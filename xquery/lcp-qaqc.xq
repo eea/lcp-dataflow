@@ -394,7 +394,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
     (: external files used for some checks :)
     let $oldBasic := doc($xmlconv:BASIC_DATA_PATH)
-    let $oldReport := if ( $reportingYear >= 2014 ) then doc($xmlconv:OLD_PLANTS_PATH)//Plant[MemberState = $memberState and $reportingYear - 1 = ReferenceYear] (: get MS's previous year plants :)
+    let $oldReport := if ( $reportingYear = 2016 ) then doc($xmlconv:OLD_PLANTS_PATH)//Plant[MemberState = $memberState and $reportingYear - 1 = ReferenceYear] (: get MS's previous year plants :)
         else ()
 
     let $findings := doc($xmlconv:FINDINGS_PATH)
@@ -473,7 +473,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     let $LCP_1_1 := $LCP_1_1_A
     (: LCP 1.2 :)
 
-    let $LCP_1_2 := if ( $reportingYear < 2014 ) then ()
+    let $LCP_1_2 := if ( $reportingYear != 2016 ) then ()
     else
 
         let $res := if ( eworx:getNumber( $docRoot//BasicData/NumberOfPlants ) != count($docRoot//Plant) ) then
@@ -526,7 +526,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
     (: LCP 2.2 :)
     let $oldIds :=  $oldReport//PlantId
-    let $LCP_2_2 := if ( $reportingYear < 2014 ) then ()
+    let $LCP_2_2 := if ( $reportingYear != 2016 ) then ()
     else
         let $res:=
             for $plant in $docRoot//Plant[PlantId = $oldIds]
@@ -679,7 +679,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     let $LCP_3_3 := xmlconv:RowBuilder("LCP 3.3","Plausibility of fuel input", $message, $res  )
 
     (: LCP 4.1 :)
-    let $LCP_4_1 := if ( $reportingYear < 2014 ) then ()
+    let $LCP_4_1 := if ( $reportingYear != 2016 ) then ()
     else
         let $CLRTAP := doc($xmlconv:CLRTAP_PATH)//country[MemberState = $memberState and Year = $reportingYear ]
 
@@ -868,7 +868,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
     (: LCP 4.5 :)
 
-    let $LCP_4_5 := if ( $reportingYear < 2014 ) then ()
+    let $LCP_4_5 := if ( $reportingYear != 2016 ) then ()
     else
 
         let $Avg_Emissions := doc($xmlconv:AVG_EMISSIONS_PATH)//emissions[MemberState = $memberState and $reportingYear - 1 = Year]
