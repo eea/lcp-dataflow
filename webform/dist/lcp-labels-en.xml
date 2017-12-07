@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels xml:lang="en">
+    <Questionnaire-title>Questionnaire on the implementation of LCP</Questionnaire-title>
+
+    <basicData>1. BASIC DATA</basicData>
+    <reporting-language>Reporting language</reporting-language>
+    <reporting-year>Reporting year</reporting-year>
+    <countryTooltip>Select the Country where the derogation is applicable - the field will be auto-filled for any subsequent derogation reports created during the same session</countryTooltip>
+    <statusTooltip>Choose the status of the plant according to LCPD 2001/80/EC Article 4.</statusTooltip>
+    <sectorsTooltip>Choose the sector in which the plant operates</sectorsTooltip>
+	<extensionTooltip>Extensions during the whole period until the end of the current reporting year should be reported.</extensionTooltip>
+    <significantChangeTooltip>Substantial changes during the whole period until the end of the current reporting year should be reported.</significantChangeTooltip>
+    <hoursoperatedTooltip>Hours operated refer to the whole period from 2008 until the end of the current reporting year.</hoursoperatedTooltip>
+    <Country>country</Country>
+
+    <note1>Please type in the number of plants you will introduce in this reporting.</note1>
+    <note2>Please enter information for the contact person.</note2>
+    <memberState>Member State</memberState>
+    <referenceYear>Reference Year</referenceYear>
+    <numberOfPlants>Number of plants</numberOfPlants>
+    <nationalContactPerson>NATIONAL CONTACT PERSON</nationalContactPerson>
+    <organization>Organization</organization>
+    <address1>Address 1</address1>
+    <address2>Address 2</address2>
+    <city>City</city>
+    <state>State</state>
+    <postalCode>Postal code</postalCode>
+    <nameOfContactPerson>Name of contact person</nameOfContactPerson>
+    <phone>Phone</phone>
+    <eMail>E-Mail</eMail>
+
+    <listOfPlants>2. LIST OF PLANTS</listOfPlants>
+    <plantName>Plant name</plantName>
+    <plantId>Plant ID</plantId>
+    <EPRTRNationalId>EPRTR national ID</EPRTRNationalId>
+    <region>Region</region>
+    <longitude>Longitude</longitude>
+    <latitude>Latitude</latitude>
+    <facilityName>Facility name</facilityName>
+    <plantLocation>PLANT LOCATION</plantLocation>
+    <geographicalCoordinate>GEOGRAPHICAL COORDINATE</geographicalCoordinate>
+
+    <plantDetails>3. PLANT DETAILS</plantDetails>
+    <statusOfThePlant>Status of the plant</statusOfThePlant>
+    <MWth>MWth</MWth>
+    <extensionBy50MWOrMore>Extension by 50 MW or more</extensionBy50MWOrMore>
+    <capacityAddedMW>Capacity added [MW]</capacityAddedMW>
+    <substantialChange>Substantial change</substantialChange>
+    <capacityAffectedMW>Capacity affected [MW]</capacityAffectedMW>
+    <dateOfStartOfOperation>Date of start of operation</dateOfStartOfOperation>
+    <sector>SECTOR</sector>
+    <refineries>Refineries</refineries>
+    <otherSector>Other sector</otherSector>
+    <gasTurbine>Gas turbine</gasTurbine>
+    <MWthGasTurbine>MWth - gas turbine</MWthGasTurbine>
+    <boiler>Boiler</boiler>
+    <MWthBoiler>MWth - boiler</MWthBoiler>
+    <gasEngine>Gas engine</gasEngine>
+    <MWthGasEngine>MWth - gas engine</MWthGasEngine>
+    <dieselEngine>Diesel engine</dieselEngine>
+    <MWthDieselEngine>MWth - diesel engine</MWthDieselEngine>
+    <other>Other</other>
+    <otherTypeOfCombustion>Other type of combustion</otherTypeOfCombustion>
+    <MWthOther>MWth - other</MWthOther>
+    <operatingHours>Operating hours</operatingHours>
+    <comments>Comments</comments>
+
+    <energyInputEmissions>4. ENERGY INPUT AND TOTAL EMISSIONS TO AIR</energyInputEmissions>
+    <energyInput>ENERGY INPUT</energyInput>
+    <biomass>Biomass (TJ)</biomass>
+    <otherSolidFuels>Other solid fuels (TJ)</otherSolidFuels>
+    <liquidFuels>Liquid fuels (TJ)</liquidFuels>
+    <naturalGas>Natural gas (TJ)</naturalGas>
+    <otherGases>Other gases (TJ)</otherGases>
+    <hardCoal>Hard coal (TJ)</hardCoal>
+    <lingnite>Lignite (TJ)</lingnite>
+    <totalEmissionsToAir>TOTAL EMISSIONS TO AIR</totalEmissionsToAir>
+    <SO2>SO2 (t)</SO2>
+    <NOx>NOx (t)</NOx>
+    <dust>Dust (t)</dust>
+
+    <optOutsTNP>5. OPT-OUTS AND NATIONAL EMISSION REDUCTION PLAN</optOutsTNP>
+    <optOuts>OPT-OUTS</optOuts>
+    <optOutPlant>Opt-out plant</optOutPlant>
+    <capacityOptedOut>Capacity opted out [MW]</capacityOptedOut>
+    <hoursOperated>Hours operated</hoursOperated>
+    <plantIncludedInNERP>Plant included in NERP</plantIncludedInNERP>
+
+    <LCPArticle15>6. LCP ART 15(3)</LCPArticle15>
+    <art5>Art 5(1)</art5>
+    <elvSO2>ELV SO2 (mg/Nm3)</elvSO2>
+    <notaBeneAnnex>Nota Bene Annex III</notaBeneAnnex>
+    <desulphurisation>Desulphurisation rate (%)</desulphurisation>
+    <sInput>S Input (t)</sInput>
+    <annexVIAfootnote2>Annex VI.A footnote 2</annexVIAfootnote2>
+    <elvNoX>ELV NOx (mg/m3)</elvNoX>
+    <annexVIAfootnote3>Annex VI.A footnote 3</annexVIAfootnote3>
+    <volatileContents>% Volatile contents</volatileContents>
+
+    <addNewPlant>Add new plant</addNewPlant>
+    <deleteSelected>Delete selected</deleteSelected>
+    <yes>Yes</yes>
+    <no>No</no>
+    <ok>Done</ok>
+    <delete>Delete</delete>
+    <remove>Remove</remove>
+    <addPlant>Add Plant</addPlant>
+    <editPlant>Edit plant</editPlant>
+    <add>Add</add>
+    <cancel>Cancel</cancel>
+    <edit>Edit</edit>
+    <editAllRows>Edit all rows</editAllRows>
+    <editsDone>Edits done</editsDone>
+    <save>Save</save>
+    <addSave>Add &amp; Save</addSave>
+    <done>Done</done>
+    <doneSave>Done &amp; Save</doneSave>
+    <close>Close</close>
+    <prev>Prev</prev>
+    <next>Next</next>
+    <print>Print</print>
+    <printPreview>Print preview</printPreview>
+    <validationOn>Turn validation On</validationOn>
+    <validationOff>Turn validation Off</validationOff>
+    <search>Search ...</search>
+
+    <required_field>This is a required field</required_field>
+    <unique_abbreviation>Please provide a unique abbreviation </unique_abbreviation>
+    <valid_telephone>Please enter a valid telephone number (at least 7 digits) </valid_telephone>
+    <valid_email>Please enter a valid email address </valid_email>
+    <valid_url>Please enter a valid URL </valid_url>
+    <yes_or_no>Please choose yes or no </yes_or_no>
+    <number_greater_than_zero>Please provide a number greater than 0 </number_greater_than_zero>
+    <data_entry_must_be_unique>Data entry must be unique ID code </data_entry_must_be_unique>
+    <must_be_less_than>Please provide a number less than </must_be_less_than>
+    <must_be_greater_than>Please provide a number greater or equal to </must_be_greater_than>
+    <must_be_percentage>Please provide a percentage between 0 and 100 </must_be_percentage>
+    <whole_number_greater_than_zero>Please provide a whole number greater than 0 </whole_number_greater_than_zero>
+    <unique_identification_code>Please enter a unique identification code </unique_identification_code>
+    <valid_longitude>Please provide a number between -180 and 180 </valid_longitude>
+    <valid_latitude>Please provide a number between -90 and 90 </valid_latitude>
+    <positive_decimal>Please provide a positive decimal number </positive_decimal>
+    <positive_integer>Please provide a positive integer</positive_integer>
+    <valid_percentage>Please provide a valid number between 0 to 100 </valid_percentage>
+
+    <load_data_from_eprtr>Load location data from E-PRTR</load_data_from_eprtr>
+    <h1>&lt;p&gt;&lt;span class="underline" &gt;LCPD 2001/80/EC Art 4(1)&lt;/span&gt;: Without prejudice to Article 17 Member States shall take appropriate measures to ensure that all licences for the construction or, in the absence of such a procedure, for the operation of new plants which in the view of the competent authority are the subject of a full request for a licence before 27 November 2002, provided that the plant is put into operation no later than 27 November 2003 contain conditions relating to compliance with the emission limit values laid down in part A of Annexes III to VII in respect of sulphur dioxide, nitrogen oxides and dust.&lt;/p&gt;
+        &lt;span class="underline" &gt;LCPD 2001/80/EC Art 4(3)&lt;/span&gt;: Without prejudice to Directive 96/61/EC and Council Directive 96/62/EC of 27 September 1996 on ambient air quality assessment and management (1), Member States shall, by 1 January 2008 at the latest, achieve significant emission reductions by: (a) taking appropriate measures to ensure that all licences for the operation of existing plants contain conditions relating to compliance with the emission limit values established for new plants referred to in paragraph 1; or (b) ensuring that existing plants are subject to the national emission reduction plan referred to in paragraph 6; and, where appropriate, applying Articles 5, 7 and 8.
+        &lt;span class="underline" &gt;LCPD 2001/80/EC Art 4(2)&lt;/span&gt;: Member States shall take appropriate measures to ensure that all licences for the construction or, in the absence of such a procedure, for the operation of new plants, other than those covered by paragraph 1, contain conditions relating to compliance with the emission limit values laid down in part B of Annexes III to VII in respect of sulphur dioxide, nitrogen oxides and dust."</h1>
+    <h2>&lt;p&gt;&lt;span class="underline" &gt;LCPD 2001/80/EC Art 10&lt;/span&gt;: Where a combustion plant is extended by at least 50 MW, the emission limit values as set in part B of Annexes III to VII shall apply to the new part of the plant and shall be fixed in relation to the thermal capacity of the entire plant. This provision shall not apply in the cases referred to in Article 8(2) and (3). Where the operator of a combustion plant is envisaging a change according to Articles 2(10)(b) and 12(2) of Directive 96/61/EC, the emission limit values as set out in part B of Annexes III to VII in respect of sulphur dioxide, nitrogen oxides and dust shall apply.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Extensions during the whole period until the end of the current reporting year should be reported.&lt;/strong&gt;&lt;/p&gt;</h2>
+    <h3>&lt;p&gt;&lt;span class="underline" &gt;IPPCD Art 12&lt;/span&gt;: Member States shall take the necessary measures to ensure that the operator informs the competent authorities of any planned change in the operation. Where appropriate, the competent authorities shall update the permit or the conditions. Member States shall take the necessary measures to ensure that no substantial change planned by the operator is made without a permit issued in accordance with this Directive. The application for a permit and the decision by the competent authority must cover those parts of the installation and those aspects listed in Article 6 that may be affected by the change.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Substantial changes during the whole period until the end of the current reporting year should be reported.&lt;/strong&gt;&lt;/p&gt;</h3>
+    <h4>&lt;p&gt;&lt;span class="underline" &gt;LCP Art. 4(4)&lt;/span&gt;: Without prejudice to Directives 96/61/EC and 96/62/EC, existing plants may be exempted from compliance with the emission limit values referred to in paragraph 3 and from their inclusion in the national emission reduction plan on the following conditions: (a) the operator of an existing plant undertakes, in a written declaration submitted by 30 June 2004 at the latest to the competent authority, not to operate the plant for more than 20 000 operational hours starting from 1 January 2008 and ending no later than 31 December 2015; (b) the operator is required to submit each year to the competent authority a record of the used and unused time allowed for the plants' remaining operational life.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;“Hours operated” refer to the whole period from 2008 until the end of the current reporting year&lt;/strong&gt;&lt;/p&gt;</h4>
+    <h5>&lt;p&gt;"Desulphurisation rate" means the ratio of the quantity of sulphur which is not emitted into the air at the combustion plant site over a given period to the quantity of sulphur contained in the fuel which is introduced into the combustion plant facilities and which is used over the same period.&lt;/p&gt;</h5>
+    <h6>&lt;p&gt;&lt;span class="underline" &gt;IED Art.32(5)&lt;/span&gt;: Not later than 1 January 2013, Member States shall communicate their transitional national plans to the Commission. The Commission shall evaluate the plans and, where the Commission has raised no objections within 12 months of receipt of a plan, the Member State concerned shall consider its plan to be accepted. When the Commission considers a plan not to be in accordance with the implementing rules established in accordance with Article 41(b), it shall inform the Member State concerned that its plan cannot be accepted. In relation to the evaluation of a new version of a plan which a Member State communicates to the Commission, the time period referred to in the second subparagraph shall be 6 months.&lt;/p&gt;</h6>
+    <h7>&lt;p&gt;&lt;span class="underline" &gt;IED Art.30(5) and (6)&lt;/span&gt;: (5) The competent authority may grant a derogation for amaximum of 6 months from the obligation to comply with the emission limit values provided for in paragraphs 2 and 3 for sulphur dioxide in respect of a combustion plant which to this end normally uses low-sulphur fuel, in cases where the operator is unable to comply with those limit values because of an interruption in the supply of low-sulphur fuel resulting from a seriousshortage. Member States shall immediately inform the Commission of any derogation granted under the first subparagraph, (6) The competent authority may grant a derogation from the obligation to comply with the emission limit values provided for in paragraphs 2 and 3 in cases where a combustion plant using only gaseous fuel has to resort exceptionally to the use of otherfuels because of a sudden interruption in the supply of gas and for this reason would need to be equipped with a waste gas purification facility. The period for which such a derogation is granted shall not exceed 10 days except where there is an overriding need to maintain energy supplies. The operator shall immediately inform the competent authority of each specific case referred to in the first subparagraph. Member States shall inform the Commission immediately of anyderogation granted under the first subparagraph.&lt;/p&gt;</h7>
+    <h8>&lt;p&gt;&lt;span class="underline" &gt;IED Art.33(2)&lt;/span&gt;: At the latest on 1 January 2016, each Member State shall communicate to the Commission a list of any combustion plants to which paragraph 1 applies, including their total rated thermal input, the fuel types used and the applicable emission limit values for sulphur dioxide, nitrogen oxides and dust. For plants subject to paragraph 1, Member States shall communicate annually to the Commission a record of the number of operating hours since 1 January 2016.&lt;/p&gt;</h8>
+    <h9>&lt;p&gt;&lt;span class="underline" &gt;IED Art.34(3)&lt;/span&gt;: Where there are, on the territory of a Member State combustion plants covered by this Chapter that are part of a small isolated system, that Member State shall report to the Commission before 7 January 2013 a list of those combustion plants, the total annual energy consumption of the small isolated system and the amount of energy obtained through interconnection with other systems.&lt;/p&gt;</h9>
+    <h10>&lt;p&gt;&lt;span class="underline" &gt;IED Art.35(2)&lt;/span&gt;: At the latest on 1 January 2016, each Member State shall communicate to the Commission a list of any combustion plants to which paragraph 1 applies, including their total rated thermal input, the fuel types used and the applicable emission limit values for sulphur dioxide, nitrogen oxides and dust. In addition, Member States shall, for any combustion plants to which paragraph 1 applies and during the period mentioned in that paragraph, inform the Commission annually of the proportion of useful heat production of each plant which was delivered in the form of steam or hot water to a public network for district heating, expressed as a rolling average over the preceding 5 years.&lt;/p&gt;</h10>
+    <h11>&lt;p&gt;&lt;span class="underline" &gt;IED Art.72(4)a&lt;/span&gt;: Member States shall, from 1 January 2016, report the following data annually to the Commission: (a) for combustion plants to which Article 31 applies, the sulphur content of the indigenous solid fuel used and the rate of desulphurisation achieved, averaged over each month. For the first year where Article 31 is applied, the technical justification of the non-feasibility of complying with the emissionlimit values referred to in Article 30(2) and (3) shall also bereported.&lt;/p&gt;</h11>
+    <h12>&lt;p&gt;&lt;span class="underline" &gt;IED Art.72(4)b&lt;/span&gt;: Member States shall, from 1 January 2016, report the following data annually to the Commission: for combustion plants which do not operate more than 1500 operating hours per year as a rolling average over aperiod of 5 years, the number of operating hours per year.&lt;/p&gt;</h12>
+
+</labels>

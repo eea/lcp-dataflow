@@ -1,0 +1,18 @@
+{
+  "name": "LCP-WebForm",
+  "dependencies": {
+    "angular-animate": "1.2.16"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "watchify": "latest",
+    "uglify-js": "~2.5.0",
+    "browserify-ngannotate": "~1.0.1"
+  },
+  "scripts": {
+    "build-js": "browserify js/browserify-app.js -o bundle.js -d",
+    "watch-js": "watchify js/browserify-app.js -o bundle.js -d",
+    "build-js-prod": "browserify js/browserify-app.js -o dist/bundle.js -d",
+	"build-min-js-prod": "browserify -t browserify-ngannotate js/browserify-app.js | uglifyjs > dist/bundle.min.js"
+  }
+}

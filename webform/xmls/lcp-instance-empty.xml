@@ -1,0 +1,101 @@
+{
+    "LCPQuestionnaire": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xml:lang": "en",
+        "@xsi:noNamespaceSchemaLocation": "http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd",
+        "BasicData": {
+            "MemberState": null,
+            "ReferenceYear": null,
+            "NumberOfPlants": null,
+            "Organization": null,
+            "Address1": null,
+            "Address2": null,
+            "City": null,
+            "State": null,
+            "PostalCode": null,
+            "NameOfContactPerson": null,
+            "Phone": null,
+            "EMail": null
+        },
+        "ListOfPlants": {
+            "Plant": {
+                "PlantName": null,
+                "PlantId": null,
+                "EPRTRNationalId": null,
+                "PlantLocation": {
+                    "Address1": null,
+                    "Address2": null,
+                    "City": null,
+                    "Region": null,
+                    "PostalCode": null
+                },
+                "GeographicalCoordinate": {
+                    "Longitude": null,
+                    "Latitude": null
+                },
+                "FacilityName": null,
+                "Comments": null,
+                "PlantDetails": {
+                    "StatusOfThePlant": null,
+                    "MWth": null,
+                    "ExtensionBy50MWOrMore": false,
+                    "CapacityAddedMW": null,
+                    "SubstantialChange": false,
+                    "CapacityAffectedMW": null,
+                    "DateOfStartOfOperation": null,
+                    "Refineries": false,
+                    "OtherSector": null,
+                    "GasTurbine": false,
+                    "GasTurbineThermalInput": null,
+                    "Boiler": false,
+                    "BoilerThermalInput": null,
+                    "GasEngine": false,
+                    "GasEngineThermalInput": null,
+                    "DieselEngine": false,
+                    "DieselEngineTurbineThermalInput": null,
+                    "Other": false,
+                    "OtherTypeOfCombustion": null,
+                    "OtherThermalInput": null,
+                    "OperatingHours": null,
+                    "Comments": null
+                },
+                "EnergyInputAndTotalEmissionsToAir": {
+                    "EnergyInput": {
+                        "Biomass": null,
+                        "OtherSolidFuels": null,
+                        "LiquidFuels": null,
+                        "NaturalGas": null,
+                        "OtherGases": null
+                    },
+                    "TotalEmissionsToAir": {
+                        "SO2": null,
+                        "NOx": null,
+                        "Dust": null
+                    }
+                },
+                "OptOutsAndNERP": {
+                    "OptOutPlant": false,
+                    "CapacityOptedOutMW": null,
+                    "HoursOperated": null,
+                    "PlantIncludedInNERP": null
+                },
+                "LcpArt15": {
+                    "Art5_1": false,
+                    "OperatingHours": null,
+                    "ElvSO2": null,
+                    "NotaBeneAnnexIII": null,
+                    "NotaBeneElvSO2": null,
+                    "DesulphurisationRate": null,
+                    "SInput": null,
+                    "AnnexVI_A_Footnote2": null,
+                    "AnnexVI_A_Footnote2_OperatingHours": null,
+                    "ElvNOx": null,
+                    "AnnexVI_A_Footnote3": null,
+                    "VolatileContents": null,
+                    "AnnexVI_A_Footnote3_ElvNOx": null,
+                    "Comments": null
+                }
+            }
+        }
+    }
+}

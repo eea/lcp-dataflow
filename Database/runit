@@ -1,0 +1,47 @@
+#!/bin/sh
+
+eval `python readconfig.py location`
+
+prefix="lcp-extraction-`date +%F`"
+
+dumpfile=$prefix.sql
+rm -f $dumpfile
+
+accessfile=$prefix.accdb
+rm -f $accessfile
+
+zipfile=$prefix.zip
+
+obligation="http://rod.eionet.europa.eu/obligations/9"
+
+echo Grabbing files 
+python grabfiles.py $obligation -r >> $dumpfile
+
+echo Store data in MS Access
+
+cp LCP_database.accdb $accessfile
+
+line=1
+total=$(wc -l < $dumpfile)
+chunk=45
+
+pages=$(($total/$chunk+1))
+echo $pages
+
+for var in $(eval echo "{1..$pages}")
+do
+    java -cp .:Access_JDBC40-eval.jar sjsql com.hxtt.sql.access.AccessDriver jdbc:access:/$accessfile n n $dumpfile --ignore-nodata --start $line --lines $chunk
+    line=$(($line+$chunk))
+done
+
+# zip access file
+zip -q $zipfile $accessfile
+
+cp "$zipfile" "$ftpdirectory"
+chown "$ftpuser.$ftpgroup" "$ftpdirectory/$zipfile"
+
+
+#cleanup
+rm $dumpfile
+rm $accessfile
+rm $zipfile

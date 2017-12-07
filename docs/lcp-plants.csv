@@ -1,0 +1,3546 @@
+countryCode,plantName,eprtrFacilityID
+"AT","Energie AG Oberösterreich Kraftwerke GmbH, Standort Timelkam, KW Timelkam GuD","5779"
+"AT","EVN AG, EVN AG Kraftwerk Korneuburg, KWK Block B","5748"
+"AT","EVN AG, EVN AG Kraftwerk Theiß Gedersdorf, KW Theiß Kombiblock B",
+"AT","EVN AG, EVN AG Kraftwerk Theiß Gedersdorf, KWT Hilfskessel 2+3",
+"AT","EVN AG, EVN AG Kraftwerk Theiß Gedersdorf, KWT Maschine 1",
+"AT","EVN AG, EVN AG Kraftwerk Theiß Gedersdorf, KWT Maschine 2",
+"AT","EVN AG, EVN AG Kraftwerk Theiß Gedersdorf, KWT Maschine 4",
+"AT","Fernwärme St. Pölten GmbH, Fernheizwerk NORD, Dampfkesselanlage 3",
+"AT","Fernwärme St. Pölten GmbH, Fernheizwerk SÜD, Dampfkesselanlage 1-4",
+"AT","Fernwärme Wien GesmbH, Arsenal, Heißwasserkessel 1/2",
+"AT","Fernwärme Wien GesmbH, Arsenal, Heißwasserkessel 3",
+"AT","Fernwärme Wien GesmbH, Inzersdorf, Heißwasserkessel 1/2",
+"AT","Fernwärme Wien GesmbH, Kagran, Heißwasserkessel 1/2/3/5",
+"AT","Fernwärme Wien GesmbH, Leopoldau, Heißwasserkessel",
+"AT","Fernwärme Wien GesmbH, Spittelau, Heißwasserkessel 1/2","5899"
+"AT","Gas Connect Austria GmbH, Verdichterstation Baumgarten, Compressor 2","52028"
+"AT","Gas Connect Austria GmbH, Verdichterstation Baumgarten, Compressor 500","52028"
+"AT","Gas Connect Austria GmbH, Verdichterstation Baumgarten, Compressor 600","52028"
+"AT","Gas Connect Austria GmbH, Verdichterstation Baumgarten, Compressor 700","52028"
+"AT","Gas Connect Austria GmbH, Verdichterstation Eggendorf, Compressor 100",
+"AT","Gas Connect Austria GmbH, Verdichterstation Eggendorf, Compressor 200",
+"AT","Gas Connect Austria GmbH, Verdichterstation Eggendorf, Compressor 300",
+"AT","Gas Connect Austria GmbH, Verdichterstation Grafendorf, Compressor 400","30043"
+"AT","Gas Connect Austria GmbH, Verdichterstation Grafendorf, Compressor 500","30043"
+"AT","Gas Connect Austria GmbH, Verdichterstation Grafendorf, Compressor 600","30043"
+"AT","Gas Connect Austria GmbH, Verdichterstation Ruden, Compressor 400",
+"AT","Gas Connect Austria GmbH, Verdichterstation Ruden, Compressor 500",
+"AT","Gas Connect Austria GmbH, Verdichterstation Weitendorf, Compressor 100","160671"
+"AT","Gas Connect Austria GmbH, Verdichterstation Weitendorf, Compressor 200","160671"
+"AT","Gas Connect Austria GmbH, Verdichterstation Weitendorf, Compressor 300","160671"
+"AT","Jungbunzlauer Austria AG, Werk Pernhofen, Kesselanlage 1","5854"
+"AT","Jungbunzlauer Austria AG, Werk Pernhofen, Kesselanlage 2","5854"
+"AT","Lenzing AG, Energie-, Faser-, Zellstoff- u. Papierprod., Gaskessel 1K6","5763"
+"AT","Lenzing AG, Energie-, Faser-, Zellstoff- u. Papierprod., Laugekessel 2K10","5763"
+"AT","Lenzing AG, Energie-, Faser-, Zellstoff- u. Papierprod., Laugekessel 2K6","5763"
+"AT","Lenzing AG, Energie-, Faser-, Zellstoff- u. Papierprod., Laugekessel 2K7","5763"
+"AT","Linz Strom GmbH, FHKW Mitte, FHKW Mitte GuD 1b","5806"
+"AT","Linz Strom GmbH, FHKW Mitte, FHKW Mitte GuD1","5806"
+"AT","Linz Strom GmbH, FHKW Mitte, FHKW Mitte Kamin","5806"
+"AT","Linz Strom GmbH, FHKW Süd","5807"
+"AT","Mayr-Melnhof Karton Gesellschaft m.b.H., 60t/h- Kessel","110684"
+"AT","Mondi Frantschach GmbH, CK 3 - Laugenverbrennungskessel",
+"AT","Mondi Frantschach GmbH, RIK - Rindenverbrennungskessel",
+"AT","Mondi Neusiedler AG, Mondi Neusiedler AG - Hausmening, 100 to-Kessel",
+"AT","Nettingsdorfer Papierfabrik AG & Co KG, Gaskessel","5927"
+"AT","Nettingsdorfer Papierfabrik AG Co KG, Sodakessel 3","5927"
+"AT","Norske Skog Bruck GmbH, GuD / Kessel 7","5947"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS07 Platformer & KEP","5858"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS10 Rohöldestillation 4","5858"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS11 Ethylenanlage","5858"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS13 FCC-Anlage","5858"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS15 neu Kraftwerk 1, 2 und Ostanlagen","5858"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS16 Wasserstoffanlage","5858"
+"AT","OMV Refining and Marketing GmbH, Raffinerie Schwechat, RS17 Thermal Gasoil Unit (TGU)","5858"
+"AT","Salzburg AG f. Energie Verkehr und Telekommunikation, HKW Mitte, HKW Mitte Gasturbine und Abhitzekessel","65082"
+"AT","Salzburg AG f. Energie Verkehr und Telekommunikation, HKW Mitte, HKW Mitte SÖK","65082"
+"AT","Salzburg AG f. Energie Verkehr und Telekommunikation, HKW Nord, HKW Nord Block 1","65082"
+"AT","Sappi Austria Produktions-GmbH & Co. KG, GuD-Anlage",
+"AT","Sappi Austria Produktions-GmbH & Co. KG, Kessel 11",
+"AT","Sappi Austria Produktions-GmbH & Co. KG, Laugenkessel",
+"AT","Schweighofer Fiber GmbH, TABA Kessel 5",
+"AT","Stadtwerke Klagenfurt AG, FHKW Klagenfurt",
+"AT","Steirische Gas-Wärme GmbH, Fernheizkraftwerk Graz, Kessel 1-3",
+"AT","Steirische Gas-Wärme GmbH, Fernheizkraftwerk Thondorf, Gasturbine + Abhitzekessel",
+"AT","UPM Kymmene Austria GmbH, UPM Steyrermühl, GuD-Anlage Gasturbine mit Abhitzekessel","193329"
+"AT","UPM Kymmene Austria GmbH, UPM Steyrermühl, Kessel K7 K8 Steamblockanlage","193329"
+"AT","VERBUND Thermal Power GmbH & Co KG, Verbund ATP FHKW Neudorf-Werndorf 2","5943"
+"AT","VERBUND Thermal Power GmbH & Co KG, Verbund VTP Mellach, WGM Linie 1","5943"
+"AT","VERBUND Thermal Power GmbH & Co KG, Verbund VTP Mellach, WGM Linie 2","5943"
+"AT","VERBUND Thermal Power GmbH Co KG, Verbund ATP KW Dürnrohr, WDR 1+2 Hauptkessel",
+"AT","voestalpine Stahl Donawitz GesmbH, voestalpine Stahl Donawitz GmbH, Dampfkessel 01","5857"
+"AT","voestalpine Stahl Donawitz GesmbH, voestalpine Stahl Donawitz GmbH, Gasturbine und Abhitzekessel (GuD-Anlage)","5857"
+"AT","voestalpine Stahl Donawitz GesmbH, voestalpine Stahl Donawitz GmbH, Kombikessel Heißdampferzeuger","5857"
+"AT","voestalpine Stahl GmbH, Blockkessel 03",
+"AT","voestalpine Stahl GmbH, Blockkessel 04",
+"AT","voestalpine Stahl GmbH, Blockkessel 05",
+"AT","voestalpine Stahl GmbH, Blockkessel 06",
+"AT","Voestalpine Stahl GmbH, Blockkessel 07",
+"AT","voestalpine Stahl GmbH, Gas- und Dampfturbine",
+"AT","voestalpine Stahl GmbH, Gebläsezentrale 2 - Kessel 1",
+"AT","voestalpine Stahl GmbH, voestalpine Stahl GmbH, Gebläsezentrale 2 - Kessel 2",
+"AT","W.Hamburger GmbH, Kessel 3","193336"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Donaustadt, Blockkraftwerk 3","5906"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Leopoldau, KW Leopoldau GUD",
+"AT","WIEN ENERGIE GmbH, Kraftwerk Simmering, Blockheizkraftwerk 3","5905"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Simmering, Blockkraftwerk 1 - Gasturbine 41","5905"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Simmering, Blockkraftwerk 1 - Gasturbine 42","5905"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Simmering, Blockkraftwerk 2","5905"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Simmering, Blockkraftwerk 2 - Gasturbine solo","5905"
+"AT","WIEN ENERGIE GmbH, Kraftwerk Simmering, Blockkraftwerk 3 - Gasturbine solo","5905"
+"AT","WIENENERGIE Bundesforste Biomasse GmbH & Co KG, BHKW - Wirbelschichtkessel","51997"
+"AT","Zellstoff Pöls Aktiengesellschaft, Sulfatlaugenkessel 1 und Steambloc","65062"
+"AT","Zellstoff Pöls Aktiengesellschaft, Sulfatlaugenkessel 2","65062"
+"BE","A & S ENERGIE","177674"
+"BE","AGFA - GEVAERT MORTSEL G1-2-5","14594"
+"BE","BASF ANTWERPEN","14602"
+"BE","BASF ANTWERPEN","14602"
+"BE","BASF ANTWERPEN","14602"
+"BE","Beneo Orafti","182284"
+"BE","Biowanze","98623"
+"BE","BOREALIS POLYMERS","14807"
+"BE","BP CHEMBEL","14597"
+"BE","BP CHEMBEL","14597"
+"BE","Cellardennes 70 m",
+"BE","Centrale Elec. Electrabel Amercoeur III","182361"
+"BE","Centrale Elec. Electrabel Awirs t4","182254"
+"BE","Centrale Elec. Electrabel Awirs t5","182254"
+"BE","Cierreux",
+"BE","CITRIQUE BELGE","14718"
+"BE","Cockerill Ougrée : centrale sidérurgique","182428"
+"BE","Cockerill Seraing : centrale 1",
+"BE","Cockerill Seraing : centrale 2",
+"BE","Deux-Acren",
+"BE","DOW  BELGIUM","182255"
+"BE","E. ON GENERATION BELGIUM","14830"
+"BE","E. ON GENERATION BELGIUM","14830"
+"BE","E. ON GENERATION BELGIUM","14830"
+"BE","E. ON GENERATION BELGIUM","14830"
+"BE","E. ON GENERATION BELGIUM Vilvoorde","14827"
+"BE","EDF LUMINUS","14751"
+"BE","EDF LUMINUS",
+"BE","EDF LUMINUS","14751"
+"BE","EDF LUMINUS Ringvaart","14750"
+"BE","ELECTRABEL - CENTRALE RUIEN","14828"
+"BE","ELECTRABEL - CENTRALE RUIEN","14828"
+"BE","ELECTRABEL - CENTRALE RUIEN","14828"
+"BE","ELECTRABEL - CENTRALE RUIEN","14828"
+"BE","ELECTRABEL - TJ BEERSE",
+"BE","ELECTRABEL  WKK LANXESS (BAYER)","14831"
+"BE","Electrabel Baudour","182437"
+"BE","ELECTRABEL CENTRALE AALST",
+"BE","ELECTRABEL CENTRALE DROGENBOS","14829"
+"BE","ELECTRABEL CENTRALE DROGENBOS","14829"
+"BE","ELECTRABEL CENTRALE HERDERSBRUG","14834"
+"BE","ELECTRABEL CENTRALE KNIPPEGROEN","160690"
+"BE","ELECTRABEL CENTRALE RODENHUIZE","14833"
+"BE","ELECTRABEL SITE LANXESS RUBBER","98856"
+"BE","Electrabel Solvay","182330"
+"BE","ELECTRABEL TURBOJET AALTER",
+"BE","ELECTRABEL TURBOJET NOORDSCHOTE",
+"BE","ELECTRABEL TURBOJET ZEDELGEM",
+"BE","ELECTRABEL TURBOJET ZELZATE",
+"BE","ELECTRAWINDS BIOSTOOM","174291"
+"BE","ESSENT ENERGIE BELGIE","65737"
+"BE","EVONIK DEGUSSA ANTWERPEN ","14620"
+"BE","EVONIK DEGUSSA ANTWERPEN ","14620"
+"BE","EXXONMOBIL PETROLEUM & CHEMICAL - ESSO RAFFINADERIJ ","14731"
+"BE","EXXONMOBIL PETROLEUM & CHEMICAL - ESSO RAFFINADERIJ ","14731"
+"BE","EXXONMOBIL PETROLEUM & CHEMICAL - ESSO RAFFINADERIJ ","14731"
+"BE","EXXONMOBIL PETROLEUM & CHEMICAL - ESSO RAFFINADERIJ ","14731"
+"BE","FINA ANTWERP OLEFINS - OLEFINENFABRIEK","14740"
+"BE","FINA ANTWERP OLEFINS - OLEFINENFABRIEK","14740"
+"BE","FLUXYS-LNG-TERMINAL","14649"
+"BE","INDEPENDENT BELGIAN REFINERY","14758"
+"BE","INDEPENDENT BELGIAN REFINERY","14758"
+"BE","INDEPENDENT BELGIAN REFINERY","14758"
+"BE","Industrie du bois Vielsalm","182370"
+"BE","INEOS","14746"
+"BE","INEOS","14746"
+"BE","INEOS PHENOL BELGIUM","14848"
+"BE","INEOS PHENOL BELGIUM","14848"
+"BE","INEOS PHENOL BELGIUM","14848"
+"BE","Iscal sugar","182289"
+"BE","LANXESS","15620"
+"BE","LANXESS nv","15145"
+"BE","LANXESS nv","15145"
+"BE","MONSANTO EUROPE","14692"
+"BE","MONSANTO EUROPE","14692"
+"BE","OLEON ","14621"
+"BE","Raffinerie Tirlemontoise Wanze","182397"
+"BE","SAPPI LANAKEN","14641"
+"BE","SAPPI LANAKEN","14641"
+"BE","SPE-Angleur","182219"
+"BE","SPE-Monsin","182219"
+"BE","SPE-Seraing","182271"
+"BE","SYRAL BELGIUM","14793"
+"BE","T POWER","182171"
+"BE","TIENSE SUIKERRAFFINADERIJ","14666"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","TOTAL RAFFINADERIJ ANTWERPEN","14847"
+"BE","Turbojet Buda",
+"BE","Turbojet Volta (Ixelles)",
+"BE","TURBO-JET ZEEBRUGGE",
+"BE","Turon",
+"BE","UMICORE ","14813"
+"BE","ZANDVLIET POWER - TERREIN BASF ","14602"
+"BG","DHP ""Burgas""","15877"
+"BG","DHP ""Dalkia"" (ex.DHP ""Vl.Varnenchik"")","99082"
+"BG","DHP ""Lulin""",
+"BG","DHP ""Plovdiv sever""","15879"
+"BG","DHP ""Turnovo""",
+"BG","DHP ""Vratsa Gradska""""",
+"BG","DHP ""Vratsa Mladost""",
+"BG","DHP ""Zemliane""","15880"
+"BG","TPP ""Agrobiohim""",
+"BG","TPP ""Bobov dol""","15872"
+"BG","TPP ""Brikel""","15796"
+"BG","TPP ""Brikel""","15796"
+"BG","TPP ""Deven""","15810"
+"BG","TPP ""Gabrovo""","65883"
+"BG","TPP ""Himernergo""",
+"BG","TPP ""Kazanlak""","65907"
+"BG","TPP ""Kremikovtsi""",
+"BG","TPP ""Lukoil""","157617"
+"BG","TPP ""Maritsa 3""","15874"
+"BG","TPP ""Maritsa 3""","15874"
+"BG","TPP ""Maritsa Iztok 2""","15875"
+"BG","TPP ""Maritsa Iztok 3""","15875"
+"BG","TPP ""Nova Plama""","15878"
+"BG","TPP ""Pirinhart""",
+"BG","TPP ""Pleven""",
+"BG","TPP ""Plovdiv Ug""",
+"BG","TPP ""Republika""","15884"
+"BG","TPP ""Rousse Iztok""","15885"
+"BG","TPP ""Rousse Zapad""","193243"
+"BG","TPP ""Shumen""",
+"BG","TPP ""Sliven""","15887"
+"BG","TPP ""Sofia Iztok""","15881"
+"BG","TPP ""Sofia""","15882"
+"BG","TPP ""St.K Stamboliiski""","65916"
+"BG","TPP ""Sviloza""","15858"
+"BG","TPP ""Varna""","15873"
+"BG","TPP ""Vidahim""","15802"
+"BG","TPP ""Zaharni Zavodi""","15822"
+"BG","TPP AЕS ""Gulubovo""",
+"CY","Dhekelia Power Station - Plant 1","7447"
+"CY","Dhekelia Power Station - Plant 2","7447"
+"CY","Dhekelia Power Station - Plant 3","7447"
+"CY","Dhekelia Power Station - Plant 4","7447"
+"CY","Dhekelia Power Station - Plant 5","7447"
+"CY","Dhekelia Power Station - Plant 6","7447"
+"CY","Moni Power Station - Plant 1","5262"
+"CY","Moni Power Station - Plant 2","5262"
+"CY","Moni Power Station - Plant 3","5262"
+"CY","Moni Power Station - Plant 4","5262"
+"CY","Moni Power Station - Plant 5","5262"
+"CY","Moni Power Station - Plant 6","5262"
+"CY","Vasilikos Power Station - Plant 1","8584"
+"CY","Vasilikos Power Station - Plant 2","8584"
+"CY","Vasilikos Power Station - Plant 3","8584"
+"CY","Vasilikos Power Station - Plant 4","8584"
+"CY","Vasilikos Power Station - Plant 5","8584"
+"CZ","ACTHERM, spol. s r.o. - o.z. Chomutov, teplarna","12834"
+"CZ","Alpiq Generation (CZ) s.r.o. - Elektrarna Kladno","11284"
+"CZ","Alpiq Generation (CZ) s.r.o. - Teplarna Zlin","10989"
+"CZ","ArcelorMittal Energy Ostrava s.r.o. - Teplarna - source A","157656"
+"CZ","ArcelorMittal Energy Ostrava s.r.o. - Teplarna - source B","157656"
+"CZ","ArcelorMittal Frydek-Mistek a.s. - Teplarna","10345"
+"CZ","Biocel Paskov a.s.","11343"
+"CZ","C-Energy Bohemia s.r.o.","15925"
+"CZ","CESKOLIPSKA TEPLARENSKA a.s. - Kotelna LOOS ",
+"CZ","CEZ, a.s. - Elektrarna Ledvice - source A","12869"
+"CZ","CEZ, a.s. - Elektrarna Ledvice - source B","12869"
+"CZ","CEZ, a.s. - Elektrarna Melnik II ","11261"
+"CZ","CEZ, a.s. - Elektrarna Melnik III","11261"
+"CZ","CEZ, a.s. - Elektrarna Prunerov 1","12825"
+"CZ","CEZ, a.s. - Elektrarna Prunerov 2","12825"
+"CZ","CEZ, a.s. - Elektrarny Tusimice","8582"
+"CZ","CEZ, a.s. - Jaderna elektrarna Temelin","16070"
+"CZ","CEZ, a.s. - Teplarna Vitkovice","11283"
+"CZ","CEZ, a.s. - Teplarny Hodonin, Porici, Tisova  – lokalita Hodonin","12833"
+"CZ","CEZ, a.s. - Teplarny Hodonin, Porici, Tisova – lokalita Porici - provoz Dvur Kralove","10605"
+"CZ","CEZ, a.s. - Teplarny Hodonin, Porici, Tisova – lokalita Porici - provoz Porici- source A","11073"
+"CZ","CEZ, a.s. - Teplarny Hodonin, Porici, Tisova – lokalita Porici - provoz Porici- source B","11073"
+"CZ","CEZ, a.s. - Teplarny Hodonin, Porici, Tisova – lokalita Tisova - source A","12846"
+"CZ","CEZ, a.s. - Teplarny Hodonin, Porici, Tisova – lokalita Tisova - source B","12846"
+"CZ","Dalkia Ceska republika, a.s. - Elektrarna Trebovice I","11398"
+"CZ","Dalkia Ceska republika, a.s. - Elektrarna Trebovice II","11398"
+"CZ","Dalkia Ceska republika, a.s. - Elektrarna Trebovice III","11398"
+"CZ","Dalkia Ceska republika, a.s. - Spickova vytopna Olomouc","11399"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Ceskoslovenske armady","11403"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Frydek-Mistek","11404"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Karvina","11402"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Krnov","11401"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Olomouc - source A","11399"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Olomouc - source B","11399"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Prerov - source A","11400"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Prerov - source B","11400"
+"CZ","Dalkia Ceska republika, a.s. - Teplarna Privoz","11397"
+"CZ","Dalkia Industry CZ, a.s. - Teplarna Dolu CSM","66448"
+"CZ","Dalkia Kolin, a.s. - Elektrarna Kolin","12838"
+"CZ","Dalkia Marianske Lazne, s.r.o.",
+"CZ","DEZA, a.s. - Energetika","14158"
+"CZ","Elektrarna Chvaletice a.s.","10300"
+"CZ","Elektrarna Detmarovice, a.s.","10343"
+"CZ","Elektrarna Pocerady, a.s.","13898"
+"CZ","Elektrarny Opatovice, a.s. - Elektrarna Opatovice                                       ","11043"
+"CZ","Elektrarny Opatovice, a.s. - ZVU                                       ",
+"CZ","ENERGETIKA TRINEC a.s. - E 2, Provozy teplarny a tepelna energetika","14305"
+"CZ","ENERGETIKA TRINEC a.s. - E 3, Provozy teplarny a tepelna energetika","14305"
+"CZ","ENERGOAQUA, a.s. - Roznov pod Radhostem","11385"
+"CZ","Energotrans, a.s. - Elektrarna Melnik I","8129"
+"CZ","ENERGY Usti nad Labem, a.s.","10243"
+"CZ","Jablonecka teplarenska a realitni, a.s. - Vytopna Brandl","9884"
+"CZ","Jablonecka teplarenska a realitni, a.s. - Vytopna Rynovice","102109"
+"CZ","JIP - Papirny Vetrni, a.s.","11387"
+"CZ","KA Contracting CR, s.r.o. - Teplarna Nachod  ","14159"
+"CZ","KOMTERM Morava, s.r.o. - Teplarna Koprivnice","12824"
+"CZ","KRPA PAPER a.s.","16411"
+"CZ","Lovochemie, a.s.","10954"
+"CZ","Momentive Specialty Chemicals, a.s.","101926"
+"CZ","Mondi Steti a.s. ","9281"
+"CZ","Moravskoslezske cukrovary, a.s. - Odstepny zavod Opava",
+"CZ","Moravskoslezske cukrovary, a.s. - Zavod Hrusovany nad Jevisovkou","6654"
+"CZ","OMGD, s.r.o. - Provozovna Kaznejov",
+"CZ","Ostrovska teplarenska, a.s. - Teplarna Ostrov","16141"
+"CZ","PARAMO, a.s. - HS Pardubice","10344"
+"CZ","Plzenska energetika a.s. - source A","9646"
+"CZ","Plzenska energetika a.s. - source B","9646"
+"CZ","Plzenska teplarenska, a.s. - Centralni zdroj tepla - source A","14160"
+"CZ","Plzenska teplarenska, a.s. - Centralni zdroj tepla - source B","14160"
+"CZ","Prazska teplarenska a.s. - Teplarna Holesovice","10469"
+"CZ","Prazska teplarenska a.s. - Teplarna Malesice I","10469"
+"CZ","Prazska teplarenska a.s. - Teplarna Malesice II","10469"
+"CZ","Prazska teplarenska a.s. - Teplarna Malesice III","10469"
+"CZ","Prazska teplarenska a.s. - Teplarna Michle","10469"
+"CZ","Prazska teplarenska a.s. - Teplarna Veleslavin","10469"
+"CZ","Prazska teplarenska a.s. - Vytopna Juliska","10469"
+"CZ","Prazska teplarenska a.s. - Vytopna Krc","10469"
+"CZ","Prazska teplarenska a.s. - Vytopna Treboradice","10469"
+"CZ","Pribramska teplarenska, a.s. - Vytopna Zdabor","102062"
+"CZ","SKO-ENERGO s.r.o. - Teplarna","16232"
+"CZ","Sokolovska uhelna, pravni nastupce, a.s. - Zpracovatelska cast Vresova - source A","12857"
+"CZ","Sokolovska uhelna, pravni nastupce, a.s. - Zpracovatelska cast Vresova - source B","12857"
+"CZ","SPOLANA a.s. ","10556"
+"CZ","Synthesia, a.s. - Odbor Energetika - Teplarna ZL 1 ","12860"
+"CZ","Synthesia, a.s. - Odbor Energetika - Teplarna ZL 2","12860"
+"CZ","TAMERO INVEST s.r.o. - Teplarna Kralupy","174663"
+"CZ","Teplarna Ceske Budejovice, a.s. - Novohradska ulice","8530"
+"CZ","Teplarna Ceske Budejovice, a.s. - Vytopna Vrato","8530"
+"CZ","Teplarna Liberec, a.s.","10577"
+"CZ","Teplarna Otrokovice a.s.","12855"
+"CZ","Teplarna Pisek, a.s.","11342"
+"CZ","Teplarna Strakonice, a.s.","14301"
+"CZ","Teplarna Tabor, a.s.","16233"
+"CZ","Teplarna Trmice, a.s. ","12973"
+"CZ","Teplarna Trmice, a.s. - PPC Trmice","12973"
+"CZ","Teplarna Varnsdorf a.s.","66310"
+"CZ","Teplarny Brno a.s. - Provoz Brno-sever","10206"
+"CZ","Teplarny Brno a.s. - Provoz Cerveny Mlyn","10208"
+"CZ","Teplarny Brno a.s. - Provoz Spitalka - source A","10207"
+"CZ","Teplarny Brno a.s. - Provoz Spitalka - source B","10207"
+"CZ","Tereos TDD, a.s. - Cukrovar Ceske Mezirici","9598"
+"CZ","Tereos TTD, a.s. - Cukrovar Dobrovice","66389"
+"CZ","UNIPETROL RPA, s.r.o. - Teplarna T 700","6838"
+"CZ","UNIPETROL RPA, s.r.o. - Zavod 01 Petrochemie - etylenova jednotka","6838"
+"CZ","United Energy, a.s. - Teplarna Komorany","11406"
+"CZ","Vyroba a prodej tepla Pribram a.s. - CZT","11175"
+"CZ","Zasobovani teplem Vsetin a.s. - Teplarna Jiraskova","157754"
+"CZ","ZDAS, a.s. - Kotelna a COV","8344"
+"DE","BHKW Augsburg (A16)","74318"
+"DE","BHKW Holungen (A265)","47045"
+"DE","BHKW Köpenick (A35)",
+"DE","BHKW Nürnberg (A410)",
+"DE","BHKW Wittenberg (A598)",
+"DE","Dampfkesselanlage Audi (A399)","2457"
+"DE","Dampfwerk Zweckel (A210)","44291"
+"DE","Energiezentrale Papier-Scheufelen (A330)","45306"
+"DE","Energiezentrale Pharma Wedding (A49)",
+"DE","Energiezentrale Rastatt (A450)",
+"DE","Erdgasspeicher Epe (A220)","44490"
+"DE","Erdgasspeicher Etzel (A670)",
+"DE","Erdgasverdichter Achim (A4)",
+"DE","Erdgasverdichter Dötlingen (A128)","70346"
+"DE","Erdgasverdichter Eiterfeld (A156)",
+"DE","Erdgasverdichter Emmerich (A166)",
+"DE","Erdgasverdichter Emsbüren (A167)","109256"
+"DE","Erdgasverdichter Emstek (A583)",
+"DE","Erdgasverdichter Epe (A221)",
+"DE","Erdgasverdichter Friedeburg I (A196)",
+"DE","Erdgasverdichter Gernsheim (A600)","44845"
+"DE","Erdgasverdichter Gstadt (A226)",
+"DE","Erdgasverdichter Hügelheim (A385)","45481"
+"DE","Erdgasverdichter Ichtershausen (A582)",
+"DE","Erdgasverdichter Kempen (A290)",
+"DE","Erdgasverdichter Kirchlinteln (A296)",
+"DE","Erdgasverdichter Köln (A298)",
+"DE","Erdgasverdichter Krummhörn (A321)","70342"
+"DE","Erdgasverdichter Krummhörn Rysum (A322)","73931"
+"DE","Erdgasverdichter Lebus (A325)","46325"
+"DE","Erdgasverdichter Lubmin (A617)","189412"
+"DE","Erdgasverdichter Mittelbrunn I (A381)",
+"DE","Erdgasverdichter Mittelbrunn II (A382)",
+"DE","Erdgasverdichter Olbernhau (A425)","158114"
+"DE","Erdgasverdichter Raguhn (A448)",
+"DE","Erdgasverdichter Rehden (A455)","70344"
+"DE","Erdgasverdichter Rimpar I (A460)",
+"DE","Erdgasverdichter Rimpar II (A461)",
+"DE","Erdgasverdichter Röthenbach (A465)",
+"DE","Erdgasverdichter Rückersdorf (A466)","47065"
+"DE","Erdgasverdichter Salzuflen (A580)",
+"DE","Erdgasverdichter Sayda (A1)","74566"
+"DE","Erdgasverdichter Schechen (A475)","46175"
+"DE","Erdgasverdichter Scheidt (A476)",
+"DE","Erdgasverdichter Schwarzach (A458)","74213"
+"DE","Erdgasverdichter Stolberg (A499)","44050"
+"DE","Erdgasverdichter Teutschenthal (A508)",
+"DE","Erdgasverdichter Velen (A518)",
+"DE","Erdgasverdichter Waidhaus I (A528)","45878"
+"DE","Erdgasverdichter Waidhaus II (A529)","45878"
+"DE","Erdgasverdichter Wardenburg (A533)",
+"DE","Erdgasverdichter Weiden (A538)","74279"
+"DE","Erdgasverdichter Werne (A546)","44679"
+"DE","FA Dampf Steyerberg (A497)",
+"DE","FA Pipeline Dornum (A401)","73929"
+"DE","FA Pipeline Lubmin (A618)","189412"
+"DE","FHW Lohbrügge Nord (A242)",
+"DE","FHW Märkisches Viertel (A44)",
+"DE","FHW Neukölln (A41)",
+"DE","FHW Schwertstraße (A315)",
+"DE","FWKW Marl (A374)",
+"DE","GT Herdecke (A581)",
+"DE","GT Kreuznach (A577)",
+"DE","GT Nortrup (A601)",
+"DE","GT Südraum Saarbrücken (A589)",
+"DE","GT Waltenhofen (A532)",
+"DE","GTKW Ahrensfelde (A5)","46304"
+"DE","GTKW Bielefeld (A54)",
+"DE","GTKW Brunsbüttel (A100)",
+"DE","GTKW Elsfleth (A158)",
+"DE","GTKW Kirchlengern (A295)",
+"DE","GTKW Trebbin (A509)",
+"DE","GTKW Wilhelmshaven (A550)",
+"DE","GuD Aschaffenburg (A754)",
+"DE","GuD Bielefeld (A55)",
+"DE","GuD Braunschweig Mitte (A612)",
+"DE","GuD Chemie-Stade (A613)",
+"DE","GuD Gera (A205)",
+"DE","GuD Halle Dieselstraße (A578)",
+"DE","GuD Hamm (A592)",
+"DE","GuD Hannover Linden (A248)","43426"
+"DE","GuD Hürth (A590)",
+"DE","GuD Jena (A275)",
+"DE","GuD Kirchmöser (A78)",
+"DE","GuD Köln Niehl (A305)","44081"
+"DE","GuD Papier-Plattling (A604)",
+"DE","GuD Plattling (A599)",
+"DE","GuD Saarbrücken (A588)",
+"DE","GuD Wolfen (A554)",
+"DE","GuD Wörth (A579)",
+"DE","HKW Adlershof (A48)",
+"DE","HKW Augsburg (A18)","46064"
+"DE","HKW Bad Salzungen (A19)","47166"
+"DE","HKW Barmen (A564)",
+"DE","HKW Bautzen (A25)","74664"
+"DE","HKW Bielefeld Stadtwerke (A57)",
+"DE","HKW Bochum (A64)",
+"DE","HKW Bonn Nord (A71)",
+"DE","HKW Bonn Süd (A72)",
+"DE","HKW Brandenburg (A79)",
+"DE","HKW Braunschweig Mitte (A80)",
+"DE","HKW Braunschweig Nord (A81)",
+"DE","HKW Bremerhaven-Abfall (A98)","43735"
+"DE","HKW Buch (A43)","46243"
+"DE","HKW Burg (A102)",
+"DE","HKW Charlottenburg (A32)","46247"
+"DE","HKW Chemnitz-Nord (A108)","74579"
+"DE","HKW Cottbus (A110)","46338"
+"DE","HKW Darmstadt (A113)",
+"DE","HKW Dessau (A118)","74829"
+"DE","HKW Dresden Brücke (A131)","74673"
+"DE","HKW Dresden Nord (A129)","74671"
+"DE","HKW Dresden Reick (A130)","74672"
+"DE","HKW Duisburg 1 (A132)","43759"
+"DE","HKW Duisburg 2 (A133)","43889"
+"DE","HKW Duisburg 3 (A134)","43833"
+"DE","HKW Duisburg Walsum (A135)","43866"
+"DE","HKW Düsseldorf Garath (A145)",
+"DE","HKW Eisenach (A154)",
+"DE","HKW Elberfeld (A565)",
+"DE","HKW Erfurt Iderhoffstraße (A169)",
+"DE","HKW Erfurt Ost (A170)","197736"
+"DE","HKW Erlangen (A172)","45950"
+"DE","HKW Fenne (A525)","3124"
+"DE","HKW Flensburg (A181)",
+"DE","HKW Frankfurt/Main Allerheiligen (A187)",
+"DE","HKW Frankfurt/Main Messe (A188)",
+"DE","HKW Frankfurt/Main Niederrad (A189)","44926"
+"DE","HKW Frankfurt/Main Nordwest (A190)","44853"
+"DE","HKW Frankfurt/Main West (A191)","44925"
+"DE","HKW Frankfurt/Oder (A182)","46316"
+"DE","HKW Freiberg (A193)",
+"DE","HKW Freiburg (A195)",
+"DE","HKW Freimann (A388)","45681"
+"DE","HKW Gelsenkirchen Westerholt (A202)",
+"DE","HKW Gießen (A209)","157960"
+"DE","HKW Glückstadt (A211)",
+"DE","HKW Greifswald (A214)",
+"DE","HKW Guben (A227)",
+"DE","HKW Halle Trotha (A232)","74833"
+"DE","HKW Hannover Linden (A609)","43426"
+"DE","HKW HB-Abfall (A97)",
+"DE","HKW Heilbronn (A257)","2434"
+"DE","HKW Heinsberg (A259)",
+"DE","HKW Herne (A261)",
+"DE","HKW Hückelhoven (A267)",
+"DE","HKW Ilmenau (A272)","47086"
+"DE","HKW Kaiserslautern (A278)",
+"DE","HKW Karlsruhe-West (A279)","74192"
+"DE","HKW Kassel (A285)",
+"DE","HKW Kassel Mittelfeld (A283)","44986"
+"DE","HKW Kiel Gemeinschaft (A292)","104959"
+"DE","HKW Kiel Mitte (A291)",
+"DE","HKW Klingenberg (A36)","46241"
+"DE","HKW Köln Merheim (A307)",
+"DE","HKW Köln Merkenich (A308)","44130"
+"DE","HKW Köln Südstadt (A306)","44028"
+"DE","HKW Lankow (A487)",
+"DE","HKW Leipzig (A326)",
+"DE","HKW Lichtenberg (A37)",
+"DE","HKW Lichterfelde (A47)","46249"
+"DE","HKW Ludwigshafen (A351)",
+"DE","HKW Mainz (A360)",
+"DE","HKW Mannheim (A365)",
+"DE","HKW Marbach (A367)","45296"
+"DE","HKW Marienehe (A463)",
+"DE","HKW Meißen (A377)",
+"DE","HKW Mitte (A38)","46242"
+"DE","HKW Moabit (A39)","46248"
+"DE","HKW München-Süd (A389)",
+"DE","HKW Münster Stadtwerke (A398)","44270"
+"DE","HKW Neubrandenburg (A402)","46497"
+"DE","HKW Neumünster (A405)",
+"DE","HKW Nürnberg (A411)",
+"DE","HKW Oberhausen Danziger (A417)",
+"DE","HKW Oberhausen Friedrich (A418)",
+"DE","HKW Offenbach (A424)","44877"
+"DE","HKW Pfaffenwald (A504)","45223"
+"DE","HKW Pforzheim (A433)","2478"
+"DE","HKW Potsdam 1 (A444)",
+"DE","HKW Potsdam 2 (A445)",
+"DE","HKW Potsdam 3 (A441)",
+"DE","HKW Potsdam 4 (A442)",
+"DE","HKW Potsdam 5 (A443)",
+"DE","HKW Reuter (A46)","46246"
+"DE","HKW Reuter West (A33)","46251"
+"DE","HKW Römerbrücke (A471)","3127"
+"DE","HKW Rosenheim (A462)","72459"
+"DE","HKW Rudolstadt (A467)","110494"
+"DE","HKW Rudow I (A42a)",
+"DE","HKW Rudow II (A42b)",
+"DE","HKW Schweinfurt (A485)",
+"DE","HKW Schwerin Süd (A486)","46446"
+"DE","HKW Sindelfingen (A490)",
+"DE","HKW Stuttgart-Gaisburg (A502)","2439"
+"DE","HKW Stuttgart-Münster (A503)","2436"
+"DE","HKW Suhl Bohrhügel (A506)",
+"DE","HKW Tiefstack (A240)","193600"
+"DE","HKW Ulm (A512)",
+"DE","HKW Uni-Freiburg (A194)",
+"DE","HKW Uni-Münster (A397)",
+"DE","HKW Unterföhring (A516)","45680"
+"DE","HKW Wedel (A536)",
+"DE","HKW Wedel GT (A535)",
+"DE","HKW Wilmersdorf (A50)","46250"
+"DE","HKW Würzburg (A568)",
+"DE","Holzkraftwerk Eberswalde (A585)","143035"
+"DE","HW Ahaweg (A280)",
+"DE","HW Altchemnitz (A109)",
+"DE","HW Baumholder (A23)",
+"DE","HW Bottrop Innenstadt (A74)",
+"DE","HW Braunschweig Süd (A82)",
+"DE","HW Braunschweig West (A83)",
+"DE","HW Broich (A663)",
+"DE","HW CONSOL (A203)",
+"DE","HW Daimlerstraße (A513)","45239"
+"DE","HW Dessau (A117)",
+"DE","HW Dillingen (A602)",
+"DE","HW Dinslaken (A123)",
+"DE","HW Duisburg Nord (A136)",
+"DE","HW Erkrath (A171)",
+"DE","HW Erlangen (A173)",
+"DE","HW Essen-Innenstadt (A176)",
+"DE","HW Essen-Nord (A177)",
+"DE","HW Essen-Rüttenscheid (A178)",
+"DE","HW Flenburg Engelsby (A606)",
+"DE","HW Flensburg Nord (A607)",
+"DE","HW Flensburg Süd (A605)",
+"DE","HW Frankfurt/Oder Nord (A183)",
+"DE","HW Fürstenwalde (A199)","46335"
+"DE","HW Gaisbergstraße (A395)",
+"DE","HW Gera (A206)",
+"DE","HW Göttingen (A213)","73904"
+"DE","HW Halle Dieselstraße (A231)","74877"
+"DE","HW HH-Hafen (A241)",
+"DE","HW Kassel (A286)",
+"DE","HW Kassel Losse (A284)",
+"DE","HW Kathi-Kobus-Straße (A393)",
+"DE","HW Kempen (A620)",
+"DE","HW Kiel Nord (A293)",
+"DE","HW Kiel Ost (A294)",
+"DE","HW Köln Deutz (A304)",
+"DE","HW Koppstraße (A394)",
+"DE","HW Kulkwitz (A327)","74745"
+"DE","HW Lange Enden (A45)",
+"DE","HW Langwasser (A414)","189334"
+"DE","HW Lankow (A488)",
+"DE","HW Leipzig Nordost (A328)",
+"DE","HW Leverkusen (A334)",
+"DE","HW Lubmin (A337)",
+"DE","HW Ludwigsfelde (A338)","189390"
+"DE","HW Magdeburg Mitte (A356)",
+"DE","HW Mainz-Lerchenberg (A358)",
+"DE","HW Maxfeld (A413)","74292"
+"DE","HW Minden (A380)",
+"DE","HW Mitte (A255)",
+"DE","HW Moers (A383)",
+"DE","HW Muggenhof (A412)","189335"
+"DE","HW Mümmelmannsberg (A238)",
+"DE","HW München-Freiham (A755)",
+"DE","HW Neubrandenburg Nord  (A403)",
+"DE","HW Neubrandenburg Süd (A404)",
+"DE","HW Nord Luzenberg (A362)",
+"DE","HW Perlach (A396)",
+"DE","HW Pfaffengrund (A253)",
+"DE","HW Plauen (A438)","189424"
+"DE","HW Recklinghausen (A453)",
+"DE","HW Rothensee (A357)","46905"
+"DE","HW RWTH Aachen (A2)",
+"DE","HW Scharnhorststraße (A40)","46244"
+"DE","HW Schwedt (A481)",
+"DE","HW Schweinfurt (A484)",
+"DE","HW Schwerin Süd (A489)",
+"DE","HW Sieker (A58)",
+"DE","HW Strausberg Nord (A500)","74357"
+"DE","HW Theresienstraße (A387)",
+"DE","HW Uni-Bielefeld (A59)",
+"DE","HW Uni-Mainz (A359)",
+"DE","HW Uni-Ulm (A514)",
+"DE","HW Unterbarmen (A566)",
+"DE","HW Vahr (A87)",
+"DE","HW Viehhof (A567)",
+"DE","HW Vogelstang (A363)",
+"DE","HW Zwickau Süd (A574)",
+"DE","IHKW Gütersloh (A229)",
+"DE","IKW Aalen (A3)",
+"DE","IKW Alu Stade (A494)","43348"
+"DE","IKW Amsdorf (A9)",
+"DE","IKW Andernach (A10)","110284"
+"DE","IKW Arneburg (A13)",
+"DE","IKW Auto Düsseldorf  (A146)","43797"
+"DE","IKW Baienfurt (A20)","2597"
+"DE","IKW Barby (A21)","46820"
+"DE","IKW Baruth (A22)",
+"DE","IKW Baunatal (A24)",
+"DE","IKW Bergbau-Unterbreizbach (A515)","73702"
+"DE","IKW Bergheim Fortuna Nord (A28)","44485"
+"DE","IKW Bergisch-Gladbach (A29)",
+"DE","IKW Bergkamen (A30)",
+"DE","IKW Bernburg (A51)",
+"DE","IKW Biotech Krefeld (A314)",
+"DE","IKW Bitterfeld GuD (A60)","46845"
+"DE","IKW Bitterfeld GWRK (A61)",
+"DE","IKW Bochum (A63)",
+"DE","IKW Bomlitz (A70)",
+"DE","IKW Bottrop (A75)",
+"DE","IKW Bremen Brauerei (A85)","73962"
+"DE","IKW Bremen Stahl (A84)",
+"DE","IKW Breuberg (A99)",
+"DE","IKW Brikett-Wachtberg (A192)",
+"DE","IKW Brunsbüttel (A101)",
+"DE","IKW Burghausen (A104)",
+"DE","IKW Burgkirchen (A105)",
+"DE","IKW Castrop-Rauxel (A107)",
+"DE","IKW Chemie Böhlen Ethylen (A68)",
+"DE","IKW Chemie Böhlen Pyrolyse (A67)",
+"DE","IKW Chemie Burghausen (A103)",
+"DE","IKW Chemie Büttel (A106)","43123"
+"DE","IKW Chemie Düsseldorf  (A147)","43996"
+"DE","IKW Chemie Hanau-Wolfgang (A247)","44876"
+"DE","IKW Chemie Krefeld Kessel (A316)",
+"DE","IKW Chemie Krefeld L57 (A318)",
+"DE","IKW Chemie Krefeld N230 (A319)",
+"DE","IKW Chemie Ludwigshafen Ammoniak3 (A339)",
+"DE","IKW Chemie Ludwigshafen Ammoniak4 (A340)",
+"DE","IKW Chemie Ludwigshafen Cracker I (A346)",
+"DE","IKW Chemie Ludwigshafen Cracker II (A347)",
+"DE","IKW Chemie Ludwigshafen Dampf (A341)",
+"DE","IKW Chemie Ludwigshafen GT855 (A342)",
+"DE","IKW Chemie Ludwigshafen GuD211 (A350)",
+"DE","IKW Chemie Ludwigshafen GuD800 (A345)",
+"DE","IKW Chemie Ludwigshafen Mitte (A343)",
+"DE","IKW Chemie Ludwigshafen Nord (A344)",
+"DE","IKW Chemie Ludwigshafen Styrol (A348)",
+"DE","IKW Chemie Ludwigshafen Wasserstoff (A615)",
+"DE","IKW Chemie Marl I-4 (A369)",
+"DE","IKW Chemie Marl I-5 (A370)",
+"DE","IKW Chemie Marl II (A371)",
+"DE","IKW Chemie Marl III-1 (A372)",
+"DE","IKW Chemie Marl III-2 (A373)",
+"DE","IKW Chemie Münchsmünster (R36)","45782"
+"DE","IKW Chemie Poppendorf (A439)","46415"
+"DE","IKW Chemie Rheinberg (A456)","43934"
+"DE","IKW Chemie Schwarzheide (A480)","74374"
+"DE","IKW Chemie Wesseling (A548)",
+"DE","IKW Chemie-E-Stade (A495)",
+"DE","IKW Chemie-Ingelheim (A273)","45143"
+"DE","IKW Chemie-Nordenham (A408)",
+"DE","IKW Chemie-Nünchritz (A409)","74679"
+"DE","IKW Chemie-Wiesbaden (A549)",
+"DE","IKW Chemie-Wilhelmshaven (A552)",
+"DE","IKW Dingolfing (A122)","45848"
+"DE","IKW Duisburg Chemie (A138)","43917"
+"DE","IKW Duisburg Eisen (A137)","43872"
+"DE","IKW Duisburg Hamborn (A140)",
+"DE","IKW Duisburg Huckingen (A142)","43825"
+"DE","IKW Duisburg Ruhrort (A141)",
+"DE","IKW Düren Schoellershammer (A144)","44123"
+"DE","IKW Düren Zanders (A143)",
+"DE","IKW Ehingen (A152)",
+"DE","IKW Eilenburg (A153)","74758"
+"DE","IKW Eisenhüttenstadt (A155)",
+"DE","IKW Emden Dampf (A163)",
+"DE","IKW Emden VW (A164)",
+"DE","IKW Erlenbach (A174)",
+"DE","IKW Ettringen Süd (A180)","46150"
+"DE","IKW FA Kösching (R49)",
+"DE","IKW FA Ost Wilhelmshaven (R47b)",
+"DE","IKW FA West Wilhelmshaven (R47a)",
+"DE","IKW Frankfurt/Main Chemie (A184)","74141"
+"DE","IKW Frankfurt/Main Industriepark I (A185)",
+"DE","IKW Frankfurt/Main Industriepark II (A186)",
+"DE","IKW Geislingen (A201)",
+"DE","IKW Grenzach-Wyhlen II (A216)",
+"DE","IKW Großenkneten (A222)",
+"DE","IKW Hagen Kabel (A230)",
+"DE","IKW Hameln (A243)",
+"DE","IKW Hamm (A244)",
+"DE","IKW Hannover (A251)",
+"DE","IKW Heidenheim (A256)",
+"DE","IKW Heringen (A260)",
+"DE","IKW HH ADM (A233)","193642"
+"DE","IKW HH Airbus (A234)","43220"
+"DE","IKW Ibbenbüren (A270)",
+"DE","IKW Ingolstadt (A274)",
+"DE","IKW Karlsruhe-Raffinerie I (R30)","2466"
+"DE","IKW Karlsruhe-Raffinerie II (R31)","2467"
+"DE","IKW Kelheim (A288)",
+"DE","IKW Klein Wanzleben (A297)",
+"DE","IKW Köln Cracker IV (A309)",
+"DE","IKW Köln Cracker V (A310)",
+"DE","IKW Köln Feuerung (A299)",
+"DE","IKW Köln Godorf (R12)",
+"DE","IKW Köln KW010 (A311)",
+"DE","IKW Könnern (A313)",
+"DE","IKW Ladenburg (A323)",
+"DE","IKW Leuna (R45)",
+"DE","IKW Leuna Abhitze (A331)",
+"DE","IKW Leuna Besicherung (A332)",
+"DE","IKW Leverkusen G (A333)",
+"DE","IKW Leverkusen X (A335)",
+"DE","IKW Ludwigshafen MVV (A349)",
+"DE","IKW Moers (A384)",
+"DE","IKW München-MAN (A390)","72490"
+"DE","IKW München-MTU (A391)","45710"
+"DE","IKW Münchsmünster (R48)",
+"DE","IKW Neuss (A406)",
+"DE","IKW Niederkassel (A407)",
+"DE","IKW Oberhausen (A419)","43884"
+"DE","IKW Osnabrück (A427)",
+"DE","IKW Paderborn (A430)",
+"DE","IKW Papier Arnsberg (A14)","175007"
+"DE","IKW Papier Aschaffenburg (A15)","46010"
+"DE","IKW Papier Diemelstadt (A120)","44971"
+"DE","IKW Papier Karlsruhe (A282)",
+"DE","IKW Papier Schongau (A478)",
+"DE","IKW Papier-Albbruck (A6)",
+"DE","IKW Papier-Alfeld (A7)","43485"
+"DE","IKW Papier-Augsburg (A17)",
+"DE","IKW Papier-Bielefeld (A53)","44396"
+"DE","IKW Papier-Blankenstein (A62)","47117"
+"DE","IKW Papier-Dörpen (A125)","43366"
+"DE","IKW Papier-Eltmann I (A160)","46031"
+"DE","IKW Papier-Eltmann II (A593)","46031"
+"DE","IKW Papier-Fulda (A198)","45027"
+"DE","IKW Papier-Herzberg (A264)","43394"
+"DE","IKW Papier-Hoya (A266)","43439"
+"DE","IKW Papier-Kehl (A287)","45570"
+"DE","IKW Papier-Kriebstein (A320)","74577"
+"DE","IKW Papier-Mannheim (A366)",
+"DE","IKW Papier-Mayen (A375)","157969"
+"DE","IKW Papier-Osnabrück (A428)",
+"DE","IKW Papier-Plattling (A436)",
+"DE","IKW Papier-Varel (A517)","43581"
+"DE","IKW Papier-Weißenborn (A540)","74585"
+"DE","IKW Papier-Witzenhausen (A553)","44982"
+"DE","IKW Papier-Wolpertswende (A558)","2522"
+"DE","IKW Papier-Wörth (A561)","45196"
+"DE","IKW Pharma Darmstadt (A112)",
+"DE","IKW Pharma-Biberach (A584)","45448"
+"DE","IKW Philippsthal (A434)","71805"
+"DE","IKW PKW-Wörth (A560)","45173"
+"DE","IKW PKW-Zwickau (A575)","74589"
+"DE","IKW Raff Burghausen (R33)",
+"DE","IKW Raff Emsland-1 (R51)","43600"
+"DE","IKW Raff Emsland-2 (R52)","43600"
+"DE","IKW Raff Emsland-3 (R53)","43600"
+"DE","IKW Raff Emsland-4 (R54)","43600"
+"DE","IKW Raff Gelsenkirchen (R21)",
+"DE","IKW Raff Gelsenkirchen A7 (R22)",
+"DE","IKW Raff Gelsenkirchen A8 (R23)",
+"DE","IKW Raff Gelsenkirchen Horst (V0001)","44246"
+"DE","IKW Raff Gelsenkirchen Hydrocracker (R24)",
+"DE","IKW Raff Gelsenkirchen Olefin 3 (R25)","44310"
+"DE","IKW Raff Gelsenkirchen Olefin IV (R26)","44310"
+"DE","IKW Raff Hemmingstedt Destillation (R1)","43110"
+"DE","IKW Raff Hemmingstedt Kohlenwasserstoff (R2)","43110"
+"DE","IKW Raff Hemmingstedt KW (R3)","43110"
+"DE","IKW Raff Hemmingstedt Raffination (R4)","43110"
+"DE","IKW Raff Hemmingstedt Weiterverarbeitung (R50)","43110"
+"DE","IKW Raff Holborn Dampferzeuger (R6)","43203"
+"DE","IKW Raff Holborn Prozeß (R7)","43203"
+"DE","IKW Raff Holborn Reaktor (R5)","43203"
+"DE","IKW Raff Köln F1 (R14)","44060"
+"DE","IKW Raff Köln F3201 (R13)","44060"
+"DE","IKW Raff Köln F7101 (R15)","44060"
+"DE","IKW Raff Kösching (R34)","45738"
+"DE","IKW Raff Neustadt (R37)","57014"
+"DE","IKW Raff Schwedt Aromizer (R38)","74350"
+"DE","IKW Raff Schwedt H2B (R43)","74350"
+"DE","IKW Raff Schwedt KW (A482)","74350"
+"DE","IKW Raff Schwedt Mitteldruck (R44)","74350"
+"DE","IKW Raff Schwedt Rohöl 1 (R39)","74350"
+"DE","IKW Raff Schwedt Rohöl 3 (R40)","74350"
+"DE","IKW Raff Schwedt Spaltanlage (R42)","74350"
+"DE","IKW Raff Schwedt VT3 (R41)","74350"
+"DE","IKW Raff Shell CD (R8)","54392"
+"DE","IKW Raff Shell GT (R10)","54392"
+"DE","IKW Raff Shell Platformer (R9)","54392"
+"DE","IKW Raff Vohburg (R35)","56969"
+"DE","IKW Raff Wesseling CCR (R17)","44061"
+"DE","IKW Raff Wesseling D500 (R20)","44061"
+"DE","IKW Raff Wilhelmshaven (R47c)","43584"
+"DE","IKW Raubling (A452)",
+"DE","IKW Regensburg (A454)",
+"DE","IKW Rheinfelden (A457)",
+"DE","IKW Rinnthal (A12)","45175"
+"DE","IKW Rüsselsheim I (A468)","44824"
+"DE","IKW Rüsselsheim II (A469)","44824"
+"DE","IKW Rüsselsheim III (A470)","44824"
+"DE","IKW Salzbergen (A472)",
+"DE","IKW Salzgitter VW (A474)",
+"DE","IKW Schkopau (A379)",
+"DE","IKW Schokolade-Stadtallendorf (A614)",
+"DE","IKW Schwedt (A576)",
+"DE","IKW Sigmundshall (A562)","70341"
+"DE","IKW Stahl-Salzgitter (A473)",
+"DE","IKW Stärke Emlichheim (A610)","43608"
+"DE","IKW Staßfurt (A496)",
+"DE","IKW Stickstoff Wittenberg I (A353)",
+"DE","IKW Stickstoff Wittenberg II (A354)",
+"DE","IKW Stockstadt (A498)",
+"DE","IKW Uetersen (A511)","43115"
+"DE","IKW Wählitz (A527)","46985"
+"DE","IKW Weinheim (A539)","45307"
+"DE","IKW Werne F (A542)","44732"
+"DE","IKW Werne G (A543)","44732"
+"DE","IKW Werne H (A544)","44732"
+"DE","IKW Werne I (A545)","44732"
+"DE","IKW Wesseling (R16)",
+"DE","IKW Wesseling Feuerung (R18)",
+"DE","IKW Wesseling GT (A302)",
+"DE","IKW Wesseling KW2 (A312)",
+"DE","IKW Wesseling Ofen 4 (A300)",
+"DE","IKW Wesseling Ofen 6 (A301)",
+"DE","IKW Wesseling Olefin (R19)","74009"
+"DE","IKW Wittenberg (A355)",
+"DE","IKW Wolfsburg Nord/Süd (A556)",
+"DE","IKW Wolfsburg West (A557)",
+"DE","IKW Worms (A559)",
+"DE","IKW Zielitz (A570)","46986"
+"DE","IKW Zucker-Anklam (A11)","46541"
+"DE","IKW Zucker-E1-Zeitz (A569)","46955"
+"DE","IKW Zucker-E3-Zeitz (A329)","46955"
+"DE","IKW Zucker-Jülich (A276)","44128"
+"DE","IKW Zucker-Obrigheim (A421)","45168"
+"DE","IKW Zucker-Offenau (A422)","2532"
+"DE","IKW Zucker-Plattling (A437)","45821"
+"DE","IKW Zülpich 1 (A572)",
+"DE","IKW Zülpich 2 (A591)",
+"DE","IKW ZUSATZ Wittenberg (A619)",
+"DE","KW Altbach (A8)","2450"
+"DE","KW Bergkamen (A31)",
+"DE","KW Bexbach (A52)","3123"
+"DE","KW Bochum (A65)",
+"DE","KW Boxberg III (A76)",
+"DE","KW Boxberg IV (A77)",
+"DE","KW Buschhaus (A479)",
+"DE","KW Datteln 6/7 (A115)","44292"
+"DE","KW Delitzsch (A116)",
+"DE","KW Dillingen (A608)",
+"DE","KW Dormagen GT1 (A124)",
+"DE","KW Dormagen GT2 (A595)",
+"DE","KW Dormagen GuD (A596)","70917"
+"DE","KW Dortmund Weißenburgerstraße (A126)",
+"DE","KW Duisburg TKS-Gase (A139)","43742"
+"DE","KW Düsseldorf Flingern (A148)","43878"
+"DE","KW Emden (A161)",
+"DE","KW Ensdorf (A168)","3139"
+"DE","KW Farge (A88)","43708"
+"DE","KW Franken (A416)","45952"
+"DE","KW Frimmersdorf (A218)","43783"
+"DE","KW Goldenberg (A268)","44057"
+"DE","KW Großkayna (A223)","110479"
+"DE","KW Gustav Knepper (A127)","44708"
+"DE","KW Hannover (A249)",
+"DE","KW Hannover Herrenhausen (A250)",
+"DE","KW Hastedt 14 (A89)","43717"
+"DE","KW Hastedt 15 (A90)","43717"
+"DE","KW Hastedt Spitze (A91)","43717"
+"DE","KW Hausham (A252)",
+"DE","KW HB-Hafen 5 (A92)",
+"DE","KW HB-Hafen 6 (A93)",
+"DE","KW Heyden (A432)","44414"
+"DE","KW Ibbenbüren (A271)",
+"DE","KW Ingolstadt (A225)","45677"
+"DE","KW Irsching (A524)","45678"
+"DE","KW Jänschwalde Block A (A745)","46361"
+"DE","KW Jänschwalde Block B (A746)","46361"
+"DE","KW Jänschwalde Block C (A747)","46361"
+"DE","KW Jänschwalde Block D (A748)","46361"
+"DE","KW Jänschwalde Block E (A749)","46361"
+"DE","KW Jänschwalde Block F (A750)","46361"
+"DE","KW Lausward (A149)","43802"
+"DE","KW Lingen (A336)",
+"DE","KW Lippendorf (A69)","74740"
+"DE","KW Lünen (A352)",
+"DE","KW Lünen Stummhafen (A662)",
+"DE","KW Mannheim (A361)",
+"DE","KW Mehrum (A376)","43260"
+"DE","KW Mittelsbüren 3 (A94)","43719"
+"DE","KW Mittelsbüren 4 (A95)","43719"
+"DE","KW Neurath (A219)","43843"
+"DE","KW Niederaußem Block A B (A621)","44073"
+"DE","KW Niederaußem Block C (A622)","44073"
+"DE","KW Niederaußem Block D (A623)","44073"
+"DE","KW Niederaußem Block E (A624)","44073"
+"DE","KW Niederaußem Block F (A625)","44073"
+"DE","KW Niederaußem Block G (A626)","44073"
+"DE","KW Niederaußem Block H (A627)","44073"
+"DE","KW Niederaußem Block K (A628)","44073"
+"DE","KW Oldendorf (A426)",
+"DE","KW Osterrönfeld Audorf (A429)",
+"DE","KW Pharma-Mannheim (A364)",
+"DE","KW Pleinting (A520)",
+"DE","KW Porta Westfalica (A440)","44408"
+"DE","KW Quierschied Weiher (A447)","3125"
+"DE","KW Rheinhafen (A281)","2469"
+"DE","KW Robert Frank (A324)","43436"
+"DE","KW Rostock (A464)",
+"DE","KW Schkopau (A477)",
+"DE","KW Scholven (A204)","74041"
+"DE","KW Schwarze Pumpe (A493)","46366"
+"DE","KW Shamrock 1-4 (A262)","44697"
+"DE","KW Spreetal (A492)",
+"DE","KW Staudinger (A224)","44894"
+"DE","KW Voerde AB (A523)",
+"DE","KW Voerde GKW West (A522)",
+"DE","KW Völklingen (A526)",
+"DE","KW Walheim (A531)","2459"
+"DE","KW Weisweiler C/D (A629)","44162"
+"DE","KW Weisweiler E (A630)","44162"
+"DE","KW Weisweiler F (A631)","44162"
+"DE","KW Weisweiler G (A632)","44162"
+"DE","KW Weisweiler H (A633)","44162"
+"DE","KW Weisweiler VGTG (A634)","44162"
+"DE","KW Weisweiler VGTH (A635)","44162"
+"DE","KW Werdohl-Elverlingsen (A541)",
+"DE","KW Wilhelmshaven (A551)","43585"
+"DE","KW Zolling (A571)",
+"DE","KWKK Heidelberg (A254)",
+"DE","Modellkraftwerk Völklingen (A587)",
+"DK","A/S Dansk Shell, Shell-Raffinaderiet Fredericia","6394"
+"DK","A/S Dansk Shell, Shell-Raffinaderiet Fredericia","6394"
+"DK","AarhusKarlshamn Denmark A/S","189653"
+"DK","AffaldVarme Aarhus",
+"DK","AffaldVarme Aarhus",
+"DK","AffaldVarme Aarhus",
+"DK","AffaldVarme Aarhus",
+"DK","AffaldVarme Aarhus",
+"DK","Albertslund Varmeværk","189550"
+"DK","Albertslund Varmeværk","189550"
+"DK","Borgmester Jørgensensen Vej, BJV",
+"DK","Brøndby Strand Varmecentral",
+"DK","Daka SecAnim",
+"DK","Dalum Papir A/S",
+"DK","Dalum Papir A/S",
+"DK","Danske Commodities",
+"DK","DONG A/S - Esbjergværket","6879"
+"DK","Dong A/S Enstedværket","10504"
+"DK","Dong A/S Enstedværket","10504"
+"DK","Dong Energy A/S Avedøreværket","9893"
+"DK","Dong Energy A/S Avedøreværket","9893"
+"DK","Dong Energy A/S Avedøreværket","9893"
+"DK","Dong Energy A/S Avedøreværket","9893"
+"DK","Dong Energy A/S H.C. Ørsted Værket","6903"
+"DK","Dong Energy A/S H.C. Ørsted Værket","6903"
+"DK","Dong Energy A/S H.C. Ørsted Værket","6903"
+"DK","Dong Energy A/S Herningværket","6883"
+"DK","Dong Energy A/S Kyndbyværket","8975"
+"DK","Dong Energy A/S Kyndbyværket","8975"
+"DK","Dong Energy A/S Kyndbyværket","8975"
+"DK","Dong Energy A/S Skærbækværket ","10318"
+"DK","Dong Energy A/S Stigsnæsværket",
+"DK","Dong Energy A/S Studstrupværket","10313"
+"DK","Dong Energy A/S Svanemølleværket","6899"
+"DK","Dong Energy A/S Svanemølleværket","6899"
+"DK","DONG Energy, Asnæsværket","9603"
+"DK","DONG Energy, Asnæsværket","9603"
+"DK","Dupont Nutrition Biosciences Aps","6204"
+"DK","Esbjerg Forsyning A/S Citycentralen",
+"DK","Esbjerg Forsyning A/S Sædding Varmeværk",
+"DK","Fjernvarme Fyn A/S (Billedskærervej Varmecentral)",
+"DK","Fjernvarme Fyn A/S (Centrum Varmecentral)",
+"DK","Fjernvarme Fyn A/S (Dalum Varmecentral)",
+"DK","Fjernvarme Fyn A/S (Sydøst Varmecentral)",
+"DK","Fjernvarme Fyn A/S (Vollsmose Varmecentral)",
+"DK","Frederiksberg Spidslastcentral kedel 1,2, 3 og 4",
+"DK","Frederikshavn Kraftvarmeværk",
+"DK","Gasværksvej, GVV",
+"DK","Gasværksvej, GVV",
+"DK","Gasværksvej, GVV",
+"DK","Grenaa Kraftvarmeværk - Verdo","189659"
+"DK","Helsingør Kraftvarmeværk A/S","6906"
+"DK","Helsingør Kraftvarmeværk A/S","6906"
+"DK","Hillerød Kraftvarmeværk","189696"
+"DK","Hjørring Varmeforsyning",
+"DK","Høje Gladsaxe Spidslastcentral",
+"DK","I/S Vestforbrænding ","10452"
+"DK","Ishøj Varmeværk",
+"DK","Københavns Lufthavns Kedelcentral, KLC2",
+"DK","Lygten Varmeværk (HOFOR)","189634"
+"DK","Lyngvejen, LYV",
+"DK","Nordic Sugar Nakskov",
+"DK","Nordic Sugar Nykøbing","6210"
+"DK","ØSTKRAFT Produktion A/S","9658"
+"DK","ØSTKRAFT Produktion A/S","9658"
+"DK","ØSTKRAFT Produktion A/S","9658"
+"DK","Østre Varmecentral (HOFOR)",
+"DK","Silkeborg Varme","189548"
+"DK","Silkeborg Varme","189548"
+"DK","Skive Fjernvarme a.m.b.a.","189593"
+"DK","Skive Fjernvarme a.m.b.a.","189593"
+"DK","Statoil Refining Denmark","10286"
+"DK","Statoil Refining Denmark","10286"
+"DK","Sundholm Varmecentral (HOFOR)",
+"DK","Svendborgvej, SVV",
+"DK","Svendborgvej, SVV",
+"DK","Svendborgvej, SVV",
+"DK","Svendborgvej, SVV",
+"DK","Svendborgvej, SVV",
+"DK","Triple Nine Fish Protein A.M.B.A.",
+"DK","Varmecentral Holstebrovej",
+"DK","Varmecentral Holstebrovej",
+"DK","Varmecentralen Hostrupsgade 45",
+"DK","Varmeværket Hovedcentralen",
+"DK","Vattenfall A/S Amagerværket","6901"
+"DK","Vattenfall A/S Amagerværket","6901"
+"DK","Vattenfall A/S Amagerværket","6901"
+"DK","Vattenfall A/S Nordjyllandsværket",
+"DK","Vattenfall A/S Nordjyllandsværket",
+"DK","Vattenfall A/S, Fynsværket","6881"
+"DK","Vattenfall A/S, Fynsværket","6881"
+"DK","VEKS Køge Kraftvarmeværk","189681"
+"DK","Verdo Produktion A/S, Randers","9857"
+"DK","Viborg Kraftvarme A/S","10455"
+"DK","Viborg Kraftvarme A/S","10455"
+"EE","Alexela Sillamäe AS","189698"
+"EE","Anne Soojus AS","16940"
+"EE","Anne Soojus AS","16955"
+"EE","Anne Soojus AS, koostootmisjaam","101418"
+"EE","Eesti Energia AS, Iru Elektrijaam","5897"
+"EE","Eesti Energia Narva Elektrijaamad AS, Balti Elektrijaam","5951"
+"EE","Eesti Energia Narva Elektrijaamad AS, Eesti Elektrijaam","16925"
+"EE","Fortum Termest AS","5821"
+"EE","Fortum Termest AS, Niidu katlamaja","158370"
+"EE","Horizon Tselluloosi ja Paberi AS","5742"
+"EE","Narva Elektrijaamad AS, Balti Elektrijaam, fluidised bed combustion","5951"
+"EE","Narva Elektrijaamad AS, Balti Elektrijaam, pulverised combustion","5951"
+"EE","Narva Elektrijaamad AS, Balti Elektrijaam, reserve boiler house","5951"
+"EE","Narva Elektrijaamad AS, Eesti Elektrijaam, fluidised bed combustion","5952"
+"EE","Narva Elektrijaamad AS, Eesti Elektrijaam, pulverised combustion","5952"
+"EE","Sillamäe Soojuselektrijaam AS","5834"
+"EE","Tallinna Elektrijaam OÜ","101411"
+"EE","Tallinna Küte AS, Kadaka katlamaja","158367"
+"EE","Tallinna Küte AS, Mustamäe katlamaja","158367"
+"EE","Tallinna Küte AS, Ülemiste katlamaja","158367"
+"EE","VKG Energia OÜ, Põhjajaam","5942"
+"EE","VKG Soojus AS, Tipu- ja reservkatlamaja","5944"
+"EL","ALUMINIUM S.A 1","14172"
+"EL","ALUMINIUM S.A 2","14172"
+"EL","ALUMINIUM S.A CHP Unit 3","14172"
+"EL","ALUMINIUM S.A CHP Unit 4","14172"
+"EL","ALUMINIUM S.A CHP Unit 5","14172"
+"EL","ELPEDISON - THESSALONIKI (ex ELPEDISON (ex ENERGIAKI)) Power Plant","58413"
+"EL","ELPEDISON - THISVI Power Plant","177551"
+"EL","Hellenic Petroleum - Aspropyrgos - 1 (Central stack) ","14290"
+"EL","Hellenic Petroleum - Aspropyrgos - 2 (L2101)","14290"
+"EL","Hellenic Petroleum - Aspropyrgos - 3 (L2001 / L2051)","14290"
+"EL","Hellenic Petroleum - Elefsina - 1 (CDU III) ","14291"
+"EL","Hellenic Petroleum - Thessaloniki - 1 (F-101)","14232"
+"EL","Hellenic Petroleum - Thessaloniki - 2 (SG931/41)","14232"
+"EL","Hellenic Petroleum - Thessaloniki - 3 (F1401/2/3)","14232"
+"EL","Heron II Voiotias S.A. ","177553"
+"EL","Heron Thermoelectric S.A. ","177553"
+"EL","KORINTHOS POWER - POWER PLANT COMBINED CYCLE","191317"
+"EL","Motor Oil 1","14201"
+"EL","Motor Oil 2","14201"
+"EL","Motor Oil 3","14201"
+"EL","PPC S.A. - Ag. Dimitrios ST ΙII-IV","14245"
+"EL","PPC S.A. -Ag. Dimitrios ST V","14245"
+"EL","PPC S.A. -Ag. Dimitrios ST Ι-II","14245"
+"EL","PPC S.A. -Ag. Georgios ST VIII-IX","14299"
+"EL","PPC S.A. -Aliveri ST IV","14183"
+"EL","PPC S.A. -Aliveri ST ΙΙΙ","14183"
+"EL","PPC S.A. -Amyntaio ST Ι-II","14254"
+"EL","PPC S.A. -Atherinolakkos ST I-II","14278"
+"EL","PPC S.A. -Chania CC",
+"EL","PPC S.A. -Chania GT 1",
+"EL","PPC S.A. -Chania GT 11",
+"EL","PPC S.A. -Chania GT 12",
+"EL","PPC S.A. -Chania GT 13",
+"EL","PPC S.A. -Chania GT 4",
+"EL","PPC S.A. -Chania GT 5",
+"EL","PPC S.A. -Kardia ST Ι","14247"
+"EL","PPC S.A. -Kardia ST ΙI","14247"
+"EL","PPC S.A. -Kardia ST ΙII","14247"
+"EL","PPC S.A. -Kardia ST ΙV","14247"
+"EL","PPC S.A. -Komotini CC","14262"
+"EL","PPC S.A. -Lavrio CC 3","14287"
+"EL","PPC S.A. -Lavrio CC 4","14287"
+"EL","PPC S.A. -Lavrio CC 5","14287"
+"EL","PPC S.A. -Lavrio ST Ι","14287"
+"EL","PPC S.A. -Lavrio ST ΙΙ","14287"
+"EL","PPC S.A. -Linoperamata GT 1","14276"
+"EL","PPC S.A. -Linoperamata GT 2","14276"
+"EL","PPC S.A. -Linoperamata GT 3","14276"
+"EL","PPC S.A. -Linoperamata GT 5","14276"
+"EL","PPC S.A. -Linoperamata ST IV","14276"
+"EL","PPC S.A. -Linoperamata ST V","14276"
+"EL","PPC S.A. -Linoperamata ST VI","14276"
+"EL","PPC S.A. -Liptol ST I-II","14248"
+"EL","PPC S.A. -Megalopoli ST Ι","14192"
+"EL","PPC S.A. -Megalopoli ST ΙI","14192"
+"EL","PPC S.A. -Megalopoli ST ΙII","14192"
+"EL","PPC S.A. -Megalopoli ST ΙV","14192"
+"EL","PPC S.A. -Meliti ST I","14255"
+"EL","PPC S.A. -Ptolemaida ST ΙII","14246"
+"EL","PPC S.A. -Ptolemaida ST Ι-II","14246"
+"EL","PPC S.A. -Ptolemaida ST ΙV","14246"
+"EL","PPC S.A. -Rodos GT 1","14265"
+"EL","PPC S.A. -Rodos GT 2","14265"
+"EL","PPC S.A. -Rodos GT 3","14265"
+"EL","PPC S.A. -Rodos GT 4","14265"
+"EL","PROTERGIA POWER PLANT COMBINED CYCLE","177550"
+"EL","Thermie Serres District Heating Plant",
+"ES","BIOMASA SANGÜESA","7257"
+"ES","C.T. BAHIA DE ALGECIRAS I",
+"ES","C.T. BAHIA DE ALGECIRAS II",
+"ES","CASTELLON II-BP  ","10573"
+"ES","CEPSA QUÍMICA Horno B-401","5997"
+"ES","COGECAN SLU","8989"
+"ES","CT ABOÑO I","8521"
+"ES","CT ABOÑO II","8521"
+"ES","CT ACECA I","7004"
+"ES","CT ACECA II","7004"
+"ES","CT ALCUDIA I-II","6617"
+"ES","CT ALCUDIA III-IV","6617"
+"ES","CT ANLLARES I","8867"
+"ES","CT AS PONTES I-II-III-IV","8972"
+"ES","CT BARRANCO TIRAJANA I","7427"
+"ES","CT BARRANCO TIRAJANA II","7427"
+"ES","CT Biomasa Energía de la Loma","10171"
+"ES","CT Biomasa Energías de la Mancha","24980"
+"ES","CT CANDELARIA Foco C (GV3 y 4)","7426"
+"ES","CT CANDELARIA Foco D (GV5 y 6)","7426"
+"ES","CT CASTELLON  I",
+"ES","CT CASTELLON II",
+"ES","CT CERCS I","7691"
+"ES","CT COMPOSTILLA I (G 2 y 3)","8971"
+"ES","CT COMPOSTILLA II (G 4 y 5)","8971"
+"ES","CT CRISTOBAL COLON III","6877"
+"ES","CT CRISTOBAL COLON I-II","6877"
+"ES","CT EIVISSA III-END  ","6595"
+"ES","CT EIVISSA IV-END  ","6595"
+"ES","CT EIVISSA V-END  ","6595"
+"ES","CT EIVISSA VI-END  ","6595"
+"ES","CT ELCOGAS","8905"
+"ES","CT ESCOMBRERAS IV","9011"
+"ES","CT ESCOMBRERAS V","9011"
+"ES","CT ESCUCHA I",
+"ES","CT FOIX I",
+"ES","CT GRANADILLA I","7423"
+"ES","CT GRANADILLA II","7423"
+"ES","CT GUIA DE ISORA I-END","175416"
+"ES","CT JINAMAR Foco A (GV1)","7429"
+"ES","CT JINAMAR Foco B (GV2 Y 3)","7429"
+"ES","CT JINAMAR Foco C (GV4)","7429"
+"ES","CT JINAMAR Foco D (GV5)","7429"
+"ES","CT LA PEREDA","6956"
+"ES","CT LA ROBLA  I","8959"
+"ES","CT LA ROBLA  II","8959"
+"ES","CT LADA III","9010"
+"ES","CT LADA IV","9010"
+"ES","CT LAS SALINAS II-END  ","7431"
+"ES","CT LITORAL I-II","8973"
+"ES","CT LOS BARRIOS I","8967"
+"ES","CT LOS GUINCHOS II-END",
+"ES","CT MAÓ III-END  ","6634"
+"ES","CT MAÓ IV-END  ","6634"
+"ES","CT MAÓ V-END  ","6634"
+"ES","CT MEIRAMA I","8957"
+"ES","CT NARCEA I","8958"
+"ES","CT NARCEA II","8958"
+"ES","CT NARCEA III","8958"
+"ES","CT PASAJES I","9199"
+"ES","CT PUENTE NUEVO I","7690"
+"ES","CT PUERTOLLANO I",
+"ES","CT SABON I","8956"
+"ES","CT SABON II","8956"
+"ES","CT SAN ADRIAN I",
+"ES","CT SAN ADRIAN III",
+"ES","CT SANTURCE I",
+"ES","CT SANTURCE II",
+"ES","CT SNIACE Cogen. 1","8935"
+"ES","CT SNIACE Cogen. 2","8935"
+"ES","CT SOTO DE RIBERA III","8520"
+"ES","CT SOTO DE RIBERA I-II","8520"
+"ES","CT TERUEL I-II-III","8966"
+"ES","CT VELILLA I","9013"
+"ES","CT VELILLA II","9013"
+"ES","CTC GUIA DE ISORA II-END","175416"
+"ES","CTCC ACECA-GN 4","7004"
+"ES","CTCC ACECA-IB 3","7004"
+"ES","CTCC AMOREBIETA-BE 1",
+"ES","CTCC AMOREBIETA-BE 2",
+"ES","CTCC ARCOS DE LA FRONTERA-IB 1","24499"
+"ES","CTCC ARCOS DE LA FRONTERA-IB 2","24499"
+"ES","CTCC ARCOS DE LA FRONTERA-IB 3","24499"
+"ES","CTCC ARCOS DE LA FRONTERA-IB 4","24499"
+"ES","CTCC ARRUBAL-CG 1","9855"
+"ES","CTCC ARRUBAL-CG 2","9855"
+"ES","CTCC AS PONTES-END 1","8972"
+"ES","CTCC AS PONTES-END 2","8972"
+"ES","CTCC BAHIA ALGECIRAS-E.ON CC I-1","175415"
+"ES","CTCC BAHIA ALGECIRAS-E.ON CC I-2","175415"
+"ES","CTCC BAHIA DE BIZKAIA-BBE 1","10320"
+"ES","CTCC BAHIA DE BIZKAIA-BBE 2","10320"
+"ES","CTCC BARCELONA-GN 1  ","175374"
+"ES","CTCC BARCELONA-GN 2  ","175374"
+"ES","CTCC BARRANCO DE TIRAJANA-END I-1","7427"
+"ES","CTCC BARRANCO DE TIRAJANA-END I-2","7427"
+"ES","CTCC BARRANCO DE TIRAJANA-END II-1","7427"
+"ES","CTCC BARRANCO DE TIRAJANA-END II-2","7427"
+"ES","CTCC BESOS-END 3",
+"ES","CTCC BESOS-END 5-1","175419"
+"ES","CTCC BESOS-END 5-2","175419"
+"ES","CTCC BESOS-GN 4","9795"
+"ES","CTCC CAMPO DE GILBRALTAR-GN 1","10187"
+"ES","CTCC CAMPO DE GILBRALTAR-GN 2","10187"
+"ES","CTCC CARTAGENA-GN 1",
+"ES","CTCC CARTAGENA-GN 2",
+"ES","CTCC CARTAGENA-GN 3",
+"ES","CTCC CAS TRESORER END I-1","84899"
+"ES","CTCC CAS TRESORER END I-2","84899"
+"ES","CTCC CAS TRESORER END II-1","84899"
+"ES","CTCC CAS TRESORER END II-2","84899"
+"ES","CTCC CASTEJON-HC 1","9308"
+"ES","CTCC CASTEJON-HC 3","9308"
+"ES","CTCC CASTEJON-IB 2","9308"
+"ES","CTCC CASTELLON-IB 1",
+"ES","CTCC CASTELLON-IB 2",
+"ES","CTCC CASTELLON-IB 3",
+"ES","CTCC CASTELLON-IB 4",
+"ES","CTCC CASTELNOU-EL 1","24484"
+"ES","CTCC CASTELNOU-EL 2","24484"
+"ES","CTCC CRISTOBAL COLON-END 1",
+"ES","CTCC ESCATRON ENVI 1-E.ON","7687"
+"ES","CTCC ESCATRON ENVI 2-E.ON","7687"
+"ES","CTCC ESCOMBRERAS FANGAL-AES 1",
+"ES","CTCC ESCOMBRERAS FANGAL-AES 2",
+"ES","CTCC ESCOMBRERAS FANGAL-AES 3",
+"ES","CTCC ESCOMBRERAS-IB 1","24725"
+"ES","CTCC ESCOMBRERAS-IB 2","24725"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 1","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 2","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 3","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 4","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 5  ","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 6  ","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 7  ","24548"
+"ES","CTCC GLOBAL 3 ESCATRON Peaker 8  ","24548"
+"ES","CTCC GRANADILLA-END I","7423"
+"ES","CTCC GRANADILLA-END II","7423"
+"ES","CTCC GRANADILLA-END II-1","7423"
+"ES","CTCC GRANADILLA-END II-2","7423"
+"ES","CTCC MALAGA-GN 1 ",
+"ES","CTCC PALOS DE LA FRONTERA I-1 GN",
+"ES","CTCC PALOS DE LA FRONTERA I-2 GN",
+"ES","CTCC PALOS DE LA FRONTERA I-3 GN",
+"ES","CTCC PLANA DEL VENT-ANALP 1","25075"
+"ES","CTCC PLANA DEL VENT-ANALP 2","25075"
+"ES","CTCC SABON-GN 1",
+"ES","CTCC SAGUNTO-GN 1",
+"ES","CTCC SAGUNTO-GN 2",
+"ES","CTCC SAGUNTO-GN 3",
+"ES","CTCC SAN ROQUE-END 2","10172"
+"ES","CTCC SAN ROQUE-GN 1","10172"
+"ES","CTCC SANTURCE-IB 4",
+"ES","CTCC SON REUS-END I-1",
+"ES","CTCC SON REUS-END I-2",
+"ES","CTCC SON REUS-END I-3",
+"ES","CTCC SON REUS-END II-1",
+"ES","CTCC SON REUS-END II-2",
+"ES","CTCC SOTO RIBERA-HC 1","123663"
+"ES","CTCC SOTO RIBERA-HC 2  ","123663"
+"ES","CTCC TARRAGONA POWER-IB 1","8093"
+"ES","CTCC TARRAGONA-E.ON 1","10280"
+"ES","Dow Chemical Ibérica, Caldera F-1010","8335"
+"ES","Dow Chemical Ibérica, Caldera F-1014","8335"
+"ES","Dow Chemical Ibérica, Foco F-1803","8335"
+"ES","ESCATRON I",
+"ES","IQA, Caldera F-5103",
+"ES","Ref. Castellón","10573"
+"ES","Ref. Cepsa Gibraltar - Cogeneración Lubrisur","6790"
+"ES","Ref. Cepsa Gibraltar - Gibraltar Crudo 3","6790"
+"ES","Ref. Cepsa Gibraltar - Gibraltar F1 Aromáticos","6790"
+"ES","Ref. Cepsa Gibraltar - Gibraltar F2 Combustibles","6790"
+"ES","Ref. Cepsa Gibraltar - Gibraltar F3 (1) Energía","6790"
+"ES","Ref. Cepsa Gibraltar - Gibraltar F4 (2) Lubrisur","6790"
+"ES","Ref. Cepsa Gibraltar - Gibraltar RZ-100","6790"
+"ES","Ref. Cepsa La Rabida - Cogeneración","6802"
+"ES","Ref. Cepsa La Rabida - Crudo2 / Vacio3 / H4",
+"ES","Ref. Cepsa La Rabida - HR2",
+"ES","Ref. Cepsa La Rabida - La Rabida 1","6805"
+"ES","Ref. Cepsa La Rabida - La Rabida 2","6805"
+"ES","Ref. Cepsa La Rabida - La Rabida 3","6805"
+"ES","Ref. Cepsa Tenerife",
+"ES","Ref. Petronor Bilbao-Chimenea 1","9118"
+"ES","Ref. Petronor Bilbao-Chimenea 2","9118"
+"ES","Ref. Petronor Bilbao-Chimenea 3","9118"
+"ES","Ref. Petronor Bilbao-Producción Hidrógeno H4","9118"
+"ES","Ref. Puertollano Producción Vapor 100 F-4 A/B",
+"ES","Ref. Puertollano Producción Vapor 100 F-7A",
+"ES","Ref. Repsol Petróleo  La Coruña Conversión","6896"
+"ES","Ref. Repsol Petróleo  La Coruña Ref 1","6896"
+"ES","Ref. Repsol Petróleo Cartagena  Caldera 10","6900"
+"ES","Ref. Repsol Petróleo Cartagena  Caldera 7","6900"
+"ES","Ref. Repsol Petróleo Cartagena  Caldera 8","6900"
+"ES","Ref. Repsol Petróleo Cartagena  Caldera 9","6900"
+"ES","Ref. Repsol Petróleo Cartagena Calderas 12-13","6900"
+"ES","Ref. Repsol Petróleo Cartagena Coogeneración 2","6900"
+"ES","Ref. Repsol Petróleo Cartagena Hidrógeno 1","6900"
+"ES","Ref. Repsol Petróleo Cartagena Hidrógeno 2","6900"
+"ES","Ref. Repsol Petróleo Cartagena Topping 3","6900"
+"ES","Ref. Repsol Petróleo Cartagena Topping-Hidrocaquer-Desulfuración","6900"
+"ES","Ref. Repsol Petróleo Cartagena Vacio-Coquer","6900"
+"ES","Ref. Repsol Petróleo La Coruña Ref 2","6896"
+"ES","Ref. Repsol Petróleo Puertollano Prod. Vapor 20 Este","6927"
+"ES","Ref. Repsol Petróleo Puertollano Prod. Vapor 20 Oeste","6927"
+"ES","Ref. Repsol Petróleo Puertollano Refinería I","6927"
+"ES","Ref. Repsol Petróleo Puertollano Refinería II","6927"
+"ES","Ref. Repsol Tarragona Chimenea 1","6897"
+"ES","Ref. Repsol Tarragona Chimenea 2","6897"
+"ES","Ref. Repsol Tarragona Conducto Hidrocracker","6897"
+"ES","Ref. Repsol Tarragona Horno F 1001/2","6897"
+"ES","Ref. Repsol Tarragona Horno F-1003/4","6897"
+"ES","Ref. Repsol Tarragona Horno F-1016","6897"
+"ES","Ref. Repsol Tarragona Horno F-1017","6897"
+"ES","SAICA",
+"ES","SAN CIPRIAN A",
+"ES","SAN CIPRIAN B",
+"ES","SAN CIPRIAN C",
+"ES","TARRAGONA POWER-Caldera 1","8093"
+"ES","TARRAGONA POWER-Caldera 2","8093"
+"ES","TORRAS CALDERA",
+"ES","TORRELAVEGA SOLVAY",
+"ES","ZABALGARBI  ","10334"
+"FI","Äänevoima Oy, Boiler","8303"
+"FI","Äänevoima Oy, Boiler 2","8303"
+"FI","Avilon Oy, Boiler 1","7739"
+"FI","Avilon Oy, Boiler 5","7739"
+"FI","Etelä-Savon Energia Oy, Pursiala plant I","9002"
+"FI","Etelä-Savon Energia Oy, Pursiala plant II","9002"
+"FI","Fingrid Oyj Tolkkinen, Gas turbine 1 73 MW",
+"FI","Fingrid Oyj Tolkkinen, Gas turbine 2 73 MW",
+"FI","Fingrid Oyj Tolkkinen, Gas turbine 3 73 MW",
+"FI","Fingrid Oyj Tolkkinen, Gas turbine 4 73 MW",
+"FI","Fingrid Oyj, Forssan varavoimalaitos (470 MW), Gas turbine 1 (GT1) 470 MW","189916"
+"FI","Fingrid Oyj, Forssan varavoimalaitos (470 MW), Gas turbine 2 (GT2) 470 MW","189916"
+"FI","Fingrid Oyj, Huutokoski reserve Gas Turbine",
+"FI","Fingrid Oyj, Kilpilahti Gas turbine",
+"FI","Fingrid Oyj, Kristiinankaupunki Gas turbine 1",
+"FI","Fingrid Oyj, Kristiinankaupunki Gas turbine 2",
+"FI","Fingrid Oyj, Loviisa, Gas turbine 1 ",
+"FI","Fingrid Oyj, Loviisa, Gas turbine 2 ",
+"FI","Fingrid Oyj, Naantali, Gas turbine 1",
+"FI","Fingrid Oyj, Naantali, Gas turbine 2 ",
+"FI","Fingrid Oyj, Olkiluoto, 66 MW Gas turbine 1/1","189898"
+"FI","Fingrid Oyj, Olkiluoto, 66 MW Gas turbine 1/2","189898"
+"FI","Fingrid Oyj, Olkiluoto, 66 MW Gas turbine 2/1","189898"
+"FI","Fingrid Oyj, Olkiluoto, 66 MW Gas turbine 2/2","189898"
+"FI","Fingrid Oyj, Porvoo, Gas turbine 1",
+"FI","Fingrid Oyj, Porvoo, Gas turbine 2 ",
+"FI","Fingrid Oyj, Tahkoluoto Gas turbine 1",
+"FI","Fingrid Oyj, Tahkoluoto Gas turbine 2",
+"FI","Fingrid Oyj, Vaasa Gas turbine plant, KWU",
+"FI","Fingrid Oyj, Vanaja Gas turbine plant","6315"
+"FI","Fortum Power and Heat Oy Boiler C5  (former Kokkola Power Oy Ab)",
+"FI","Fortum Power and Heat Oy Kaasuturbiini So2","6093"
+"FI","Fortum Power and Heat Oy, Inkoo power plant, Boiler 1","6347"
+"FI","Fortum Power and Heat Oy, Inkoo Power plant, Boiler 2","6347"
+"FI","Fortum Power and Heat Oy, Inkoo Power plant, Boiler 3","6347"
+"FI","Fortum Power and Heat Oy, Inkoo Power plant, Boiler 4","6347"
+"FI","Fortum Power and Heat Oy, Kauttua power plant, Boiler ","6093"
+"FI","Fortum Power and Heat Oy, Kirkniemi power plant, Boiler 2 ",
+"FI","Fortum Power and Heat Oy, Kirkniemi power plant, Boiler 3",
+"FI","Fortum Power and Heat Oy, Kirkniemi power plant, Boiler 4",
+"FI","Fortum Power and Heat Oy, Kirkniemi power plant, Gas turbine",
+"FI","Fortum Power and Heat Oy, Kivenlahti, Boiler 1","6093"
+"FI","Fortum Power and Heat Oy, Kivenlahti, Boiler 2","6093"
+"FI","Fortum Power and Heat Oy, Meri-Pori power plant, Boiler ","7297"
+"FI","Fortum Power and Heat Oy, Naantali power plant, Boiler 1  ","7153"
+"FI","Fortum Power and Heat Oy, Naantali power plant, Boiler 2  ","7153"
+"FI","Fortum Power and Heat Oy, Naantali power plant, Boiler 3 ","7153"
+"FI","Fortum Power and Heat Oy, Suomenoja power plant, Boiler 1","6093"
+"FI","Fortum Power and Heat Oy, Suomenoja power plant, Boiler 3","6093"
+"FI","Fortum Power and Heat Oy, Suomenoja power plant, Gas turbine 4","6093"
+"FI","Fortum Power and Heat Oy, Uimaharju, Boiler 2",
+"FI","Fortum Power and Heat Oy/Fortum Service Oy, Joensuu power plant, Boiler 1",
+"FI","Helsingin Energia, Hanasaari B-power plant, Boiler 3",
+"FI","Helsingin Energia, Hanasaari B-power plant, Boiler 4",
+"FI","Helsingin Energia, Kellosaari, Gas turbine 1",
+"FI","Helsingin Energia, Kellosaari, Gas turbine2",
+"FI","Helsingin Energia, Lassila heating plant, Boiler 1",
+"FI","Helsingin Energia, Lassila heating plant, Boiler 2",
+"FI","Helsingin Energia, Myllypuro heating plant, Boiler 1","189915"
+"FI","Helsingin Energia, Myllypuro heating plant, Boiler 2",
+"FI","Helsingin Energia, Ruskeasuo heating plant, Boiler 1",
+"FI","Helsingin Energia, Ruskeasuo heating plant, Boiler 2",
+"FI","Helsingin Energia, Ruskeasuo heating plant, Boiler 3",
+"FI","Helsingin Energia, Ruskeasuo heating plant, Boiler 4",
+"FI","Helsingin Energia, Salmisaari power plant, Boiler 1","6178"
+"FI","Helsingin Energia, Salmisaari power plant, Boiler 7","6178"
+"FI","Helsingin Energia, Vuosaari power plant, Gas turbine Kt1","6123"
+"FI","Helsingin Energia, Vuosaari power plant, Gas turbine Kt2","6123"
+"FI","Helsingin Energia, Vuosaari power plant, Gas turbine Kt4","6123"
+"FI","Helsingin Energia, Vuosaari power plant, Gas turbine Kt5","6123"
+"FI","Järvi-Suomen Voima Oy, Boiler",
+"FI","Järvi-Suomen Voima Oy, Savonlinna Power Plant, boiler","9026"
+"FI","Jyväskylän Energiantuotanto Oy, Boiler 2","6427"
+"FI","Jyväskylän Energiantuotanto Oy, Rauhalahti power plant, Boiler 1","6427"
+"FI","Jyväskylän Energiantuotanto Oy, Savela power plant, Boiler 3, C","6427"
+"FI","Jyväskylän Voima Oy Keljonlahti power plant","189917"
+"FI","Kainuun Voima Oy, Kajaani power plant, Boiler 1","6533"
+"FI","Kainuun Voima Oy, Kajaani power plant, Boiler 2","6533"
+"FI","Kanteleen Voima Oy, Haapavesi power plant, Boiler 390 MW","6121"
+"FI","Kaukaan Voima Oy Biopolttolaitos",
+"FI","Keravan Lämpövoima Oy Keravan voimalaitos",
+"FI","Kokkola Power Oy Ab, Boiler C4","8261"
+"FI","Kokkolan Voima Oy, Ykspihlaja, Kokkola power plant","8059"
+"FI","Kotkan Energia Oy, NG Power plant 1997","7003"
+"FI","Kotkan Energia Oy, Power plant, 2003","7003"
+"FI","KSS Energia Oy, Gas turbine1",
+"FI","Kuopion Energia Oy, Haapaniemi power plant  I","8711"
+"FI","Kuopion Energia Oy, Haapaniemi power plant II","8711"
+"FI","Kymin Voima Oy, Power plant, K7 ","7049"
+"FI","Kyro Power Oy, P2 Gas turbine 3  60+40 MW",
+"FI","Laanilan Voima Oy, Pyroflow Boiler","17218"
+"FI","Lahti Energia  Oy, Teivaanmäki power plant, Boiler 1","7948"
+"FI","LAHTI ENERGIA OY P4 Kymijärvi II, kaasutuslaitos","7948"
+"FI","Lahti Energia Oy, Gas turbine 2","7948"
+"FI","Lahti Energia Oy, Kymijärvi power plant, Boiler 1","7948"
+"FI","Lappeenrannan Energia Oy, Ihalainen heating plant, k1+k2+k3+k4","17003"
+"FI","Lappeenrannan Energia Oy, Skinnarila heating plant, Boiler 4*15 MW","17003"
+"FI","Lappeenrannan Lämpövoima Oy, MRT I Gas turbine1 ","17003"
+"FI","Lappeenrannan Lämpövoima Oy, MRT II Gas turbine KT 2.1","17003"
+"FI","Lappeenrannan Lämpövoima Oy, MRT II Gas turbine KT 2.2 ","17003"
+"FI","Mäntän Energia Oy, P3 Boiler K3","7977"
+"FI","Mäntän Energia Oy, P4 Boiler K4","7977"
+"FI","Metsä Board Oyj, Kaskinen BCTMP mill, bark boiler","125250"
+"FI","Metsä Board Oyj, Metsä Board Kyro Board P1 Boiler K6","6295"
+"FI","Metsä Fibre, Kemi Mill, Boiler 9","6592"
+"FI","M-Real Oyj, Simpele Mill, Boiler 1 ",
+"FI","M-Real Oyj, Simpele, Boiler 2 ",
+"FI","M-real Oyj, Tako Board, P3 Boiler 3",
+"FI","Mussalon Kaukolämpö Oy and Nokian Lämpövoima Oy, Mussalo Power plant, Mussalon Kaukolämpö Oy, Mussalo 1","125258"
+"FI","Mussalon Kaukolämpö Oy and Nokian Lämpövoima Oy, Mussalon Power Oy, Gas turbine","125258"
+"FI","Mussalon Kaukolämpö Oy ja Nokian Lämpövoima Oy, Mussalo power plant Nokian Lämpövoima Oy, Mussalo 2","125258"
+"FI","Myllykoski Paper Oy, power plant, K6  Boiler 2/2001",
+"FI","Myllykoski Paper Oy, power plant, K7  5/2001",
+"FI","Myllykoski Paper Oy, power plant, K8 Boiler 2/2001",
+"FI","Myllykoski Paper Oy, power plant, K9 Boiler 2/2001",
+"FI","Neste Oil Oyj, Porvoo refinery, Boiler K1 (BF-14001)","7303"
+"FI","Neste Oil Oyj, Porvoo refinery, Boiler K2 (BF-14002)","7303"
+"FI","Neste Oil Oyj, Porvoo refinery, Boiler K5 (BF-6105)","7303"
+"FI","Neste Oil Oyj, Porvoo refinery, Gas turbine 2 (KTVL 2, 132+40 MW)","7303"
+"FI","Neste Oil Oyj, Porvoo refinery, Gas turbine 3 (KTVL 3, 211+56 MW)","7303"
+"FI","Nokian Lämpövoima Oy, Boiler K3","7988"
+"FI","Nokian Lämpövoima Oy, P4  Boiler K4","7988"
+"FI","Nokian Lämpövoima Oy, P5 Boiler, K5","7988"
+"FI","Oulun Energia, Limingantulli heating plant, Oulu Boiler 1",
+"FI","Oulun Energia, Toppila power plant, Boiler 1 Toppila 1","7213"
+"FI","Oulun Energia, Toppila power plant, Oulu Boiler 4, Toppila 2","7213"
+"FI","Ovako Wire Oy Ab, Boiler 1 (Power plant)","6144"
+"FI","Oy Alholmens Kraft Ab AK2, Boiler","7640"
+"FI","Oy Alholmens Kraft Ab, AK1 Bark Boiler","7640"
+"FI","Oy Metsä-Botnia Ab Kemi Mill, Boiler 10",
+"FI","Oy Metsä-Botnia Ab, Joutseno Mill, Boiler 3 ",
+"FI","Pori Energia Oy, Aittaluoto power plant, R Boiler ","7295"
+"FI","Pori Energia Oy, Aittaluoto Power Plant, RT Boiler ","7295"
+"FI","Porin Prosessivoima Oy, 206 MW Pyroflow boiler","17081"
+"FI","Porin Prosessivoima Oy, Pyroflow Boiler","17081"
+"FI","Porvoon Energia Oy, Tolkkinen power plant, Boiler 1",
+"FI","PVO Lämpövoima Oy, Tahkoluoto power plant, Boiler","7288"
+"FI","PVO-Huippuvoima Oy, Vaasa power plant, POR boiler ",
+"FI","PVO-Lämpövoima Oy, Kristiina power plant, Boiler 1 (KRS1)","6735"
+"FI","PVO-Lämpövoima Oy, Kristiina power plant, Boiler 2 KRS2","6735"
+"FI","Rauman voima Oy, Boiler HK4","17086"
+"FI","Rauman voima Oy, Boiler HK5 ","17086"
+"FI","Rauman voima Oy, Boiler HK6 ","17086"
+"FI","Rauman voima Oy, Boiler SK2 ","17086"
+"FI","Rautaruukki Oy, Raahe, Boiler 3","7377"
+"FI","Rautaruukki Oyj, Raahe, Boiler 4","7377"
+"FI","Rovaniemen Energia Oy, Power plant Boiler","8334"
+"FI","Stora Enso Oyj, Anjalankoski Mill, Boiler 1","8249"
+"FI","Stora Enso Oyj, Anjalankoski Mill, Boiler 2","8249"
+"FI","Stora Enso Oyj, Anjalankoski Mill, Combined cycle power plant ","8249"
+"FI","Stora Enso Oyj, Heinola Mill, Boiler 1 (PR2)","6166"
+"FI","Stora Enso Oyj, Heinola mill, Boiler 2(PR1)","6166"
+"FI","Stora Enso Oyj, Imatra Mill, Bark Boiler 2 ","6363"
+"FI","Stora Enso Oyj, Imatra Mill, Boiler 12 ","6363"
+"FI","Stora Enso Oyj, Imatra Mill, Boilers 9-11 (3*50 MW)","6363"
+"FI","Stora Enso Oyj, Kemi Mill, Boiler 6",
+"FI","Stora Enso Oyj, Kemi Mill, Boiler 7",
+"FI","Stora Enso Oyj, Kotka Mill, Boiler 11 172 MW","6698"
+"FI","Stora Enso Oyj, Oulu Mill, Boiler","7199"
+"FI","Stora Enso Oyj, Oulu Mill, Oil boiler","7199"
+"FI","Stora Enso Oyj, Oulu Mill, Oulu peatboiler","7199"
+"FI","Stora Enso Oyj, Sunila Mill, Bark Boiler 2",
+"FI","Stora Enso Oyj, Varkaus Mill, Boiler 5","7249"
+"FI","Stora Enso Oyj, Varkaus Mill, Boiler 6","7249"
+"FI","Tampereen Energiantuotanto Oy, P3  Gas turbine 1","7662"
+"FI","Tampereen Energiantuotanto Oy, P4  Gas turbine 2","7662"
+"FI","Tampereen Sähkölaitos, Naistenlahti power plant, NSL 1 Gas turbine","7662"
+"FI","Tampereen Sähkölaitos, Naistenlahti power plant, NSL 2  ","7662"
+"FI","Tornion voima Oy, Power plant boiler","67512"
+"FI","UPM-KYMMENE OYJ  K6 Varakattila 105 MW","7737"
+"FI","UPM-Kymmene Oyj, Jämsänkoski Mill, Boiler 1","6445"
+"FI","UPM-Kymmene Oyj, Jämsänkoski Mill, Boiler 2","6445"
+"FI","UPM-Kymmene Oyj, Jämsänkoski Mill, Boiler 3","6445"
+"FI","UPM-Kymmene Oyj, Jämsänkoski Mill, K5 Boiler","6445"
+"FI","UPM-Kymmene Oyj, Jokilaakso Mill, Kaipola Boiler 5","6445"
+"FI","UPM-Kymmene Oyj, Jokilaakso Mill, Kaipola Boiler 6","6445"
+"FI","UPM-Kymmene Oyj, Kaukaa Mill power plant (3*37 MW)","6954"
+"FI","UPM-Kymmene Oyj, Kaukaa Mill, Bark Boiler 1","6954"
+"FI","UPM-Kymmene Oyj, Kaukaa Mill, Gas turbine 9 (90/49 MW)","6954"
+"FI","UPM-Kymmene Oyj, Kymi mill, natural gas boiler","6919"
+"FI","UPM-Kymmene Oyj, Tervasaari, P1 Boiler CE II ","7737"
+"FI","UPM-Kymmene Oyj, Tervasaari, P13 Boiler K2","7737"
+"FI","Vaasan Sähkö Oy, Palosaaren silta, Boiler 1",
+"FI","Vaasan Sähkö Oy, Palosaaren silta, Boiler 2: Witermo 1 + 2",
+"FI","VANTAAN ENERGIA OY Gas turbine Mar4","6188"
+"FI","Vantaan Energia Oy, Martinlaakso power plant, Boiler 1 (Tampella)","6188"
+"FI","Vantaan Energia Oy, Martinlaakso power plant, Boiler 2","6188"
+"FI","Vantaan Energia Oy, Martinlaakso, Boiler 3","6188"
+"FI","Vapo Oy, Kiimassuo power plant, K Boiler ","16991"
+"FI","Vaskiluodon Voima Oy, Boiler VL 2","7732"
+"FI","Vaskiluodon Voima Oy, Seinäjoki power plant, Boiler 1","7435"
+"FI","Vattenfall Kaukolämpö Oy, Vanaja Power plant, Hämeenlinna 6 Gas turbine","6315"
+"FI","Vattenfall Kaukolämpö Oy, Vanaja power plant, Hämeenlinna Boiler (K4)","6315"
+"FI","Vattenfall Lämpö Oy, Vanaja Power Plant, P11 boiler K5","6315"
+"FR","0010","6288"
+"FR","0020","1253"
+"FR","0040","1259"
+"FR","005A","5327"
+"FR","0060",
+"FR","0070",
+"FR","0080",
+"FR","011A","5310"
+"FR","011B","5310"
+"FR","0120","5326"
+"FR","0130","5283"
+"FR","016A","1336"
+"FR","0170",
+"FR","0210","4339"
+"FR","0220",
+"FR","0230",
+"FR","0240","4351"
+"FR","0250","4353"
+"FR","0260",
+"FR","0270",
+"FR","0280","104684"
+"FR","0290","4412"
+"FR","0300","4370"
+"FR","0310","4362"
+"FR","0330","190106"
+"FR","035C","4377"
+"FR","036A",
+"FR","0370","4379"
+"FR","0380",
+"FR","0400","18078"
+"FR","0420","5123"
+"FR","0450",
+"FR","046B",
+"FR","0470","4416"
+"FR","048B",
+"FR","0500",
+"FR","0520",
+"FR","0530",
+"FR","0550","69459"
+"FR","056A","4400"
+"FR","056B","4400"
+"FR","0570","4403"
+"FR","0580","158770"
+"FR","0600","4408"
+"FR","0620",
+"FR","0630",
+"FR","0640","4422"
+"FR","0650","4395"
+"FR","0660",
+"FR","0680",
+"FR","0690","4937"
+"FR","0720","4401"
+"FR","0750","912"
+"FR","0790","17505"
+"FR","0800",
+"FR","0810","18143"
+"FR","0830",
+"FR","0840","4431"
+"FR","0870","4145"
+"FR","0880",
+"FR","0890",
+"FR","090A",
+"FR","090B",
+"FR","0950",
+"FR","0960","4789"
+"FR","0990","4727"
+"FR","100B","4793"
+"FR","101A","4848"
+"FR","101B","4848"
+"FR","1020",
+"FR","1030",
+"FR","1080",
+"FR","1090","69533"
+"FR","1100",
+"FR","1110",
+"FR","1120",
+"FR","1130","18253"
+"FR","1140",
+"FR","1170","4729"
+"FR","1200","4697"
+"FR","1210",
+"FR","122A",
+"FR","122B",
+"FR","1230","104431"
+"FR","125A",
+"FR","125B",
+"FR","1270",
+"FR","1280","3057"
+"FR","1290","2963"
+"FR","130A",
+"FR","130B",
+"FR","1310","2976"
+"FR","1330",
+"FR","1350",
+"FR","1360","2995"
+"FR","1370",
+"FR","1380",
+"FR","1400",
+"FR","1410",
+"FR","1430",
+"FR","1440","3077"
+"FR","1460",
+"FR","1470",
+"FR","1510","882"
+"FR","1530","860"
+"FR","1580",
+"FR","159A",
+"FR","1600",
+"FR","1620",
+"FR","1630",
+"FR","167A",
+"FR","167B",
+"FR","168A",
+"FR","168B",
+"FR","169A","4204"
+"FR","169B","4204"
+"FR","1700",
+"FR","171A",
+"FR","171B",
+"FR","1720",
+"FR","173A",
+"FR","173B",
+"FR","1750",
+"FR","176A",
+"FR","176B",
+"FR","1770",
+"FR","1780",
+"FR","1790",
+"FR","180A",
+"FR","180B",
+"FR","1810","4090"
+"FR","1820",
+"FR","1830",
+"FR","1840","17916"
+"FR","1860",
+"FR","1870",
+"FR","1880","3979"
+"FR","190A",
+"FR","190B",
+"FR","1910","3982"
+"FR","192B","189994"
+"FR","197B","787"
+"FR","1980","799"
+"FR","199A",
+"FR","199B",
+"FR","2010",
+"FR","2030",
+"FR","2050","815"
+"FR","2090","4126"
+"FR","2100",
+"FR","2110",
+"FR","2130",
+"FR","2140","4147"
+"FR","2160",
+"FR","2170",
+"FR","2180","1119"
+"FR","2190","1111"
+"FR","2230",
+"FR","2240","1082"
+"FR","2250","1085"
+"FR","2260","1089"
+"FR","2290",
+"FR","2300","4507"
+"FR","2310",
+"FR","2320","4524"
+"FR","2350","4554"
+"FR","2360",
+"FR","237A",
+"FR","237B",
+"FR","2380","190093"
+"FR","240A",
+"FR","240B",
+"FR","2420",
+"FR","2430",
+"FR","2440",
+"FR","2470",
+"FR","2480","1226"
+"FR","2490","69361"
+"FR","2510","69359"
+"FR","253A","1203"
+"FR","253B","1203"
+"FR","2540","17687"
+"FR","2550",
+"FR","2560",
+"FR","2580",
+"FR","2590","1133"
+"FR","2600","1153"
+"FR","261A",
+"FR","261B",
+"FR","261C",
+"FR","2640","688"
+"FR","2660","668"
+"FR","2680","694"
+"FR","2750",
+"FR","278A","704"
+"FR","278B","704"
+"FR","283A","744"
+"FR","283B","744"
+"FR","2850","17350"
+"FR","2860","756"
+"FR","2880","755"
+"FR","300A",
+"FR","300B",
+"FR","3010",
+"FR","305A",
+"FR","305B",
+"FR","3090","1219"
+"FR","3100","104729"
+"FR","3110","4515"
+"FR","312A","4476"
+"FR","312B","4476"
+"FR","3130",
+"FR","3150","4359"
+"FR","3170",
+"FR","3180","4126"
+"FR","3220",
+"FR","3240",
+"FR","3250",
+"FR","3270",
+"FR","3280",
+"FR","3290",
+"FR","3300",
+"FR","3310",
+"FR","3320","4929"
+"FR","3330",
+"FR","3340","17678"
+"FR","3350",
+"FR","3360",
+"FR","3370","104694"
+"FR","3380","18349"
+"FR","3390","104802"
+"FR","3400",
+"FR","3410",
+"FR","3420","18291"
+"FR","3430","175491"
+"FR","3440",
+"FR","3450",
+"FR","3460",
+"FR","3470",
+"FR","3480",
+"FR","3490",
+"FR","3500",
+"FR","3510","158593"
+"FR","3530",
+"FR","3540","190186"
+"FR","3550","1167"
+"FR","358B",
+"FR","3590","2918"
+"FR","3600","4930"
+"FR","3610",
+"FR","3620",
+"FR","3630",
+"FR","3640","190127"
+"FR","3650","2942"
+"HU","AES Borsodi Energetikai Kft. Borsodi Hőerőmű",
+"HU","AES Borsodi Energetikai Kft.
+Tiszapalkonyai Hőerőmű",
+"HU","AES Tisza Erőmű Kft.","5688"
+"HU","Alpiq Csepel Kft., Csepel II. KCGT","856"
+"HU","Alpiq Csepeli Erőmű Kft.","856"
+"HU","Bakonyi Bioenergia Kft.","39820"
+"HU","Bakonyi Erőmű Zrt.","281"
+"HU","BC-Erőmű Kft.","39837"
+"HU","BC-Therm Kft.","40002"
+"HU","Budapesti Erőmű Rt. Kispesti Erőmű",
+"HU","Budapesti Erőmű Rt. Révész utcai Fűtőmű",
+"HU","Budapesti Erőmű Rt. Újpesti Erőmű",
+"HU","Budapesti Erőmű Zrt. Kelenföldi Erőmű",
+"HU","Bunge Rt. Martfűi Gyára","4986"
+"HU","DBM Dél-Nyírségi Bioenergia Művek Energiatermelő Zrt.","101285"
+"HU","Debreceni Kombinált Ciklusú Erőmű",
+"HU","Dorogi Erőmű Kft. ","39969"
+"HU","Dunamenti Erőmű Zrt.","772"
+"HU","E.ON Energiatermelő Kft. Debreceni Erőmű",
+"HU","E.ON Energiatermelő Kft. Győri Erőmű ",
+"HU","E.ON Energiatermelő Kft. Nyíregyházi Erőmű","75586"
+"HU","E.ON Energiatermelő Kft. Soproni Erőmű ",
+"HU","E.ON Erőmű Kft. ","176813"
+"HU","FGSZ Földgázszállító Zrt.","75640"
+"HU","FGSZ Földgázszállító Zrt. ",
+"HU","FŐTÁV Rt. Észak-Budai Fűtőmű ",
+"HU","FŐTÁV Rt. Füredi Fűtőmű ",
+"HU","FŐTÁV Rt. Rákoskesztúri Fűtőmű ",
+"HU","FŐTÁV Rt. Újpalotai Fűtőmű ",
+"HU","Győr-Szol Zrt. ","166851"
+"HU","Hamburger Hungária Kft.","101305"
+"HU","Hankook Tire Magyarország Kft.","101283"
+"HU","Hungrana Kft.","471"
+"HU","ISD POWER Kft.","468"
+"HU","Magyar Cukor Zrt. Kaposvári Cukorgyár","39906"
+"HU","Mátrai Erőmű Zrt.","5791"
+"HU","MESZ Magyaróvár Zrt.","166852"
+"HU","MIFŰ Miskolci Fűtőerőmű Kft.",
+"HU","MIFŰ Miskolci Fűtőerőmű Kft.",
+"HU","MOL Nyrt. Dunai Finomító","75679"
+"HU","MOL Nyrt. Zalai Finomító","243"
+"HU","MVM BVMT Zrt.","191336"
+"HU","MVM Észak-Budai Kogenerációs Fűtőerőmű",
+"HU","MVM GTER Gázturbinás Erőmű Zrt.","39907"
+"HU","MVM GTER Gázturbinás Erőmű Zrt.","39892"
+"HU","MVM GTER Gázturbinás Erőmű Zrt.",
+"HU","Nitrogénművek Zrt. ","298"
+"HU","Nyíregyházi Kombinált Ciklusú Erőmű",
+"HU","Pannon Hőerőmű Zrt.","534"
+"HU","Pannonenergia Erőművi Tanácsadó Kft.",
+"HU","Pannon-Hő Energetikai Termelő Kft.",
+"HU","Pannónia Ethanol Zrt.","191331"
+"HU","Rába Energia Kft.",
+"HU","SEKAB Zrt.",
+"HU","Székesfehérvári Fűtőerőmű Kft.","191335"
+"HU","Tatabányai Erőmű Kft.","142"
+"HU","TVK-Erőmű Kft.","39838"
+"HU","Vértesi Erőmű Zrt. ","140"
+"HU","Zoltek Zrt.","137"
+"IE","Aghada CCGT","9626"
+"IE","Aghada CT11-U2","9626"
+"IE","Aghada CT12-U3","9626"
+"IE","Aghada CT14-U4","9626"
+"IE","Aghada U1","9626"
+"IE","Aughinish Alumina","8595"
+"IE","Aughinish Alumina","8595"
+"IE","Concophillips P0266","7964"
+"IE","Edenderry Power","9486"
+"IE","Great Island 1 & 2","176837"
+"IE","Great Island 3","176837"
+"IE","Guinness P301",
+"IE","Huntstown Power Station (phase I)","9506"
+"IE","Lough Ree Power","8740"
+"IE","Marina","7934"
+"IE","Moneypoint U1","8025"
+"IE","Moneypoint U2","8025"
+"IE","Moneypoint U3","8025"
+"IE","North Wall 5","8271"
+"IE","Poolbeg U4","8353"
+"IE","Poolbeg U5","8353"
+"IE","Synergen (Dublin Bay Power Plant)","75905"
+"IE","Tarbert 1 & 2","7997"
+"IE","Tarbert 3 & 4","7997"
+"IE","Tynagh Energy","19169"
+"IE","Viridian Power (phase II)","19171"
+"IE","West Offaly Power","8061"
+"IE","Whitegate Power Station P0830",
+"IT","A.R.I.A. Srl ( Linea 1 )","191456"
+"IT","A.R.I.A. Srl ( Linea 2)","191456"
+"IT","A.R.I.A. Srl (Linea 3)","191456"
+"IT","A2A Calore & Servizi","117430"
+"IT","A2A Calore & Servizi","117430"
+"IT","A2A Calore & Servizi","117430"
+"IT","A2A Calore & Servizi","27357"
+"IT","A2A Calore & Servizi","117430"
+"IT","A2A S.p.A.","1503"
+"IT","A2A S.p.A.","1503"
+"IT","A2A S.p.A.","1503"
+"IT","A2A S.p.A.","1503"
+"IT","A2A spa","312"
+"IT","A2A spa","312"
+"IT","A2A spa","312"
+"IT","A2A SpA - Centrale Termoelettrica del Mincio","437"
+"IT","ABRUZZOENERGIA SPA",
+"IT","ABRUZZOENERGIA SPA",
+"IT","ACEA Produzione S.p.a. (Centrale Montemartini)",
+"IT","ACEA Produzione S.p.a. (Centrale Montemartini)",
+"IT","ACEA Produzione S.p.a. (Centrale Montemartini)",
+"IT","ACEA Produzione S.p.a. (Centrale Tor di Valle)","6263"
+"IT","ACEA Produzione S.p.a. (Centrale Tor di Valle)","6263"
+"IT","ACEA Produzione S.p.a. (Centrale Tor di Valle)","6263"
+"IT","ACEA RISORSE E IMPIANTI PER L'AMBIENTE S.r.l. (in forma abbreviata A.R.I.A. S.r.l.)","117613"
+"IT","Acetati S.p.A.","27972"
+"IT","AGSM Verona Spa","573"
+"IT","Alba Power S.p.A.","27088"
+"IT","Alba Power S.p.A.","27088"
+"IT","Alba Power S.p.A.","27088"
+"IT","Alpiq Vercelli S.r.l.","27380"
+"IT","ALTO GARDA POWER","516"
+"IT","Amsa Azienda milanese servizi ambientali S.p.A.","27382"
+"IT","api energia ",
+"IT","api raffineria di ancona spa (*)","6056"
+"IT","BG ITALIA POWER SPA (ex SERENE SPA)","77742"
+"IT","BG ITALIA POWER SPA (ex SERENE SPA)",
+"IT","BG ITALIA POWER SPA (ex SERENE SPA)",
+"IT","BG ITALIA POWER SPA (ex SERENE SPA)","27864"
+"IT","BG ITALIA POWER SPA (ex SERENE SPA)","108"
+"IT","Biomasse Crotone S.p.A.","27240"
+"IT","Biomasse Italia S.p.a.","27241"
+"IT","BioPower Sardegna S.r.l.","120277"
+"IT","BioPower Sardegna S.r.l.","120277"
+"IT","Burgo Group  SpA","6280"
+"IT","Burgo Group S.p.A.","6541"
+"IT","Burgo Group S.p.A.","1425"
+"IT","Burgo Group S.p.A.","1425"
+"IT","BURGO GROUP SPA","1519"
+"IT","BURGO GROUP SPA","1519"
+"IT","BURGO GROUP SPA","440"
+"IT","BURGO GROUP SPA","1519"
+"IT","BURGO GROUP SPA","623"
+"IT","BURGO GROUP spa (ex Cartiera Marchi spa)","401"
+"IT","Calenia Energia S.p.A.","27071"
+"IT","Calenia Energia S.p.A.","27071"
+"IT","Centro Energia Ferrara S.p.A.","5026"
+"IT","Centro Energia Ferrara S.p.A.","5026"
+"IT","CENTRO ENERGIA TEVEROLA S.p.A.",
+"IT","CENTRO ENERGIA TEVEROLA S.p.A.",
+"IT","CO.PRO.B. SCA","654"
+"IT","CO.PRO.B. SCA","654"
+"IT","CO.PRO.B. SCA","654"
+"IT","CO.PRO.B. SCA","26807"
+"IT","Cofely Italia Spa","120279"
+"IT","Cofely Italia Spa","117396"
+"IT","Cofely Italia Spa","5727"
+"IT","Cofely Italia Spa","27556"
+"IT","Cofely Italia Spa ","117409"
+"IT","Cofely Italia Spa","27556"
+"IT","Cofely Italia Spa ","117409"
+"IT","Dalmine S.p.A.","346"
+"IT","Dalmine S.p.A.","346"
+"IT","E.ON Produzione Centrale Livorno Ferraris S.p.A.","117453"
+"IT","E.ON Produzione Centrale Livorno Ferraris S.p.A.","117453"
+"IT","E.ON Produzione S.p.A.","7490"
+"IT","E.ON Produzione S.p.A.","7490"
+"IT","E.ON Produzione S.p.A.","7341"
+"IT","E.ON Produzione S.p.A.","7490"
+"IT","E.ON Produzione S.p.A.","480"
+"IT","E.ON Produzione S.p.A.","480"
+"IT","E.ON Produzione S.p.A.","480"
+"IT","E.ON Produzione S.p.A.","480"
+"IT","E.ON Produzione S.p.A.","455"
+"IT","E.ON Produzione S.p.A.","455"
+"IT","E.ON Produzione S.p.A.","455"
+"IT","E.ON Produzione S.p.A.","455"
+"IT","E.ON Produzione S.p.A.","7490"
+"IT","E.ON Produzione S.p.A.","7490"
+"IT","E.ON Produzione S.p.A.","480"
+"IT","E.ON Produzione S.p.A.","7490"
+"IT","E.ON Produzione S.p.A.","7341"
+"IT","ECO & POWER AMBROSIANA",
+"IT","ECO & POWER AMBROSIANA",
+"IT","ECO & POWER AMBROSIANA",
+"IT","EDIPOWER SPA","74"
+"IT","EDIPOWER SPA","7030"
+"IT","EDIPOWER SPA","318"
+"IT","EDIPOWER SPA","318"
+"IT","EDIPOWER SPA","74"
+"IT","EDIPOWER SPA","7030"
+"IT","EDIPOWER SPA","318"
+"IT","EDIPOWER SPA","318"
+"IT","EDIPOWER SPA","4991"
+"IT","EDIPOWER SPA","4991"
+"IT","EDIPOWER SPA","318"
+"IT","EDIPOWER SPA","74"
+"IT","EDIPOWER SPA","7349"
+"IT","EDIPOWER SPA","443"
+"IT","EDIPOWER SPA","443"
+"IT","EDIPOWER SPA","443"
+"IT","EDIPOWER SPA","7349"
+"IT","EDIPOWER SPA","7349"
+"IT","Edison Spa","5138"
+"IT","Edison Spa","338"
+"IT","EDISON SPA","5156"
+"IT","Edison SpA","26668"
+"IT","Edison SpA","26668"
+"IT","Edison SpA","644"
+"IT","Edison SpA","644"
+"IT","Edison SpA","5725"
+"IT","Edison SpA","644"
+"IT","Edison SpA","26668"
+"IT","EDISON SPA","26666"
+"IT","Edison SpA","5003"
+"IT","Edison SpA","6549"
+"IT","Edison Spa","5138"
+"IT","EDISON SPA","5156"
+"IT","Edison SpA","5725"
+"IT","Edison SpA","644"
+"IT","Edison SpA","644"
+"IT","Edison Spa","338"
+"IT","Edison Spa","338"
+"IT","EDISON SPA","117532"
+"IT","EDISON SPA","117532"
+"IT","EDISON SPA","117532"
+"IT","EDISON SpA","191709"
+"IT","EDISON SPA","26665"
+"IT","EDISON SPA","26665"
+"IT","Edison SpA","117405"
+"IT","Elettra Produzione s.r.l.","1520"
+"IT","Elettra Produzione s.r.l.","1520"
+"IT","Elettra Produzione SRL","27335"
+"IT","Elettrogorizia SpA","28187"
+"IT","En Plus S.r.l.","159051"
+"IT","ENEL PRODUZIONE S.p.A.","7237"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","7342"
+"IT","ENEL PRODUZIONE S.p.A.","7342"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","7342"
+"IT","ENEL PRODUZIONE S.p.A.","7237"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","7237"
+"IT","ENEL PRODUZIONE S.p.A.","7237"
+"IT","ENEL PRODUZIONE S.p.A.","7237"
+"IT","ENEL PRODUZIONE S.p.A.","28198"
+"IT","ENEL PRODUZIONE S.p.A.","28198"
+"IT","ENEL PRODUZIONE S.p.A.","7351"
+"IT","ENEL PRODUZIONE S.p.A.","7351"
+"IT","ENEL PRODUZIONE S.p.A.","656"
+"IT","ENEL PRODUZIONE S.p.A.","656"
+"IT","ENEL PRODUZIONE S.p.A.","656"
+"IT","ENEL PRODUZIONE S.p.A.","656"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","7342"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","640"
+"IT","ENEL PRODUZIONE S.p.A.","5149"
+"IT","ENEL PRODUZIONE S.p.A.","7514"
+"IT","ENEL PRODUZIONE S.p.A.","7514"
+"IT","ENEL PRODUZIONE S.p.A.","639"
+"IT","ENEL PRODUZIONE S.p.A.","5710"
+"IT","ENEL PRODUZIONE S.p.A.","5710"
+"IT","ENEL PRODUZIONE S.p.A.","5710"
+"IT","ENEL PRODUZIONE S.p.A.","640"
+"IT","ENEL PRODUZIONE S.p.A.","7367"
+"IT","ENEL PRODUZIONE S.p.A.","7367"
+"IT","ENEL PRODUZIONE S.p.A.","640"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","5039"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","639"
+"IT","ENEL PRODUZIONE S.p.A.","5149"
+"IT","ENEL PRODUZIONE S.p.A.","93"
+"IT","ENEL PRODUZIONE S.p.A.","93"
+"IT","ENEL PRODUZIONE S.p.A.","7514"
+"IT","ENEL PRODUZIONE S.p.A.","117522"
+"IT","ENEL PRODUZIONE S.p.A.","7514"
+"IT","ENEL PRODUZIONE S.p.A.","7237"
+"IT","ENEL PRODUZIONE S.p.A.","7342"
+"IT","ENEL PRODUZIONE S.p.A.","6258"
+"IT","ENEL PRODUZIONE S.p.A.","640"
+"IT","ENEL PRODUZIONE S.p.A.","5039"
+"IT","ENEL PRODUZIONE S.p.A.","6262"
+"IT","ENEL PRODUZIONE S.p.A.","6262"
+"IT","ENEL PRODUZIONE S.p.A.","4989"
+"IT","ENEL PRODUZIONE S.p.A.","4989"
+"IT","ENEL PRODUZIONE S.p.A.","4989"
+"IT","ENEL PRODUZIONE S.p.A.","4864"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","5176"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","7011"
+"IT","ENEL PRODUZIONE S.p.A.","26895"
+"IT","ENEL PRODUZIONE S.p.A.","26895"
+"IT","ENEL PRODUZIONE S.p.A.","5712"
+"IT","ENEL PRODUZIONE S.p.A.","5712"
+"IT","ENEL PRODUZIONE S.p.A.","6262"
+"IT","ENEL PRODUZIONE S.p.A.","4864"
+"IT","ENEL PRODUZIONE S.p.A.","27595"
+"IT","ENEL PRODUZIONE S.p.A.","7027"
+"IT","ENEL PRODUZIONE S.p.A.","7027"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","7027"
+"IT","ENEL PRODUZIONE S.p.A.","7027"
+"IT","ENEL PRODUZIONE S.p.A.","4989"
+"IT","ENEL PRODUZIONE S.p.A.","27595"
+"IT","ENEL PRODUZIONE S.p.A.","26895"
+"IT","ENEL PRODUZIONE S.p.A.","7011"
+"IT","ENEL PRODUZIONE S.p.A.","7366"
+"IT","ENEL PRODUZIONE S.p.A.","7366"
+"IT","ENEL PRODUZIONE S.p.A.","27595"
+"IT","ENEL PRODUZIONE S.p.A.","27595"
+"IT","ENEL PRODUZIONE S.p.A.","7366"
+"IT","ENEL PRODUZIONE S.p.A.","27595"
+"IT","ENEL PRODUZIONE S.p.A.","4870"
+"IT","ENEL PRODUZIONE S.p.A.","26895"
+"IT","ENEL PRODUZIONE S.p.A.","4870"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","158935"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENEL PRODUZIONE S.p.A.","5155"
+"IT","ENEL PRODUZIONE S.p.A.","4870"
+"IT","ENEL PRODUZIONE S.p.A.","5155"
+"IT","ENEL PRODUZIONE S.p.A.",
+"IT","ENI","626"
+"IT","ENI","626"
+"IT","eni s.p.a. divisione exploration & production","7133"
+"IT","eni s.p.a. divisione exploration & production","7133"
+"IT","Eni S.p.A. Divisione Refining & Marketing","7018"
+"IT","Eni S.p.A. Divisione Refining & Marketing Raffineria di Livorno","5157"
+"IT","ENI SpA - DIVISIONE R&M ","412"
+"IT","ENI SpA - DIVISIONE R&M ","412"
+"IT","Enipower","5038"
+"IT","Enipower","5038"
+"IT","Enipower","5038"
+"IT","Enipower","5038"
+"IT","Enipower Mantova S.p.A.","452"
+"IT","Enipower Mantova S.p.A.","452"
+"IT","Enipower Mantova S.p.A.","452"
+"IT","ENIPOWER s.p.a.","418"
+"IT","ENIPOWER S.p.a.","7028"
+"IT","ENIPOWER s.p.a.","418"
+"IT","ENIPOWER S.p.a.","7028"
+"IT","ENIPOWER S.p.a.","7028"
+"IT","enipower S.p.A.","342"
+"IT","ENIPOWER s.p.a.","418"
+"IT","enipower S.p.A.","342"
+"IT","Enipower S.p.A.","7022"
+"IT","enipower S.p.A.","342"
+"IT","enipower S.p.A.","342"
+"IT","ENIPOWER SPA",
+"IT","ENIPOWER SPA",
+"IT","ERG Power s.r.l. ","159137"
+"IT","ERG Power s.r.l. ","159137"
+"IT","ERG Power s.r.l. ","159137"
+"IT","ERG Power s.r.l. ","159137"
+"IT","ERG Power s.r.l. ","159137"
+"IT","ERG Power s.r.l. ","159137"
+"IT","ERGOSUD S.p.A.","159056"
+"IT","ERGOSUD S.p.A.","159056"
+"IT","ERIDANIA SADAM S.p.A.","5004"
+"IT","ERIDANIA SADAM S.p.A.","5004"
+"IT","ERIDANIA SADAM S.p.A.","5004"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Esso Italiana S.r.l. - Raffineria di Augusta (SR)","7365"
+"IT","Fenice S.p.A.","87"
+"IT","Fenice S.p.A.","87"
+"IT","Fenice S.p.A.","87"
+"IT","Fenice S.p.A.","87"
+"IT","Fenice S.p.A.","27856"
+"IT","Fenice S.p.A.","27856"
+"IT","Fenice S.p.A.","27856"
+"IT","Fenice S.p.A.","87"
+"IT","Fenice SpA","27863"
+"IT","FENICE SPA","27861"
+"IT","FENICE SPA","27861"
+"IT","FENICE SPA","27861"
+"IT","FENICE SPA","27861"
+"IT","FENICE SPA","77685"
+"IT","FENICE SPA","77686"
+"IT","Fenice SpA","27863"
+"IT","Fenice SpA","27859"
+"IT","Fenice SpA","27859"
+"IT","Ferrari S.p.A.","76880"
+"IT","GDF SUEZ Produzione S.p.a. (Centrale Leinì)","27074"
+"IT","GEVER SpA","115"
+"IT","GEVER SpA","115"
+"IT","HERA SPADIREZIONE ENERGIA- UNITA' PRODUTTIVE RILEVANTI","26832"
+"IT","ILVA S.p.A.","4868"
+"IT","ILVA S.p.A.","4868"
+"IT","IREN ENERGIA S.p.A.","5006"
+"IT","Iren Energia S.p.A.",
+"IT","Iren Energia S.p.A.","4869"
+"IT","Iren Energia S.p.A.","67"
+"IT","Iren Energia S.p.A.","67"
+"IT","Iren Energia S.p.A.","67"
+"IT","IREN ENERGIA S.p.A.","5006"
+"IT","Iren Energia S.p.A.","67"
+"IT","Iren Energia S.p.A.",
+"IT","IREN ENERGIA S.p.A.","5006"
+"IT","Iren Energia S.p.A.","191764"
+"IT","Iren Energia S.p.A.","191764"
+"IT","IRENE S.r.l.","374"
+"IT","ISAB Energy Srl","7362"
+"IT","ISAB S.r.l. - Raffineria Isab Impianti Nord","7364"
+"IT","ISAB S.r.l. - Raffineria ISAB Impianti Sud","7363"
+"IT","ISTITUTO POLIGRAFICO E ZECCA DELLO STATO S.P.A.",
+"IT","Jesi Energia SpA","6054"
+"IT","Novel S.p.A.","107"
+"IT","NUOVA SOLMINE S.p.A.","5183"
+"IT","NUOVA SOLMINE S.p.A.","5183"
+"IT","Ottana Energia S.p.a.","7497"
+"IT","Ottana Energia S.p.a.","7497"
+"IT","Raffineria di Gela S.p.A.","7353"
+"IT","Raffineria di Milazzo S.C.p.A.","7350"
+"IT","Raffineria di Milazzo S.C.p.A.","7350"
+"IT","Raffineria di Roma","6267"
+"IT","Rizziconi Energia S.p.A.","77753"
+"IT","Rizziconi Energia S.p.A.","77753"
+"IT","ROQUETTE ITALIA S.p.A.",
+"IT","ROQUETTE ITALIA S.p.A.",
+"IT","ROSELECTRA S.p.A.","27075"
+"IT","ROSEN ROSIGNANO ENERGIA S.p.A.","5160"
+"IT","ROSEN ROSIGNANO ENERGIA S.p.A.","5160"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.A.R.P.O.M. srl","103"
+"IT","S.E.F. s.r.l. - Società EniPower Ferrara","5031"
+"IT","S.E.F. s.r.l. - Società EniPower Ferrara","5031"
+"IT","S.E.F. s.r.l. - Società EniPower Ferrara","5031"
+"IT","SARAS S.p.A.","7506"
+"IT","SARAS S.p.A.","7506"
+"IT","SASOL Italy  S.p.A.","7370"
+"IT","SASOL Italy  S.p.A.","7370"
+"IT","SASOL Italy  S.p.A.","7370"
+"IT","SASOL Italy  S.p.A.","7370"
+"IT","SASOL Italy  S.p.A.","7370"
+"IT","SASOL Italy  S.p.A.","7370"
+"IT","Scarlino Energia S.r.l.",
+"IT","SET S.P.A.","27068"
+"IT","SICET - Società Italiana Centrali ElettroTermiche S.r.l.","200502"
+"IT","Snam Rete Gas S.p.a.","117418"
+"IT","Snam Rete Gas S.p.a.","27316"
+"IT","Snam Rete Gas S.p.a.","27316"
+"IT","Snam Rete Gas S.p.a.","27316"
+"IT","Snam Rete Gas S.p.a.","27316"
+"IT","Snam Rete Gas S.p.a.","27320"
+"IT","Snam Rete Gas S.p.a.","1418"
+"IT","Snam Rete Gas S.p.a.","1418"
+"IT","Snam Rete Gas S.p.a.","27318"
+"IT","Snam Rete Gas S.p.a.","27318"
+"IT","Snam Rete Gas S.p.a.","27317"
+"IT","Snam Rete Gas S.p.a.","27318"
+"IT","Snam Rete Gas S.p.a.","7347"
+"IT","Snam Rete Gas S.p.a.","7347"
+"IT","Snam Rete Gas S.p.a.","7347"
+"IT","Snam Rete Gas S.p.a.","1418"
+"IT","Snam Rete Gas S.p.a.","7347"
+"IT","Snam Rete Gas S.p.a.","27318"
+"IT","Snam Rete Gas S.p.a.","27320"
+"IT","Snam Rete Gas S.p.a.","27322"
+"IT","Snam Rete Gas S.p.a.","27322"
+"IT","Snam Rete Gas S.p.a.","27322"
+"IT","Snam Rete Gas S.p.a.","27321"
+"IT","Snam Rete Gas S.p.a.","27321"
+"IT","Snam Rete Gas S.p.a.","27321"
+"IT","Snam Rete Gas S.p.a.","27321"
+"IT","Snam Rete Gas S.p.a.","27317"
+"IT","Snam Rete Gas S.p.a.","27317"
+"IT","Snam Rete Gas S.p.a.","27317"
+"IT","Snam Rete Gas S.p.a.","7347"
+"IT","SOLVAY CHIMICA ITALIA S.P.A.","5150"
+"IT","SOLVAY CHIMICA ITALIA S.P.A.","5150"
+"IT","Sorgenia Power Spa","191625"
+"IT","Sorgenia Power Spa","191625"
+"IT","Sorgenia Power Spa","27066"
+"IT","Sorgenia Power Spa","27066"
+"IT","Sorgenia Power Spa","191881"
+"IT","Sorgenia Power Spa","191881"
+"IT","Sorgenia Puglia Spa","159035"
+"IT","Sorgenia Puglia Spa","159035"
+"IT","Stogit. S.p.A.","422"
+"IT","Stogit. S.p.A.","4990"
+"IT","Stogit. S.p.A.","423"
+"IT","Stogit. S.p.A.","4990"
+"IT","Stogit. S.p.A.","6553"
+"IT","Stogit. S.p.A.","423"
+"IT","Stogit. S.p.A.","422"
+"IT","Stogit. S.p.A.","6553"
+"IT","TAMOIL RAFFINAZIONE S.p.A.",
+"IT","TAMOIL RAFFINAZIONE S.p.A.",
+"IT","TAMOIL RAFFINAZIONE S.p.A.",
+"IT","TAMOIL RAFFINAZIONE S.p.A.",
+"IT","TAMOIL RAFFINAZIONE S.p.A.",
+"IT","Tampieri Energie Srl","5068"
+"IT","TARANTO ENERGIA S.R.L.","176967"
+"IT","TARANTO ENERGIA S.R.L.","176967"
+"IT","TARANTO ENERGIA S.R.L.","176967"
+"IT","TARANTO ENERGIA S.R.L.","176967"
+"IT","TARANTO ENERGIA S.R.L.","176967"
+"IT","TARANTO ENERGIA S.R.L.","176967"
+"IT","TERMICA CELANO S.p.A.","6544"
+"IT","TERMICA COLLEFERRO S.p.A.","191759"
+"IT","Termica Cologno srl","326"
+"IT","Termica Milazzo srl","7348"
+"IT","TIRRENO POWER S.P.A.","4859"
+"IT","TIRRENO POWER S.P.A.","4859"
+"IT","TIRRENO POWER S.P.A.","4859"
+"IT","TIRRENO POWER S.P.A.","6862"
+"IT","TIRRENO POWER S.P.A.","4859"
+"IT","TIRRENO POWER S.P.A.","6269"
+"IT","TIRRENO POWER S.P.A.","6269"
+"IT","TIRRENO POWER S.P.A.","6269"
+"IT","Versalis S.p.A","634"
+"IT","Versalis S.p.A","634"
+"IT","Versalis S.p.A","634"
+"IT","versalis spa","7372"
+"IT","versalis SpA","7513"
+"IT","versalis spa","119234"
+"IT","versalis spa","119234"
+"IT","versalis SpA","7513"
+"IT","versalis spa","7372"
+"IT","Voghera Energia S.p.A.","27656"
+"IT","Yara Italia S.p.A.","5032"
+"IT","ZUCCHERIFICIO DEL MOLISE SPA",
+"LT","Alytus DB  ",
+"LT","Ateities DB-8 ","40511"
+"LT","Danisco sugar Kėdainiai","63"
+"LT","Druskininkai DB ",
+"LT","Ignalina NPP",
+"LT","Jonava DB ",
+"LT","Kaunas electric power station ","3"
+"LT","Kėdainiai DB ",
+"LT","Klaipėda DB  ",
+"LT","Klaipėda electric power station ",
+"LT","Klaipėdos nafta","40527"
+"LT","Lithuanian electric power station ","22"
+"LT","Lypkiai DB ",
+"LT","Marijampolė DB  ",
+"LT","Mažeikiai DB ",
+"LT","Mažeikiai electric power station ","18"
+"LT","Panevėžys DB-1 ","159204"
+"LT","Panevėžys DB-2 ","40488"
+"LT","Panevėžys electric power station","40488"
+"LT","Petrašiūnai electric power station ",
+"LT","Pietinė DB  ",
+"LT","SC „Mažeikių nafta“, Installation  No. 001","18"
+"LT","SC „Mažeikių nafta“, Installation No. 006","18"
+"LT","Utena DB  ","40533"
+"LT","Vilnius electric power station No.2 ","24"
+"LT","Vilnius electric power station No.3 ","23"
+"LT","Visagino energija",
+"LU","Twinerg","14381"
+"LV","Cesu siltumtikli",
+"LV","Daugavpils siltumtikli nr.1","177119"
+"LV","Daugavpils siltumtikli nr.2","177119"
+"LV","Daugavpils siltumtikli nr.3","177119"
+"LV","Fortum Jelgava","181979"
+"LV","Jurmalas siltums, Kauguri",
+"LV","Latvenergo TEC1","10350"
+"LV","Latvenergo TEC1","10350"
+"LV","Latvenergo TEC1","10350"
+"LV","Latvenergo TEC1","10350"
+"LV","Latvenergo TEC2","177120"
+"LV","Latvenergo TEC2","177120"
+"LV","Liepajas energija","10991"
+"LV","Rezeknes siltumtikli","181980"
+"LV","Rigas siltums, Imanta","8585"
+"LV","Rigas siltums, Imanta","8585"
+"LV","Rigas siltums, Zasulauks","191904"
+"LV","Rigas siltums, Ziepniekkalns","191905"
+"MT","DPS1","14409"
+"MT","DPS2","14409"
+"MT","DPS3","14409"
+"MT","DPS4","14409"
+"MT","DPS5","14409"
+"MT","DPS6","14409"
+"MT","MPS1","14408"
+"MT","MPS2","14408"
+"MT","MPS3","14408"
+"MT","MPS4","14408"
+"MT","MPS5","14408"
+"NL","Abengoa Bioenergy, 89685","177145"
+"NL","Air Products HyCo 4 (Botlekweg), 88784","191942"
+"NL","Air Products Nederland BV (Botlek), 89783","5979"
+"NL","Air Products Nederland BV (Botlek), 89784","5979"
+"NL","Akzo Nobel Chemicals BV (Botlek), 90690","5676"
+"NL","Akzo Nobel Chemicals BV (Botlek), 90691","5676"
+"NL","Akzo Nobel Chemicals BV (Botlek), 90692","5676"
+"NL","Akzo Nobel Chemicals BV (Hengelo), 90127","10586"
+"NL","Akzo Nobel Chemicals BV (Hengelo), 90128","10586"
+"NL","Akzo Nobel Chemicals BV (Hengelo), 90129","10586"
+"NL","Avebe u.a. (Foxhol), 91756","5832"
+"NL","Bio Methanol Chemie Nederland (BioMCN), 90736","5751"
+"NL","Biomassacentrale Moerdijk, 87528","78381"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","BP Rotterdam Refinery","5729"
+"NL","Centrale Gelderland GDF SUEZ Energie Nederland N.V., 88270","10435"
+"NL","Centrale Gelderland GDF SUEZ Energie Nederland N.V., 88271","10435"
+"NL","Centrale Gelderland GDF SUEZ Energie Nederland N.V., 88272","10435"
+"NL","Chemelot Site Permit BV, 89404","10390"
+"NL","Chemelot Site Permit BV, 89405","10390"
+"NL","Chemelot Site Permit BV, 89406","10390"
+"NL","Chemelot Site Permit BV, 89407","10390"
+"NL","Chemelot Site Permit BV, 89408","10390"
+"NL","Chemelot Site Permit BV, 89409","10390"
+"NL","Chemelot Site Permit BV, 89410","10390"
+"NL","Chemelot Site Permit BV, 89411","10390"
+"NL","Chemelot Site Permit BV, 89412","10390"
+"NL","Chemelot Site Permit BV, 89417","10390"
+"NL","Chemelot Site Permit BV, 89418","10390"
+"NL","Chemelot Site Permit BV, 89422","10390"
+"NL","Croda Nederland BV, 90987","5981"
+"NL","Delesto BV, 90811","5890"
+"NL","Delesto BV, 90812","5890"
+"NL","Delesto BV, 90813","5890"
+"NL","Delesto BV, 90819","5890"
+"NL","Dow Benelux BV (Hoek), 92104","9981"
+"NL","Dow Benelux BV (Hoek), 92105","9981"
+"NL","Dow Benelux BV (Hoek), 92116","9981"
+"NL","Dow Benelux BV (Hoek), 92117","9981"
+"NL","Dow Benelux BV (Hoek), 92120","9981"
+"NL","Dow Benelux BV (Hoek), 92121","9981"
+"NL","Dow Benelux BV (Hoek), 92122","9981"
+"NL","Dow Benelux BV (Hoek), 92123","9981"
+"NL","Dow Benelux BV (Hoek), 92124","9981"
+"NL","Dow Benelux BV (Hoek), 92129","9981"
+"NL","Dow Benelux BV (Hoek), 92130","9981"
+"NL","Dow Benelux BV (Hoek), 92131","9981"
+"NL","Dow Benelux BV (Hoek), 92132","9981"
+"NL","Dow Benelux BV (Hoek), 92133","9981"
+"NL","Dow Benelux BV (Hoek), 92134","9981"
+"NL","Dow Benelux BV (Hoek), 92135","9981"
+"NL","Dow Benelux BV (Hoek), 92136","9981"
+"NL","Dow Benelux BV (Hoek), 92137","9981"
+"NL","Dow Benelux BV (Hoek), 92138","9981"
+"NL","Dow Benelux BV (Hoek), 92139","9981"
+"NL","Dow Benelux BV (Hoek), 92140","9981"
+"NL","Dow Benelux BV (Hoek), 92141","9981"
+"NL","Dow Benelux BV (Hoek), 92142","9981"
+"NL","Dow Benelux BV (Hoek), 92143","9981"
+"NL","Dow Benelux BV (Hoek), 92144","9981"
+"NL","Dow Benelux BV (Hoek), 92152","9981"
+"NL","Dow Benelux BV (Hoek), 92159","9981"
+"NL","Du Pont de Nemours (Ned.) BV, 95373","5741"
+"NL","Du Pont de Nemours (Ned.) BV, 95374","5741"
+"NL","E.On Benelux NV (Maasvlakte), 91387","6306"
+"NL","E.On Benelux NV (Maasvlakte), 91388","6306"
+"NL","E.On Benelux NV (Maasvlakte), 91389","6306"
+"NL","E.On Benelux NV (Maasvlakte), 91391","6306"
+"NL","E.On Benelux NV (RoCa), 90600","6311"
+"NL","E.On Benelux NV (RoCa), 90601","6311"
+"NL","Elsta B.V. & Co. CV, 90786","6141"
+"NL","Elsta B.V. & Co. CV, 90787","6141"
+"NL","Elsta B.V. & Co. CV, 90788","6141"
+"NL","Enecal Energy VOF, 87555","78342"
+"NL","ENECOGEN V.O.F., 89935","177158"
+"NL","ENECOGEN V.O.F., 89936","177158"
+"NL","EPZ NV (Conventional Operations), 88108","10128"
+"NL","Essent bio-energiecentrale Cuijk, 87478","78487"
+"NL","Essent Energie Productie BV (Amer), 90265","9537"
+"NL","Essent Energie Productie BV (Amer), 90266","9537"
+"NL","Essent Energie Productie BV (Clauscentrale), 87998","9295"
+"NL","Essent Energie Productie BV (Clauscentrale), 87999","9295"
+"NL","Essent Energie Productie BV (Clauscentrale), 88000","9295"
+"NL","Essent Energie Productie BV (Clauscentrale), 88001","9295"
+"NL","Essent Energie Productie WKC Eindhoven, 87509","121313"
+"NL","Essent WKC Bergen op Zoom, 87514","7471"
+"NL","Essent WKC Helmond 1+2, 87500","78475"
+"NL","Essent WKC Helmond 1+2, 87501","78475"
+"NL","Essent WKC 's-Hertogenbosch, 87476",
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89543","5732"
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89544","5732"
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89546","5732"
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89547","5732"
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89548","5732"
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89549","5732"
+"NL","Esso Nederland BV (Raffinaderij Rotterdam), 89550","5732"
+"NL","Eurogen CV, 87543","6142"
+"NL","Eurogen CV, 87544","6142"
+"NL","ExxonMobil Chemical Holland BV (RAP), 89532","5733"
+"NL","ExxonMobil Chemical Holland BV (RAP), 89533","5733"
+"NL","ExxonMobil Chemical Holland BV (ROP van RPI), 88736","37237"
+"NL","ExxonMobil Chemical Holland BV (ROP van RPI), 88737","37237"
+"NL","FrieslandCampina (Leeuwarden), 90096","11161"
+"NL","GDF SUEZ (Centrale Bergum), 89757","11194"
+"NL","GDF SUEZ (Centrale Bergum), 89760","11194"
+"NL","GDF SUEZ Centrale Harculo, 89638","10641"
+"NL","GDF SUEZ Centrale Harculo, 89639","10641"
+"NL","GDF Suez Energie Nederland NV Eemscentrale, 87883","5889"
+"NL","GDF Suez Energie Nederland NV Eemscentrale, 87884","5889"
+"NL","GDF Suez Energie Nederland NV Eemscentrale, 87885","5889"
+"NL","GDF Suez Energie Nederland NV Eemscentrale, 87886","5889"
+"NL","GDF Suez Energie Nederland NV Eemscentrale, 87887","5889"
+"NL","GDF Suez Energie Nederland NV Eemscentrale, 87888","5889"
+"NL","Koch HC Partnership BV, 90346","121221"
+"NL","Kuwait Petroleum Europoort BV (KPE), 88847","5730"
+"NL","Kuwait Petroleum Europoort BV (KPE), 88848","5730"
+"NL","Kuwait Petroleum Europoort BV (KPE), 88849","5730"
+"NL","Kuwait Petroleum Europoort BV (KPE), 88850","5730"
+"NL","Kuwait Petroleum Europoort BV (KPE), 88851","5730"
+"NL","Kuwait Petroleum Europoort BV (KPE), 88852","5730"
+"NL","Maasstroom Energie CV, 88205","177150"
+"NL","Maxima-centrale, 89621","19642"
+"NL","Maxima-centrale, 89622","19642"
+"NL","Maxima-centrale, 89623","19642"
+"NL","Nuon (Kanaalweg), 90757",
+"NL","Nuon (Nieuwegein), 90760",
+"NL","Nuon HWC Nicolaas Beetsstraat, 90762",
+"NL","Nuon HWC Overvecht (Esmoreit), 90512",
+"NL","Nuon IJmond 1, 90365","8407"
+"NL","Nuon Power Generation BV (Buggenum), 90505","10287"
+"NL","Nuon Power Generation BV (Diemen), 90752","8040"
+"NL","Nuon Power Generation BV (Diemen), 90753","8040"
+"NL","Nuon Power Generation BV (Diemen), 90754","8040"
+"NL","Nuon Power Generation BV (Hemweg), 90714","8039"
+"NL","Nuon Power Generation BV (Hemweg), 90715","8039"
+"NL","Nuon Power Generation BV (Hemweg), 90716","8039"
+"NL","Nuon Power Generation BV (Lage Weide), 90284","19760"
+"NL","Nuon Power Generation BV (Merwedekanaal), 90280","19759"
+"NL","Nuon Power Generation BV (Merwedekanaal), 90281","19759"
+"NL","Nuon Power Generation BV (Velsen), 90355","8041"
+"NL","Nuon Power Generation BV (Velsen), 90356","8041"
+"NL","Reststoffen Energie Centrale (REC), 89352","177149"
+"NL","Rijnmond Energie, 88202","19670"
+"NL","Rijnmond Energie, 88203","19670"
+"NL","SABIC Innovative Plastics BV, 89722","9346"
+"NL","Sappi Maastricht BV, 88693","10354"
+"NL","Sappi Maastricht BV, 88695","10354"
+"NL","Sappi Nijmegen BV, 87831","10442"
+"NL","SCA Packaging De Hoop BV, 87390","10443"
+"NL","Shell Nederland Chemie BV (Moerdijk), 88928","9340"
+"NL","Shell Nederland Chemie BV (Moerdijk), 88929","9340"
+"NL","Shell Nederland Chemie BV (Moerdijk), 88930","9340"
+"NL","Shell Nederland Chemie BV (Moerdijk), 88931","9340"
+"NL","Shell Nederland Raffinaderij BV, 89050","5728"
+"NL","Shell Nederland Raffinaderij BV, 89051","5728"
+"NL","Shell Nederland Raffinaderij BV, 89052","5728"
+"NL","Shell Nederland Raffinaderij BV, 89053","5728"
+"NL","Shell Nederland Raffinaderij BV, 89054","5728"
+"NL","Shell Nederland Raffinaderij BV, 89055","5728"
+"NL","Shell Nederland Raffinaderij BV, 89056","5728"
+"NL","Shell Nederland Raffinaderij BV, 89057","5728"
+"NL","Shell Nederland Raffinaderij BV, 89075","5728"
+"NL","Shell Nederland Raffinaderij BV, 89077","5728"
+"NL","Sloe Centrale BV (Vlissingen), 88528","121256"
+"NL","Sloe Centrale BV (Vlissingen), 88529","121256"
+"NL","Suiker Unie (Dinteloord), 88597","9420"
+"NL","Suiker Unie (Dinteloord), 88598","9420"
+"NL","Suiker Unie Vierverlaten, 90863","5816"
+"NL","Tata Steel IJmuiden BV, 95032","7974"
+"NL","Tata Steel IJmuiden BV, 95033","7974"
+"NL","Tata Steel IJmuiden BV, 95035","7974"
+"NL","Tata Steel IJmuiden BV, 95037","7974"
+"NL","Tata Steel IJmuiden BV, 95038","7974"
+"NL","Tata Steel IJmuiden BV, 95039","7974"
+"NL","YARA Sluiskil BV, 91418","9982"
+"NL","YARA Sluiskil BV, 91419","9982"
+"NL","Zeeland Refinery N.V., 87291","10003"
+"NL","Zeeland Refinery N.V., 87292","10003"
+"NL","Zeeland Refinery N.V., 87293","10003"
+"NL","Zeeland Refinery N.V., 87294","10003"
+"NL","Zeeland Refinery N.V., 87295","10003"
+"PL","ANWIL S.A.","21133"
+"PL","ArcelorMittal Poland S.A. Oddział w Krakowie","4659"
+"PL","ArcelorMittal Poland S.A. Oddział w Zdzieszowicach","5120"
+"PL","Arctic Paper Kostrzyn S.A.","553"
+"PL","Arctic Paper Kostrzyn S.A.","553"
+"PL","Dalkia Łódź S.A. - Elektrociepłownia Zakład EC2","1322"
+"PL","Dalkia Łódź S.A. - Elektrociepłownia Zakład EC3","1321"
+"PL","Dalkia Łódź S.A. - Elektrociepłownia Zakład EC4","1323"
+"PL","Dalkia Poznań ZEC S.A. - Elektrociepłownia EC I Garbary","6963"
+"PL","Dalkia Poznań ZEC S.A. - Elektrociepłownia EC II Karolin","6963"
+"PL","EDF Kraków S.A.","4644"
+"PL","EDF Rybnik S.A.","6461"
+"PL","EDF Toruń S.A. - Elektrociepłownia EC 1","49203"
+"PL","EDF Wybrzeże S.A. - Elektrociepłownia Gdańska","20208"
+"PL","EDF Wybrzeże S.A. - Elektrociepłownia Gdyńska","20209"
+"PL","Elana - Energetyka Sp. z o.o. - Elektrociepłownia EC 2","20215"
+"PL","Elektrociepłownia ""Będzin"" S.A.","6456"
+"PL","Elektrociepłownia ""Zielona Góra"" S.A.","554"
+"PL","Elektrociepłownia ""Zielona Góra"" S.A.","554"
+"PL","Elektrociepłownia Białystok S.A.","6029"
+"PL","Elektrociepłownia Chorzów ""ELCHO"" Sp. z o.o.","6457"
+"PL","Elektrociepłownia MEGATEM EC - LUBLIN Sp. z o.o.","20348"
+"PL","Elektrociepłownia Nowa Sarzyna Sp. z o.o.","5212"
+"PL","Elektrociepłownia Starogard Sp. z o.o.","20265"
+"PL","Elektrownia Pątnów II Sp. z o.o.","81484"
+"PL","Elektrownia Połaniec S.A. - Grupa GDF SUEZ Energia Polska","6672"
+"PL","Elektrownia Skawina S.A.","4646"
+"PL","ENEA Wytwarzanie S.A.","4951"
+"PL","ENERGA Elektrownie Ostrołęka S.A. - Elektrociepłownia Ostrołęka A","4985"
+"PL","ENERGA Elektrownie Ostrołęka S.A. - Elektrownia Ostrołęka B","4985"
+"PL","ENERGA Kogeneracja Sp. z o.o. - Elektrociepłownia Elbląg","6839"
+"PL","Energetyka Cieplna Opolszczyzny S.A. - Ciepłownia K-173","5106"
+"PL","FENICE Poland Sp. z o.o.","5210"
+"PL","Fortum Bytom S.A. - Elektrociepłownia Miechowice","6460"
+"PL","Fortum Power and Heat Polska Sp. z o.o. - CHP Częstochowa","177296"
+"PL","Fortum Power and Heat Polska Sp. z o.o. - Ciepłownia ul. Rejtana","6469"
+"PL","Fortum Zabrze S.A.","6460"
+"PL","Grupa Azoty S.A.","4675"
+"PL","Grupa Azoty Zakłady Azotowe Kędzierzyn S.A.","5119"
+"PL","Grupa Azoty Zakłady Azotowe Puławy S.A.","509"
+"PL","Grupa Azoty Zakłady Chemiczne ""POLICE"" S.A. - Elektrociepłownia 2","7118"
+"PL","Grupa LOTOS S.A. - Elektrociepłownia GL S.A.","6220"
+"PL","International Paper – Kwidzyn S.A.","21239"
+"PL","Koksownia Przyjaźń S.A.","6475"
+"PL","Krajowa Spółka Cukrowa S.A. z siedzibą w Toruniu Oddział Cukrownia Krasnystaw","498"
+"PL","Krajowa Spółka Cukrowa S.A. z siedzibą w Toruniu Oddział Cukrownia Łapy","498"
+"PL","Michelin Polska S.A.","6841"
+"PL","Miejska Energetyka Cieplna Piła Sp. z o.o. ","20191"
+"PL","Miejskie Przedsiębiorstwo Energetyki Cieplnej Sp. z o.o. w Białymstoku - Ciepłownia ""Zachód""","6031"
+"PL","Miejskie Przedsiębiorstwo Energetyki Cieplnej w Łomży Sp. z o.o.","6033"
+"PL","Miejskie Przedsiębiorstwo Energetyki Cieplnej w Przemyślu Sp. z o.o.","5227"
+"PL","Mondi Świecie S.A.","21752"
+"PL","PCC Rokita S.A. - Elektrociepłownia PCC Rokita S.A.","21042"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A. - Oddział Elektrociepłownia Zgierz - EC III","20237"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektociepłownia Gorzów","81486"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektociepłownia Gorzów","81486"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrociepłownia Kielce","6671"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrociepłownia Lublin Wrotków","500"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrociepłownia Lublin Wrotków","500"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrociepłownia Rzeszów","5213"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrociepłownia Rzeszów","5213"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrownia Bełchatów","1298"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrownia Opole","5102"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Elektrownia Turów","198"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Zespół Elektrociepłowni Bydgoszcz - Elektrociepłownia Bydgoszcz I","20253"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Zespół Elektrociepłowni Bydgoszcz - Elektrociepłownia Bydgoszcz II","20245"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Zespół Elektrociepłowni Bydgoszcz - Elektrociepłownia Bydgoszcz III",
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Zespół Elektrowni Dolna Odra - Elektrownia Dolna Odra","7121"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Zespół Elektrowni Dolna Odra - Elektrownia Pomorzany","7120"
+"PL","PGE Górnictwo i Energetyka Konwencjonalna S.A.- Oddział Zespół Elektrowni Dolna Odra - Elektrownia Szczecin","7119"
+"PL","PGNiG TERMIKA S.A. - Ciepłownia Kawęczyn","4976"
+"PL","PGNiG TERMIKA S.A. - Ciepłownia Wola","4975"
+"PL","PGNiG TERMIKA S.A. - Elektrociepłownia Siekierki","4978"
+"PL","PGNiG TERMIKA S.A. - Elektrociepłownia Żerań",
+"PL","Polski Koncern Naftowy ORLEN S.A. - Elektrociepłownia","20177"
+"PL","Przesiębiorstwo Energetyki Cieplnej - Gliwice Sp. z o.o.","20224"
+"PL","Soda Polska Ciech S.A. - Elektrociepłownia Inowrocław","21118"
+"PL","Soda Polska Ciech S.A. - Elektrociepłownia Janikowo","21119"
+"PL","Spółka Energetyczna ""Jastrzębie"" S.A. - Elektrociepłownia ""Zofiówka""","6515"
+"PL","Spółka Energetyczna „Jastrzębie” S.A. - Elektrociepłownia ""Moszczenica""","6516"
+"PL","Stora Enso Poland S.A. - Elektrociepłownia","4971"
+"PL","Synthos Dwory 7 spółka z ograniczoną odpowiedzialnością spółka komandytowo-akcyjna","21091"
+"PL","Szczecińska Energetyka Cieplna Sp. z o.o. - Ciepłownia Rejonowa Benesza","7116"
+"PL","TAURON Ciepło S.A. - Zakład Wytwarzania Katowice ","6498"
+"PL","TAURON Ciepło S.A. - Zakład Wytwarzania Nowa","20195"
+"PL","TAURON Ciepło S.A. - Zakład Wytwarzania Tychy","6459"
+"PL","TAURON Wytwarzanie S. A. – Oddział Elektrownia Siersza w Trzebini","4663"
+"PL","TAURON Wytwarzanie S. A. – Oddział Zespół Elektrociepłowni Bielsko-Biała w Bielsku-Białej - Elektrociepłownia Bielsko-Północ EC2","6496"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Blachownia w Kędzierzynie-Koźlu","5105"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Halemba w Rudzie Śląskiej","6491"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Jaworzno III w Jaworznie – Elektrownia II","6493"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Jaworzno III w Jaworznie – Elektrownia III","6497"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Łagisza w Będzinie","6492"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Łaziska w Łaziskach Górnych","6494"
+"PL","TAURON Wytwarzanie S.A. – Oddział Elektrownia Stalowa Wola w Stalowej Woli","5214"
+"PL","TAURON Wytwarzanie S.A. – Oddział Zespół Elektrociepłowni Bielsko-Biała w Bielsku-Białej - Elektrociepłownia Bielsko-Biała EC1","6495"
+"PL","Wojewódzkie Przedsiębiorstwo Energetyki Cieplnej w Legnicy S.A. - Centralna Ciepłownia w Legnicy","224"
+"PL","Wojewódzkie Przedsiębiorstwo Energetyki Cieplnej w Legnicy S.A. - Centralna Ciepłownia w Lubinie",
+"PL","Zakład Elektroenergetyczny H. Cz. ELSEN S.A. - Elektrociepłownia EC I ","6483"
+"PL","Zakład Elektroenergetyczny H. Cz. ELSEN S.A. - Elektrociepłownia EC II ","6483"
+"PL","ZE PAK S.A. Elektrownia Adamów","6993"
+"PL","ZE PAK S.A. Elektrownia Konin","6994"
+"PL","ZE PAK S.A. Elektrownia Pątnów I","6995"
+"PL","Zespół Elektrociepłowni Wrocławskich KOGENERACJA S.A. - Elektrociepłownia Czechnica","234"
+"PL","Zespół Elektrociepłowni Wrocławskich KOGENERACJA S.A. - Elektrociepłownia Wrocław","235"
+"PT","CCC Tapada do Outeiro (Chaminé 1)","5403"
+"PT","CCC Tapada do Outeiro (Chaminé 2)","5403"
+"PT","CCC Tapada do Outeiro (Chaminé 3)","5403"
+"PT","Central Cogeração FISIGEN (Chaminé 1)","177453"
+"PT","Central de Cogeração da Gás Natural - SPCG","133926"
+"PT","Central Termica Carregado (Chaminé 1)","5483"
+"PT","Central Termica Carregado (Chaminé 2)","5483"
+"PT","Central Termica Carregado (Chaminé 3)","5483"
+"PT","Central Termica Ribatejo (Chaminé 1)","5531"
+"PT","Central Termica Ribatejo (Chaminé 2)","5531"
+"PT","Central Termica Ribatejo (Chaminé 3)","5531"
+"PT","Central Termica Setúbal (Chaminé 1)","5482"
+"PT","Central Termica Setúbal (Chaminé 2)","5482"
+"PT","Central Termica Sines - 7a","5485"
+"PT","Central Termica Sines - 7b","5485"
+"PT","Central Termoeléctrica Biomassa Figueira Foz","133882"
+"PT","Central Termoelétrica de Lares (Chaminé 1)","133888"
+"PT","Central Termoelétrica de Lares (Chaminé 2)","133888"
+"PT","Central Termoelétrica de Tunes",
+"PT","Central Termoelétrica do Pego","5530"
+"PT","Cogeração Carriço","38374"
+"PT","Cogeração Energin","5532"
+"PT","Cogeração Soporgen (Chaminé 1)","5491"
+"PT","Cogeração Soporgen (Chaminé 2)","5491"
+"PT","Europac Kraft Viana (CCC a Gás Natural 1)","5389"
+"PT","Europac Kraft Viana (CCC a Gás Natural 2)","5389"
+"PT","Portucel Cacia (caldeira biomassa)","5388"
+"PT","Portucel Setúbal  (caldeira biomassa)","5476"
+"PT","Portucel/Soporcel (caldeira biomassa)","5410"
+"PT","Portucel/Soporcel (caldeira fuel)","5410"
+"PT","Refinaria de Sines (Caldeira 4)","5453"
+"PT","Refinaria de Sines (Caldeiras 1, 2 e 3)","5453"
+"PT","Refinaria do Porto (chaminé  4002) - 12b","5452"
+"PT","Refinaria do Porto (chaminé 4001) - 12a","5452"
+"PT","Repsol ACE","5357"
+"RO"," MODERN CALOR SA ",
+"RO"," OLTCHIM SA Divizia Petrochimica Bradu",
+"RO"," S.C. Complexul Energetic  Oltenia  S.A  S.E Turceni nr. 3","167389"
+"RO"," S.C. Complexul Energetic  Oltenia  S.A  S.E Turceni nr. 4 ","167389"
+"RO"," S.C. Complexul Energetic  Oltenia  S.A  SE Turceni nr. 1","167389"
+"RO"," S.C. Complexul Energetic  Oltenia  S.A  SE Turceni nr.2 ","167389"
+"RO"," S.C. TERMICA S.A. Targoviste nr.1",
+"RO"," S.C.OMV Petrom S.A. CCCC Brazi nr.1","193180"
+"RO"," SC CET IASI SA  CET II nr.1                                                                                                                                  ","167308"
+"RO"," SC ECOGEN ENERGY SA nr.2 ",
+"RO","C.E.T. ENERGOTERM S.A. RESITA nr.1",
+"RO","C.E.T. ENERGOTERM S.A. RESITA nr.2",
+"RO","C.E.T. ENERGOTERM S.A. RESITA nr.3",
+"RO","C.E.T. ENERGOTERM S.A. RESITA nr.4",
+"RO","Centrala Termica a SC MICHELIN ROMANIA SA  ",
+"RO","CET Arad Hidrocarburi nr.10","167405"
+"RO","CET Arad Hidrocarburi nr.3","167405"
+"RO","CET Arad Hidrocarburi nr.4","167405"
+"RO","CET Arad Hidrocarburi nr.5","167405"
+"RO","CET Arad Hidrocarburi nr.6","167405"
+"RO","CET Arad Hidrocarburi nr.7","167405"
+"RO","CET Arad Hidrocarburi nr.8","167405"
+"RO","CET Arad Hidrocarburi nr.9","167405"
+"RO","CET Arad Lignit nr.1","167405"
+"RO","CET Arad Lignit nr.2","167405"
+"RO","CET BACAU nr.1","167294"
+"RO","CET BACAU nr.2","167294"
+"RO","CET BACAU nr.3","167294"
+"RO","Directia de Termoficare a Mun. Bistrita  ",
+"RO","OMV PETROM S.A.nr.2 ","167345"
+"RO","OMV PETROM S.A.nr.3 ","167345"
+"RO","RAAN - Suc. ROMAG TERMO, nr.1","167394"
+"RO","RAAN - Suc. ROMAG TERMO, nr.2","167394"
+"RO","RAAN - Suc. ROMAG TERMO, nr.3","167394"
+"RO","RADET Bucuresti CTZ",
+"RO","Regia Autonoma de Termoficare Cluj-Napoca","177468"
+"RO","S.C. AGRANA ROMANIA S.A. Buzau Sucursala Roman","167319"
+"RO","S.C. ALUM S.A. TULCEA  nr.1","167343"
+"RO","S.C. AMURCO S.R.L.","167296"
+"RO","S.C. C.E.T. GOVORA S.A. nr.1","167399"
+"RO","S.C. C.E.T. GOVORA S.A. nr.2 ","167399"
+"RO","S.C. C.E.T. GOVORA S.A. nr.3","167399"
+"RO","S.C. CALOR SERV S.R.L. nr.1 ",
+"RO","S.C. CALOR SERV S.R.L. nr.2",
+"RO","S.C. CET GRIVITA SRL",
+"RO","S.C. CET IASI S.A. CET I nr.1",
+"RO","S.C. CET IASI S.A. CET I nr.2",
+"RO","S.C. CET IASI S.A. CET I nr.3",
+"RO","S.C. CET S.A.Braila  nr.1","22756"
+"RO","S.C. CET S.A.Braila  nr.2","22756"
+"RO","S.C. CET S.A.Braila  nr.3","22756"
+"RO","S.C. CET S.A.Braila  nr.4","22756"
+"RO","S.C. CET S.A.Braila  nr.5","22756"
+"RO","S.C. CET S.A.Braila  nr.6","22756"
+"RO","S.C. Complexul Energetic  Oltenia  S.A  S.E Rovinari nr. 1 ","167390"
+"RO","S.C. Complexul Energetic  Oltenia  S.A  S.E Rovinari nr. 2 ","167390"
+"RO","S.C. COMPLEXUL ENERGETIC HUNEDOARA S.A. SE DEVA nr.1","167410"
+"RO","S.C. COMPLEXUL ENERGETIC HUNEDOARA S.A. SE DEVA nr.2 ","167410"
+"RO","S.C. COMPLEXUL ENERGETIC HUNEDOARA S.A. SE DEVA nr.3","167410"
+"RO","S.C. Complexul Energetic Oltenia  S.A  - S.E  Craiova nr. 2","167387"
+"RO","S.C. Complexul Energetic Oltenia  S.A - S.E  Craiova  nr.3 ","167387"
+"RO","S.C. Complexul Energetic Oltenia  S.A - S.E Craiova  nr.1 ","167387"
+"RO","S.C. Complexul Energetic Oltenia  S.A - S.E Craiova  nr.4","167387"
+"RO","S.C. Complexul Energetic Oltenia  S.A S.E  Isalnita","167386"
+"RO","S.C. Electrocentrale Galati nr.1",
+"RO","S.C. Electrocentrale Galati nr.2",
+"RO","S.C. Electrocentrale Galati nr.3",
+"RO","S.C. ELECTROCENTRALE ORADEA S.A  nr. 1","167427"
+"RO","S.C. ELECTROCENTRALE ORADEA S.A  nr. 2","167427"
+"RO","S.C. ENERGOTERM S.A. Tulcea",
+"RO","S.C. TERMICA VASLUI S.A",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.1",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.2",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.3 ",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.4",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.5 ",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.6 ",
+"RO","S.C. TERMO CALOR CONFORT S.A. nr.7",
+"RO","S.C. Termoelectrica S.A. SE PAROSENI nr.1","167411"
+"RO","S.C. Termoelectrica S.A. SE PAROSENI nr.2 ","167411"
+"RO","S.C. TERMOELECTRICA S.A. Sucursala Electrocentrale Borzesti",
+"RO","S.C. Termoelectrica S.A.S.E. Doicesti  nr.1","167353"
+"RO","S.C. Termoelectrica S.A.S.E. Doicesti  nr.2","167353"
+"RO","S.C. TERMON S.R.L. ONESTI",
+"RO","S.C. Uzina Termoelectrica Giurgiu S.A. nr.1",
+"RO","S.C. Uzina Termoelectrica Giurgiu S.A. nr.2",
+"RO","S.C.COLTERM S.A. nr.1","167418"
+"RO","S.C.COLTERM S.A. nr.2","167418"
+"RO","S.C.COLTERM S.A. nr.3","167418"
+"RO","S.C.COLTERM S.A. nr.4","167418"
+"RO","S.C.COLTERM S.A. nr.5","167418"
+"RO","S.C.COLTERM S.A. nr.6 ","167418"
+"RO","S.C.COLTERM S.A. nr.7","167418"
+"RO","S.C.OMV Petrom S.A. CCCC Brazi nr.2","193180"
+"RO","S.C.TERMICA S.A SUCEAVA nr.1         ","167321"
+"RO","S.C.TERMICA S.A SUCEAVA nr.2","167321"
+"RO","S.C.TERMICA S.A SUCEAVA nr.3","167321"
+"RO","S.C.TERMICA S.A SUCEAVA nr.4","167321"
+"RO","S.C.Uzina Termoelectrica Midia S.A nr.1","167334"
+"RO","S.C.Uzina Termoelectrica Midia S.A nr.2","167334"
+"RO","S.C.Uzina Termoelectrica Midia S.A nr.3","167334"
+"RO","S.C.Uzina Termoelectrica Midia S.A nr.4","167334"
+"RO","SC CET BRASOV SA  nr. 2",
+"RO","SC CET BRASOV SA nr. 1",
+"RO","SC Dalkia Termo Prahova SRL nr. 1","167376"
+"RO","SC Dalkia Termo Prahova SRL nr. 2","167376"
+"RO","SC Dalkia Termo Prahova SRL nr. 3","167376"
+"RO","SC Dalkia Termo Prahova SRL nr. 4","167376"
+"RO","SC ECOGEN ENERGY  SA nr.1",
+"RO","SC ELCEN Bucuresti     CET Progresu nr.1","167470"
+"RO","SC ELCEN Bucuresti     CET Progresu nr.2","167470"
+"RO","SC ELCEN Bucuresti     CET Progresu nr.3","167470"
+"RO","SC ELCEN Bucuresti     CET Progresu nr.4","167470"
+"RO","SC ELCEN Bucuresti     CET Titan nr.1",
+"RO","SC ELCEN Bucuresti     CET Titan nr.2",
+"RO","SC ELCEN Bucuresti     CET Vest nr.7","167472"
+"RO","SC ELCEN Bucuresti     CET Vest nr.8","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.1","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.2","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.3","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.4","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.5","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.6","167472"
+"RO","SC ELCEN Bucuresti    CET Vest nr.9","167472"
+"RO","SC ELCEN Bucuresti   CET Sud nr.10","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.11","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.12","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.13","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.14","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.15","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.16","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.8","167471"
+"RO","SC ELCEN Bucuresti   CET Sud nr.9","167471"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.1","167473"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.2","167473"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.3","167473"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.4","167473"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.5","167473"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.6","167473"
+"RO","SC ELCEN Bucuresti  CET Grozavesti nr.7","167473"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 1","167471"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 2","167471"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 3","167471"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 4","167471"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 5","167471"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 6","167471"
+"RO","SC ELCEN Bucuresti  CET Sud nr. 7","167471"
+"RO","SC ELCEN Bucuresti SE Palas nr.1+4","167335"
+"RO","SC ELCEN Bucuresti SE Palas nr.2","167335"
+"RO","SC ELCEN Bucuresti SE Palas nr.3","167335"
+"RO","SC ELCEN Bucuresti SE Palas nr.5","167335"
+"RO","SC ELCEN Bucuresti SE Palas nr.6","167335"
+"RO","SC ELCEN Bucuresti SE Palas nr.7","167335"
+"RO","SC ELCEN Bucuresti SE Palas nr.8","167335"
+"RO","SC ENET SA Nr.1 Focsani",
+"RO","SC ENET SA Nr.2 Focsani",
+"RO","SC ENET SA Nr.3 Focsani",
+"RO","SC ENET SA Nr.4 Focsani",
+"RO","SC Lemarco Cristal SRL",
+"RO","SC LUKOIL ENERGY & GAS SRL  nr.2","159568"
+"RO","SC LUKOIL ENERGY & GAS SRL nr.3","159568"
+"RO","SC Rafinaria ASTRA ROMANA -Centrala termica","82885"
+"RO","SC ROMPETROL RAFINARE SA RAFINARIA VEGA PLOIESTI ",
+"RO","SC TERMA SERV ALEXANDRIA",
+"RO","SC TERMICA SA nr.2 Botosani",
+"RO","SC TERMICA SA nr.3 Botosani",
+"RO","SC TERMOELECTRICA S.A. Sucursala Electrocentrale Braila nr.1",
+"RO","SC TERMOELECTRICA S.A. Sucursala Electrocentrale Braila nr.2",
+"RO","SC Uzina Electrica Zalau S.A  nr.1",
+"RO","SC Uzina Electrica Zalau S.A  nr.3",
+"RO","SC ZAHARUL SA Oradea","99703"
+"RO","SNGN Romgaz SA - SPEE Iernut  nr.4 ","167460"
+"RO","SNGN Romgaz SA - SPEE Iernut nr.1","167460"
+"RO","SNGN Romgaz SA - SPEE Iernut nr.2","167460"
+"RO","SNGN Romgaz SA - SPEE Iernut nr.3","167460"
+"RO","SNGN Romgaz SA - SPEE Iernut nr.5 ","167460"
+"SE","AarhusKarlshamn Sweden AB","6002"
+"SE","AB Sandvik Materials Technolog","7761"
+"SE","Akalla värmeverk","42035"
+"SE","Akzo Nobel Functional Chemical","6721"
+"SE","Ålidehemsanläggningen","8109"
+"SE","Allöverket","41979"
+"SE","Angereds Värmecentral","85628"
+"SE","Ångkraftverket, (ÅKV)","6408"
+"SE","Arboga värmeverk",
+"SE","Arctic Paper Grycksbo AB","7645"
+"SE","Arsta energicentral","85669"
+"SE","Årsta värmeverk","42002"
+"SE","Bäckelundsverket","41968"
+"SE","Beleverket i Hässleholm","85664"
+"SE","Bergsättersverken","150715"
+"SE","Billerud Karlsborgs AB","8155"
+"SE","Billerud Skärblacka AB","1240"
+"SE","Björksätra Kraftvärmeverk","7762"
+"SE","Bodens värmeverk, BEAB","85650"
+"SE","Boländeranläggningarna, Kraftvärmeverket o Bolandv","492"
+"SE","Bollmora värmeverk","85651"
+"SE","Brattåsverket",
+"SE","Bravikens Pappersbruk","1238"
+"SE","Bristaverket","195"
+"SE","Carlsborg hetv.centr (reserv)",
+"SE","Dåva kraftvärmeverk","8110"
+"SE","Djupedsverket","41878"
+"SE","Draken , Hetvattencentral",
+"SE","E.ON Värme Sverige AB Hetvattencentralen","41914"
+"SE","E.ON Värme Sverige AB, Åbyverket","7318"
+"SE","Ersbo hetvattencentral",
+"SE","Farsta värmeverk",
+"SE","Fittjaverket","85639"
+"SE","Fjärrvärmecentral,Israel (FCI)",
+"SE","Fjärrvärmeverket Hammargård",
+"SE","Gällivare Energi AB","41901"
+"SE","Geneta panncentral",
+"SE","Granskärs kraftvärmeverk",
+"SE","Gruvöns bruk","7189"
+"SE","Hammarbyverket","188"
+"SE","Hässelbyverket","185"
+"SE","Heden kraftvärmeverk","7202"
+"SE","Hedensbyns kraftvärmeverk","8115"
+"SE","Heleneholmsverket, (HVK)","6405"
+"SE","HPC Simpan och Ena Kraft, kraftvärmeverket","42038"
+"SE","Huddinge maskincentral",
+"SE","Husbyborgsverket",
+"SE","HVC 1 Fräsen Porsön",
+"SE","HVC 2 Aronstorp",
+"SE","HVG-stationen",
+"SE","Idbäckens Kraftvärmeverk","41893"
+"SE","Igelstaverket",
+"SE","Iggesund Paperboard AB","7771"
+"SE","INEOS Sverige AB","6723"
+"SE","Jordbro värmeverk","112488"
+"SE","Karlshamn Kraft AB",
+"SE","Karskärsverket","7755"
+"SE","Korsnäs AB, Frövi","7326"
+"SE","Kraftvärmeverk Karlskrona",
+"SE","Kraftvärmeverket Härnösand","7913"
+"SE","Kraftvärmeverket i Katrineholm","41940"
+"SE","Kraftvärmeverket i Linköping","1231"
+"SE","Kraftvärmeverket i yttre hamn",
+"SE","Kraftvärmeverket Munksjö","4637"
+"SE","Kraftvärmeverket Övik Energi A",
+"SE","KVV-Åkerslund","42057"
+"SE","Lidingö värmeverk",
+"SE","Limhamns Fjärrvärmecentral, (L",
+"SE","Lövängsverket (f d Kärnsjukhus","85674"
+"SE","Lugnviksverket","42045"
+"SE","Luleå kraftvärmeverk LUKAB",
+"SE","Lunds Hetvattencentral (LHVC)","85648"
+"SE","Minnesgärdet","159630"
+"SE","Moskogens kraftvärmeverk","41960"
+"SE","M-real Sverige AB, Husums fabr","7924"
+"SE","Nässjö Kraftvärmeverk","85631"
+"SE","Navestad HVC",
+"SE","Norsaverkets värmecentral","41881"
+"SE","Nybro Energicentral",
+"SE","Öresundsverket, (ÖVT)","41946"
+"SE","Örtofta sockerbruk","6425"
+"SE","Ortvikens pappersbruk",
+"SE","Östrands massafabrik","7891"
+"SE","Panna P7 och P11 Övik Energi AB",
+"SE","Panncentralen Släggan",
+"SE","Panncentralen Turbingatan",
+"SE","PC CSK",
+"SE","Perstorp Oxo AB, Stenungsund","6720"
+"SE","Piteå värmeverk",
+"SE","Preem Petroleum AB Preemraff Göteborg","6797"
+"SE","Preemraff, Lysekil","6808"
+"SE","Riskullaverket","6803"
+"SE","Rosenlunds Kraftvärmeverk","6801"
+"SE","Rya Gaskraftvärmeverk","42016"
+"SE","Rya Värmecentral","41916"
+"SE","Ryaverket","6822"
+"SE","Säbyverket",
+"SE","Sandviksverket","41949"
+"SE","Sävenäs Kraftvärmeverk","41915"
+"SE","SCA Packaging Obbola AB","8108"
+"SE","Skene värmeverk, Assbergsverke",
+"SE","Skeppsdockan",
+"SE","Skogås värmeverk",
+"SE","Skoghalls Bruk","7184"
+"SE","Skutskärs Bruk","482"
+"SE","Smurfit Kappa Kraftliner Piteå","8235"
+"SE","Södra Cell Mönsterås","5099"
+"SE","Södra Cell Mörrum","6001"
+"SE","Södra Cell Värö","6649"
+"SE","Solnaverket","192"
+"SE","SSAB Oxelösund AB","539"
+"SE","St1 Refinery AB","6800"
+"SE","Stallbacka Värmeverk","42009"
+"SE","Stora Enso Fors AB","7652"
+"SE","Stora Enso Hylte AB","6568"
+"SE","Stora Enso Kvarnsveden AB","7647"
+"SE","Stora Enso Nymölla AB","6391"
+"SE","Sundbybergsverket","112502"
+"SE","Sundsvall Energi AB, Korstaver","7918"
+"SE","Sundsvall Energi AB, Nackstave",
+"SE","Utklippans Fjärrvärmecentral,","193218"
+"SE","Vallviks Bruk","7764"
+"SE","Värmecentral Lextorp",
+"SE","Värmecentral Önafors","193227"
+"SE","Värmeverket Anoden",
+"SE","Värmeverket Södra Vakten 17",
+"SE","Värmeverket Vattumannen","552"
+"SE","Värtaverket","187"
+"SE","Västerås kraftvärmeverk","7417"
+"SE","Västerbyverket","177518"
+"SE","Västermalmsverket/Falu Energi & Vatten AB","41953"
+"SE","Västhamnsverket, (VHV)","6415"
+"SE","Vattenfall Visby Kraftvärmeverk",
+"SE","Vilundaverket","85643"
+"SE","VOLVO Personvagnar AB","6795"
+"SI","JPE G",
+"SI","JPE H",
+"SI","TEB J",
+"SI","TEB K",
+"SI","TEB L",
+"SI","TEB M",
+"SI","TEB N",
+"SI","TEŠ A","7125"
+"SI","TEŠ B","7125"
+"SI","TEŠ C","7125"
+"SI","TEŠ O","7125"
+"SI","TEŠ P","7125"
+"SI","TET F","7333"
+"SI","TE-TOL D","7229"
+"SI","TE-TOL E","7229"
+"SI","TOM I","23136"
+"SI","VIPAP R","7784"
+"SI","VIPAP S","7784"
+"SK","Bratislavská teplárenská, a. s. Výhrevňa JUH",
+"SK","Bratislavská teplárenská, a.s. Tepláreň 1 - západ",
+"SK","Bratislavská teplárenská, a.s. TEPLÁREŇ II - východ - K5","9132"
+"SK","Bratislavská teplárenská, a.s. TEPLÁREŇ II - východ - K6","9132"
+"SK","Bratislavská teplárenská, a.s. TEPLÁREŇ II - východ - K8+K9","9132"
+"SK","BUKÓZA ENERGO, a.s. - Energetický celok K1+ K2","159708"
+"SK","Bytkomfort s.r.o.Nové Zámky CTZ Nové Zámky K1-K2","23003"
+"SK","CHEMES, a.s. HUMENNÉ TEPLÁREŇ K4+K5+K8","10253"
+"SK","CM European power Slovakia, s. r. o. - Tepláreň BC kotol K11-14","100144"
+"SK","CM European power Slovakia, s. r. o. - Tepláreň K1-5+K7-8","100144"
+"SK","Continental Matador Rubber, s.r.o. - Kotolňa","10924"
+"SK","Dalkia Industry Žiar nad Hronom, a.s. Závod ENEVIA","9693"
+"SK","Duslo a.s. Tepláreň K5",
+"SK","Duslo a.s. Tepláreň K6-K7",
+"SK","E.ON Elektrárne s.r.o. - Spaľovacia turbína ST1",
+"SK","Energy Snina,a.s. Kombinovaná výroba tepla a elektrickej energie K1+K2+K4+K5",
+"SK","EUSTREAM, a.s. - 5 KOMPRESOROVÁ STANICA - TS  NUOVO PIGNONE DLE (R05)","10272"
+"SK","EUSTREAM, a.s. - 5 KOMPRESOROVÁ STANICA - TS  NUOVO PIGNONE DLE (R06)","10272"
+"SK","EUSTREAM, a.s. 2 KOMPRESOROVÁ STANICA TS NUOVO PIGNONE","10272"
+"SK","EUSTREAM, a.s. 3 KOMPRESOROVÁ STANICA TS COOPER-ROLLS (CR1)","10272"
+"SK","EUSTREAM, a.s. 4 KOMPRESOROVÁ STANICA TS COOPER-ROLLS (CR3)","10272"
+"SK","EUSTREAM, a.s. 4 KOMPRESOROVÁ STANICA TS COOPER-ROLLS (CR4)","10272"
+"SK","eustream, a.s. Cooper Rolls CR-1","10267"
+"SK","eustream, a.s. Cooper Rolls CR-2","10267"
+"SK","eustream, a.s. Nuovo Pignone","10267"
+"SK","eustream, a.s. Plynové turbíny 23-NP 1 ","9686"
+"SK","eustream, a.s. Plynové turbíny 24-NP 2 ","9686"
+"SK","eustream, a.s. Závod 04, Kompresorová stanica - turbína 23","9168"
+"SK","eustream, a.s. Závod 04, Kompresorová stanica - turbína 24","9168"
+"SK","eustream, a.s. Závod 04, Kompresorová stanica - turbína 25","9168"
+"SK","eustream, a.s. Závod 04, Kompresorová stanica - turbína 26","9168"
+"SK","HANDLOVSKÁ ENERGETIKA, s.r.o. Tepláreň Handlová - K1, K5-K6",
+"SK","KVARTET, a.s. - Tepláreň",
+"SK","Martinská teplárenská, a.s. Tepláreň K4-7","10927"
+"SK","Mondi scp, a.s. Kotol K3","10934"
+"SK","Mondi scp, a.s. Kotol na biomasu","10934"
+"SK","Mondi scp, a.s. Paroplynové zariadenie PPZ č.1 a č.2","10934"
+"SK","PALMA - GROUP a.s. Bratislava kotolňa","22979"
+"SK","Považský cukor a.s. Tepelno-energetická centrála K1-K2","23072"
+"SK","PPC Energy, a.s. 58 MW zdroj",
+"SK","PPC POWER, a.s. paroplynový cyklus","9134"
+"SK","Slov.elektrárne,Vojany, EVO II K21-24","10271"
+"SK","Slov.elektrárne,Vojany, EVO II K25-26","10271"
+"SK","Slovenské cukrovary, s.r.o., Sereď kotol K1-K2 na HU-tepláreň",
+"SK","SLOVENSKÉ ELEKTRÁRNE, a.s. ENO B-Bl.1,2","10271"
+"SK","SLOVENSKÉ ELEKTRÁRNE, a.s. ENO fluidný kotol","10271"
+"SK","SLOVENSKÉ ELEKTRÁRNE, a.s. ENO granulačné kotly","10271"
+"SK","SLOVENSKÉ ELEKTRÁRNE, a.s. EVO I - K11+K12","10271"
+"SK","SLOVENSKÉ ELEKTRÁRNE, a.s. EVO I - K13+K14","10271"
+"SK","SLOVENSKÉ ELEKTRÁRNE, a.s. EVO I - K15+K16","10271"
+"SK","Slovenské elektrárne, a.s., závod Atómové elektrárne Pomocná nábehová kotolňa",
+"SK","Slovintegra Energy, s.r.o. - Kotolňa - K2-K3","83154"
+"SK","Slovintegra Energy, s.r.o. plynová turbína ST1","83154"
+"SK","Slovintegra Energy, s.r.o. plynová turbína ST2","83154"
+"SK","Slovnaft Petrochemicals, s.r.o. - P 231100 Etylénová jednotka - BA110","9119"
+"SK","Smurfit Kappa Štúrovo, a.s. Energetika K1+K3",
+"SK","Smurfit Kappa Štúrovo, a.s. Energetika K4",
+"SK","STEFE Rimavská Sobota s.r.o. Centrálna výhrevňa",
+"SK","Stredoslovenská energetika - Project Development, s.r.o. - DANTE - Špičková elektráreň",
+"SK","Tepláreň Košice, a.s. TEKO - Plant 1","10265"
+"SK","Tepláreň Košice, a.s. TEKO - Plant 2","10265"
+"SK","Tepláreň Košice, a.s. TEKO - Plant 3","10265"
+"SK","TEPLÁREŇ, a.s. Považská  Bystrica - Paroplynový cyklus","10936"
+"SK","TP 2, s.r.o. Pomocná výhrevňa K7+K9+K10","10270"
+"SK","Trnavská teplárenská, a. s. Trnavská tepláreň","51576"
+"SK","U. S. Steel Košice, s.r.o. DZ Energetika - kotolňa teplárne K1-5","10251"
+"SK","U. S. Steel Košice, s.r.o. DZ Energetika - kotolňa teplárne K6","10251"
+"SK","VOLKSWAGEN SLOVAKIA, a.s. Kotolňa E5","10601"
+"SK","Žilinská teplárenská, a.s. K1-K2-K5","10935"
+"SK","Žilinská teplárenská, a.s. K4","10935"
+"SK","Zvolenská teplárenská a.s. Tepláreň A","9704"
+"SK","Zvolenská teplárenská a.s. Tepláreň B","9704"
+"UK","2CDU/2DHT","14524"
+"UK","2VDU/Hydrocracker","14524"
+"UK","3CDU/3DHT","14524"
+"UK","AES Indian Queens , St Denis, Cornwall","32776"
+"UK","AES Kilroot Power Ltd","14388"
+"UK","AES Kilroot Power Ltd","14388"
+"UK","AES Kilroot Power Ltd","14388"
+"UK","Arjo Wiggins","14439"
+"UK","Aylesford Newsprint Services A1 Aylesford, Kent ME20 7DL","13397"
+"UK","Aylesford Newsprint Services A2 Aylesford, Kent ME20 7DL","13397"
+"UK","Baglan Operations, Baglan CCGT","13465"
+"UK","Ballylumford A14","32954"
+"UK","Ballylumford A16","32954"
+"UK","Ballylumford A18","32954"
+"UK","Ballylumford A2","32954"
+"UK","Ballylumford A3","32954"
+"UK","Ballylumford A4","32954"
+"UK","Ballylumford A5","32954"
+"UK","BASF Performance Products",
+"UK","Boiler 1&2","14508"
+"UK","Boiler 3&4","14508"
+"UK","Boiler 5","14532"
+"UK","Boiler 8","14524"
+"UK","Boilers 1 & 2","14455"
+"UK","Boilers 11,12&13","14524"
+"UK","Boilers 14&15","14524"
+"UK","Boilers 9&10","14524"
+"UK","BP Chemicals Limited Hull","13708"
+"UK","BP Chemicals Limited Hull SB8 Boiler","13708"
+"UK","Bristol Energy Limited Bristol OCGT, Filton","31611"
+"UK","BRITE Partnership soild biomass CHP",
+"UK","British Salt Limited Middlewich, Cheshire",
+"UK","British Sugar Bury St Edmunds Sugar Factory Plant 1","13741"
+"UK","British Sugar Bury St Edmunds Sugar Factory Plant 2","13741"
+"UK","British Sugar Newark Sugar Factory","13743"
+"UK","British Sugar plc,  Bury St Edmonds.Boilers CHP and HRSG ","13741"
+"UK","British Sugar plc, Wissington CHP plant","13740"
+"UK","British Sugar Wissington Sugar Factory","13740"
+"UK","Cat Ref 1st Int","14524"
+"UK","Cat Reformer Main Heaters","14524"
+"UK","Central Bacton Gas Terminal",
+"UK","Centrica  Barry Power Station","13775"
+"UK","Centrica Brigg GT1A","31745"
+"UK","Centrica Brigg GT1B","31745"
+"UK","Centrica Brigg GT2A","31745"
+"UK","Centrica Brigg GT2B","31745"
+"UK","Centrica Energy, King's Lynn Power Station","13776"
+"UK","Centrica Energy, South Humber Bank A1 GT 13","13090"
+"UK","Centrica Energy, South Humber Bank A2 GTs 11 & 12","13090"
+"UK","Centrica Energy, South Humber Bank A3 GTs 21 & 22","13090"
+"UK","Centrica KPS, Killingholme GT1","13779"
+"UK","Centrica KPS, Killingholme GT2","13779"
+"UK","Centrica KPS, Killingholme GT3","13779"
+"UK","Centrica PB Limited, Peterborough Power station Stack A1","13778"
+"UK","Centrica PB Limited, Peterborough Power station Stack A2","13778"
+"UK","Centrica Roosecote Power Station, Barrow-in-Furness","13100"
+"UK","Centrica Storage Limited RB211 gas turbine, Easington","13783"
+"UK","CHP (GT and Boiler 3)","14488"
+"UK","Cofely Energy Limited Grimsby Chimney 3",
+"UK","Cofely Industrial Energy Services - Dow Corning Barry Cogeneration Plant","13891"
+"UK","Cofely Limited, Syngenta CHP, Huddersfield",
+"UK","Conoco Philips Seal Sands",
+"UK","ConocoPhillips HOR CHP ST703 ",
+"UK","ConocoPhillips HOR ST6001",
+"UK","ConocoPhillips Petroleum, Seal Sands, Teeside.",
+"UK","Coolkeeragh A1","14384"
+"UK","Coolkeeragh A2","14384"
+"UK","Coolkeeragh A3","14384"
+"UK","Coors Brewers Limited Bass Burton C Brewery","31838"
+"UK","Corby Power Limited Stack A1","13821"
+"UK","Corby Power Limited Stack A2","13821"
+"UK","Corus Llanwern 3 package boilers","13828"
+"UK","Corus Port Talbot PT Works NP (ICL5)","13829"
+"UK","Coryton Energy A1Coryton Energy CCGT","32855"
+"UK","Coryton Energy A2 Coryton Energy CCGT","32855"
+"UK","Coryton Refinery Boiler 3","32855"
+"UK","Coryton Refinery GTG/HRSG","32855"
+"UK","Croydon Energy Limited GT ","32855"
+"UK","Dalkia Utilities Services PLC Berkshire Brewery, Reading",
+"UK","Damhead Creek Power Station A1 Kingsnorth, Hoo, Rochester, Kent.ME3 9TX","13865"
+"UK","Damhead Creek Power Station A2 Kingsnorth, Hoo, Rochester, Kent.ME3 9TX","13865"
+"UK","Deeside Power, Flintshire CCGT (GT 1)","13873"
+"UK","Deeside Power, Flintshire CCGT (GT 2)","13873"
+"UK","Derby Cogeneration Limited, Rolls Royce plc Sinfin C Site","32305"
+"UK","Derwent Cogeneration Limited Derwent Power Stn. Spondon","31697"
+"UK","Derwent Cogeneration Limited Derwent Power Stn. Spondon","31697"
+"UK","Derwent Cogeneration Limited Derwent Power Stn. Spondon","31697"
+"UK","Derwent Cogeneration Limited Derwent Power Stn. Spondon","31697"
+"UK","Dragon LNG, WaterstonExisting GTs","130227"
+"UK","Drax Power Limited Drax Power Station","13777"
+"UK","DS Smith Paper Limited Wansborough Paper Mill","13462"
+"UK","E.ON CHP Limited aux boilers, Stoke-on-Trent (Refer to 148)",
+"UK","E.ON CHP Limited CoGeneration Castleford Limited., Castleford","12984"
+"UK","E.ON CHP Limited, Stoke-on-Trent ",
+"UK","E.ON Cogen Dewsbury CCGT, Thornhill","31768"
+"UK","E.ON Connah's Quay CCGT (A1)","12986"
+"UK","E.ON Connah's Quay CCGT (A2)","12986"
+"UK","E.ON Connah's Quay CCGT (A3)","12986"
+"UK","E.ON Connah's Quay CCGT (A4)","12986"
+"UK","E.ON Cottam Development Centre  ","12987"
+"UK","E.ON Enfield CCGT","32422"
+"UK","E.ON Grain LCP 2","12989"
+"UK","E.ON Grain LCP 3","12989"
+"UK","E.ON Grain LCP 4","12989"
+"UK","E.ON Grain LCP 5","12989"
+"UK","E.ON Grain PS","12989"
+"UK","E.ON Ironbridge PS","12985"
+"UK","E.ON Killingholme Power Station GT11","32403"
+"UK","E.ON Killingholme Power Station GT12","32403"
+"UK","E.ON Killingholme Power Station GT21","32403"
+"UK","E.ON Killingholme Power Station GT22","32403"
+"UK","E.ON Kingsnorth LCP2","32610"
+"UK","E.ON Kingsnorth LCP3","32610"
+"UK","E.ON Kingsnorth PS","32610"
+"UK","E.ON Port of Liverpool","12979"
+"UK","E.ON Ratcliffe PS","12992"
+"UK","E.ON UK CHP cogen Limited Sandbach (LCP in 2006)","12982"
+"UK","E.ON UK CHP Limited  Brunner Mond Winnington needs splitting","12981"
+"UK","E.ON Willesden E.On UK, Taylors Lane, Willesden","32108"
+"UK","EDF Cottam PS","12999"
+"UK","EDF Energy West Burton GT stack Under construction","13640"
+"UK","EDF Energy West Burton GT stack Under construction","13640"
+"UK","EDF Energy West Burton GT stack Under construction","13640"
+"UK","EDF Greenwich, A1(GT5,GT7) Old Woolwich Road, Greenwich",
+"UK","EDF Greenwich, A2(GT6,GT8) Old Woolwich Road, Greenwich",
+"UK","EDF Greenwich, A3(GT1) Old Woolwich Road, Greenwich",
+"UK","EDF Greenwich, A4(GT2,GT4) Old Woolwich Road, Greenwich",
+"UK","EDF Sutton Bridge A Sutton Bridge, Lincs PE12 9TF Stack A","13639"
+"UK","EDF Sutton Bridge A Sutton Bridge, Lincs PE12 9TF Stack B","13639"
+"UK","EDF West Burton LCP 1","13640"
+"UK","EDF West Burton LCP 2","13640"
+"UK","Eggborough Power Limited Eggborough Power Station","31723"
+"UK","Elean Power Station EPR Ely, Sutton, Ely","13009"
+"UK","Engines 22, 23, 24","14458"
+"UK","Enviroenergy Limited London Road Heat Station","32635"
+"UK","EON (UK) plc","33158"
+"UK","EPR Thetford Limited Fibrothetford Power Station Thetford","32506"
+"UK","Essar Oil (UK) Limited Stanlow 1 (Crude Distiller 3)","31661"
+"UK","Essar Oil (UK) Limited Stanlow 2 (Crude Distiller 4)","31661"
+"UK","Essar Oil (UK) Limited Stanlow 3 (HP Boiler House)","31661"
+"UK","Essar Oil (UK) Limited Stanlow 4 Secondary Processes (Aromatics, HIV, HDS2)","31661"
+"UK","Essar Oil (UK) Limited Stanlow 6 (Platformer 3/HDT3 Stack)","31661"
+"UK","Essar Oil (UK) Limited Stanlow 6 (SHOP)","31661"
+"UK","Esso Petroleum Co Cogen, Fawley","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (ENSR)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (GTGWHB)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (PH-1)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (PH-2)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (PS/PV-1)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (PS/PV3)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (PS-2)","13013"
+"UK","Esso Petroleum Co Limited Fawley Refinery (SP4)","13013"
+"UK","Ethylene Plant A","14531"
+"UK","Ethylene Plant B","14531"
+"UK","Ethylene Plant C","14531"
+"UK","Exeter OCGT Exeter Power Limited, Exeter","32112"
+"UK","Ford Engine Plant, Bridgend Boilers",
+"UK","Ford Motor Co Limited Main Site, Dagenham",
+"UK","G4 Ethylene WF 4 A & B","14524"
+"UK","G4 Ethylene WF 5","14524"
+"UK","Gas Turbine","14455"
+"UK","Gas Turbine 1","14463"
+"UK","Gas Turbine 2","14463"
+"UK","Gas Turbine 3","14463"
+"UK","Gas Turbine 4","14463"
+"UK","Gaz de France, Deeside, Flintshire GT (A1)","13032"
+"UK","Gaz de France, Deeside, Flintshire GT (A2)","13032"
+"UK","GDF Suez Stack A10","13327"
+"UK","GDF Suez Stack A1-A4","13327"
+"UK","GDF Suez Stack A5-A8","13327"
+"UK","Grangemouth CHP","14523"
+"UK","Greenergy Terminals Limited North Tees Refinery & Road Rail Terminal",
+"UK","Heartlands Power Limited Fort Parkway, Heartlands, Birmingham, B24 9QT","31569"
+"UK","HJ Heinz Wigan","32152"
+"UK","Humber Energy Limited Grimsby Chimney 1","13706"
+"UK","Humber Energy Limited Grimsby Chimney 2","13706"
+"UK","Hydrocarbon Resources Limited, Barrow Gas Terminals NT Compression (2 GTs)",
+"UK","Hydrocarbon Resources Limited, Barrow Gas Terminals SMO Compression (2 GTs) ",
+"UK","Hydrocarbon Resources Limited, Barrow Gas Terminals SMO Compression (2 GTs) ",
+"UK","Iggesund (CHP)",
+"UK","Iggesund (Standby Plant)",
+"UK","Iggesund Workington (Biomass CHP) ",
+"UK","Iggesund Workington (Standby plant) ",
+"UK","Immingham CHP Limited, Immingham","13114"
+"UK","Ineos Chlor Limited., Runcorn RPB01","128164"
+"UK","Ineos Chlor Limited., Runcorn RPB02","128164"
+"UK","Ineos Chlor Limited., Runcorn RPB03","128164"
+"UK","Ineos Chlor Ltd., Runcorn Weaver PS","128164"
+"UK","INEOS Nitriles (UK) Limited Seal Sands 1","13540"
+"UK","INEOS Nitriles (UK) Limited Seal Sands 2","13540"
+"UK","INEOS Nitriles (UK) Limited Seal Sands 3","13540"
+"UK","Interconnector Bacton Terminal","13129"
+"UK","Interconnector Bacton Terminal","13129"
+"UK","Interconnector Bacton Terminal","13129"
+"UK","Interconnector Bacton Terminal","13129"
+"UK","International Power Rugeley","13367"
+"UK","Invista Textiles UK Ltd Maydown Works","14391"
+"UK","ITI Power (Wilton)",
+"UK","Jaguar Cars Limited","190817"
+"UK","Keadby LCP 1","13153"
+"UK","Keadby LCP 2","13153"
+"UK","Keadby LCP 3","13153"
+"UK","Keadby P Stn Keadby Power Station Now split into 3 353-355","13153"
+"UK","Kemsley Boilers A-C Kemsley, Sittingbourne ME10 2TD",
+"UK","Kemsley boilers A-C Kemsley, Sittingbourne ME10 2TD (Refer to 208)",
+"UK","Kemsley Boilers D-F Kemsley, Sittingbourne ME10 2TD (Refer to 366)",
+"UK","Kemsley CHP (GT&WHRB) Kemsley, Sittingbourne ME10 2TD","12978"
+"UK","KG Ethylene Plant 36-F-501A","14524"
+"UK","KG Ethylene Plant 36-F-501B","14524"
+"UK","Kodak Limited Harrow 1 (Boilers 1,3 &4)","13162"
+"UK","Langage Energy Centre CCGT Centrica fully op from 2010 onwards (due to report next year)","160014"
+"UK","Leven Power Limited",
+"UK","Longannet Power Station","14511"
+"UK","Lynemouth Power Limited Lynemouth Power Station",
+"UK","Marchwood 1 Marchwood Power Station","159834"
+"UK","Marchwood 2 Marchwood Power Station","159834"
+"UK","Medway Power Station A1 Isle of Grain, Nr Rochester, Kent. ME7 3AT","32608"
+"UK","Medway Power Station A2 Isle of Grain, Nr Rochester, Kent. ME7 3AT","32608"
+"UK","MGT Teesside Limited",
+"UK","Michelin Tyre Dundee","14514"
+"UK","Millenium Organic Chemicals (px power)",
+"UK","Module 1","14456"
+"UK","Module 2","14456"
+"UK","Morzine Limited Coryton Refinery - Boiler 4/5",
+"UK","Morzine Limited Coryton Refinery - Boiler 6",
+"UK","Morzine Limited Coryton Refinery - Cracking Stack",
+"UK","Morzine Limited Coryton Refinery - Fuels Stack",
+"UK","Murco Petroleum Limited Milford Haven Refinery 1 (Duct A)","32810"
+"UK","Murco Petroleum Limited Milford Haven Refinery 2 (Duct B,C,D)","32810"
+"UK","National Grid Gas Aylesbury GT A","32371"
+"UK","National Grid Gas Aylesbury GT B","32371"
+"UK","National Grid Gas Bishop Auckland GT A","32371"
+"UK","National Grid Gas Bishop Auckland GT B ","32371"
+"UK","National Grid Gas Carnforth C LM2500 GT","13513"
+"UK","National Grid Gas Carnforth GTA RB211  ","13513"
+"UK","National Grid Gas Carnforth GTB RB211","13513"
+"UK","National Grid Gas Hatton GT A","32588"
+"UK","National Grid Gas Hatton GT B","32588"
+"UK","National Grid Gas Hatton GT C","32588"
+"UK","National Grid Gas Warrington GT A",
+"UK","National Grid Gas Warrington GT B",
+"UK","National Grid Gas Wisbech GT A RB211","32375"
+"UK","National Grid Gas Wisbech GT B Maxi Avon","32375"
+"UK","National Grid Gas Wooler Northumberland GT A ",
+"UK","National Grid Gas Wooler Northumberland GT B ",
+"UK","NEI Boilers (Boiler 1 and 2)","14488"
+"UK","Not Used  1",
+"UK","Not Used 2",
+"UK","Not Used 3",
+"UK","Not Used 4",
+"UK","Not Used 5",
+"UK","Not Used 6",
+"UK","Not Used 7",
+"UK","Package Boiler 1","14463"
+"UK","Package Boiler 2","14463"
+"UK","Palm Paper Limited, King's Lynn, Norfolk",
+"UK","Petroplus Coryton Refinery CCR",
+"UK","Phillips 66 Limited Humber Refinery - 1 (ST101)","13816"
+"UK","Phillips 66 Limited Humber Refinery - 2 (ST301)","13816"
+"UK","Phillips 66 Limited Humber Refinery - 3 (ST201)","13816"
+"UK","Phillips 66 Limited Humber Refinery - 4 (ST3401)","13816"
+"UK","Phillips 66 Limited Humber Refinery - 5 (H6301/2)","13816"
+"UK","plant 2A","14446"
+"UK","plant 2B","14446"
+"UK","plant 2D","14446"
+"UK","Polimeri Grangemouth","14526"
+"UK","PQ Silicas UK Limited South Bank Works","32169"
+"UK","QMC 1 GT ","32651"
+"UK","Rocksavage Power Company Limited, Runcorn","31758"
+"UK","Rolls Royce Power Developments","31569"
+"UK","Rugeley Power Limited aux gas turbine (Not an LCP)","13367"
+"UK","RWE CHP, Grimsby",
+"UK","RWE Gt. Yarmouth Power Limited, Gt Yarmouth, Norfolk","32691"
+"UK","RWE Hythe CHP Plant Charleston Rd, Hardley, Hythe (Refer to 102)","13709"
+"UK","RWE Hythe CHP Plant Charleston Rd, Hardley, Hythe (Refer to 365)",
+"UK","RWE npower Aberthaw PS","13265"
+"UK","RWE nPower Cheshire CHP",
+"UK","RWE Npower Cogen (ConocoPhillips)",
+"UK","RWE Npower Cogen (Ineos Nitriles)",
+"UK","RWE npower Cowes Isle of Wight LCP1 ","32760"
+"UK","RWE npower Cowes Isle of Wight LCP2","32760"
+"UK","RWE nPower Didcot A","13369"
+"UK","RWE nPower Didcot B Mod 5 (Refer to 368)","13704"
+"UK","RWE nPower Didcot B mod 6 (Refer to 243)","13704"
+"UK","RWE nPower Fawley","13370"
+"UK","RWE nPower Littlebrook LCP2 ","13372"
+"UK","RWE nPower Littlebrook PS","13372"
+"UK","RWE nPower Tilbury LCP 1","13373"
+"UK","RWE nPower Tilbury LCP 2","13373"
+"UK","RWE Npower, Little Barford Power Station St Neots Mod 1A(1B no 364)","13371"
+"UK","RWE Npower, Little Barford Power Station St Neots mod 1B(1A no 249)","13371"
+"UK","RWE npower, Pembroke Power Station","191256"
+"UK","SABIC U.K Petrochemicals Limited No 1 Aromatics, North Tees","130606"
+"UK","SABIC U.K Petrochemicals Limited No 2 Aromatics, North Tees","130606"
+"UK","SABIC U.K Petrochemicals Limited Olefins Boilers, Wilton","130606"
+"UK","Sahaviriya Steel Industries UK Limited Teeside Works, Redcar","13836"
+"UK","SAICA Paper UK","190909"
+"UK","Saltend Co-generation, Hull Boiler A4 ","13385"
+"UK","Saltend Co-generation, Hull Boiler A5","13385"
+"UK","Saltend Co-generation, Hull Turbine A1","13385"
+"UK","Saltend Co-generation, Hull Turbine A2","13385"
+"UK","Saltend Co-generation, Hull Turbine A3","13385"
+"UK","Sandwich Pharmaceuticals Ramsgate Road, Sandwich, Kent. CT13 9NJ","13300"
+"UK","Scottish and Southern Energy Ferrybridge C Units 1 & 2","13151"
+"UK","Scottish and Southern Energy Ferrybridge C Units 3 & 4","13151"
+"UK","Scottish and Southern Energy Fiddlers Ferry","13152"
+"UK","Scottish and Southern Energy Fiddlers Ferry GTs SSE, Fiddlers Ferry P Stn","13152"
+"UK","Scottish and Southern Energy Salt Union, Runcorn","13394"
+"UK","Scottish and Southern Energy Uskmouth PS",
+"UK","Scottish Power, Blackburn Mill CHP plant","13150"
+"UK","Scottish Power, Hoddesdon Ryehouse CCGT ","13396"
+"UK","Scottish Power, Shoreham CCGT","88461"
+"UK","Seabank A1 Seabank Power, Avonmouth","13398"
+"UK","Seabank A2 Seabank Power, Avonmouth","13398"
+"UK","Seabank A3 Seabank Power, Avonmouth","13398"
+"UK","Sellafield GT1","31630"
+"UK","Sellafield GT2","31630"
+"UK","Sellafield GT3","31630"
+"UK","Sellafield GT4","31630"
+"UK","Sembcorp Utilities U.K Limited Wilton","13403"
+"UK","Sembcorp Utilities U.K Limited Wilton 2","13403"
+"UK","Sembcorp Utilities U.K Limited Wilton 3","13403"
+"UK","SembCorp Utilities UK Ltd GT2","13403"
+"UK","Severn Power Station Unit 10",
+"UK","Severn Power Station Unit 20",
+"UK","Slough Heat & Power LCP(GT& in duct firing)","13441"
+"UK","Slough Heat & Power LCP1 north stack CFBs and boiler17)","13441"
+"UK","Slough Heat and Power boilers 15, 16, whb","13441"
+"UK","Smithkline Beecham Irvine","88777"
+"UK","Solvay Interox Limited Warrington","130228"
+"UK","Spalding Energy Spalding,Lincolnshire Stack A1","13452"
+"UK","Spalding Energy Spalding,Lincolnshire Stack A2","13452"
+"UK","SSE Smurfit CHP",
+"UK","SSEPG (Operations) Limited,Chickerell OCGT  Weymouth",
+"UK","SSEPG Burghfield Cottage Lane Burghfield",
+"UK","Staythorpe Power Station LCP1","159837"
+"UK","Staythorpe Power Station LCP2","159837"
+"UK","Staythorpe Power Station LCP3","159837"
+"UK","Staythorpe Power Station LCP4","159837"
+"UK","Tata Steel UK Limited Port Talbot 1 (Service Boilers) ",
+"UK","Tata Steel UK Limited Port Talbot 2 (Mitchell Boiler)",
+"UK","Tata Steel UK Limited Port Talbot 3 (A5 Boiler)",
+"UK","Tata Steel UK Limited Port Talbot 4 (6&7 Boiler)",
+"UK","Tata Steel UK Limited Scunthorpe Works 1 (Central Power Station)","167657"
+"UK","Tata Steel UK Limited Scunthorpe Works 2 (Turbo Blower House Boilers 1-4)","167657"
+"UK","Tata Steel UK Limited Scunthorpe Works 3 (Turbo Blower House Boilers 5-6)","167657"
+"UK","Tate & Lyle Sugars","13486"
+"UK","Thames Power Services, Barking Power, Dagenham GT1A ","32786"
+"UK","Thames Power Services, Barking Power, Dagenham GT1B ","32786"
+"UK","Thames Power Services, Barking Power, Dagenham GT2A ","32786"
+"UK","Thames Power Services, Barking Power, Dagenham GT2B ","32786"
+"UK","Thames Power Services, Barking Power, Dagenham GT2C ","32786"
+"UK","Thor Cogeneration Limited",
+"UK","Thorpe Marsh Power Limited - A1","31748"
+"UK","Thorpe Marsh Power Limited - A2","31748"
+"UK","Thorpe Marsh Power Limited - A3","31748"
+"UK","Tioxide Europe Limited Greatham Works","13503"
+"UK","Total Lindsay Oil Refinery GT","86181"
+"UK","Total Lindsey Oil Refinery Limited - (A1) South Stack","86181"
+"UK","Total Lindsey Oil Refinery Limited - (A2) North Stack","86181"
+"UK","Total Lindsey Oil Refinery Limited - (A3) Stage 3/4","86181"
+"UK","Total Lindsey Oil RefineryLimited - (A4,5&6) West A,B,C","86181"
+"UK","Train 1 and 2 Auxilary Burners","14474"
+"UK","Turbine A","14445"
+"UK","Turbine B","14445"
+"UK","Turbine C","33113"
+"UK","Turbine C","14445"
+"UK","Turbine D","33113"
+"UK","Turbine D","14513"
+"UK","Unit A","14494"
+"UK","Unit B","14494"
+"UK","UPM-Kymmene Irvine CHP","14473"
+"UK","UPM-Kymmene UK Limited Shotton Paper Mill","13430"
+"UK","Valero Energy Limited Pembroke Plant (A1/A2)",
+"UK","Valero Energy Limited Pembroke Plant (A11/A12)",
+"UK","Valero Energy Limited Pembroke Plant (A3/A4)",
+"UK","Valero Energy Limited Pembroke Plant (A6)",
+"UK","Valero Energy Limited Pembroke Plant (A7/A8/A9/A10)",
+"UK","Viking UK Gas Limited",
+"UK","Waste Heat Boiler No 1","14463"
+"UK","Weston Point Power Station","13394"
