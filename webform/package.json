@@ -13,6 +13,6 @@
     "build-js": "browserify js/browserify-app.js -o bundle.js -d",
     "watch-js": "watchify js/browserify-app.js -o bundle.js -d",
     "build-js-prod": "browserify js/browserify-app.js -o dist/bundle.js -d",
-	"build-min-js-prod": "browserify -t browserify-ngannotate js/browserify-app.js | uglifyjs > dist/bundle.min.js"
+    "build-min-js-prod": "browserify -t browserify-ngannotate js/browserify-app.js | uglifyjs > dist/bundle.min.js"
   }
 }

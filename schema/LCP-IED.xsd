@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+	<xs:element name="LCPQuestionnaire">
+		<xs:annotation>
+			<xs:documentation>
+
+                XML Schema for Reporting on Combustion Plants under Art 72 of the Industrial Emissions Directive
+
+                Reporting obligation: http://rod.eionet.europa.eu/obligations/756
+
+                The reporting is done through online questionnaire in CDR envelope. The online questionnaire saves the data
+                automatically in XML format.
+
+
+
+
+
+
+
+                ********
+
+                NOTE: This is just a copy of the previous LCP schema, used only as a placeholder to have a schema URL from DD.
+
+                ********
+
+
+
+
+
+
+
+
+
+
+
+            </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BasicData" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MemberState" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="ReferenceYear" minOccurs="1" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:minInclusive value="2004"/>
+										<xs:maxInclusive value="2015"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="NumberOfPlants" minOccurs="1" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:minInclusive value="0"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Organization" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="Address1" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="Address2" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="City" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="State" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="PostalCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="NameOfContactPerson" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="EMail" type="xs:string" minOccurs="1" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ListOfPlants" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Plant" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PlantName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+										<xs:element name="PlantId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+										<xs:element name="EPRTRNationalId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+										<xs:element name="PlantLocation">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Address1" type="xs:string" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="Address2" type="xs:string" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="City" type="xs:string" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="Region" type="xs:string" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="PostalCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="GeographicalCoordinate" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Longitude" type="xs:string" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="Latitude" type="xs:string" minOccurs="1" maxOccurs="1"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="FacilityName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="Comments" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="PlantDetails" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="StatusOfThePlant" type="StatusOfThePlantType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="MWth" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="ExtensionBy50MWOrMore" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="CapacityAddedMW" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="SubstantialChange" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="CapacityAffectedMW" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="DateOfStartOfOperation" type="DateOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="Refineries" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="OtherSector" type="OtherSectorType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="GasTurbine" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="GasTurbineThermalInput" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="Boiler" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="BoilerThermalInput" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="GasEngine" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="GasEngineThermalInput" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="DieselEngine" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="DieselEngineTurbineThermalInput" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="Other" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="OtherTypeOfCombustion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="OtherThermalInput" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="OperatingHours" type="IntOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="Comments" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="EnergyInputAndTotalEmissionsToAir" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="EnergyInput" minOccurs="1" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Biomass" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="OtherSolidFuels" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="LiquidFuels" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="NaturalGas" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="OtherGases" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="TotalEmissionsToAir" minOccurs="1" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="SO2" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="NOx" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                                <xs:element name="Dust" type="xs:double" minOccurs="1" maxOccurs="1"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="OptOutsAndNERP" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="OptOutPlant" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="CapacityOptedOutMW" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="HoursOperated" type="IntOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="PlantIncludedInNERP" type="BoolorNothing" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+										<xs:element name="LcpArt15">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Art5_1" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="OperatingHours" type="IntOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="ElvSO2" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="NotaBeneAnnexIII" type="BoolorNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="NotaBeneElvSO2" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="DesulphurisationRate" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="SInput" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="AnnexVI_A_Footnote2" type="BoolorNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="AnnexVI_A_Footnote2_OperatingHours" type="IntOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="ElvNOx" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="AnnexVI_A_Footnote3" type="BoolorNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="VolatileContents" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="AnnexVI_A_Footnote3_ElvNOx" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="Comments" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="xml:lang" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="TrueFalseType">
+		<xs:annotation>
+			<xs:documentation>Checkbox values</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="false"/>
+			<xs:enumeration value="true"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DateOrNothing">
+		<xs:annotation>
+			<xs:documentation>Date or null(allows empty xml element)</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base='xs:string'>
+				  <xs:length value='0'/>
+				</xs:restriction>
+		  </xs:simpleType>
+		  <xs:simpleType>
+				<xs:restriction base='xs:date'>
+				</xs:restriction>
+		  </xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DoubleOrNothing">
+		<xs:annotation>
+			<xs:documentation>Double or null(allows empty xml element)</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base='xs:string'>
+				  <xs:length value='0'/>
+				</xs:restriction>
+		  </xs:simpleType>
+		  <xs:simpleType>
+				<xs:restriction base='xs:double'>
+				</xs:restriction>
+		  </xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="IntOrNothing">
+		<xs:annotation>
+			<xs:documentation>Integer or null(allows empty xml element)</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base='xs:string'>
+				  <xs:length value='0'/>
+				</xs:restriction>
+		  </xs:simpleType>
+		  <xs:simpleType>
+				<xs:restriction base='xs:integer'>
+				</xs:restriction>
+		  </xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="BoolorNothing">
+		<xs:annotation>
+			<xs:documentation>Bool or null(allows empty xml element)</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base='xs:string'>
+				  <xs:length value='0'/>
+				</xs:restriction>
+		  </xs:simpleType>
+		  <xs:simpleType>
+				<xs:restriction base='TrueFalseType'>
+				</xs:restriction>
+		  </xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="StatusOfThePlantType">
+		<xs:annotation>
+			<xs:documentation>Status of the plant according to LCPD 2001/80/EC Article 4.t</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value=""/>
+			<xs:enumeration value="art_4_1">
+				<xs:annotation>
+					<xs:documentation>Art 4(1) - old-new plants</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="art_4_2">
+				<xs:annotation>
+					<xs:documentation>Art 4(2) - new-new plants</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="art_4_3">
+				<xs:annotation>
+					<xs:documentation>Art 4(3) - existing plants</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OtherSectorType">
+		<xs:annotation>
+			<xs:documentation>Other sectors</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value=""/>
+			<xs:enumeration value="iron_steel">
+				<xs:annotation>
+					<xs:documentation>Iron/steel</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="esi">
+				<xs:annotation>
+					<xs:documentation>ESI</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="district_heating">
+				<xs:annotation>
+					<xs:documentation>District heating</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="chp">
+				<xs:annotation>
+					<xs:documentation>CHP</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="other">
+				<xs:annotation>
+					<xs:documentation>Other (non refineries)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

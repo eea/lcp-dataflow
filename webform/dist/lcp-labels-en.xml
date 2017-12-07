@@ -65,13 +65,13 @@
     <operatingHours>Operating hours</operatingHours>
     <comments>Comments</comments>
 
-    <energyInputEmissions>4. ENERGY INPUT AND TOTAL EMISSIONS TO AIR</energyInputEmissions>
+    <Emissions>TOTAL EMISSIONS TO AIR</Emissions>
     <energyInput>ENERGY INPUT</energyInput>
     <biomass>Biomass (TJ)</biomass>
-    <otherSolidFuels>Other solid fuels (TJ)</otherSolidFuels>
+    <otherSolidFuels>Other solid fuels (TJ): Category | Value</otherSolidFuels>
     <liquidFuels>Liquid fuels (TJ)</liquidFuels>
     <naturalGas>Natural gas (TJ)</naturalGas>
-    <otherGases>Other gases (TJ)</otherGases>
+    <otherGases>Other gases (TJ): Category | Value</otherGases>
     <hardCoal>Hard coal (TJ)</hardCoal>
     <lingnite>Lignite (TJ)</lingnite>
     <totalEmissionsToAir>TOTAL EMISSIONS TO AIR</totalEmissionsToAir>
@@ -97,7 +97,7 @@
     <annexVIAfootnote3>Annex VI.A footnote 3</annexVIAfootnote3>
     <volatileContents>% Volatile contents</volatileContents>
 
-    <addNewPlant>Add new plant</addNewPlant>
+    <addNewPlant>Add New Plant</addNewPlant>
     <deleteSelected>Delete selected</deleteSelected>
     <yes>Yes</yes>
     <no>No</no>

@@ -20,9 +20,10 @@ $.noConflict();
             {"id":"BasicData",            "active" : true},
             {"id":"ListOfPlants",         "active" : false},
             {"id":"PlantDetails",         "active" : false},
-            {"id":"EnergyInputEmissions", "active" : false},
-            {"id":"OptOutsTNP",           "active" : false},
-            {"id":"LCPArt15",             "active" : false},
+            {"id":"EnergyInput",          "active" : false},
+            {"id":"TotalEmissionsToAir",  "active" : false},
+            {"id":"Desulphurisation",     "active" : false},
+            {"id":"UsefulHeat",             "active" : false},
             {"id":"Notes",                "active" : false}]);
     });
 
@@ -87,12 +88,11 @@ $.noConflict();
     var sessionId = getParameterByName('sessionid');
     var countryCode = getParameterByName('countrycode');
     countryCode = countryCode === "GB" ? "UK" : countryCode;
-
     var DD_VOCABULARY_BASE_URI = "http://dd.eionet.europa.eu/vocabulary/";
 
     app.controller("questionnaire", function ($scope, $rootScope, dataRepository, languageChanger, $sce, $location, $timeout, $anchorScroll, $notification, $http, $filter ,$q) {
 
-
+     
         $scope.codeList = {};
         $scope.regionsCodelist = {};
 
@@ -121,7 +121,7 @@ $.noConflict();
 
             if ($scope.instance.LCPQuestionnaire.ListOfPlants && $scope.instance.LCPQuestionnaire.ListOfPlants.Plant) {
 
-                // if there is only 1 plant, then convert it to array
+                // if therσυσe is only 1 plant, then convert it to array
                 if (!angular.isArray($scope.instance.LCPQuestionnaire.ListOfPlants.Plant)) {
                     $scope.instance.LCPQuestionnaire.ListOfPlants.Plant = [$scope.instance.LCPQuestionnaire.ListOfPlants.Plant];
                 }
@@ -195,6 +195,7 @@ $.noConflict();
                                  " } ORDER BY ?PlantId ";
 
                         url = baseUri + '/restProxy?uri=' + encodeURIComponent(url + encodeURIComponent(sparql));
+        //                console.log('plants url is:'+url);
                         $http.get(url, {tracker : $rootScope.loadingTracker})
                                 .error(function(){alert("Failed to pre-load plants data from E-PRTR database.");})
                                 .success(function(eprtrData) {
@@ -263,11 +264,11 @@ $.noConflict();
             $scope.$broadcast('instanceReady');
         });
 
-        var minReportingYear = 2004;
-        var maxReportingYear = 2015;
+   
+        
         $scope.reportingYears = [];
-        for ( var i =  maxReportingYear; i >= minReportingYear ; i --)
-            $scope.reportingYears.push ( i )
+        $scope.reportingYears.push ('2016');
+        $scope.plantDetailsOtherSectorFieldsView = {iron_steel:"Iron and Steel",esi:"Electricity production",district_heating:"District heating",chp:"Combined heat and power generation",other:"Other"};
 
         // new
         $scope.currentListOfPlantsTable = null;
@@ -326,7 +327,16 @@ $.noConflict();
 
 
         dataRepository.loadCodeList();
+        dataRepository.loadOldLCPCodeList();
+        dataRepository.loadCombustionPlantCodeList();
+        dataRepository.loadDerogationValueCodeList();
+        dataRepository.loadOtherSolidFuelCodeList();
+        dataRepository.loadOtherGasesousFuelCodeList();
+        dataRepository.loadMonthValueCodeList();
         $scope.codeList = dataRepository.getCodeList();
+
+       
+    
         $scope.conversionLink = "";
         $scope.instanceInfo = {};
         dataRepository.loadInstanceInfo().error(function(){console.log("Failed to readfile info from server.");}).success(function(info) {
@@ -605,6 +615,41 @@ $.noConflict();
 
         };
 
+         $scope.hasArticle31DerogationValue = function(item){
+             // check against this value: http://dd.eionet.europa.eu/vocabularyconcept/euregistryonindustrialsites/DerogationValue/Article31/
+             if(item.PlantDetails!=null && item.PlantDetails.Derogation!= null){
+                 if(item.PlantDetails.Derogation.indexOf("Article31") !== -1) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+             }
+             return false;
+         }
+
+         $scope.hasArticle35DerogationValue = function(item){
+             // check against this value: http://dd.eionet.europa.eu/vocabularyconcept/euregistryonindustrialsites/DerogationValue/Article35/
+             if(item.PlantDetails!=null && item.PlantDetails.Derogation!= null){
+                 if(item.PlantDetails.Derogation.indexOf("Article35") !== -1) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+             }
+             return false;
+         }
+
+
+         $scope.addDesulphurizationValuesForEachMonth=function(i,plant){
+                 plant.Desulphurisation.push({
+                    "MonthValue":$scope.codeList.MonthlyDesulphurisation[i].MonthValue,
+                    "DesulphurisationRate": $scope.codeList.MonthlyDesulphurisation[i].DesulphurisationRate,
+                    "SulphurContent": $scope.codeList.MonthlyDesulphurisation[i].SulphurContent,
+                    "TechnicalJustification": $scope.codeList.MonthlyDesulphurisation[i].TechnicalJustification,
+                 })
+         }
         $scope.isFormComplete = function () {
             // returns true if the required fields for all plant are filled; false if not ~
 
@@ -624,6 +669,7 @@ $.noConflict();
                     res = false;
 
                 // energy input
+               
                 for  ( j in ( ( plant.EnergyInputAndTotalEmissionsToAir.EnergyInput)) ) {
                     if  ( isEmpty (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput[ j]) )
                         plant.EnergyInputAndTotalEmissionsToAir.EnergyInput[ j] = 0;
@@ -634,13 +680,15 @@ $.noConflict();
                         plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir[ j] = 0;
                 }
 
-                // optouts
-                if ( plant.OptOutsAndNERP.OptOutPlant && ( isEmpty (plant.OptOutsAndNERP.HoursOperated) || isEmpty (plant.OptOutsAndNERP.CapacityOptedOutMW)) )
-                    res = false;
+                for ( j in ( ( plant.Desulphurisation)) ) {
+                    if (isEmpty (plant.Desulphurisation[ j]))
+                        plant.Desulphurisation[ j] = 0;
+                }
+                for ( j in ( ( plant.UsefulHeat)) ) {
+                    if (isEmpty (plant.UsefulHeat[ j]))
+                        plant.UsefulHeat[ j] = 0;
+                }
 
-                // art5_1
-                if ( plant.LcpArt15.Art5_1 === true && ( isEmpty (plant.LcpArt15.OperatingHours) || isEmpty ( plant.LcpArt15.ElvSO2)) )
-                    res = false;
 
                 if (res === false) break;
             }
@@ -664,10 +712,10 @@ $.noConflict();
             var sectors = {};
             var status  = {};
 
-            for (i in $scope.codeList.LCPCodelists.sectors.concepts) {  sectors[ $scope.codeList.LCPCodelists.sectors.concepts[ i ] ['@id'] ] = 1 ; }
+   //         for (i in $scope.codeList.LCPCodelists.sectors.concepts) {  sectors[ $scope.codeList.LCPCodelists.sectors.concepts[ i ] ['@id'] ] = 1 ; }
             // sectors is a dictionary of valid other sector values
 
-            for (i in $scope.codeList.LCPCodelists.status.concepts) {  status[ $scope.codeList.LCPCodelists.status.concepts[ i ] ['@id'] ] = 1 ; }
+        //    for (i in $scope.codeList.LCPCodelists.status.concepts) {  status[ $scope.codeList.LCPCodelists.status.concepts[ i ] ['@id'] ] = 1 ; }
 
             var names = {};
             var dublicates = {};
@@ -748,13 +796,7 @@ $.noConflict();
 
                     }
                 }
-            // LCP 5.2
-                if ( plants[i].OptOutsAndNERP.HoursOperated > 20000 ) {
-                    // warn
-                    console.log(i);
-                    //$scope.appForm.$setValidity(false);
-
-                }
+           
 
             }// end for
             if ( JSON.stringify(dublicates) !== "{}") {
@@ -775,35 +817,6 @@ $.noConflict();
 
                 delete plant.Delete;
 
-                if ( plant.OptOutsAndNERP.OptOutPlant !== true) {
-                    plant.OptOutsAndNERP.OptOutPlant = false;
-                    plant.OptOutsAndNERP.CapacityOptedOutMW = null;
-                    plant.OptOutsAndNERP.HoursOperated = null;
-                }
-
-                if ( plant.LcpArt15.Art5_1 !== true){
-                    plant.LcpArt15.OperatingHours = null;
-                    plant.LcpArt15.ElvSO2 = null;
-                    plant.LcpArt15.Art5_1 = false;
-                }
-                if ( plant.LcpArt15.NotaBeneAnnexIII !== true ) {
-                    plant.LcpArt15.DesulphurisationRate = null;
-                    plant.LcpArt15.NotaBeneElvSO2 = null;
-                    plant.LcpArt15.SInput = null;
-                    plant.LcpArt15.NotaBeneAnnexIII = false;
-                }
-
-                if ( plant.LcpArt15.AnnexVI_A_Footnote2 !== true) {
-                    plant.LcpArt15.AnnexVI_A_Footnote2_OperatingHours = null;
-                    plant.LcpArt15.ElvNOx = null;
-                    plant.LcpArt15.AnnexVI_A_Footnote2 = false;
-                }
-
-                if ( plant.LcpArt15.AnnexVI_A_Footnote3 !== true) {
-                    plant.LcpArt15.AnnexVI_A_Footnote3_ElvNOx = null;
-                    plant.LcpArt15.VolatileContents = null;
-                    plant.LcpArt15.AnnexVI_A_Footnote3 = false;
-                }
 
                 if ( plant.PlantDetails.ExtensionBy50MWOrMore !== true ){
                     plant.PlantDetails.ExtensionBy50MWOrMore = false;
@@ -1010,6 +1023,16 @@ $.noConflict();
             }
         };
 
+        $rootScope.otherTypeOfCombustionPlant = false;
+
+        $scope.isTypeOfCombustionPlantOther = function (plant) {
+            if (plant.PlantDetails.TypeOfCombustionPlant === 'Others') {
+                $rootScope.otherTypeOfCombustionPlant = true;
+            } else {
+                $rootScope.otherTypeOfCombustionPlant = false;
+            }
+        };
+
         //TODO format error message to handle different limits better
         $scope.errorMessages = {
             "required_field" : "This is a required field",
@@ -1028,6 +1051,7 @@ $.noConflict();
             "valid_longitude" : "Please provide a number between -180 and 180",
             "valid_latitude" : "Please provide a number between -90 and 90",
             "positive_decimal" : "Please provide a positive decimal number  ",
+            "positive_decimal01" : "Please provide a positive decimal number between 0 and 1",
             "positive_integer" : "Please provide a positive integer ",
             "article_format" : "Please use the edit menu to correct the article format"
 
@@ -1048,8 +1072,6 @@ $.noConflict();
 
 
         $scope.isGreaterThanZero = function(inputValue) {
-
-
             return $scope.submitted == false && ( Number(inputValue) > 0);
         };
 
@@ -1241,20 +1263,42 @@ $.noConflict();
         var codeLists = {};
         //var lcpVocabularySetBaseUri = 'http://test.tripledev.ee/datadict/vocabulary/lcp/';
         //var lcpVocabularySetBaseUri = DD_VOCABULARY_BASE_URI + 'habides/';
-        var lcpVocabularySetBaseUri = DD_VOCABULARY_BASE_URI + 'lcp/';
-        var vocabularies = ['lcpcountries','plantstatus','sectors'];
-        var vocabularyIdentifiersInCode = ['countries', 'status', 'sectors'];
-
+     
+     
+        var EPRTRandlLCPVocabularySetBaseUri = DD_VOCABULARY_BASE_URI + 'EPRTRandLCP/';
+        var EPRTRandLCPvocabularies =['CombustionPlantCategoryValue', 'CountryCodeValue', 'EPRTRPollutantCodeValue', 'FuelInputValue',
+         'LCPPollutantCodeValue', 'MediumCodeValue', 'MethodClassificationValue', 'MethodCodeValue', 'MonthValue', 
+         'OtherGaseousFuelValue', 'OtherSolidFuelValue', 'ReasonValue', 'UnitCodeValue', 'WasteClassificationValue',
+          'WasteTreatmentValue'];
+        var EPRTRandLCPvocabularyIdentifiersInCode = ['CombustionPlantCategoryValue', 'CountryCodeValue', 'EPRTRPollutantCodeValue', 'FuelInputValue',
+         'LCPPollutantCodeValue', 'MediumCodeValue', 'MethodClassificationValue', 'MethodCodeValue', 'MonthValue', 
+         'OtherGaseousFuelValue', 'OtherSolidFuelValue', 'ReasonValue', 'UnitCodeValue', 'WasteClassificationValue',
+          'WasteTreatmentValue'];
+        
+      
+  var lcpVocabularySetBaseUri = DD_VOCABULARY_BASE_URI + 'lcp/';
+        var lcpVocabularies = ['lcpcountries','plantstatus','sectors'];
+        var lcpVocabularyIdentifiersInCode = ['countries', 'status', 'sectors'];
 
         var commonVocabularySetBaseUri = DD_VOCABULARY_BASE_URI + 'common/';
 
         //define undefined members, i dont know if this is really necessary!!!
         codeLists.LCPCodelists = {};
-        var regionCodeLists = {};
-        for (var i = 0; i < vocabularies.length; i++){
-            codeLists.LCPCodelists[vocabularyIdentifiersInCode[i]] = {};
-        }
+        codeLists.OldLCPCodelists={};
+        codeLists.CombustionPlantCodeLists={};
+        codeLists.DerogationValueCodeLists={};
+        codeLists.OtherSolidFuelCodeLists={};
+        codeLists.OtherGasesousFuelCodeLists={};
+        codeLists.MonthValueCodeLists={};
+        codeLists.MonthlyDesulphurisation={};
 
+        var regionCodeLists = {};
+        for (var i = 0; i < EPRTRandLCPvocabularies.length; i++){
+            codeLists.LCPCodelists[EPRTRandLCPvocabularyIdentifiersInCode[i]] = {};
+        }
+        for (var i = 0; i < lcpVocabularies.length; i++){
+            codeLists.OldLCPCodelists[lcpVocabularyIdentifiersInCode[i]] = {};
+        }
         return {
             getInstance: function() {
                 var url = null;
@@ -1279,8 +1323,8 @@ $.noConflict();
                 var defaultlanguage = 'en';
                 var currentLanguage = !language? defaultlanguage : language;
 
-                for (var i = 0; i < vocabularies.length; i++) {
-                    var url = lcpVocabularySetBaseUri + vocabularies[i] + '/json?lang=' + currentLanguage;
+                for (var i = 0; i < EPRTRandLCPvocabularies.length; i++) {
+                    var url = EPRTRandlLCPVocabularySetBaseUri + EPRTRandLCPvocabularies[i] + '/json?lang=' + currentLanguage;
 
                     if ($rootScope.isIE9 || window.isIE9){
                         url = baseUri + '/restProxy?uri=' + encodeURIComponent(url);
@@ -1290,11 +1334,112 @@ $.noConflict();
                             .error(function(data, status, headers, config){
                                 alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
                             .success((function(i){return function (newCodeList) {
-                        angular.copy(newCodeList, codeLists.LCPCodelists[vocabularyIdentifiersInCode[i]]);
+                        angular.copy(newCodeList, codeLists.LCPCodelists[EPRTRandLCPvocabularyIdentifiersInCode[i]]);
                         ////console.log("received " + vocabularyIdentifiersInCode[i]);
                     }})(i));
-                }
+                } 
+            }, 
+            loadOldLCPCodeList: function(language) {
+                //finds file in project folder
+                var defaultlanguage = 'en';
+                var currentLanguage = !language? defaultlanguage : language;
+
+                for (var i = 0; i < lcpVocabularies.length; i++) {
+                    var url = lcpVocabularySetBaseUri + lcpVocabularies[i] + '/json?lang=' + currentLanguage;
+
+                    if ($rootScope.isIE9 || window.isIE9){
+                        url = baseUri + '/restProxy?uri=' + encodeURIComponent(url);
+                    }
+
+                    $http.get(url, {tracker: $rootScope.loadingTracker})
+                            .error(function(data, status, headers, config){
+                                alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
+                            .success((function(i){return function (newCodeList) {
+                                console.log("newCodeList "+newCodeList);
+                        angular.copy(newCodeList, codeLists.OldLCPCodelists[lcpVocabularyIdentifiersInCode[i]]);
+                        ////console.log("received " + vocabularyIdentifiersInCode[i]);
+                    }})(i));
+                } 
+            }, 
+             loadCombustionPlantCodeList: function(language){
+                // we do not need the for each of the above loadCodeList method, since in the above , it has to make seperate calls
+                // for each vocabulary, whereas we do not have to.
+                var defaultlanguage = 'en';
+                var currentLanguage = !language? defaultlanguage : language;
+                var url = 'http://dd.eionet.europa.eu/vocabulary/EPRTRandLCP/CombustionPlantCategoryValue/json';
+                $http.get(url, {tracker: $rootScope.loadingTracker})
+                .error(function(data, status, headers, config){
+                    alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
+                .success( function (newCodeList) {
+            angular.copy(newCodeList, codeLists.CombustionPlantCodeLists);
+            ////console.log("received " + vocabularyIdentifiersInCode[i]);
+                  });
             },
+            loadDerogationValueCodeList: function(language){
+                // we do not need the for each of the above loadCodeList method, since in the above , it has to make seperate calls
+                // for each vocabulary, whereas we do not have to.
+                var defaultlanguage = 'en';
+                var currentLanguage = !language? defaultlanguage : language;
+                var url = 'http://dd.eionet.europa.eu/vocabulary/euregistryonindustrialsites/DerogationValue/json';
+                $http.get(url, {tracker: $rootScope.loadingTracker})
+                .error(function(data, status, headers, config){
+                    alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
+                .success( function (newCodeList) {
+            angular.copy(newCodeList, codeLists.DerogationValueCodeLists);
+            ////console.log("received " + vocabularyIdentifiersInCode[i]);
+                  });
+            },
+            loadOtherSolidFuelCodeList: function(language){
+                // we do not need the for each of the above loadCodeList method, since in the above , it has to make seperate calls
+                // for each vocabulary, whereas we do not have to.
+                var defaultlanguage = 'en';
+                var currentLanguage = !language? defaultlanguage : language;
+                var url = 'http://dd.eionet.europa.eu/vocabulary/EPRTRandLCP/OtherSolidFuelValue/json';
+                $http.get(url, {tracker: $rootScope.loadingTracker})
+                .error(function(data, status, headers, config){
+                    alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
+                .success( function (newCodeList) {
+            angular.copy(newCodeList, codeLists.OtherSolidFuelCodeLists);
+            ////console.log("received " + vocabularyIdentifiersInCode[i]);
+                  });
+            },
+            loadOtherGasesousFuelCodeList: function(language){
+                // we do not need the for each of the above loadCodeList method, since in the above , it has to make seperate calls
+                // for each vocabulary, whereas we do not have to.
+                var defaultlanguage = 'en';
+                var currentLanguage = !language? defaultlanguage : language;
+                var url = 'http://dd.eionet.europa.eu/vocabulary/EPRTRandLCP/OtherGaseousFuelValue/json';
+                $http.get(url, {tracker: $rootScope.loadingTracker})
+                .error(function(data, status, headers, config){
+                    alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
+                .success( function (newCodeList) {
+            angular.copy(newCodeList, codeLists.OtherGasesousFuelCodeLists);
+            ////console.log("received " + vocabularyIdentifiersInCode[i]);
+                  });
+            },
+            loadMonthValueCodeList: function(language){
+                // we do not need the for each of the above loadCodeList method, since in the above , it has to make seperate calls
+                // for each vocabulary, whereas we do not have to.
+                var defaultlanguage = 'en';
+                var currentLanguage = !language? defaultlanguage : language;
+                var url = 'http://dd.eionet.europa.eu/vocabulary/EPRTRandLCP/MonthValue/json';
+                $http.get(url, {tracker: $rootScope.loadingTracker})
+                .error(function(data, status, headers, config){
+                    alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
+                .success( function (newCodeList) {
+            angular.copy(newCodeList, codeLists.MonthValueCodeLists);
+            ////console.log("received " + vocabularyIdentifiersInCode[i]);
+            angular.forEach(codeLists.MonthValueCodeLists.concepts, function(value, key){
+                          codeLists.MonthlyDesulphurisation[key]={
+                    "DesulphurisationRate": '',
+                    "MonthValue":value.prefLabel[0]['@value'],
+                    "SulphurContent": '',
+                    "TechnicalJustification": ''
+                    };
+                });
+            });
+        },
+       
             loadRegionsCodelist: function(country) {
                 var url = DD_VOCABULARY_BASE_URI + "common/nuts/json?id=" + country;
                 if ($rootScope.isIE9 || window.isIE9){
@@ -1312,7 +1457,7 @@ $.noConflict();
                                 }
                                 $http.get(url, {tracker: $rootScope.loadingTracker})
                                     .error(function(data, status, headers, config){alert("Failed to read regions code lists.");})
-                                    .success(function (newCodeList) {
+                                    .success(function (plantDetailsOtherSectorFieldsViewnewCodeList) {
                                     angular.copy(newCodeList, regionCodeLists);
                                 });
                             }
@@ -1341,6 +1486,18 @@ $.noConflict();
         };
     });
 
+    app.filter('formatDerogation', function () {
+        return function (x) {
+            var result = "";
+            if (x != null) {
+                x.forEach(function (entry) {
+                    result += entry;
+                    result += '\n';
+                });
+            }
+            return result;
+        };
+    });
 
     app.controller('ModalCtrl', function ($scope, $rootScope, $modal, $http) {
         //saves Main form validation stage
@@ -1377,6 +1534,7 @@ $.noConflict();
             $scope.open('lg','ListOfPlants');
         }
         $scope.loadDataFromEPRTR = function(plant) {
+            console.log('loadDataFromEPRTR function invoked');
             var countryCode = $scope.instance.LCPQuestionnaire.BasicData.MemberState;
             if (countryCode && countryCode.length == 2 && plant ) {
 
@@ -1392,6 +1550,7 @@ $.noConflict();
                         " prtr:facilityID ?facilityID ; " +
                         " prtr:facilityName ?facilityName ; " +
                         " prtr:streetName ?streetName; " +
+                        "prtr:buildingNumber  ?buildingNumber ; "+
                         " prtr:postalCode  ?postalCode ; " +
                         " prtr:city ?city ; " +
                         " geo:lat ?lat ; " +
@@ -1403,6 +1562,7 @@ $.noConflict();
                         " prtr:reportingYear ?reportingYear." +
                         " FILTER (?countryCode = '" + eprtrCountryCode + "' and UCASE(?NationalID) = UCASE('" + plant.EPRTRNationalId + "' ) ) } ORDER BY DESC(?reportingYear) LIMIT 1";
                 url = baseUri + '/restProxy?uri=' + encodeURIComponent(url + encodeURIComponent(sparql));
+                console.log('url for sparql eprtr data is:'+url);
                 $http.get(url, {tracker : $rootScope.loadingTracker})
                         .error(function(){alert("Failed to read data from E-PRTR.");})
                         .success(function(eprtrData) {
@@ -1418,6 +1578,7 @@ $.noConflict();
                                     }
                                     plant.PlantLocation.City =facility.city.value;
                                     plant.PlantLocation.PostalCode = facility.postalCode.value;
+                                    plant.PlantLocation.BuildingNumber = facility.buildingNumber.value;
                                     plant.GeographicalCoordinate.Longitude = facility.long.value;
                                     plant.GeographicalCoordinate.Latitude = facility.lat.value;
                                     plant.FacilityName = facility.facilityName.value;
@@ -1489,11 +1650,11 @@ $.noConflict();
 
                 });
             }
-            if(modalPageId=="EnergyInputAndEmissions"){
+            if(modalPageId=="TotalEmissionsToAir"){
                 modalInstance = $modal.open({
 
-                    templateUrl: 'EnergyInputAndTotalEmissionsToAirModalContent.html',
-                    controller: 'EnergyInputAndTotalEmissionsToAirModalInstanceCtrl',
+                    templateUrl: 'TotalEmissionsToAirModalContent.html',
+                    controller: 'TotalEmissionsToAirModalInstanceCtrl',
                     size: size,
                     scope: $scope,
                     windowClass: 'app-modal-window',
@@ -1505,11 +1666,11 @@ $.noConflict();
 
                 });
             }
-            if(modalPageId=="OptOutsAndTNP"){
+            if(modalPageId=="EnergyInput"){
                 modalInstance = $modal.open({
 
-                    templateUrl: 'OptOutsAndNERPModalContent.html',
-                    controller: 'OptOutsAndTransitionalNationalPlanModalInstanceCtrl',
+                    templateUrl: 'EnergyInputModalContent.html',
+                    controller: 'EnergyInputModalInstanceCtrl',
                     size: size,
                     scope: $scope,
                     windowClass: 'app-modal-window',
@@ -1521,11 +1682,11 @@ $.noConflict();
 
                 });
             }
-            if(modalPageId=="LCPArticle15"){
+            if(modalPageId=="Desulphurisation"){
                 modalInstance = $modal.open({
 
-                    templateUrl: 'LcpArt15ModalContent.html',
-                    controller: 'LcpArt15ModalInstanceCtrl',
+                    templateUrl: 'DesulphurisationModalContent.html',
+                    controller: 'DesulphurisationModalInstanceCtrl',
                     size: size,
                     scope: $scope,
                     windowClass: 'app-modal-window',
@@ -1537,6 +1698,23 @@ $.noConflict();
 
                 });
             }
+            if(modalPageId=="UsefulHeat"){
+                modalInstance = $modal.open({
+
+                    templateUrl: 'UsefulHeatModalContent.html',
+                    controller: 'UsefulHeatModalInstanceCtrl',
+                    size: size,
+                    scope: $scope,
+                    windowClass: 'app-modal-window',
+                    resolve: {
+                        plant: function () {
+                            return  $scope.plant;
+                        }
+                    }
+
+                });
+            }
+
             modalInstance.result.then(function (selectedItem) {
                 $scope.selected = selectedItem;
             }, function () {
@@ -1582,11 +1760,13 @@ $.noConflict();
                             lastPlant.PlantId = plantid ;
                             lastPlant.PlantName =  plant.PlantName;
                             lastPlant.EPRTRNationalId =  plant.EPRTRNationalId;
-                            lastPlant.PlantLocation.Address1 =  plant.PlantLocation.Address1;
-                            lastPlant.PlantLocation.Address2 =  plant.PlantLocation.Address2;
+                            lastPlant.PlantLocation.StreetName =  plant.PlantLocation.StreetName;
+                         //   lastPlant.PlantLocation.Address2 =  plant.PlantLocation.Address2;
                             lastPlant.PlantLocation.City =  plant.PlantLocation.City;
                             lastPlant.PlantLocation.Region =  plant.PlantLocation.Region;
                             lastPlant.PlantLocation.PostalCode =  plant.PlantLocation.PostalCode;
+                            lastPlant.PlantLocation.BuildingNumber =  plant.PlantLocation.BuildingNumber;
+                            lastPlant.PlantLocation.CountryCode =  $scope.memberStateValue;
                             lastPlant.GeographicalCoordinate.Longitude =  plant.GeographicalCoordinate.Longitude;
                             lastPlant.GeographicalCoordinate.Latitude =  plant.GeographicalCoordinate.Latitude;
                             lastPlant.FacilityName =  plant.FacilityName;
@@ -1606,11 +1786,13 @@ $.noConflict();
                         var lastPlant = $scope.originalPlant;
                         lastPlant.PlantName =  plant.PlantName;
                         lastPlant.EPRTRNationalId =  plant.EPRTRNationalId;
-                        lastPlant.PlantLocation.Address1 =  plant.PlantLocation.Address1;
-                        lastPlant.PlantLocation.Address2 =  plant.PlantLocation.Address2;
+                        lastPlant.PlantLocation.StreetName =  plant.PlantLocation.StreetName;
+                        //lastPlant.PlantLocation.Address2 =  plant.PlantLocation.Address2;
                         lastPlant.PlantLocation.City =  plant.PlantLocation.City;
                         lastPlant.PlantLocation.Region =  plant.PlantLocation.Region;
+                        lastPlant.PlantLocation.BuildingNumber =  plant.PlantLocation.BuildingNumber;
                         lastPlant.PlantLocation.PostalCode =  plant.PlantLocation.PostalCode;
+                        lastPlant.PlantLocation.CountryCode =  plant.PlantLocation.CountryCode;
                         lastPlant.GeographicalCoordinate.Longitude =  plant.GeographicalCoordinate.Longitude;
                         lastPlant.GeographicalCoordinate.Latitude =  plant.GeographicalCoordinate.Latitude;
                         lastPlant.FacilityName =  plant.FacilityName;
@@ -1651,13 +1833,10 @@ $.noConflict();
             if (!$scope.modalPlantDetails.$invalid) {
                 var lastPlant = $scope.originalPlant;
 
-                lastPlant.PlantDetails.StatusOfThePlant =  plant.PlantDetails.StatusOfThePlant;
+                lastPlant.PlantDetails.TypeOfCombustionPlant = plant.PlantDetails.TypeOfCombustionPlant;
                 lastPlant.PlantDetails.MWth =  plant.PlantDetails.MWth;
-                lastPlant.PlantDetails.ExtensionBy50MWOrMore =  $filter('lowercase')(plant.PlantDetails.ExtensionBy50MWOrMore);
-                lastPlant.PlantDetails.CapacityAddedMW =  plant.PlantDetails.CapacityAddedMW;
-                lastPlant.PlantDetails.SubstantialChange =  $filter('lowercase')(plant.PlantDetails.SubstantialChange);
-                lastPlant.PlantDetails.CapacityAffectedMW =  plant.PlantDetails.CapacityAffectedMW;
                 lastPlant.PlantDetails.DateOfStartOfOperation =  plant.PlantDetails.DateOfStartOfOperation;
+                lastPlant.PlantDetails.Derogation = plant.PlantDetails.Derogation;
                 lastPlant.PlantDetails.Refineries =  $filter('lowercase')(plant.PlantDetails.Refineries);
                 lastPlant.PlantDetails.OtherSector =  plant.PlantDetails.OtherSector;
                 lastPlant.PlantDetails.GasTurbine =  $filter('lowercase')(plant.PlantDetails.GasTurbine);
@@ -1666,10 +1845,10 @@ $.noConflict();
                 lastPlant.PlantDetails.BoilerThermalInput =  plant.PlantDetails.BoilerThermalInput;
                 lastPlant.PlantDetails.GasEngine =  $filter('lowercase')(plant.PlantDetails.GasEngine);
                 lastPlant.PlantDetails.GasEngineThermalInput =  plant.PlantDetails.GasEngineThermalInput;
-                lastPlant.PlantDetails.DieselEngine =  $filter('lowercase')(plant.PlantDetails.DieselEngine);
-                lastPlant.PlantDetails.DieselEngineTurbineThermalInput =  plant.PlantDetails.DieselEngineTurbineThermalInput;
-                lastPlant.PlantDetails.Other =  $filter('lowercase')(plant.PlantDetails.Other);
                 lastPlant.PlantDetails.OtherTypeOfCombustion =  plant.PlantDetails.OtherTypeOfCombustion;
+                if(plant.PlantDetails.OtherTypeOfCombustion!=null){
+                lastPlant.PlantDetails.OtherTypeOfCombustion.Other =  plant.PlantDetails.OtherTypeOfCombustion.Other;
+                }
                 lastPlant.PlantDetails.OtherThermalInput =  plant.PlantDetails.OtherThermalInput;
                 lastPlant.PlantDetails.OperatingHours =  plant.PlantDetails.OperatingHours;
                 lastPlant.PlantDetails.Comments =  plant.PlantDetails.Comments;
@@ -1696,26 +1875,60 @@ $.noConflict();
         };
     });
 
-    app.controller('EnergyInputAndTotalEmissionsToAirModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
+    app.controller('TotalEmissionsToAirModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
 
         $scope.ok = function (plant) {
-            if (!$scope.modalEnergyInputAndTotalEmissionsToAir.$invalid) {
+            if (!$scope.modalTotalEmissionsToAir.$invalid) {
+                var lastPlant = $scope.originalPlant;
+
+                lastPlant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2 =  plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx =  plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP =  plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP;
+
+                $rootScope.$broadcast('updateFilter');
+
+                //load Main form validation stage
+                $scope.submitted = $scope.mainFormSubmitted;
+                $scope.modalTotalEmissionsToAir.$setPristine(true);
+                $modalInstance.close(plant);
+            }
+            else{
+                $scope.submitted = true;
+                alert("Please fill in all mandatory fields! ");
+            }
+
+
+        }
+
+        $scope.cancel = function () {
+            //load Main form validation stage
+            $scope.submitted = $scope.mainFormSubmitted;
+            $modalInstance.dismiss('cancel');
+        };
+    });
+app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
+
+        $scope.ok = function (plant) {
+            if (!$scope.modalEnergyInput.$invalid) {
                 var lastPlant = $scope.originalPlant;
 
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass;  
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal;      
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite;      
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat;      
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value;
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels;
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2 =  plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx =  plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.Dust =  plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.Dust;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value;
 
                 $rootScope.$broadcast('updateFilter');
 
                 //load Main form validation stage
                 $scope.submitted = $scope.mainFormSubmitted;
-                $scope.modalEnergyInputAndTotalEmissionsToAir.$setPristine(true);
+                $scope.modalEnergyInput.$setPristine(true);
                 $modalInstance.close(plant);
             }
             else{
@@ -1733,79 +1946,94 @@ $.noConflict();
         };
     });
 
-    app.controller('OptOutsAndTransitionalNationalPlanModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
+    
+            app.controller('DesulphurisationModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
 
-        $scope.ok = function (plant) {
-            if (!$scope.modalOptOutsAndNERP.$invalid) {
-                var lastPlant = $scope.originalPlant;
+                //We check if Month is an array and if not initialize it as an array in order to then fill it below.
+                if(!plant.Desulphurisation.Months.Month.isArray){
+                    plant.Desulphurisation.Months.Month=[];
+                }
 
-                lastPlant.OptOutsAndNERP.OptOutPlant =  plant.OptOutsAndNERP.OptOutPlant;
-                lastPlant.OptOutsAndNERP.CapacityOptedOutMW =  plant.OptOutsAndNERP.CapacityOptedOutMW;
-                lastPlant.OptOutsAndNERP.HoursOperated =  plant.OptOutsAndNERP.HoursOperated;
-                lastPlant.OptOutsAndNERP.PlantIncludedInNERP =  plant.OptOutsAndNERP.PlantIncludedInNERP;
+                //If Months Empty , initialize them before the modal
+                angular.forEach($scope.codeList.MonthlyDesulphurisation, function (value, key) {
+                    if (plant.Desulphurisation.Months.Month[key]==null){
+                         plant.Desulphurisation.Months.Month.push({
+                                "MonthValue": value.MonthValue,
+                                "DesulphurisationRate": null,
+                                "SulphurContent": null,
+                                "TechnicalJustification": null
+                            });
+                    }
 
-                $rootScope.$broadcast('updateFilter');
+                })
 
-                //load Main form validation stage
-                $scope.submitted = $scope.mainFormSubmitted;
-                $scope.modalOptOutsAndNERP.$setPristine(true);
-                $modalInstance.close(plant);
-            }
-            else{
-                $scope.submitted = true;
-                alert("Please fill in all mandatory fields! ");
-            }
+                $scope.ok = function (plant) {
+                    if (!$scope.modalDesulphurisation.$invalid) {
+                        var lastPlant = $scope.originalPlant;
+                        angular.forEach($scope.codeList.MonthlyDesulphurisation, function (value, key) {
+                     /**       plant.Desulphurisation.Months.Month.push({
+                                "MonthValue": value.MonthValue,
+                                "DesulphurisationRate": value.DesulphurisationRate,
+                                "SulphurContent": value.SulphurContent,
+                                "TechnicalJustification": value.TechnicalJustification
+                            });
+                        **/
+                        })
 
-        }
+                        lastPlant.Desulphurisation = plant.Desulphurisation;
+                        $rootScope.$broadcast('updateFilter');
+                        //load Main form validation stage
+                        $scope.submitted = $scope.mainFormSubmitted;
+                        $scope.modalDesulphurisation.$setPristine(true);
+                        $modalInstance.close(plant);
 
-        $scope.cancel = function () {
-            //load Main form validation stage
-            $scope.submitted = $scope.mainFormSubmitted;
-            $modalInstance.dismiss('cancel');
-        };
-    });
+                    }
+                    else {
+                        $scope.submitted = true;
+                        alert("Please fill in all mandatory fields! ");
+                    }
 
-    app.controller('LcpArt15ModalInstanceCtrl', function ($rootScope, $scope,$filter, $modalInstance, plant) {
 
-            $scope.ok = function (plant) {
-                if (!$scope.modalLcpArt15.$invalid) {
-                    var lastPlant = $scope.originalPlant;
+                }
 
-                    lastPlant.LcpArt15.Art5_1 =  $filter('lowercase')(plant.LcpArt15.Art5_1);
-                    lastPlant.LcpArt15.OperatingHours =  plant.LcpArt15.OperatingHours;
-                    lastPlant.LcpArt15.ElvSO2 =  plant.LcpArt15.ElvSO2;
-                    lastPlant.LcpArt15.NotaBeneAnnexIII =  $filter('lowercase')(plant.LcpArt15.NotaBeneAnnexIII);
-                    lastPlant.LcpArt15.NotaBeneElvSO2 =  plant.LcpArt15.NotaBeneElvSO2;
-                    lastPlant.LcpArt15.DesulphurisationRate =  plant.LcpArt15.DesulphurisationRate;
-                    lastPlant.LcpArt15.SInput =  plant.LcpArt15.SInput;
-                    lastPlant.LcpArt15.AnnexVI_A_Footnote2 =  $filter('lowercase')(plant.LcpArt15.AnnexVI_A_Footnote2);
-                    lastPlant.LcpArt15.AnnexVI_A_Footnote2_OperatingHours =  plant.LcpArt15.AnnexVI_A_Footnote2_OperatingHours;
-                    lastPlant.LcpArt15.ElvNOx =  plant.LcpArt15.ElvNOx;
-                    lastPlant.LcpArt15.AnnexVI_A_Footnote3 =  $filter('lowercase')(plant.LcpArt15.AnnexVI_A_Footnote3);
-                    lastPlant.LcpArt15.VolatileContents =  plant.LcpArt15.VolatileContents;
-                    lastPlant.LcpArt15.AnnexVI_A_Footnote3_ElvNOx =  plant.LcpArt15.AnnexVI_A_Footnote3_ElvNOx;
-                    lastPlant.LcpArt15.Comments =  plant.LcpArt15.Comments;
-
-                    $rootScope.$broadcast('updateFilter');
-
+                $scope.cancel = function () {
                     //load Main form validation stage
                     $scope.submitted = $scope.mainFormSubmitted;
-                    $scope.modalLcpArt15.$setPristine(true);
-                    $modalInstance.close(plant);
-                }
-                else{
-                    $scope.submitted = true;
-                    alert("Please fill in all mandatory fields! ");
-                }
-        }
+                    $modalInstance.dismiss('cancel');
+                };
+            });
 
-        $scope.cancel = function () {
-            //load Main form validation stage
-            $scope.submitted = $scope.mainFormSubmitted;
-            $modalInstance.dismiss('cancel');
-        };
-    });
+            app.controller('UsefulHeatModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
+                
+                        $scope.ok = function (plant) {
+                            if (!$scope.modalUsefulHeat.$invalid) {
+                                var lastPlant = $scope.originalPlant;
+                
+                                lastPlant.UsefulHeat.UsefulHeatProportion =  plant.UsefulHeat.UsefulHeatProportion;
+                              
+                                $rootScope.$broadcast('updateFilter');
+                
+                                //load Main form validation stage
+                                $scope.submitted = $scope.mainFormSubmitted;
+                                $scope.modalUsefulHeat.$setPristine(true);
+                                $modalInstance.close(plant);
+                            }
+                            else{
+                                $scope.submitted = true;
+                                alert("Please fill in all mandatory fields! ");
+                            }
+                
+                
+                        }
+                
+                        $scope.cancel = function () {
+                            //load Main form validation stage
+                            $scope.submitted = $scope.mainFormSubmitted;
+                            $modalInstance.dismiss('cancel');
+                        };
+                    });
 
+  
     app.filter('true_false', function() {
         return function(text, length, end) {
             if (text && (text === true || text === 'TRUE')) {
@@ -2009,19 +2237,22 @@ $.noConflict();
 
     function getHandsontableColHeaders(form) {
         if (form == 'ListOfPlants'){
-            return ["Plant Name", "Plant Id", "E-PRTR national ID", "Address 1", "Address 2", "City", "Region", "Postal code", "Longitude", "Latitude", "Facility name", "Comments"]
+            return ["Plant Name", "Plant Id", "E-PRTR national ID", "Street Name ", "City", "Region", "Postal code","Country Code", "Longitude", "Latitude", "Facility name", "Comments"]
         }
         else if (form == 'PlantDetails'){
-            return ["Plant name", "Plant ID", "Status of the plant", "MWth", "Extension by 50 MW or more", "Capacity added [MW]", "Substantial change", "Capacity affected [MW]", "Date of start of operation", "Refineries", "Other sector", "Gas turbine", "MWth - gas turbine", "Boiler", "MWth - boiler", "Gas engine", "MWth - gas engine", "Diesel engine", "MWth - diesel engine", "Other", "Other type of combustion", "MWth - other", "Operating hours", "Comments"]
+            return ["Plant name", "Plant ID", "MWth","Type of Combustion Plant", "Date of start of operation", "Refineries",  "Gas turbine", "MWth - gas turbine", "Boiler", "MWth - boiler","Other","Other type of combustion", "MWth - other", "Operating hours","Derogation", "Comments"]
         }
-        else if (form == 'EnergyInputAndTotalEmissionsToAir'){
-            return ["Plant name", "Plant ID", "Biomass (TJ)", "Other solid fuels (TJ)", "Liquid fuels (TJ)", "Natural gas (TJ)", "Other gases (TJ)", "SO2 (t)", "NOx (t)", "Dust (t)"]
+        else if (form == 'EnergyInput'){
+            return ["Plant name", "Plant ID", "Biomass (TJ)","Coal","Lignite","Peat", "Other solid fuels (TJ) Category","Other solid fuels (TJ) Value" , "Liquid fuels (TJ)", "Natural gas (TJ)", "Other gases (TJ) Category","Other gases (TJ) Value", "SO2 (t)", "NOx (t)", "Dust (t)"]
         }
-        else if (form == 'OptOutsAndNERP'){
-            return ["Plant name", "Plant ID", "Opt-out plant", "Capacity opted out [MW]", "Hours operated", "Plant included in NERP" ]
+        else if (form == 'TotalEmissionsToAir'){
+            return ["Plant name", "Plant ID", "SO2 (t)", "NOx (t)", "TSP (t)"]
         }
-        else if (form == 'LcpArt15'){
-            return ["Plant name", "Plant ID", "Art 5(1)", "Operating hours", "ELV SO2 (mg/Nm3)", "Nota Bene Annex III", "ELV SO2 (mg/Nm3)", "Desulphurisation rate (%)", "S Input (t)", "Annex VI.A footnote 2", "Operating hours", "ELV NOx (mg/m3)", "Annex VI.A footnote 3", "% Volatile contents", "ELV NOx (mg/m3)", "Comments"]
+        else if (form == 'Desulphurisation'){
+            return ["Desulphurisation Rate", "Sulphur Content", "Technical Justification", "Month"]
+        }
+        else if (form == 'UsefulHeat'){
+            return ["UsefulHeat Proportion"]
         }
         else {
             //default is the first table
@@ -2048,6 +2279,7 @@ $.noConflict();
             var data = scope.data;
             var formname = scope.formname;
             var container = elem;
+
 			elem.handsontable({
 			    data: data,
                 contextMenu: false /*formname === 'ListOfPlants' ? true : false*/,
@@ -2057,6 +2289,20 @@ $.noConflict();
                 fixedColumnsLeft: 2,
                 minSpareRows: 0, // formname === 'ListOfPlants' ? 1 : 0,
                 minSpareCols: 0,
+                afterDocumentKeyDown: function(x){
+                    if(x.keyCode=='13'){
+                        elem.handsontable('alter', 'insert_row');
+                    }
+                },
+                beforePaste: function(data,coords){
+                   var ht = container.handsontable('getInstance');
+                   var rowsNeeded = data.length - ht.countEmptyRows();
+                   for (var index = 0; index < rowsNeeded; index++) {
+                   elem.handsontable('alter', 'insert_row');
+                   }
+                },
+                
+              
                 //maxRows: formname === 'ListOfPlants' ? 200 : data.length,
                 //maxCols: data.numberOfColumns,
                 colHeaders: getHandsontableColHeaders(formname),
@@ -2065,9 +2311,8 @@ $.noConflict();
                             [
                                 {data: "PlantName"}, {data: "PlantId", readOnly: true},
                                 {data: "EPRTRNationalId"},
-                                {data: "PlantLocation.Address1"},
-                                 {data: "PlantLocation.Address2"},
-                                  {data: "PlantLocation.City"}, {data: "PlantLocation.Region"}, {data: "PlantLocation.PostalCode"},
+                                {data: "PlantLocation.StreetName"},
+                                  {data: "PlantLocation.City"}, {data: "PlantLocation.Region"}, {data: "PlantLocation.PostalCode"},{data: "PlantLocation.CountryCode"},
                                 {data: "GeographicalCoordinate.Longitude", type: 'numeric', format: '0.[00000]'},
                                  {data: "GeographicalCoordinate.Latitude", type: 'numeric', format: '0.[00000]'},
                                 {data: "FacilityName"},{data: "Comments"}
@@ -2075,56 +2320,49 @@ $.noConflict();
                     : formname == 'PlantDetails' ?
                             [
                                 {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
-                                {data: "PlantDetails.StatusOfThePlant", type: 'dropdown', source: ["" ,"art_4_1", "art_4_2", "art_4_3"]}, {data: "PlantDetails.MWth", type: 'numeric', format: '0.[00000]'},
-                                {data: "PlantDetails.ExtensionBy50MWOrMore", type: 'checkbox'}, {data: "PlantDetails.CapacityAddedMW", type: 'numeric', format: '0.[00000]'},
-                                {data: "PlantDetails.SubstantialChange", type: 'checkbox'}, {data: "PlantDetails.CapacityAffectedMW", type: 'numeric', format: '0.[00000]'},
                                 {data: "PlantDetails.DateOfStartOfOperation"},
-                                {data: "PlantDetails.Refineries", type: 'checkbox'}, {data: "PlantDetails.OtherSector", type: 'dropdown', source: ["iron_steel", "esi", "district_heating", "chp", "other"]},
+                                {data: "PlantDetails.Refineries", type: 'checkbox'}, {data: "PlantDetails.OtherSector", type: 'dropdown', source: [{iron_steel:"iron_steel"}, "esi", "district_heating", "chp", "other"]},
                                 {data: "PlantDetails.GasTurbine", type: 'checkbox'}, {data: "PlantDetails.GasTurbineThermalInput", type: 'numeric', format: '0.[00000]'},
                                 {data: "PlantDetails.Boiler", type: 'checkbox'}, {data: "PlantDetails.BoilerThermalInput", type: 'numeric', format: '0.[00000]'},
                                 {data: "PlantDetails.GasEngine", type: 'checkbox'}, {data: "PlantDetails.GasEngineThermalInput", type: 'numeric', format: '0.[00000]'},
-                                {data: "PlantDetails.DieselEngine", type: 'checkbox'}, {data: "PlantDetails.DieselEngineTurbineThermalInput", type: 'numeric', format: '0.[00000]'},
                                 {data: "PlantDetails.Other", type: 'checkbox'}, {data: "PlantDetails.OtherTypeOfCombustion"}, {data: "PlantDetails.OtherThermalInput", type: 'numeric', format: '0.[00000]'},
                                 {data: "PlantDetails.OperatingHours", type: 'numeric'}, {data: "PlantDetails.Comments"}
                             ]
-                    : formname == 'EnergyInputAndTotalEmissionsToAir' ?
+                   : formname == 'EnergyInput' ?
                             [
                                 {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass", type: 'numeric', format: '0.[00000]'},
-                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category"},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value", type: 'numeric', format: '0.[00000]'},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels", type: 'numeric', format: '0.[00000]'},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas", type: 'numeric', format: '0.[00000]'},
-                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category"},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value", type: 'numeric', format: '0.[00000]'},
+
+                            ]         
+                    : formname == 'TotalEmissionsToAir' ?
+                            [
+                                {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
                                 {data: "EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2", type: 'numeric', format: '0.[00000]'},
                                 {data: "EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx", type: 'numeric', format: '0.[00000]'},
-                                {data: "EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.Dust", type: 'numeric', format: '0.[00000]'}
+                                {data: "EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP", type: 'numeric', format: '0.[00000]'}
                             ]
-                    : formname == 'OptOutsAndNERP' ?
+                    : formname == 'Desulphurisation' ?
+                           [
+                                {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
+                                {data: "Desulphurisation.DesulphurisationRate", type: 'numeric', format: '0.[00000]'},
+                                {data: "Desulphurisation.SulphurContent", type: 'numeric', format: '0.[00000]'},
+                                {data: "Desulphurisation.TechnicalJustification" }
+                            ]
+                    : formname == 'UsefulHeat' ?
                             [
                                 {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
-                                {data: "OptOutsAndNERP.OptOutPlant", type: 'checkbox'},
-                                {data: "OptOutsAndNERP.CapacityOptedOutMW", type: 'numeric', format: '0.[00000]'},
-                                {data: "OptOutsAndNERP.HoursOperated", type: 'numeric'},
-                                {data: "OptOutsAndNERP.PlantIncludedInNERP", type: 'checkbox'}
+                                {data: "UsefulHeat.UsefulHeatProportion", type: 'numeric', format: '0.[00000]'},
                             ]
-                    : formname == 'LcpArt15' ?
-                            [
-                                {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
-                                {data: "LcpArt15.Art5_1", type: 'checkbox'},
-                                {data: "LcpArt15.OperatingHours", type: 'numeric'},
-                                {data: "LcpArt15.ElvSO2", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.NotaBeneAnnexIII", type: 'checkbox'},
-                                {data: "LcpArt15.NotaBeneElvSO2", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.DesulphurisationRate", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.SInput", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.AnnexVI_A_Footnote2", type: 'checkbox'},
-                                {data: "LcpArt15.AnnexVI_A_Footnote2_OperatingHours", type: 'numeric'},
-                                {data: "LcpArt15.ElvNOx", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.AnnexVI_A_Footnote3", type: 'checkbox'},
-                                {data: "LcpArt15.VolatileContents", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.AnnexVI_A_Footnote3_ElvNOx", type: 'numeric', format: '0.[00000]'},
-                                {data: "LcpArt15.Comments"}
-                            ]
+                   
                     :[]),
                     onSelection: function (row, col, row2, col2) {
                         var meta = container.handsontable('getCellMeta', row2, col2);

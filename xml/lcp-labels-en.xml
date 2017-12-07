@@ -8,6 +8,9 @@
     <countryTooltip>Select the Country where the derogation is applicable - the field will be auto-filled for any subsequent derogation reports created during the same session</countryTooltip>
     <statusTooltip>Choose the status of the plant according to LCPD 2001/80/EC Article 4.</statusTooltip>
     <sectorsTooltip>Choose the sector in which the plant operates</sectorsTooltip>
+	<extensionTooltip>Extensions during the whole period until the end of the current reporting year should be reported.</extensionTooltip>
+    <significantChangeTooltip>Substantial changes during the whole period until the end of the current reporting year should be reported.</significantChangeTooltip>
+    <hoursoperatedTooltip>Hours operated refer to the whole period from 2008 until the end of the current reporting year.</hoursoperatedTooltip>
     <Country>country</Country>
 
     <note1>Please type in the number of plants you will introduce in this reporting.</note1>
@@ -62,13 +65,13 @@
     <operatingHours>Operating hours</operatingHours>
     <comments>Comments</comments>
 
-    <energyInputEmissions>4. ENERGY INPUT AND TOTAL EMISSIONS TO AIR</energyInputEmissions>
+    <Emissions>TOTAL EMISSIONS TO AIR</Emissions>
     <energyInput>ENERGY INPUT</energyInput>
     <biomass>Biomass (TJ)</biomass>
-    <otherSolidFuels>Other solid fuels (TJ)</otherSolidFuels>
+    <otherSolidFuels>Other solid fuels (TJ): Category | Value</otherSolidFuels>
     <liquidFuels>Liquid fuels (TJ)</liquidFuels>
     <naturalGas>Natural gas (TJ)</naturalGas>
-    <otherGases>Other gases (TJ)</otherGases>
+    <otherGases>Other gases (TJ): Category | Value</otherGases>
     <hardCoal>Hard coal (TJ)</hardCoal>
     <lingnite>Lignite (TJ)</lingnite>
     <totalEmissionsToAir>TOTAL EMISSIONS TO AIR</totalEmissionsToAir>
@@ -94,7 +97,7 @@
     <annexVIAfootnote3>Annex VI.A footnote 3</annexVIAfootnote3>
     <volatileContents>% Volatile contents</volatileContents>
 
-    <addNewPlant>Add new plant</addNewPlant>
+    <addNewPlant>Add New Plant</addNewPlant>
     <deleteSelected>Delete selected</deleteSelected>
     <yes>Yes</yes>
     <no>No</no>
