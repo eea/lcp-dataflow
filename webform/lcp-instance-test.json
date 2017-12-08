@@ -4,8 +4,8 @@
         "@xml:lang": "en",
         "@xsi:noNamespaceSchemaLocation": "http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd",
         "BasicData": {
-            "MemberState": null,
-            "ReferenceYear": null,
+            "MemberState": "GR",
+            "ReferenceYear": "2016",
             "NumberOfPlants": null,
             "Organization": null,
             "Address1": null,
@@ -19,8 +19,8 @@
         },
         "ListOfPlants": {
             "Plant": {
-                "PlantName":null,
-                "PlantId": null,
+                "PlantName":"some other  Plant",
+                "PlantId": "23",
                 "EPRTRNationalId": null,
                 "PlantLocation": {
                     "Address1": null,
@@ -41,10 +41,6 @@
                     "DateOfStartOfOperation": null,
                     "Refineries": false,
                     "OtherSector": null,
-                    "GasTurbine": false,
-                    "GasTurbineThermalInput": null,
-                    "Boiler": false,
-                    "BoilerThermalInput": null,
                     "OperatingHours": null,
                     "Comments": null
                 },

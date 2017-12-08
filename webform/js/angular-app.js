@@ -817,42 +817,14 @@ $.noConflict();
 
                 delete plant.Delete;
 
-
-                if ( plant.PlantDetails.ExtensionBy50MWOrMore !== true ){
-                    plant.PlantDetails.ExtensionBy50MWOrMore = false;
-                    plant.PlantDetails.CapacityAddedMW = null;
-                }
-                if ( plant.PlantDetails.SubstantialChange !== true ){
-                    plant.PlantDetails.SubstantialChange = false;
-                    plant.PlantDetails.CapacityAffectedMW = null;
-                }
-                if ( plant.PlantDetails.Refineries !== true ){
+                
+                if ( plant.plantDetails!=null && plant.PlantDetails.Refineries !== true ){
                     plant.PlantDetails.Refineries = false;
                 }
-                if ( plant.PlantDetails.Refineries === true ){
+                if (plant.plantDetails!=null && plant.PlantDetails.Refineries === true ){
                     plant.PlantDetails.OtherSector = null;
                 }
-                if ( plant.PlantDetails.GasTurbine !== true ){
-                    plant.PlantDetails.GasTurbine = false;
-                    plant.PlantDetails.GasTurbineThermalInput = null;
-                }
-                if ( plant.PlantDetails.Boiler !== true ){
-                    plant.PlantDetails.Boiler = false;
-                    plant.PlantDetails.BoilerThermalInput = null;
-                }
-                if ( plant.PlantDetails.GasEngine !== true ){
-                    plant.PlantDetails.GasEngine = false;
-                    plant.PlantDetails.GasEngineThermalInput = null;
-                }
-                if ( plant.PlantDetails.DieselEngine !== true ){
-                    plant.PlantDetails.DieselEngine = false;
-                    plant.PlantDetails.DieselEngineTurbineThermalInput = null;
-                }
-                if ( plant.PlantDetails.Other !== true ){
-                    plant.PlantDetails.Other = false;
-                    plant.PlantDetails.OtherTypeOfCombustion = null;
-                    plant.PlantDetails.OtherThermalInput = null;
-                }
+               
 
             }
 
@@ -1839,17 +1811,7 @@ $.noConflict();
                 lastPlant.PlantDetails.Derogation = plant.PlantDetails.Derogation;
                 lastPlant.PlantDetails.Refineries =  $filter('lowercase')(plant.PlantDetails.Refineries);
                 lastPlant.PlantDetails.OtherSector =  plant.PlantDetails.OtherSector;
-                lastPlant.PlantDetails.GasTurbine =  $filter('lowercase')(plant.PlantDetails.GasTurbine);
-                lastPlant.PlantDetails.GasTurbineThermalInput =  plant.PlantDetails.GasTurbineThermalInput;
-                lastPlant.PlantDetails.Boiler =  $filter('lowercase')(plant.PlantDetails.Boiler);
-                lastPlant.PlantDetails.BoilerThermalInput =  plant.PlantDetails.BoilerThermalInput;
-                lastPlant.PlantDetails.GasEngine =  $filter('lowercase')(plant.PlantDetails.GasEngine);
-                lastPlant.PlantDetails.GasEngineThermalInput =  plant.PlantDetails.GasEngineThermalInput;
-                lastPlant.PlantDetails.OtherTypeOfCombustion =  plant.PlantDetails.OtherTypeOfCombustion;
-                if(plant.PlantDetails.OtherTypeOfCombustion!=null){
-                lastPlant.PlantDetails.OtherTypeOfCombustion.Other =  plant.PlantDetails.OtherTypeOfCombustion.Other;
-                }
-                lastPlant.PlantDetails.OtherThermalInput =  plant.PlantDetails.OtherThermalInput;
+               
                 lastPlant.PlantDetails.OperatingHours =  plant.PlantDetails.OperatingHours;
                 lastPlant.PlantDetails.Comments =  plant.PlantDetails.Comments;
 
@@ -2237,7 +2199,7 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
 
     function getHandsontableColHeaders(form) {
         if (form == 'ListOfPlants'){
-            return ["Plant Name", "Plant Id", "E-PRTR national ID", "Street Name ", "City", "Region", "Postal code","Country Code", "Longitude", "Latitude", "Facility name", "Comments"]
+            return ["Plant Name", "Plant Id", "E-PRTR national ID", "Street Name ", "City", "Region", "Postal code","Country Code","Building Number", "Longitude", "Latitude", "Facility name", "Comments"]
         }
         else if (form == 'PlantDetails'){
             return ["Plant name", "Plant ID", "MWth","Type of Combustion Plant", "Date of start of operation", "Refineries",  "Gas turbine", "MWth - gas turbine", "Boiler", "MWth - boiler","Other","Other type of combustion", "MWth - other", "Operating hours","Derogation", "Comments"]
@@ -2282,7 +2244,7 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
 
 			elem.handsontable({
 			    data: data,
-                contextMenu: false /*formname === 'ListOfPlants' ? true : false*/,
+                    contextMenu:false,// ['row_above', 'row_below', 'remove_row'],
 				rowHeaders: false,
                 columnSorting: false,
                 stretchH: 'all',
@@ -2312,7 +2274,7 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                                 {data: "PlantName"}, {data: "PlantId", readOnly: true},
                                 {data: "EPRTRNationalId"},
                                 {data: "PlantLocation.StreetName"},
-                                  {data: "PlantLocation.City"}, {data: "PlantLocation.Region"}, {data: "PlantLocation.PostalCode"},{data: "PlantLocation.CountryCode"},
+                                  {data: "PlantLocation.City"}, {data: "PlantLocation.Region"}, {data: "PlantLocation.PostalCode"},{data: "PlantLocation.CountryCode"},{data: "PlantLocation.BuildingNumber"},
                                 {data: "GeographicalCoordinate.Longitude", type: 'numeric', format: '0.[00000]'},
                                  {data: "GeographicalCoordinate.Latitude", type: 'numeric', format: '0.[00000]'},
                                 {data: "FacilityName"},{data: "Comments"}
@@ -2322,10 +2284,6 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                                 {data: "PlantName", readOnly: true}, {data: "PlantId", readOnly: true},
                                 {data: "PlantDetails.DateOfStartOfOperation"},
                                 {data: "PlantDetails.Refineries", type: 'checkbox'}, {data: "PlantDetails.OtherSector", type: 'dropdown', source: [{iron_steel:"iron_steel"}, "esi", "district_heating", "chp", "other"]},
-                                {data: "PlantDetails.GasTurbine", type: 'checkbox'}, {data: "PlantDetails.GasTurbineThermalInput", type: 'numeric', format: '0.[00000]'},
-                                {data: "PlantDetails.Boiler", type: 'checkbox'}, {data: "PlantDetails.BoilerThermalInput", type: 'numeric', format: '0.[00000]'},
-                                {data: "PlantDetails.GasEngine", type: 'checkbox'}, {data: "PlantDetails.GasEngineThermalInput", type: 'numeric', format: '0.[00000]'},
-                                {data: "PlantDetails.Other", type: 'checkbox'}, {data: "PlantDetails.OtherTypeOfCombustion"}, {data: "PlantDetails.OtherThermalInput", type: 'numeric', format: '0.[00000]'},
                                 {data: "PlantDetails.OperatingHours", type: 'numeric'}, {data: "PlantDetails.Comments"}
                             ]
                    : formname == 'EnergyInput' ?

@@ -229,7 +229,7 @@
                                 <th rowspan="2">
                                    <a href="" ng-click="setCriteria('EPRTRNationalId')"><span   translate="EPRTRNationalId"></span></a>
                                 </th>
-                                <th colspan="5"><span translate="plantLocation"></span></th>
+                                <th colspan="6"><span translate="plantLocation"></span></th>
                                 <th colspan="2"><span translate="geographicalCoordinate"></span></th>
                                 <th rowspan="2">
                                     <a href="" ng-click="setCriteria('FacilityName')"><span translate="facilityName"></span></a>
@@ -255,6 +255,9 @@
                                 <th >
                                     <a href="" ng-click="setCriteria('PlantLocation.CountryCode')"><span   translate="countryCode"></span></a>
                                 </th>
+                                <th >
+                                    <a href="" ng-click="setCriteria('PlantLocation.BuildingNumber')"><span   translate="buildingNumber"></span></a>
+                                </th>
                                 <th class="mandatory">
                                     <a href="" ng-click="setCriteria('GeographicalCoordinate.Longitude')"><span   translate="longitude"></span></a>
                                 </th>
@@ -278,6 +281,7 @@
                                     </td>
                                     <td><span>{{plant.PlantLocation.PostalCode}}</span></td>
                                     <td><span>{{plant.PlantLocation.CountryCode}}</span></td>
+                                    <td><span>{{plant.PlantLocation.BuildingNumber}}</span></td>
                                     <td><span>{{plant.GeographicalCoordinate.Longitude}}</span>
                                         <span class="red" ng-show="isRequired(plant.GeographicalCoordinate.Longitude)" translate="required_field"> </span>
                                         <span  class="red" ng-show="isDegree(plant.GeographicalCoordinate.Longitude, 180, submitted)" translate="valid_longitude"></span>
@@ -438,6 +442,16 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th colspan="5">
+                                                <span   translate="BuildingNumber"></span>
+                                            </th>
+                                        </tr>
+                                         <tr>
+                                            <td class="width15">
+                                                <input class="form-control" type="text" name="addBuildingNumber" ng-model="plant.PlantLocation.BuildingNumber"/>
+                                            </td>
+                                            </tr>
+                                        <tr>
                                             <th class="mandatory">
                                                 <span   translate="longitude"></span>
                                             </th>
@@ -556,24 +570,6 @@
                                     <span translate="sector"></span>
                                 </th>
                                 <th rowspan="2">
-                                    <a href="" ng-click="setCriteria('PlantDetails.GasTurbine')"><span translate="gasTurbine"></span></a>
-                                </th>
-                                <th rowspan="2">
-                                    <a href="" ng-click="setCriteria('PlantDetails.GasTurbineThermalInput')"><span translate="MWthGasTurbine"></span></a>
-                                </th>
-                                <th rowspan="2">
-                                    <a href="" ng-click="setCriteria('PlantDetails.Boiler')"><span   translate="boiler"></span></a>
-                                </th>
-                                <th rowspan="2">
-                                    <a href="" ng-click="setCriteria('PlantDetails.BoilerThermalInput')"><span translate="MWthBoiler"></span></a>
-                                </th>
-                                <th rowspan="2">
-                                    <a href="" ng-click="setCriteria('PlantDetails.OtherTypeOfCombustion')"><span translate="otherTypeOfCombustion"></span></a>
-                                </th>
-                                <th rowspan="2">
-                                    <a href="" ng-click="setCriteria('PlantDetails.OtherThermalInput')"><span translate="MWthOther"></span></a>
-                                </th>
-                                <th rowspan="2">
                                     <a href="" ng-click="setCriteria('PlantDetails.OperatingHours')"><span translate="operatingHours"></span></a>
                                 </th>
                                 <th class="mandatory" rowspan="2">
@@ -615,23 +611,6 @@
                                 </td>
                                   <td id="byOtherSector">{{plant.PlantDetails.OtherSector}}
 
-                                </td>
-                                <td id="byGasTurbine">{{plant.PlantDetails.GasTurbine| true_false}}
-
-                                </td>
-                                <td id="byGasTurbineThermalInput">{{ plant.PlantDetails.GasTurbineThermalInput }}
-                                    <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.PlantDetails.GasTurbineThermalInput) && plant.PlantDetails.GasTurbine"  translate="positive_decimal">! </span>
-                                </td>
-                                <td id="byBoiler">{{plant.PlantDetails.Boiler| true_false}}
-
-                                </td>
-                                <td id="byBoilerThermalInput">{{ plant.PlantDetails.BoilerThermalInput }}
-                                    <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.PlantDetails.BoilerThermalInput) && plant.PlantDetails.Boiler"  translate="positive_decimal">! </span>
-                                </td>
-                                <td id="byOtherTypeOfCombustion">{{ plant.PlantDetails.OtherTypeOfCombustion }}
-                                </td>
-                                <td id="byOtherThermalInput">{{ plant.PlantDetails.OtherThermalInput }}
-                                    <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.PlantDetails.OtherThermalInput)&& plant.PlantDetails.Other"  translate="positive_decimal">! </span>
                                 </td>
                                 <td id="byOperatingHours">{{ plant.PlantDetails.OperatingHours }}
                                     <span class="red" ng-show="submitted == true &&  number(plant.LcpArt15.OperatingHours) < 0 "  translate="positive_integer">! </span>
@@ -743,64 +722,10 @@
                                             </td>
                                         </tr>
                                     
-                                        <tr>
-                                            <th>
-                                                <span  translate="gasTurbine"></span>
-                                            </th>
-                                            <th>
-                                                <span translate="MWthGasTurbine"></span>
-                                            </th>
-                                            <th>
-                                                <span  translate="boiler"></span>
-                                            </th>
-                                            <th>
-                                                <span translate="MWthBoiler"></span>
-                                            </th>
-                                            <th></th>
-                                        </tr>
-                                        <tr>
-                                            <td> <input class="form-control"  type="checkbox"  name="addGasTurbine" ng-change="checkboxClearInputs(plant, 'PlantDetails.GasTurbine' , 'PlantDetails.GasTurbineThermalInput')"
-                                                        ng-model="plant.PlantDetails.GasTurbine"  />
-                                            </td>
-                                            <td> <input class="form-control" type="number" name="addGasTurbineThermalInput" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.PlantDetails.GasTurbineThermalInput}}"
-                                                         ng-disabled="!plant.PlantDetails.GasTurbine" ng-model="plant.PlantDetails.GasTurbineThermalInput"/>
-                                            </td>
-                                            <td> <input class="form-control" type="checkbox" name="addBoiler"ng-change="checkboxClearInputs(plant, 'PlantDetails.Boiler' , 'PlantDetails.BoilerThermalInput')"
-                                                        ng-model="plant.PlantDetails.Boiler" />
-                                            </td>
-                                            <td> <input class="form-control" type="number" name="addBoilerThermalInput" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.PlantDetails.BoilerThermalInput}}"
-                                                          ng-disabled="!plant.PlantDetails.Boiler" ng-model="plant.PlantDetails.BoilerThermalInput"/>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-
-                                            </td>
-                                            <td>
-                                                <span class="red" ng-show="showError(modalPlantDetails.addGasTurbineThermalInput, 'required')" translate="required_field"></span>
-                                                <span class="red" ng-show="!showError(modalPlantDetails.addGasTurbineThermalInput, 'required') && showError(modalPlantDetails.addGasTurbineThermalInput, 'pattern')"  translate="positive_decimal">! </span>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td>
-                                                <span class="red" ng-show="showError(modalPlantDetails.addBoilerThermalInput, 'required')" translate="required_field"></span>
-                                                <span class="red" ng-show="!showError(modalPlantDetails.addBoilerThermalInput, 'required') && showError(modalPlantDetails.addBoilerThermalInput, 'pattern')"  translate="positive_decimal">! </span>
-                                            </td>
-                                            <td></td>
-                                        </tr>
+                                       
                                        
                                         <tr>
-                                            <th>
-                                                <span translate="other"></span>
-                                            </th>
-                                            <th>
-                                                <span translate="otherTypeOfCombustion"></span>
-                                            </th>
-                                            <th>
-                                                <span translate="MWthOther"></span>
-                                            </th>
+                                           
                                             <th class="mandatory">
                                                 <span translate="operatingHours"></span>
                                             </th>
@@ -810,15 +735,7 @@
                                             <th colspan="2"></th>
                                         </tr>
                                         <tr>
-                                                <td> <input class="form-control" type="checkbox" name="addOther"
-                                                    ng-change="checkboxClearInputs(plant, 'PlantDetails.Other' , 'PlantDetails.OtherTypeOfCombustion:PlantDetails.OtherThermalInput')"   ng-model="plant.PlantDetails.Other"  /><!--checkboxClearInputs = function(plant, checkboxValue, dependingInputs)-->
-                                           </td>
-                                            <td> <input class="form-control" type="text" name="addOtherTypeOfCombustion"
-                                                ng-disabled="!plant.PlantDetails.Other"   ng-model="plant.PlantDetails.OtherTypeOfCombustion"  />
-                                    </td>
-                                    <td> <input class="form-control" type="number" name="addOtherThermalInput" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.PlantDetails.OtherThermalInput}}"
-                                                ng-disabled="!plant.PlantDetails.Other"   ng-model="plant.PlantDetails.OtherThermalInput" />
-                                    </td>
+                                      
                                             <td> <input class="form-control" type="number" name="addOperatingHours" ng-pattern="positiveIntegerPattern" placeholder="{{plant.PlantDetails.OperatingHours}}"
                                                     required    ng-model="plant.PlantDetails.OperatingHours" />
                                             </td>
@@ -914,10 +831,10 @@
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass')"><span   translate="biomass"></span></a></th>
-                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal')"><span   translate="coal"></span></a></th>
-                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite')"><span   translate="lignite"></span></a></th>
-                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat')"><span   translate="peat"></span></a></th>
+                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Biomass')"><span   translate="Biomass"></span></a></th>
+                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal')"><span   translate="Coal"></span></a></th>
+                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite')"><span   translate="Lignite"></span></a></th>
+                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat')"><span   translate="Peat"></span></a></th>
                                         <th colspan="2" class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels')"><span   translate="otherSolidFuels"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels')"><span   translate="liquidFuels"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas')"><span   translate="naturalGas"></span></a></th>
@@ -1010,16 +927,16 @@
                                             </tr>
                                             <tr>
                                                 <th class="width30 mandatory">
-                                                    <span  translate="biomass"></span>
+                                                    <span  translate="Biomass"></span>
                                                 </th>
                                                 <th class="width30 mandatory">
-                                                    <span  translate="coal"></span>
+                                                    <span  translate="Coal"></span>
                                                 </th>
                                                 <th class="width30 mandatory">
-                                                    <span  translate="lignite"></span>
+                                                    <span  translate="Lignite"></span>
                                                 </th>
                                                 <th class="width30 mandatory">
-                                                    <span  translate="peat"></span>
+                                                    <span  translate="Peat"></span>
                                                 </th>
                                             </tr>
 

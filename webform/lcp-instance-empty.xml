@@ -1,155 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<LCPQuestionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd" xml:lang="en">
-<BasicData>
-    <MemberState/>
-    <ReferenceYear/>
-    <NumberOfPlants/>
-    <Organization/>
-    <Address1/>
-    <Address2/>
-    <City/>
-    <State/>
-    <PostalCode/>
-    <NameOfDepartmentContactPerson/>
-    <Phone/>
-    <EMail/>
-</BasicData>
-<ListOfPlants>
-	<Plant>
-				<PlantName/>
-		<PlantId/>
-		<EPRTRNationalId/>
-		<PlantLocation>
-			<Address1/>
-			<Address2/>
-			<City/>
-			<Region/>
-			<PostalCode/>
-            <BuildingNumber/>
-		</PlantLocation>
-		<GeographicalCoordinate>
-			<Longitude/>
-			<Latitude/>
-		</GeographicalCoordinate>
-		<FacilityName/>
-        <Comments/>
-        <PlantDetails>
-            <MWth />
-					<DateOfStartOfOperation />
-					<Refineries/>
-					<OtherSector />
-					<GasTurbine/>
-					<GasTurbineThermalInput />
-					<Boiler/>
-					<BoilerThermalInput />
-			    <Other/>
-                    <OtherTypeOfCombustion/>
-					<OperatingHours />
-					<Comments />
-        </PlantDetails>
-        <EnergyInputAndTotalEmissionsToAir>
-            <EnergyInput>
-                <Biomass/>
-<OtherSolidFuels>
-							<Category />
-							<Value />
-						</OtherSolidFuels>         
-                               <LiquidFuels/>
-                <NaturalGas/>
-                <OtherGases>
-							<Category />
-							<Value />
-						</OtherGases>
-                <HardCoal/>
-                <Lignite/>
-            </EnergyInput>
-            <TotalEmissionsToAir>
-                <SO2/>
-                <NOx/>
-				<TSP/>
-            </TotalEmissionsToAir>
-        </EnergyInputAndTotalEmissionsToAir>
-      <Desulphurisation>
-					<Months>
-						<Month>
-							<MonthValue />
-							<DesulphurisationRate />
-							<SulphurContent />
-							<TechnicalJustification />
-						</Month>
-					</Months>
-				</Desulphurisation>
-				<UsefulHeat>
-					<UsefulHeatProportion />
-				</UsefulHeat>
-	</Plant>
-	<Plant>
-				<PlantName/>
-		<PlantId/>
-		<EPRTRNationalId/>
-		<PlantLocation>
-			<Address1/>
-			<Address2/>
-			<City/>
-			<Region/>
-			<PostalCode/>
-            <BuildingNumber/>
-		</PlantLocation>
-		<GeographicalCoordinate>
-			<Longitude/>
-			<Latitude/>
-		</GeographicalCoordinate>
-		<FacilityName/>
-        <Comments/>
-        <PlantDetails>
-            <MWth />
-					<DateOfStartOfOperation />
-					<Refineries/>
-					<OtherSector />
-					<GasTurbine/>
-					<GasTurbineThermalInput />
-					<Boiler/>
-					<BoilerThermalInput />
-					<OperatingHours />
-					<Comments />
-        </PlantDetails>
-        <EnergyInputAndTotalEmissionsToAir>
-            <EnergyInput>
-                <Biomass/>
-<OtherSolidFuels>
-							<Category />
-							<Value />
-						</OtherSolidFuels>         
-                               <LiquidFuels/>
-                <NaturalGas/>
-                <OtherGases>
-							<Category />
-							<Value />
-						</OtherGases>
-                <HardCoal/>
-                <Lignite/>
-            </EnergyInput>
-            <TotalEmissionsToAir>
-                <SO2/>
-                <NOx/>
-				<TSP/>
-            </TotalEmissionsToAir>
-        </EnergyInputAndTotalEmissionsToAir>
-      <Desulphurisation>
-					<Months>
-						<Month>
-							<MonthValue />
-							<DesulphurisationRate />
-							<SulphurContent />
-							<TechnicalJustification />
-						</Month>
-					</Months>
-				</Desulphurisation>
-				<UsefulHeat>
-					<UsefulHeatProportion />
-				</UsefulHeat>
-	</Plant>
-</ListOfPlants>
-</LCPQuestionnaire>
-
-
+{
+    "LCPQuestionnaire": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xml:lang": "en",
+        "@xsi:noNamespaceSchemaLocation": "http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd",
+        "BasicData": {
+            "MemberState": "GR",
+            "ReferenceYear": "2016",
+            "NumberOfPlants": null,
+            "Organization": null,
+            "Address1": null,
+            "Address2": null,
+            "City": null,
+            "State": null,
+            "PostalCode": null,
+            "NameOfDepartmentContactPerson": null,
+            "Phone": null,
+            "EMail": null
+        },
+        "ListOfPlants": {
+            "Plant": {
+                "PlantName":"some other  Plant",
+                "PlantId": "23",
+                "EPRTRNationalId": null,
+                "PlantLocation": {
+                    "Address1": null,
+                    "Address2": null,
+                    "City": null,
+                    "Region": null,
+                    "BuildingNumber":null,
+                    "PostalCode": null
+                },
+                "GeographicalCoordinate": {
+                    "Longitude": null,
+                    "Latitude": null
+                },
+                "FacilityName": null,
+                "Comments": null,
+                "PlantDetails": {
+                    "MWth": null,
+                    "DateOfStartOfOperation": null,
+                    "Refineries": false,
+                    "OtherSector": null,
+                    "OperatingHours": null,
+                    "Comments": null
+                },
+                "EnergyInputAndTotalEmissionsToAir": {
+                    "EnergyInput": {
+                        "Biomass": null,
+                        "Coal":null,
+                        "Lignite":null,
+                        "Peat":null,
+                        "OtherSolidFuels":  {
+                          "Category":null,
+                          "Value":null
+                        },
+                        "LiquidFuels": null,
+                        "NaturalGas": null,
+                        "OtherGases": {
+                          "Category":null,
+                          "Value":null
+                        }
+                    },
+                    "TotalEmissionsToAir": {
+                        "SO2": null,
+                        "NOx": null,
+                        "TSP": null
+                    }
+                },
+             "Desulphurisation":{
+                  "Months" :{
+                      "Month":[{
+                    "MonthValue":null,
+                    "DesulphurisationRate":null,
+                    "SulphurContent": null,
+                    "TechnicalJustification":null
+                      }]
+                  }
+                },
+                "UsefulHeat":{
+                "UsefulHeatProportion": null
+                }
+            }
+        }
+    }
+}
