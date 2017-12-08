@@ -45,8 +45,8 @@
 							<xs:element name="ReferenceYear" minOccurs="1" maxOccurs="1">
 								<xs:simpleType>
 									<xs:restriction base="xs:integer">
-										<xs:minInclusive value="2004"/>
-										<xs:maxInclusive value="2015"/>
+										<xs:minInclusive value="2015"/>
+										<xs:maxInclusive value="2016"/>
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:element>
@@ -102,13 +102,9 @@
                                         <xs:element name="PlantDetails" minOccurs="1" maxOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="StatusOfThePlant" type="StatusOfThePlantType" minOccurs="1" maxOccurs="1"/>
                                                     <xs:element name="MWth" type="xs:double" minOccurs="1" maxOccurs="1"/>
-                                                    <xs:element name="ExtensionBy50MWOrMore" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
-                                                    <xs:element name="CapacityAddedMW" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
                                                     <xs:element name="SubstantialChange" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
                                                     <xs:element name="CapacityAffectedMW" type="DoubleOrNothing" minOccurs="1" maxOccurs="1"/>
-                                                    <xs:element name="DateOfStartOfOperation" type="DateOrNothing" minOccurs="1" maxOccurs="1"/>
                                                     <xs:element name="Refineries" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
                                                     <xs:element name="OtherSector" type="OtherSectorType" minOccurs="1" maxOccurs="1"/>
                                                     <xs:element name="GasTurbine" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
@@ -138,6 +134,9 @@
                                                                 <xs:element name="LiquidFuels" type="xs:double" minOccurs="1" maxOccurs="1"/>
                                                                 <xs:element name="NaturalGas" type="xs:double" minOccurs="1" maxOccurs="1"/>
                                                                 <xs:element name="OtherGases" type="xs:double" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Coal" type="xs:double" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Lignite" type="xs:double" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Peat" type="xs:double" minOccurs="1" maxOccurs="1"/>
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
@@ -265,29 +264,6 @@
 				</xs:restriction>
 		  </xs:simpleType>
 		</xs:union>
-	</xs:simpleType>
-	<xs:simpleType name="StatusOfThePlantType">
-		<xs:annotation>
-			<xs:documentation>Status of the plant according to LCPD 2001/80/EC Article 4.t</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value=""/>
-			<xs:enumeration value="art_4_1">
-				<xs:annotation>
-					<xs:documentation>Art 4(1) - old-new plants</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="art_4_2">
-				<xs:annotation>
-					<xs:documentation>Art 4(2) - new-new plants</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="art_4_3">
-				<xs:annotation>
-					<xs:documentation>Art 4(3) - existing plants</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OtherSectorType">
 		<xs:annotation>
