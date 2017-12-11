@@ -129,13 +129,15 @@
 											</xs:complexType>
 										</xs:element>
 										<xs:element name="Desulphurisation" minOccurs="1" maxOccurs="1">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="DesulphurisationRate" type="xs:double" minOccurs="1" maxOccurs="1"/>
-													<xs:element name="SulphurContent" type="xs:double" minOccurs="1" maxOccurs="1"/>
-													<xs:element name="TechnicalJustification" type="xs:string" minOccurs="0" maxOccurs="1"/>
-												</xs:sequence>
-											</xs:complexType>
+											<xs:element name="Months"/>
+												<xs:element name="Month"/>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="DesulphurisationRate" type="xs:double" minOccurs="1" maxOccurs="1"/>
+															<xs:element name="SulphurContent" type="xs:double" minOccurs="1" maxOccurs="1"/>
+															<xs:element name="TechnicalJustification" type="xs:string" minOccurs="0" maxOccurs="1"/>
+														</xs:sequence>
+													</xs:complexType>
 										</xs:element>
 										<xs:element name="UsefulHeat" type="xs:double" minOccurs="1" maxOccurs="1">
 											<xs:complexType>
