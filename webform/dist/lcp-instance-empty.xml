@@ -38,6 +38,7 @@
         <MWth/>
         <DateOfStartOfOperation/>
         <Refineries/>
+        <OtherSector/>
         <OperatingHours/>
         <Comments/>
       </PlantDetails>

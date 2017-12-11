@@ -735,10 +735,10 @@ $.noConflict();
                 if ( plants[i].GeographicalCoordinate.Latitude > 90 || plants[i].GeographicalCoordinate.Latitude < -90)
                     res = false;
                 //
-                if ( !( plants[i].PlantDetails.Refineries) && ( !( plants[i].PlantDetails.OtherSector  )  || ! (sectors[plants[i].PlantDetails.OtherSector ] )) ){
+           //     if ( !( plants[i].PlantDetails.Refineries) && ( !( plants[i].PlantDetails.OtherSector  )  || ! (sectors[plants[i].PlantDetails.OtherSector ] )) ){
                     // ^^ checks that if not Refineries, that OtherSector is filled with one of the permitted values(fetched from DD)
-                    res = false;
-                }
+            //        res = false;
+             //   }
 
                 if ( ! ( ( plants[i].PlantDetails.StatusOfThePlant === null ) || ( plants[i].PlantDetails.StatusOfThePlant === "" ) || status [ plants[i].PlantDetails.StatusOfThePlant] ) )
                     res = false;
@@ -869,7 +869,7 @@ $.noConflict();
 
                     var plant = $scope.instance.LCPQuestionnaire.ListOfPlants.Plant[i];
 
-                    if ( isEmpty(plant.PlantName)  && isEmpty(plant.EPRTRNationalId) &&
+                    if ( plant.PlantLocation!=null && isEmpty(plant.PlantName)  && isEmpty(plant.EPRTRNationalId) &&
                            isEmpty(plant.PlantLocation.Address1) && isEmpty(plant.PlantLocation.Address2) &&
                            isEmpty(plant.PlantLocation.City) && isEmpty(plant.PlantLocation.Region) && isEmpty(plant.PlantLocation.PostalCode) &&
                            isEmpty(plant.GeographicalCoordinate.Longitude) && isEmpty(plant.GeographicalCoordinate.Latitude) && isEmpty(plant.FacilityName))
@@ -925,6 +925,7 @@ $.noConflict();
         $scope.phoneNumberPattern = /^[ 0-9\(\)\+\-]{7,25}$/;
         $scope.positiveIntegerPattern = /^\d+$/;
         $scope.positiveDecimalNumberPattern = /^\d*\.?\d*$/;
+        $scope.binaryNumberPattern=/^[0-1]/;
         $scope.decimalNumberPattern =/^[+-]?(\d*\.?\d*)$/;
         $scope.dateFormat = /^(19|20)\d\d([-])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/;
 
@@ -1066,6 +1067,7 @@ $.noConflict();
             return $scope.positiveDecimalNumberPattern.test(inputValue);
 
         };
+        
 
         $scope.validDateFormat = function( inputDate){
             // allows empty values for simplicity sake
@@ -1217,6 +1219,52 @@ $.noConflict();
             }
         }    ;
 
+        $scope.isDesulphurizationRateEmpty = function (desulphurisation) {
+            if (desulphurisation == null || desulphurisation.Months==null || desulphurisation.Months.Month==null  || desulphurisation.Months.Month.length==1) {
+                return true;
+            }
+            if(desulphurisation.Months.Month.isArray){
+            desulphurisation.Months.Month.forEach(function (element) {
+                if (element.DesulphurisationRate == null) {
+                    return true;
+                }
+            }, this);
+        }
+            return false;
+        };
+
+        $scope.isSulphurContentEmpty = function (desulphurisation) {
+            if (desulphurisation == null || desulphurisation.Months==null || desulphurisation.Months.Month==null  || desulphurisation.Months.Month.length==1) {
+                return true;
+            }
+
+            if(desulphurisation.Months.Month.isArray){                
+            desulphurisation.Months.Month.forEach(function (element) {
+                if (element.SulphurContent == null) {
+                    return true;
+                }
+
+            }, this);
+        }
+            return false;
+        };
+        $scope.isTechnicalJustificationEmpty = function (desulphurisation) {
+            if (desulphurisation == null || desulphurisation.Months==null || desulphurisation.Months.Month==null  || desulphurisation.Months.Month.length==1) {
+                return true;
+            }
+            if(desulphurisation.Months.Month.isArray){
+                
+            desulphurisation.Months.Month.forEach(function (element) {
+
+                if (element.TechnicalJustification == null || element.TechnicalJustification == '') {
+                    return true;
+                }
+
+            }, this);
+        }
+            return false;
+        };
+        
     });
     function isEmpty(value){
         // returns true on undefined, empty array, empty string
@@ -1371,8 +1419,17 @@ $.noConflict();
                 .error(function(data, status, headers, config){
                     alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
                 .success( function (newCodeList) {
+                    //Push "Other" value to the end of the Array
+                    var otherElement ={};
+                    newCodeList.concepts.forEach(function(element) {
+                        if(element['@id']=='Other'){
+                            var OtherElementIndex = newCodeList.concepts.indexOf(element);
+                            newCodeList.concepts.splice(OtherElementIndex,1);
+                             Object.assign(otherElement,element);
+                        }
+                    }, this);
+                    newCodeList.concepts.push(otherElement);
             angular.copy(newCodeList, codeLists.OtherSolidFuelCodeLists);
-            ////console.log("received " + vocabularyIdentifiersInCode[i]);
                   });
             },
             loadOtherGasesousFuelCodeList: function(language){
@@ -1385,6 +1442,16 @@ $.noConflict();
                 .error(function(data, status, headers, config){
                     alert("Failed to read code lists. Data = " +  data + ", status = " + status);})
                 .success( function (newCodeList) {
+                        //Push "Other" value to the end of the Array
+                        var otherElement ={};
+                        newCodeList.concepts.forEach(function(element) {
+                            if(element['@id']=='Other'){
+                                var OtherElementIndex = newCodeList.concepts.indexOf(element);
+                                newCodeList.concepts.splice(OtherElementIndex,1);
+                                 Object.assign(otherElement,element);
+                            }
+                        }, this);
+                        newCodeList.concepts.push(otherElement);
             angular.copy(newCodeList, codeLists.OtherGasesousFuelCodeLists);
             ////console.log("received " + vocabularyIdentifiersInCode[i]);
                   });
@@ -1912,10 +1979,8 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
             app.controller('DesulphurisationModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
 
                 //We check if Month is an array and if not initialize it as an array in order to then fill it below.
-                if(!plant.Desulphurisation.Months.Month.isArray){
+                if(plant.Desulphurisation.Months==null || plant.Desulphurisation.Months.Month==null  || plant.Desulphurisation.Months.Month.constructor === Object || plant.Desulphurisation.Months.Month.length==1) {
                     plant.Desulphurisation.Months.Month=[];
-                }
-
                 //If Months Empty , initialize them before the modal
                 angular.forEach($scope.codeList.MonthlyDesulphurisation, function (value, key) {
                     if (plant.Desulphurisation.Months.Month[key]==null){
@@ -1928,6 +1993,8 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                     }
 
                 })
+                }
+               
 
                 $scope.ok = function (plant) {
                     if (!$scope.modalDesulphurisation.$invalid) {
@@ -2249,22 +2316,8 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                 columnSorting: false,
                 stretchH: 'all',
                 fixedColumnsLeft: 2,
-                minSpareRows: 0, // formname === 'ListOfPlants' ? 1 : 0,
+                minSpareRows: 1, // formname === 'ListOfPlants' ? 1 : 0,
                 minSpareCols: 0,
-                afterDocumentKeyDown: function(x){
-                    if(x.keyCode=='13'){
-                        elem.handsontable('alter', 'insert_row');
-                    }
-                },
-                beforePaste: function(data,coords){
-                   var ht = container.handsontable('getInstance');
-                   var rowsNeeded = data.length - ht.countEmptyRows();
-                   for (var index = 0; index < rowsNeeded; index++) {
-                   elem.handsontable('alter', 'insert_row');
-                   }
-                },
-                
-              
                 //maxRows: formname === 'ListOfPlants' ? 200 : data.length,
                 //maxCols: data.numberOfColumns,
                 colHeaders: getHandsontableColHeaders(formname),

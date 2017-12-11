@@ -5,7 +5,7 @@
         "reporting-language": "Reporting language",
         "reporting-year": "Reporting year",
         "countryTooltip": "Select the Country where the derogation is applicable - the field will be auto-filled for any subsequent derogation reports created during the same session",
-        "statusTooltip": "Choose the status of the plant according to LCPD 2001/80/EC Article 4.",
+        "statusTooltip": "Choose the categories of the plant according to Article 72 of Directive 2010/75/EU",
         "sectorsTooltip": "Choose the sector in which the plant operates",
         "extensionTooltip": "Extensions during the whole period until the end of the current reporting year should be reported.",
         "significantChangeTooltip": "Substantial changes during the whole period until the end of the current reporting year should be reported.",
@@ -71,13 +71,13 @@
         "MWthOther": "MWth - other",
         "operatingHours": "Operating hours",
         "comments": "Comments",
-        "Emissions": "TOTAL EMISSIONS TO AIR",
+        "energyInputEmissions": "4. ENERGY INPUT AND TOTAL EMISSIONS TO AIR",
         "energyInput": "ENERGY INPUT",
         "Biomass": "Biomass (TJ)",
-        "otherSolidFuels": "Other solid fuels (TJ): Category | Value",
+        "otherSolidFuels": "Other solid fuels (TJ)",
         "liquidFuels": "Liquid fuels (TJ)",
         "naturalGas": "Natural gas (TJ)",
-        "otherGases": "Other gases (TJ): Category | Value",
+        "otherGases": "Other gases (TJ)",
          "Coal":"Coal",
         "Lignite": "Lignite (TJ)",
         "Peat":"Peat",
@@ -110,7 +110,6 @@
         "addSave": "Add & Save",
         "done": "Done",
         "doneSave": "Done & Save",
-        "addNewPlant":"Add New Plant",
         "close": "Close",
         "prev": "Prev",
         "next": "Next",
@@ -153,4 +152,3 @@
         "_xml:lang": "en"
     }
 }
-
