@@ -431,7 +431,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             <td class='error' title="Details"> Please provide all the mandatory fields</td>
             <td class="{ if (functx:if-empty( data($plant/PlantName)   , ' ') = ' ') then "tderror" else ""  }" title="PlantName"> { functx:if-empty( data($plant/PlantName)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($plant/PlantId)   , ' ') = ' ') then "tderror" else ""  }" title="PlantID"> { functx:if-empty( data($plant/PlantId)   , '#Missing Value')  } </td>
-            <td class="{ if (functx:if-empty( data($plant/PlantLocation/Address1)   , ' ') = ' ') then "tderror" else ""  }" title="Address1"> { functx:if-empty( data($plant/PlantLocation/Address1)   , '#Missing Value')  } </td>
+            <td class="{ if (functx:if-empty( data($plant/PlantLocation/StreetName)   , ' ') = ' ') then "tderror" else ""  }" title="StreetName"> { functx:if-empty( data($plant/PlantLocation/StreetName)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($plant/PlantLocation/City)   , ' ') = ' ') then "tderror" else ""  }" title="City"> { functx:if-empty( data($plant/PlantLocation/City)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($plant/PlantLocation/PostalCode)   , ' ') = ' ') then "tderror" else ""  }" title="PostalCode"> { functx:if-empty( data($plant/PlantLocation/PostalCode)   , '#Missing Value')  } </td>
         </tr>
@@ -684,7 +684,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
         let $CLRTAP := doc($xmlconv:CLRTAP_PATH)//country[MemberState = $memberState and Year = $reportingYear ]
 
         let $tsp := if  ($CLRTAP/TSP castable as xs:double ) then
-            round-half-to-even ( (eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/Dust) div ($CLRTAP/TSP * 1000) ) * 100 , 3 ) else
+            round-half-to-even ( (eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) div ($CLRTAP/TSP * 1000) ) * 100 , 3 ) else
             'TSP emissions were not reported under CLRTAP. Therefore they cannot be compared to emissions reported under the LCP Directive'
 
         let $res := <tr>
@@ -837,18 +837,18 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
                                 then 0.0000001
                                 else $expected
 
-            let $Dust := if (($plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/Dust) castable as xs:double)
-                            then xs:double($plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/Dust)
+            let $TSP := if (($plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) castable as xs:double)
+                            then xs:double($plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP)
                             else 0
             where(
                 $expected > 0.0000001
                 and
                     $totalInputTJ > 1
                 and (
-                    $Dust div $expected > 20
+                    $TSP div $expected > 20
                     or
                     (
-                        $Dust div $expected < 1 div 500
+                        $TSP div $expected < 1 div 500
                         and
                         $oBio + $oSolid + $oOtherGas + $oLiq + $oCoal + $oLignite + $oPeat > 0
                     )
@@ -856,14 +856,14 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             )
             return
                 <tr>
-                    <td class='warning' title="Details">Significant difference in reported and expected Dust emissions</td>
+                    <td class='warning' title="Details">Significant difference in reported and expected TSP emissions</td>
                     <td title="PlantName"> { data($plant/PlantName)  } </td>
                     <td title="PlantID"> { data($plant/PlantId)  } </td>
-                    <td class="tdwarning" title="Dust"> { $Dust } </td>
-                    <td title="expected Dust"> { round-half-to-even ( $expected, 3)  } </td>
+                    <td class="tdwarning" title="TSP"> { $TSP } </td>
+                    <td title="expected TSP"> { round-half-to-even ( $expected, 3)  } </td>
                 </tr>
 
-    let $LCP_4_4 := xmlconv:RowBuilder("LCP 4.4","Dust emission outlier test", $message, $res  )
+    let $LCP_4_4 := xmlconv:RowBuilder("LCP 4.4","TSP emission outlier test", $message, $res  )
 
 
     (: LCP 4.5 :)
@@ -916,24 +916,24 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
                 </tr>
             else ()
 
-        (: Dust :)
+        (: TSP :)
 
-        let $diff :=   ( eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/Dust) - eworx:getNumber($Avg_Emissions/Dust) ) div abs(eworx:getNumber($Avg_Emissions/Dust))
+        let $diff :=   ( eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) - eworx:getNumber($Avg_Emissions/TSP) ) div abs(eworx:getNumber($Avg_Emissions/TSP))
 
         let $res3 :=
             if ( abs($diff) > 0.3) then
                 <tr>
-                    <td class='warning' title="Details"> More than 30% diffence in this year's total amount of <b>Dust</b> reported to the average of last three years. Please make sure that the reported data are correct. </td>
-                    <td title="Total Reported Amount({$reportingYear})"> {   eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/Dust) }</td>
-                    <td title="Average of Total Reported Amount ({$reportingYear - 3}-{$reportingYear - 1})"> {  $Avg_Emissions/Dust }</td>
+                    <td class='warning' title="Details"> More than 30% diffence in this year's total amount of <b>TSP</b> reported to the average of last three years. Please make sure that the reported data are correct. </td>
+                    <td title="Total Reported Amount({$reportingYear})"> {   eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) }</td>
+                    <td title="Average of Total Reported Amount ({$reportingYear - 3}-{$reportingYear - 1})"> {  $Avg_Emissions/TSP }</td>
                     <td class="tdwarning" title="Change (%) "> {  round-half-to-even ($diff * 100 , 2 )} </td>
 
                 </tr>
             else if ( abs($diff) > 0.1 ) then
                 <tr>
-                    <td class='info' title="Details"> More than 10% diffence in this year's total amount of <b>Dust</b> reported to the average of last three years.</td>
-                    <td title="Total Reported Amount({$reportingYear})"> {  eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/Dust)}</td>
-                    <td title="Average of Total Reported Amount ({$reportingYear - 3}-{$reportingYear - 1})"> {  $Avg_Emissions/Dust }</td>
+                    <td class='info' title="Details"> More than 10% diffence in this year's total amount of <b>TSP</b> reported to the average of last three years.</td>
+                    <td title="Total Reported Amount({$reportingYear})"> {  eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP)}</td>
+                    <td title="Average of Total Reported Amount ({$reportingYear - 3}-{$reportingYear - 1})"> {  $Avg_Emissions/TSP }</td>
                     <td class="tdinfo" title="Change (%) "> {  round-half-to-even ($diff * 100 , 2 )} </td>
                 </tr>
             else ()
