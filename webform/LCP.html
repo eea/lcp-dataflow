@@ -37,7 +37,7 @@
         </div> <!-- toolribbon -->
 
         <div id="pagehead">
-            <a href="/" accesskey="1"><img src="./images/eea-print-logo.gif" alt="Logo" id="logo" /></a>
+            <a href="/" accesskey="1"><img src="/images/eea-print-logo.gif" alt="Logo" id="logo" /></a>
             <div id="networktitle">Eionet</div>
             <div id="sitetitle">European Environment Information and Observation Network</div>
             <div id="sitetagline">Web questionnaires</div>
@@ -569,7 +569,7 @@
                                 <th colspan="2">
                                     <span translate="sector"></span>
                                 </th>
-                                <th rowspan="2">
+                                <th class="mandatory" rowspan="2">
                                     <a href="" ng-click="setCriteria('PlantDetails.OperatingHours')"><span translate="operatingHours"></span></a>
                                 </th>
                                 <th class="mandatory" rowspan="2">
@@ -584,7 +584,7 @@
                                 <th  class="mandatory">
                                     <a href="" ng-click="setCriteria('Refineries')"><span translate="refineries"></span></a>
                                 </th>
-                                <th  class="mandatory">
+                                <th>
                                     <a href="" ng-click="setCriteria('OtherSector')"><span translate="OtherSector"></span></a>
                                 </th>
                             </tr>
@@ -701,7 +701,7 @@
                                             <th>
                                                 <span  translate="refineries"></span>
                                             </th>
-                                            <th colspan="2" ng-class="{ 'mandatory' : !plant.PlantDetails.Refineries }">
+                                            <th colspan="2" ng-class="{ !plant.PlantDetails.Refineries }">
                                                 <span translate="otherSector"></span>
                                             </th>
                                         </tr>
@@ -856,7 +856,7 @@
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal)"  translate="positive_decimal">! </span>
                                     </td>
                                     <td id="byEnergyInputLignite">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite}}
-                                        <span class="red" ng-show="isRequired(plant.EnergyInput.Lignite)" translate="required_field">! </span>
+                                        <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite)" translate="required_field">! </span>
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite)"  translate="positive_decimal">! </span>
                                     </td>
                                     <td id="byEnergyInputPeat">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat}}
@@ -866,7 +866,6 @@
 
                                     <td ="byEnergyInputOtherSolidFuelsCategory">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category}}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category)"  translate="positive_decimal">! </span>
                                     </td>
                                     <td ="byEnergyInputOtherSolidFuelsValue">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value}}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value)" translate="required_field">! </span>
@@ -882,7 +881,6 @@
                                     </td>
                                     <td id="byEnergyInputOtherGasesCategory">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category}}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category)"  translate="positive_decimal">! </span>
                                     </td>
                                     <td id="byEnergyInputOtherGasesValue">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value}}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases)" translate="required_field">! </span>
@@ -1285,22 +1283,23 @@
                                     <td id="byDesulphurisationDesulphurisationRate"> <div ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts" ng-hide="!plant.Desulphurisation.Months.Month[i]">
                                              {{ plant.Desulphurisation.Months.Month[i].MonthValue}}:   {{ plant.Desulphurisation.Months.Month[i].DesulphurisationRate}} 
                                     </div> 
-                                        <span class="red" ng-show="isRequired(plant.Desulphurisation.DesulphurisationRate)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.Desulphurisation.DesulphurisationRate)"  translate="positive_decimal">! </span>
+                                        <!--span class="red" ng-show="isRequired(plant.Desulphurisation.DesulphurisationRate)" translate="required_field">! </span-->
+                                        <span class="red" ng-show="isDesulphurizationRateEmpty(plant.Desulphurisation)"  translate="required_field">! </span>
                                     </td>
                                     <td id="byDesulphurisationSulphurContent">
                                             <div ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts" ng-hide="!plant.Desulphurisation.Months.Month[i]">
                                              {{ plant.Desulphurisation.Months.Month[i].MonthValue}}: {{ plant.Desulphurisation.Months.Month[i].SulphurContent}} 
                                                  </div> 
-                                        <span class="red" ng-show="isRequired(plant.Desulphurisation.SulphurContent)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.Desulphurisation.SulphurContent)"  translate="positive_decimal">! </span>
+                                        <!--span class="red" ng-show="isRequired(plant.Desulphurisation.SulphurContent)" translate="required_field">! </span-->
+                                        <span class="red" ng-show="isSulphurContentEmpty(plant.Desulphurisation)"  translate="required_field">! </span>
                                     </td>
                                     <td id="byDesulphurisationTechnicalJustification">
                                             <div ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts" ng-hide="!plant.Desulphurisation.Months.Month[i]">
                                             {{ plant.Desulphurisation.Months.Month[i].MonthValue}}:   {{ plant.Desulphurisation.Months.Month[i].TechnicalJustification}} 
                                                  </div> 
-                                        <span class="red" ng-show="isRequired(plant.Desulphurisation.TechnicalJustification)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.Desulphurisation.TechnicalJustification)"  translate="positive_decimal">! </span>
+                                        <!--span class="red" ng-show="isRequired(plant.Desulphurisation.TechnicalJustification)" translate="required_field">! </span-->
+                                        <span class="red" ng-show="isTechnicalJustificationEmpty(plant.Desulphurisation)"  translate="required_field">! </span>
+                                        
                                     </td>
                                     <!--td id="byDesulphurisationMonth">
                                             <div ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts">
@@ -1364,16 +1363,18 @@
 
                                             </tr>
 
-                                            <tr ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts">
+                                            <tr ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts track by $index">
                                                 <td> <input class="form-control" type="number" name="addDesulphurisationRate"  ng-model="plant.Desulphurisation.Months.Month[i].DesulphurisationRate"
-                                                required/>
+                                                placeholder="{{plant.Desulphurisation.Months.Month[i].DesulphurisationRate}}" required/>
+                                            
                                                 </td>
                                                 <td> <input class="form-control" type="number" name="addSulphurContent" ng-pattern="positiveDecimalNumberPattern" 
-                                          ng-model="plant.Desulphurisation.Months.Month[i].SulphurContent"     required/>
+                                          ng-model="plant.Desulphurisation.Months.Month[i].SulphurContent" placeholder="{{plant.Desulphurisation.Months.Month[i].SulphurContent}}"  required/>
                                                 </td>
-                                                <td> <input class="form-control" type="text" name="addTechnicalJustification"  
-                                           ng-model="plant.Desulphurisation.Months.Month[i].TechnicalJustification"    required/>
-                                                </td>
+                                                <td> <input class="form-control" type="text" name="addTechnicalJustification"   placeholder="{{plant.Desulphurisation.Months.Month[i].TechnicalJustification}}" 
+                                           ng-model="plant.Desulphurisation.Months.Month[i].TechnicalJustification"   required/>
+                                      
+                                        </td>
                                                 <td> 
                                                         <input class="width30em"  type="text" name="addDesulphurisationMonth" 
                                                         
@@ -1525,8 +1526,8 @@
                                                 </th>
                                             </tr>
                                             <tr>
-                                                <td> <input class="form-control" type="number" name="addUsefulHeatProportion" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.UsefulHeat.UsefulHeatProportion}}"
-                                                             ng-model="plant.UsefulHeat.UsefulHeatProportion"  required/>
+                                                <td> <input class="form-control" type="number" name="addUsefulHeatProportion" ng-pattern="binaryNumberPattern" placeholder="{{plant.UsefulHeat.UsefulHeatProportion}}"
+                                                             ng-model="plant.UsefulHeat.UsefulHeatProportion"  min="0" max="1" required/>
                                                 </td>
                                             </tr>
                                             <tr>

@@ -5,7 +5,7 @@
 		<reporting-language>Reporting language</reporting-language>
 		<reporting-year>Reporting year</reporting-year>
 		<countryTooltip>Select the Country where the derogation is applicable - the field will be auto-filled for any subsequent derogation reports created during the same session</countryTooltip>
-		<statusTooltip>Choose the status of the plant according to LCPD 2001/80/EC Article 4.</statusTooltip>
+		<statusTooltip>Choose the categories of the plant according to Article 72 of Directive 2010/75/EU</statusTooltip>
 		<sectorsTooltip>Choose the sector in which the plant operates</sectorsTooltip>
 		<extensionTooltip>Extensions during the whole period until the end of the current reporting year should be reported.</extensionTooltip>
 		<significantChangeTooltip>Substantial changes during the whole period until the end of the current reporting year should be reported.</significantChangeTooltip>
