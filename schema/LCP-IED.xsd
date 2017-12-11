@@ -82,7 +82,14 @@
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element name="MWth" type="xs:double" minOccurs="1" maxOccurs="1"/>
-													<xs:element name="TypeOfCombustionPlant" type="TypeOfCombustionPlantType" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="TypeOfCombustionPlant" type="TypeOfCombustionPlantType" minOccurs="1" maxOccurs="1">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="typeOfCombustionPlant" type="xs:string" minOccurs="0" maxOccurs="1"/>
+																<xs:element name="FurtherDetails" type="xs:string" minOccurs="0" maxOccurs="1"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
 													<xs:element name="DateOfStartOfOperation" type="DateOrNothing" minOccurs="1" maxOccurs="1"/>
 													<xs:element name="Refineries" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
 													<xs:element name="OtherSector" type="OtherSectorType" minOccurs="1" maxOccurs="1"/>
