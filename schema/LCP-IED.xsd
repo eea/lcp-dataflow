@@ -133,7 +133,7 @@
 												<xs:sequence>
 													<xs:element name="DesulphurisationRate" type="xs:double" minOccurs="1" maxOccurs="1"/>
 													<xs:element name="SulphurContent" type="xs:double" minOccurs="1" maxOccurs="1"/>
-													<xs:element name="TechnicalJustification" type="xs:double" minOccurs="1" maxOccurs="1"/>
+													<xs:element name="TechnicalJustification" type="xs:double" minOccurs="0" maxOccurs="1"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
