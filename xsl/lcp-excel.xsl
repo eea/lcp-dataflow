@@ -365,6 +365,10 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
                                     table:default-cell-style-name="number-cell">
                             </table:table-column>
                             <table:table-column
@@ -441,6 +445,11 @@
 
                                     </text:p>
                                 </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
                             </table:table-row>
                             <table:table-row table:default-cell-value-type="string">
                                 <table:table-cell table:style-name="Heading2">
@@ -461,6 +470,11 @@
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
                                         <xsl:value-of select="$labels/typeOfCombustionPlant"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/TypeOfCombustionPlantFurtherDetails"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -1053,12 +1067,12 @@
         <table:table-row table:default-cell-value-type="string">
             <table:table-cell table:style-name="Heading1">
                 <text:p>
-                    <xsl:value-of select="$labels/nameOfContactPerson"/>
+                    <xsl:value-of select="$labels/nameOfDepartmentContactPerson"/>
                 </text:p>
             </table:table-cell>
             <table:table-cell table:style-name="cell1">
                 <text:p>
-                    <xsl:value-of select="./BasicData/NameOfContactPerson"/>
+                    <xsl:value-of select="./BasicData/NameOfDepartmentContactPerson"/>
                 </text:p>
             </table:table-cell>
         </table:table-row>
@@ -1183,6 +1197,11 @@
                 <table:table-cell table:style-name="cell1">
                     <text:p>
                         <xsl:value-of select="./TypeOfCombustionPlant"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="cell1">
+                    <text:p>
+                        <xsl:value-of select="./TypeOfCombustionPlantFurtherDetails"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
