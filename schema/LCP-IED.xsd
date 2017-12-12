@@ -42,7 +42,7 @@
 										<xs:element name="UsefulHeat" minOccurs="1" maxOccurs="1">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="UsefulHeatProportion" type="xs:double" minOccurs="1" maxOccurs="unbounded"/>
+													<xs:element name="UsefulHeatProportion" type="xs:double" minOccurs="1" maxOccurs="1"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -52,7 +52,6 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-
 			</xs:sequence>
 			<xs:attribute ref="xml:lang" use="required"/>
 		</xs:complexType>
@@ -182,24 +181,24 @@
 					<xs:documentation>Boiler</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Gas Turbine">
+			<xs:enumeration value="DieselEngine">
 				<xs:annotation>
-					<xs:documentation>Gas turbine</xs:documentation>
+					<xs:documentation>DieselEngine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Gas Engine">
+			<xs:enumeration value="GasEngine">
 				<xs:annotation>
-					<xs:documentation>Gas engine</xs:documentation>
+					<xs:documentation>GasEngine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Diesel Engine">
+			<xs:enumeration value="GasTurbine">
 				<xs:annotation>
-					<xs:documentation>Diesel engine</xs:documentation>
+					<xs:documentation>GasTurbine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Other">
+			<xs:enumeration value="Others">
 				<xs:annotation>
-					<xs:documentation>Other (specifying the type)</xs:documentation>
+					<xs:documentation>Others</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -209,32 +208,32 @@
 			<xs:documentation>Derogation value</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Plant due to additional reporting for operating under an annual average of 1500 hours.">
+			<xs:enumeration value="Art72.4.b">
 				<xs:annotation>
 					<xs:documentation>Plant due to additional reporting for operating under an annual average of 1500 hours.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Desulphurisation rate applied in accordance with clauses (1) and (2) of Article 31 of Directive 2010/75/EU">
+			<xs:enumeration value="Article31">
 				<xs:annotation>
 					<xs:documentation>Desulphurisation rate applied in accordance with clauses (1) and (2) of Article 31 of Directive 2010/75/EU</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Exemption from compliance with emission limit values or desulphurisation rates due to coverage by transitional national plan, in accordance with Article 32(2) of Directive 2010/75/EU">
+			<xs:enumeration value="Article32">
 				<xs:annotation>
 					<xs:documentation>Exemption from compliance with emission limit values or desulphurisation rates due to coverage by transitional national plan, in accordance with Article 32(2) of Directive 2010/75/EU</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Limited life time derogation granted in accordance with Article 33(1) of Directive 2010/75/EU">
+			<xs:enumeration value="Article33">
 				<xs:annotation>
 					<xs:documentation>Limited life time derogation granted in accordance with Article 33(1) of Directive 2010/75/EU</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="Exemption from compliance with emission limit values and desulphurisation rates due to being a small isolated system, in accordance with Article 34(1) of Directive 2010/75/EU">
+			<xs:enumeration value="Article34">
 				<xs:annotation>
 					<xs:documentation>Exemption from compliance with emission limit values and desulphurisation rates due to being a small isolated system, in accordance with Article 34(1) of Directive 2010/75/EU</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="District heating plant exempted from compliance with emission limits values and rates of desulphurisation, in accordance with conditions listed in Article 35 of Directive 2010/75/EU">
+			<xs:enumeration value="Article35">
 				<xs:annotation>
 					<xs:documentation>District heating plant exempted from compliance with emission limits values and rates of desulphurisation, in accordance with conditions listed in Article 35 of Directive 2010/75/EU</xs:documentation>
 				</xs:annotation>
@@ -463,13 +462,13 @@
 	<xs:complexType name="EnergyInputType">
 		<xs:sequence>
 			<xs:element name="Biomass" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="Coal" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="Lignite" type="xs:double" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="Peat" type="xs:double" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="OtherSolidFuels" type="OtherSolidFuelsType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="LiquidFuels" type="xs:double" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="NaturalGas" type="xs:double" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="OtherGases" type="OtherGasesType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Coal" type="xs:double" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Lignite" type="xs:double" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Peat" type="xs:double" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="EnergyInputAndTotalEmissionsToAirType">
