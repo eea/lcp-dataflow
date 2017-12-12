@@ -21,7 +21,7 @@ declare function xmlconv:validateXmlSchema($source_url)
         <span style="display:none"><p>OK</p></span>
         <h2>XML Schema validation</h2>
         <p><span style="background-color: green; font-size: 0.8em; color: white; padding-left:5px;padding-right:5px;margin-right:5px;text-align:center">OK</span>XML Schema validation passed without errors.</p>
-         <p>The file was validated against <a href="http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd"> http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd</a></p>
+         <p>The file was validated against <a href="http://dd.eionet.europa.eu/schemas/LCP-article_72_IED/LCP-IED.xsd">http://dd.eionet.europa.eu/schemas/LCP-article_72_IED/LCP-IED.xsd</a></p>
        </div>
 
     let $fullUrl := concat($xmlconv:xmlValidatorUrl, fn:encode-for-uri($source_url))
