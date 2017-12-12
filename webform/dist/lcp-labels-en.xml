@@ -74,10 +74,10 @@
 		<Emissions>TOTAL EMISSIONS TO AIR</Emissions>
 		<energyInput>ENERGY INPUT</energyInput>
 		<Biomass>Biomass (TJ)</Biomass>
-		<otherSolidFuels>Other solid fuels (TJ): Category | Value</otherSolidFuels>
+		<otherSolidFuels>Other solid fuels (TJ)</otherSolidFuels>
 		<liquidFuels>Liquid fuels (TJ)</liquidFuels>
 		<naturalGas>Natural gas (TJ)</naturalGas>
-		<otherGases>Other gases (TJ): Category | Value</otherGases>
+		<otherGases>Other gases (TJ)</otherGases>
 		<Coal>Coal</Coal>
 		<Lignite>Lignite (TJ)</Lignite>
 		<Peat>Peat</Peat>
@@ -98,6 +98,7 @@
 		<no>No</no>
 		<ok>Done</ok>
 		<delete>Delete</delete>
+		<deleteSelected>Delete Selected</deleteSelected>
 		<remove>Remove</remove>
 		<addPlant>Add Plant</addPlant>
 		<editPlant>Edit plant</editPlant>
@@ -135,6 +136,7 @@
 		<valid_longitude>Please provide a number between -180 and 180 </valid_longitude>
 		<valid_latitude>Please provide a number between -90 and 90 </valid_latitude>
 		<positive_decimal>Please provide a positive decimal number </positive_decimal>
+		<positive_decimal01> please provide a positive decimal number that express a proportion from 0 to 1</positive_decimal01>
 		<positive_integer>Please provide a positive integer</positive_integer>
 		<valid_percentage>Please provide a valid number between 0 to 100 </valid_percentage>
 		<load_data_from_eprtr>Load location data from E-PRTR</load_data_from_eprtr>
