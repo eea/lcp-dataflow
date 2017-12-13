@@ -1110,7 +1110,7 @@
             </table:table-cell>
             <table:table-cell table:style-name="cell1">
                 <text:p>
-                    <xsl:value-of select="./BasicData/EMail"/>
+                    <xsl:value-of select="./BasicData/Email"/>
                 </text:p>
             </table:table-cell>
         </table:table-row>

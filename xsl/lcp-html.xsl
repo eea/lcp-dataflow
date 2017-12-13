@@ -512,7 +512,7 @@
                     </th>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="EMail"/>
+                            <xsl:with-param name="elem" select="Email"/>
                         </xsl:call-template>
                     </td>
                 </tr>
@@ -567,11 +567,6 @@
             <tr>
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'address1'"/>
-                    </xsl:call-template>
-                </th>
-                <th>
-                    <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'StreetName'"/>
                     </xsl:call-template>
                 </th>
@@ -617,11 +612,6 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem" select="EPRTRNationalId"/>
-                        </xsl:call-template>
-                    </td>
-                    <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="PlantLocation/Address1"/>
                         </xsl:call-template>
                     </td>
                     <td>

@@ -410,7 +410,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     (: LCP 1.1 - Basic Data :)
 
     (: Valid Email :)
-    let $email := $docRoot//BasicData/EMail
+    let $email := $docRoot//BasicData/Email
     let $invalidEmail :=
       if
       (  ( matches(($email),
@@ -419,7 +419,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
            else
           <tr>
            <td class='error' title="Details"> Please Provide a valid email address</td>
-              <td class="tderror" title="EMail">{data($email)}</td>
+              <td class="tderror" title="Email">{data($email)}</td>
           </tr>
 
     (:  Required fields for each plant :)
