@@ -409,8 +409,8 @@
                                             <td> <input class="form-control" type="text" name="addPostalCode"
                                                                ng-model="plant.PlantLocation.PostalCode"/>
                                             </td>
-                                            <td> <input class="form-control" type="text" name="addCountryCode"
-                                                               ng-model="plant.PlantLocation.CountryCode"/>
+                                            <td> <input class="form-control" type="text" name="addCountryCode" placeholder="{{instance.LCPQuestionnaire.BasicData.MemberState}}"
+                                                readonly        ng-model="plant.PlantLocation.CountryCode"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -607,7 +607,7 @@
 
                                 </td>
                                 <td id="byOperatingHours">{{ plant.PlantDetails.OperatingHours }}
-                                    <span class="red" ng-show="submitted == true &&  number(plant.LcpArt15.OperatingHours) < 0 "  translate="positive_integer">! </span>
+                                    <span class="red" ng-show="submitted == true  "  translate="positive_integer">! </span>
                                 </td>
                                 <td id="byDerogation">{{ plant.PlantDetails.Derogation}}
                                 </td>
@@ -1547,53 +1547,7 @@
                 </div>
             </li>
         </div>
-        <div >
-            <li tab heading="Additional help text" active="tabs[getTabIndex('Notes')].active"   ng-controller="TabController" disabled="bulkEditListOfPlants == true">
-                <div class="notesPage"  novalidate>
-                        <div id="H_1">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right linkBackground" ng-click="goto('PlantDetails' , 'TAB_H_1')">H1</a></h4>
-
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_1_text" translate="h1"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_2">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right linkBackground" ng-click="goto('PlantDetails' , 'TAB_H_2')">H2</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_2_text"  translate="h2"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_3">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right  linkBackground" ng-click="goto('PlantDetails' , 'TAB_H_3')">H3</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_3_text"  translate="h3"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_4">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right  linkBackground" ng-click="goto('OptOutsTNP' , 'TAB_H_4')">H4</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_4_text"  translate="h4"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_5">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right  linkBackground" ng-click="goto('LCPArt15' , 'TAB_H_5')">H5</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_5_text"  translate="h5"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                </div>
-            </li>
-        </div>
+       
     </ul>
 
         </div>

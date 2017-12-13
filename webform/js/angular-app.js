@@ -740,8 +740,7 @@ $.noConflict();
             //        res = false;
              //   }
 
-                if ( ! ( ( plants[i].PlantDetails.StatusOfThePlant === null ) || ( plants[i].PlantDetails.StatusOfThePlant === "" ) || status [ plants[i].PlantDetails.StatusOfThePlant] ) )
-                    res = false;
+          
 
                 // LCP 2.1 Unequivocal naming of plants
                 if ( names[ plants[i].PlantName ] != undefined ) {
@@ -765,37 +764,15 @@ $.noConflict();
                 }
 
                 // LCP 3.4
-                if ( plants[i].PlantDetails.ExtensionBy50MWOrMore && !( plants[i].PlantDetails.CapacityAddedMW >= 50 ) ){
-                    // error
-                    res = false;
-
-                }
+              
                 // LCP 3.5
-                if ( plants[i].PlantDetails.SubstantialChange && !( plants[i].PlantDetails.CapacityAffectedMW >= 0 ) ){
-                        // error
-                        res = false;
-
-                    }
+             
                 // LCP 3.6
                 // valid dates(if date submitted)
                 if ( !$scope.validDateFormat(plants[i].PlantDetails.DateOfStartOfOperation)) {
                         res = false;
                     }
-                if ( plants[i].PlantDetails.DateOfStartOfOperation ) {
-
-                    if ( ( plants[i].PlantDetails.StatusOfThePlant === "art_4_1" || plants[i].PlantDetails.StatusOfThePlant === "art_4_3" ) &&
-                     ( new Date (plants[i].PlantDetails.DateOfStartOfOperation) > refDay ) ){
-                        // error
-                        res = false;
-
-                    }
-                    else if ( ( plants[i].PlantDetails.StatusOfThePlant === "art_4_2" ) &&
-                     ( new Date (plants[i].PlantDetails.DateOfStartOfOperation) <= refDay ) ){
-                        // error
-                        res = false;
-
-                    }
-                }
+               
            
 
             }// end for
@@ -822,7 +799,7 @@ $.noConflict();
                     plant.PlantDetails.Refineries = false;
                 }
                 if (plant.plantDetails!=null && plant.PlantDetails.Refineries === true ){
-                    plant.PlantDetails.OtherSector = null;
+                    //plant.PlantDetails.OtherSector = null;
                 }
                
 
@@ -1814,7 +1791,7 @@ $.noConflict();
                             lastPlant.PlantLocation.Region =  plant.PlantLocation.Region;
                             lastPlant.PlantLocation.PostalCode =  plant.PlantLocation.PostalCode;
                             lastPlant.PlantLocation.BuildingNumber =  plant.PlantLocation.BuildingNumber;
-                            lastPlant.PlantLocation.CountryCode =  $scope.memberStateValue;
+                            lastPlant.PlantLocation.CountryCode =  $scope.instance.LCPQuestionnaire.BasicData.MemberState;
                             lastPlant.GeographicalCoordinate.Longitude =  plant.GeographicalCoordinate.Longitude;
                             lastPlant.GeographicalCoordinate.Latitude =  plant.GeographicalCoordinate.Latitude;
                             lastPlant.FacilityName =  plant.FacilityName;
@@ -1840,7 +1817,7 @@ $.noConflict();
                         lastPlant.PlantLocation.Region =  plant.PlantLocation.Region;
                         lastPlant.PlantLocation.BuildingNumber =  plant.PlantLocation.BuildingNumber;
                         lastPlant.PlantLocation.PostalCode =  plant.PlantLocation.PostalCode;
-                        lastPlant.PlantLocation.CountryCode =  plant.PlantLocation.CountryCode;
+                        lastPlant.PlantLocation.CountryCode = $scope.instance.LCPQuestionnaire.BasicData.MemberState;
                         lastPlant.GeographicalCoordinate.Longitude =  plant.GeographicalCoordinate.Longitude;
                         lastPlant.GeographicalCoordinate.Latitude =  plant.GeographicalCoordinate.Latitude;
                         lastPlant.FacilityName =  plant.FacilityName;
@@ -1890,7 +1867,7 @@ $.noConflict();
                 lastPlant.PlantDetails.TypeOfCombustionPlant = plant.PlantDetails.TypeOfCombustionPlant;
                 lastPlant.PlantDetails.TypeOfCombustionPlantFurtherDetails = plant.PlantDetails.TypeOfCombustionPlantFurtherDetails;
                 lastPlant.PlantDetails.Derogation = plant.PlantDetails.Derogation;
-               
+    
 
                 $rootScope.$broadcast('updateFilter');
 
@@ -2319,7 +2296,7 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
             var formname = scope.formname;
             var container = elem;
 
-			elem.handsontable({
+            elem.handsontable({
 			    data: data,
                     contextMenu:false,// ['row_above', 'row_below', 'remove_row'],
 				rowHeaders: false,
@@ -2332,6 +2309,19 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                 //maxRows: formname === 'ListOfPlants' ? 200 : data.length,
                 //maxCols: data.numberOfColumns,
                 colHeaders: getHandsontableColHeaders(formname),
+      /**          modifyRow: function(row){
+                    var ht = container.handsontable('getInstance');
+                 //   var rowsNeeded = data.length - ht.countEmptyRows();
+               //     console.log('rowIndex:'+row);
+               if(row!=0){
+                    var data = this.getData(row);
+                    console.log("rowData"+data);
+               }
+                  //  for (var index = 0; index < rowsNeeded; index++) {
+                  //  elem.handsontable('alter', 'insert_row');
+                   // }
+                 },
+                 **/
                 columns:
                         (formname === 'ListOfPlants' ?
                             [

@@ -10,12 +10,12 @@
     <xsl:param name="xml_folder_uri"/>
     <xsl:variable name="language">en</xsl:variable>
     <xsl:variable name="labels"
-                  select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP/xml/lcp-labels-en.xml')/labels"/>
+                  select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/xml/lcp-labels-en.xml')/labels"/>
 
 
     <xsl:variable name="codelists"
-                  select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP/xml/languages/lcp-codelists-en.xml')/LCPCodelists"/>
-    <!--<xsl:variable name="schema" select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/IPPC-WI-Directive/schemas/dir20081ec_schema.xsd')/xs:schema"/>
+                  select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/xml/lcp-codelists-en.xml')/LCPCodelists"/>
+    <!--<xsl:variable name="schema" select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/schema/LCP-IED.xsd')/xs:schema"/>
     -->
     <xsl:variable name="heading" select="'Questionnaire on the implementation of LCP'"/>
     <xsl:template match="/LCPQuestionnaire">
