@@ -183,17 +183,17 @@
 			</xs:enumeration>
 			<xs:enumeration value="DieselEngine">
 				<xs:annotation>
-					<xs:documentation>DieselEngine</xs:documentation>
+					<xs:documentation>Diesel Engine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GasEngine">
 				<xs:annotation>
-					<xs:documentation>GasEngine</xs:documentation>
+					<xs:documentation>Gas Engine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GasTurbine">
 				<xs:annotation>
-					<xs:documentation>GasTurbine</xs:documentation>
+					<xs:documentation>Gas Turbine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="Others">
@@ -247,62 +247,62 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="JAN">
 				<xs:annotation>
-					<xs:documentation>JAN</xs:documentation>
+					<xs:documentation>January</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FEB">
 				<xs:annotation>
-					<xs:documentation>FEB</xs:documentation>
+					<xs:documentation>February</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="MAR">
 				<xs:annotation>
-					<xs:documentation>MAR</xs:documentation>
+					<xs:documentation>March</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="APR">
 				<xs:annotation>
-					<xs:documentation>APR</xs:documentation>
+					<xs:documentation>April</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="MAY">
 				<xs:annotation>
-					<xs:documentation>MAY</xs:documentation>
+					<xs:documentation>May</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="JUN">
 				<xs:annotation>
-					<xs:documentation>JUN</xs:documentation>
+					<xs:documentation>June</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="JUL">
 				<xs:annotation>
-					<xs:documentation>JUL</xs:documentation>
+					<xs:documentation>July</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AUG">
 				<xs:annotation>
-					<xs:documentation>AUG</xs:documentation>
+					<xs:documentation>August</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="SEP">
 				<xs:annotation>
-					<xs:documentation>SEP</xs:documentation>
+					<xs:documentation>September</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="OCT">
 				<xs:annotation>
-					<xs:documentation>OCT</xs:documentation>
+					<xs:documentation>October</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="NOV">
 				<xs:annotation>
-					<xs:documentation>NOV</xs:documentation>
+					<xs:documentation>November</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="DEC">
 				<xs:annotation>
-					<xs:documentation>DEC</xs:documentation>
+					<xs:documentation>December</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -324,7 +324,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="PatentFuels">
 				<xs:annotation>
-					<xs:documentation>PatentFuels</xs:documentation>
+					<xs:documentation>Patent Fuels</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="Tar">
@@ -341,17 +341,17 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="BlastFurnaceGas">
 				<xs:annotation>
-					<xs:documentation>BlastFurnaceGas</xs:documentation>
+					<xs:documentation>Blast Furnace Gas</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CokeOvenGas">
 				<xs:annotation>
-					<xs:documentation>CokeOvenGas</xs:documentation>
+					<xs:documentation>Coke Oven Gas</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FurnaceGas">
 				<xs:annotation>
-					<xs:documentation>FurnaceGas</xs:documentation>
+					<xs:documentation>Furnace Gas</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="LPG">
@@ -366,12 +366,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="OxygenSteel">
 				<xs:annotation>
-					<xs:documentation>OxygenSteel</xs:documentation>
+					<xs:documentation>Oxygen Steel</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="RefineryGas">
 				<xs:annotation>
-					<xs:documentation>RefineryGas</xs:documentation>
+					<xs:documentation>Refinery Gas</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
