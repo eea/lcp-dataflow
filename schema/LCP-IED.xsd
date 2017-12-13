@@ -38,7 +38,7 @@
 													<xs:element name="Months" minOccurs="1" maxOccurs="1">
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element name="Month" type="MonthType" minOccurs="1" maxOccurs="unbounded"/>
+																<xs:element name="Month" type="MonthType" minOccurs="1" maxOccurs="12"/>
 															</xs:sequence>
 														</xs:complexType>
 													</xs:element>
