@@ -575,7 +575,7 @@
                                 <th rowspan="2"></th>
                             </tr>
                             <tr>
-                                <th  class="mandatory">
+                                <th >
                                     <a href="" ng-click="setCriteria('Refineries')"><span translate="refineries"></span></a>
                                 </th>
                                 <th>
@@ -607,7 +607,7 @@
 
                                 </td>
                                 <td id="byOperatingHours">{{ plant.PlantDetails.OperatingHours }}
-                                    <span class="red" ng-show="submitted == true  "  translate="positive_integer">! </span>
+                                    <span class="red" ng-show="isRequired(plant.PlantDetails.OperatingHours)"  translate="required_field">! </span>
                                 </td>
                                 <td id="byDerogation">{{ plant.PlantDetails.Derogation}}
                                 </td>
@@ -713,7 +713,9 @@
 
                                                 <select class="form-control" id="statusOfThePlantId" name="addOtherSector" ng-model="plant.PlantDetails.OtherSector" 
                                                         ng-options="sector['@id'] as plantDetailsOtherSectorFieldsView[sector['@id']] for sector in codeList.OldLCPCodelists.sectors.concepts"
-                                                       tooltip="{{'sectorsTooltip' | translate}}"></select>
+                                                       tooltip="{{'sectorsTooltip' | translate}}">
+                                                        <option value=""></option>
+                                                       </select>
                                             </td>
                                         </tr>
                                     
@@ -967,20 +969,43 @@
                                             </tr>
 
                                             <tr>
-                                                <th colspan="2" class="width15 mandatory">
-                                                    <span  translate="otherSolidFuels"></span>
-                                                </th>
+                                                 <th  class="width15 mandatory">
+                                                    <span  translate="naturalGas"></span>
+                                                 </th>
                                                 <th  class="width30 mandatory">
                                                     <span   translate="liquidFuels"></span>
                                                 </th>
-                                                <th  class="width15 mandatory">
-                                                    <span  translate="naturalGas"></span>
-                                                </th>
-                                                <th colspan="2" class="width30 mandatory">
-                                                    <span   translate="otherGases"></span>
-                                                </th>
+                                            </tr>
+                                            <tr>
+
+                                                <td> <input class="form-control" type="number" name="addNaturalGas" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas"  required/>
+                                                </td>
+                                                <td> <input class="form-control" type="number" name="addLiquidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels"  required/>
+                                                </td>
+                                            </tr>
+                                              <tr>
+                                                   <td>
+                                                    <span class="red" ng-show="showError(modalEnergyInput.addNaturalGas, 'required')" translate="required_field"></span>
+                                                    <span class="red" ng-show="!showError(modalEnergyInput.addNaturalGas, 'required') && showError(modalEnergyInput.addNaturalGas, 'pattern')"  translate="positive_decimal">! </span>
+                                                </td>
+                                                <td>
+                                                    <span class="red" ng-show="showError(modalEnergyInput.addLiquidFuels, 'required')" translate="required_field"></span>
+                                                    <span class="red" ng-show="!showError(modalEnergyInput.addLiquidFuels, 'required') && showError(modalEnergyInput.addLiquidFuels, 'pattern')"  translate="positive_decimal">! </span>
+                                                </td>
                                             </tr>
 
+                                             <tr>
+                                                <th colspan="2" class="width15 mandatory">
+                                                    <span  translate="otherSolidFuels"></span>
+                                                </th>
+                                                <th></th>
+                                                 <th colspan="2" class="width30 mandatory">
+                                                    <span   translate="otherGases"></span>
+                                                </th>
+                                                <th></th>
+                                            </tr>
                                             <tr>
 
                                                 <td> <input class="form-control" type="number" name="addOtherSolidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value}}"
@@ -992,27 +1017,84 @@
                                                                       <option value=""></option>
                                                                    </select>
                                                            
-                                                        </td>
+                                                </td>
+                                                      <td><button  type="button" class="btn btn-default">Add</button>
+                                                      </td>
+                                                <td> <input class="form-control" type="number" name="addOtherGases" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value"  required/>
+                                                </td>
+                                                 <td>     <select class="width12 form-control" id="addOtherGasesousFuels" name="addOtherGasesousFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category"
+                                                    ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherGasesousFuelCodeLists.concepts"
+                                                     tooltip="{{'statusTooltip' | translate}}">
+                                                     <option value=""></option>
+                                                  </select>
+                                                </td>
+                                                    <td><button  type="button" class="btn btn-default">Add</button>
+                                                       </td>
+                                            </tr>
+
+
+
+
+
+
+
+                                            <!--tr>
+                                                <th colspan="2" class="width15 mandatory">
+                                                    <span  translate="otherSolidFuels"></span>
+                                                </th>
+                                                <th></th>
+                                                <th  class="width30 mandatory">
+                                                    <span   translate="liquidFuels"></span>
+                                                </th>
+                                            </tr-->
+
+                                            <!---tr>
+
+                                                <td> <input class="form-control" type="number" name="addOtherSolidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value"  required/>
+                                                </td>  
+                                                       <td>     <select class="form-control" id="addOtherSolidFuels" name="addOtherSolidFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category"
+                                                                     ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherSolidFuelCodeLists.concepts"
+                                                                      tooltip="{{'statusTooltip' | translate}}">
+                                                                      <option value=""></option>
+                                                                   </select>
+                                                           
+                                                      </td>
+                                                      <td><button  type="button" class="btn btn-default">Add</button>
+                                               </td>
                                                 <td> <input class="form-control" type="number" name="addLiquidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels}}"
                                                             ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels"  required/>
                                                 </td>
+                                            </tr-->
+                                          <!--tr>
+                                                <th  class="width15 mandatory">
+                                                    <span  translate="naturalGas"></span>
+                                                </th>
+                                                <th colspan="2" class="width30 mandatory">
+                                                    <span   translate="otherGases"></span>
+                                                </th>
+                                                <th></th>
+                                            </tr-->
+
+                                            <!--tr>
                                                 <td> <input class="form-control" type="number" name="addNaturalGas" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas}}"
                                                             ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas"  required/>
                                                 </td>
                                                 <td> <input class="form-control" type="number" name="addOtherGases" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value}}"
                                                             ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value"  required/>
                                                 </td>
-                                                <td>     <select class="width15 form-control" id="addOtherGasesousFuels" name="addOtherGasesousFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category"
+                                                <td>     <select class="width12 form-control" id="addOtherGasesousFuels" name="addOtherGasesousFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category"
                                                     ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherGasesousFuelCodeLists.concepts"
                                                      tooltip="{{'statusTooltip' | translate}}">
                                                      <option value=""></option>
                                                   </select>
-                                          
-                                       </td>
-                                            </tr>
+                                              </td>
+                                               <td><button  type="button" class="btn btn-default">Add</button>
+                                               </td>
+                                            </tr-->
 
-                                            
-                                            <tr>
+                                            <!--tr>
                                                 <td>
                                                     <span class="red" ng-show="showError(modalEnergyInput.addLiquidFuels, 'required')" translate="required_field"></span>
                                                     <span class="red" ng-show="!showError(modalEnergyInput.addLiquidFuels, 'required') && showError(modalEnergyInput.addLiquidFuels, 'pattern')"  translate="positive_decimal">! </span>
@@ -1021,7 +1103,7 @@
                                                     <span class="red" ng-show="showError(modalEnergyInput.addNaturalGas, 'required')" translate="required_field"></span>
                                                     <span class="red" ng-show="!showError(modalEnergyInput.addNaturalGas, 'required') && showError(modalEnergyInput.addNaturalGas, 'pattern')"  translate="positive_decimal">! </span>
                                                 </td>
-                                            </tr>
+                                            </tr-->
                                         </table>
                                     </div>
                                     <div class="modal-footer">
@@ -1359,10 +1441,12 @@
                                             </tr>
 
                                             <tr ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts track by $index">
+                                                  <!--ng-form name="DesulphurizationInnerForm"-->
                                                 <td> <input class="form-control" type="number" name="addDesulphurisationRate"  ng-model="plant.Desulphurisation.Months.Month[i].DesulphurisationRate"
                                                 placeholder="{{plant.Desulphurisation.Months.Month[i].DesulphurisationRate}}" required/>
-                                            
-                                                </td>
+                                                <!--span class="red" ng-show="showError(DesulphurizationInnerForm.addDesulphurisationRate, 'required')" translate="required_field"></span-->
+                                                <!--span class="red" ng-show="!showError(DesulphurizationInnerForm.addDesulphurisationRate, 'required') && showError(DesulphurizationInnerForm.addDesulphurisationRate, 'pattern')"  translate="positive_decimal01">! </span-->
+                                            </td>
                                                 <td> <input class="form-control" type="number" name="addSulphurContent" ng-pattern="positiveDecimalNumberPattern" 
                                           ng-model="plant.Desulphurisation.Months.Month[i].SulphurContent" placeholder="{{plant.Desulphurisation.Months.Month[i].SulphurContent}}"  required/>
                                                 </td>
@@ -1382,6 +1466,7 @@
                                                              <option value=""></option>
                                                           </select-->
                                                 </td>
+                                                <!--/ng-form-->
                                             </tr>
                                             <!--tr>
                                                 <td>
