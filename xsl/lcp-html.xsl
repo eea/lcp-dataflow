@@ -73,10 +73,34 @@
                     <xsl:with-param name="labelName" select="'no'"/>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$codelistElement='StatusOfThePlant'">
+            <xsl:when test="$codelistElement='TypeOfCombustionPlant'">
                 <xsl:call-template name="break">
                     <xsl:with-param name="text"
-                                    select="$schema/xs:simpleType[@name = 'StatusOfThePlantType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
+                                    select="$schema/xs:simpleType[@name = 'TypeOfCombustionPlantType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$codelistElement='Derogation'">
+                <xsl:call-template name="break">
+                    <xsl:with-param name="text"
+                                    select="$schema/xs:simpleType[@name = 'DerogationType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$codelistElement='MonthValue'">
+                <xsl:call-template name="break">
+                    <xsl:with-param name="text"
+                                    select="$schema/xs:simpleType[@name = 'MonthValueType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$codelistElement='OtherSolidFuelsValue'">
+                <xsl:call-template name="break">
+                    <xsl:with-param name="text"
+                                    select="$schema/xs:simpleType[@name = 'OtherSolidFuelsValueType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$codelistElement='OtherGasesValue'">
+                <xsl:call-template name="break">
+                    <xsl:with-param name="text"
+                                    select="$schema/xs:simpleType[@name = 'OtherGasesValueType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:when test="$codelistElement='OtherSector'">
