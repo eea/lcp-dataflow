@@ -7,7 +7,7 @@
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
                 omit-xml-declaration="yes"/>
     <xsl:variable name="schema"
-                  select="document('http://dd.eionet.europa.eu/schemas/lcp/LCPQuestionnaire.xsd')/xs:schema"/>
+                  select="document('http://dd.eionet.europa.eu/schemas/LCP-article_72_IED/LCP-IED.xsd')/xs:schema"/>
     <!--<xsl:variable name="labels" select="document('http://converters.eionet.europa.eu/xmlfile/article17-labels.xml')/labels"/>-->
     <!--<xsl:variable name="codelists" select="document('http://converters.eionet.europa.eu/xmlfile/lcp-codelists-en.xml')/Article17Codelists"/>-->
 
@@ -699,7 +699,7 @@
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'OtherSector'"/>
-                        <xsl:with-param name="codelistElement" select="'Sector'"/>
+                        <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
@@ -759,7 +759,7 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                            <xsl:with-param name="codelistElement" select="'Sector'"/>
+                            <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
                         </xsl:call-template>
                     </td>
                     <td>
@@ -827,7 +827,7 @@
                         <th rowspan="2">
                             <xsl:call-template name="getLabel">
                                 <xsl:with-param name="labelName" select="'OtherSector'"/>
-                                <xsl:with-param name="codelistElement" select="'Sector'"/>
+                                <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
                             </xsl:call-template>
                         </th>
                         <th rowspan="2">
@@ -886,7 +886,7 @@
                             <td>
                                 <xsl:call-template name="getValue">
                                     <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                                    <xsl:with-param name="codelistElement" select="'Sector'"/>
+                                    <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
                                 </xsl:call-template>
                             </td>
                             <td>

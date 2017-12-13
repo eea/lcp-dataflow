@@ -169,7 +169,11 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="number-cell">
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -177,7 +181,7 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="long-string-heading">
+                                    table:default-cell-style-name="number-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -193,6 +197,11 @@
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
                                         <xsl:value-of select="$labels/listOfPlants"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -279,7 +288,7 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/StreetName"/>
+                                        <xsl:value-of select="$labels/Address1"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -305,6 +314,11 @@
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
                                         <xsl:value-of select="$labels/buildingnumber"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/streetname"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -353,7 +367,7 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="string-cell">
+                                    table:default-cell-style-name="number-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -381,7 +395,7 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="number-cell">
+                                    table:default-cell-style-name="string-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -469,16 +483,6 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/typeOfCombustionPlant"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-                                        <xsl:value-of select="$labels/TypeOfCombustionPlantFurtherDetails"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
                                         <xsl:value-of select="$labels/dateOfStartOfOperation"/>
                                     </text:p>
                                 </table:table-cell>
@@ -499,12 +503,22 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/derogation"/>
+                                        <xsl:value-of select="$labels/comments"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/comments"/>
+                                        <xsl:value-of select="$labels/typeOfCombustionPlant"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/TypeOfCombustionPlantFurtherDetails"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/derogation"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>
@@ -635,21 +649,6 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/coal"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-                                        <xsl:value-of select="$labels/lignite"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-                                        <xsl:value-of select="$labels/peat"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
                                         <xsl:value-of select="$labels/otherSolidFuels"/>
                                     </text:p>
                                 </table:table-cell>
@@ -666,6 +665,21 @@
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
                                         <xsl:value-of select="$labels/otherGases"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/coal"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/lignite"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/peat"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>
@@ -1123,7 +1137,7 @@
                 </table:table-cell>
                 <table:table-cell table:style-name="cell1">
                     <text:p>
-                        <xsl:value-of select="./PlantLocation/StreetName"/>
+                        <xsl:value-of select="./PlantLocation/Address1"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="cell1">
@@ -1149,6 +1163,11 @@
                 <table:table-cell table:style-name="cell1">
                     <text:p>
                         <xsl:value-of select="./PlantLocation/BuildingNumber"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="cell1">
+                    <text:p>
+                        <xsl:value-of select="./PlantLocation/StreetName"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
@@ -1194,16 +1213,6 @@
                         <xsl:value-of select="./MWth"/>
                     </text:p>
                 </table:table-cell>
-                <table:table-cell table:style-name="cell1">
-                    <text:p>
-                        <xsl:value-of select="./TypeOfCombustionPlant"/>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="cell1">
-                    <text:p>
-                        <xsl:value-of select="./TypeOfCombustionPlantFurtherDetails"/>
-                    </text:p>
-                </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
                         <xsl:value-of select="./DateOfStartOfOperation"/>
@@ -1226,12 +1235,22 @@
                 </table:table-cell>
                 <table:table-cell table:style-name="cell1">
                     <text:p>
-                        <xsl:value-of select="./Derogation"/>
+                        <xsl:value-of select="./Comments"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="cell1">
                     <text:p>
-                        <xsl:value-of select="./Comments"/>
+                        <xsl:value-of select="./TypeOfCombustionPlant"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="cell1">
+                    <text:p>
+                        <xsl:value-of select="./TypeOfCombustionPlantFurtherDetails"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="cell1">
+                    <text:p>
+                        <xsl:value-of select="./Derogation"/>
                     </text:p>
                 </table:table-cell>
             </table:table-row>
@@ -1259,21 +1278,6 @@
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
-                        <xsl:value-of select="./EnergyInput/Coal"/>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="number-cell">
-                    <text:p>
-                        <xsl:value-of select="./EnergyInput/Lignite"/>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="number-cell">
-                    <text:p>
-                        <xsl:value-of select="./EnergyInput/Peat"/>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="number-cell">
-                    <text:p>
                         <xsl:value-of select="./EnergyInput/OtherSolidFuels"/>
                     </text:p>
                 </table:table-cell>
@@ -1290,6 +1294,21 @@
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
                         <xsl:value-of select="./EnergyInput/OtherGases"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="./EnergyInput/Coal"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="./EnergyInput/Lignite"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="./EnergyInput/Peat"/>
                     </text:p>
                 </table:table-cell>
             </table:table-row>
@@ -1341,6 +1360,11 @@
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
                         <xsl:value-of select="../PlantId"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="./MonthValue"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
