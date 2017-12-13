@@ -14,7 +14,7 @@ declare variable $ignoredMessages := ();
 declare variable $source_url as xs:string external;
 
 declare function xmlconv:validateXmlSchema($source_url)
-{    
+{
     let $successfulResult := 
       <div class="feedbacktext">
         <span id="feedbackStatus" class="INFO" style="display:none">XML Schema validation passed without errors.</span>

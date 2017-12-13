@@ -1,2 +1,7 @@
 .idea
 webform/node_modules
+xquery/dataflow-lcp.html
+xquery/lib
+xquery/out
+xquery/src
+xquery/LCP-IED.xsd

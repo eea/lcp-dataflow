@@ -22,8 +22,6 @@ declare variable $xmlconv:CLRTAP_PATH as xs:string := ("https://converters.eione
 declare variable $xmlconv:AVG_EMISSIONS_PATH as xs:string := ("https://converters.eionet.europa.eu/xmlfile/LCP_avg_emissions.xml");
 declare variable $xmlconv:FINDINGS_PATH as xs:string := ("https://converters.eionet.europa.eu/xmlfile/LCP_Findings_Step1.xml");
 
-
-declare variable $xmlconv:VALID_PLANT_STATUS as xs:string* := ("" ,"art_4_1", "art_4_2", "art_4_3");
 declare variable $xmlconv:VALID_OTHER_SECTOR as xs:string* := ("iron_steel","esi","district_heating","chp","other");
 declare variable $eworx:SchemaModel := eworx:getSchemaModel($source_url);
 
@@ -449,11 +447,11 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
     (: warning if some contact info missing :)
     let $missingContactInfo :=
-    for $bdata in ($docRoot//BasicData[  Organization = '' or Address1 = '' or City = '' or NameOfContactPerson = '' or Phone = '' or PostalCode = '' ])
+    for $bdata in ($docRoot//BasicData[  Organization = '' or Address1 = '' or City = '' or NameOfDepartmentContactPerson = '' or Phone = '' or PostalCode = '' ])
     return
         <tr>
             <td class='warning' title="Details"> Missing some contact info </td>
-            <td class="{ if (functx:if-empty( data($bdata/NameOfContactPerson)   , ' ') = ' ') then "tdwarning" else ""  }" title="NameOfContactPerson"> { functx:if-empty( data($bdata/NameOfContactPerson)   , '#Missing Value')  } </td>
+            <td class="{ if (functx:if-empty( data($bdata/NameOfDepartmentContactPerson)   , ' ') = ' ') then "tdwarning" else ""  }" title="NameOfDepartmentContactPerson"> { functx:if-empty( data($bdata/NameOfDepartmentContactPerson)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/Organization)   , ' ') = ' ') then "tdwarning" else ""  }" title="Organization"> { functx:if-empty( data($bdata/Organization)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/City)   , ' ') = ' ') then "tdwarning" else ""  }" title="City"> { functx:if-empty( data($bdata/City)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/Address1)   , ' ') = ' ') then "tdwarning" else ""  }" title="Address1"> { functx:if-empty( data($bdata/Address1)   , '#Missing Value')  } </td>

@@ -1,5 +1,5 @@
 <LCPQuestionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="en"
-                  xsi:noNamespaceSchemaLocation="http://dd.eionet.europa.eu/schemas/lcp-1.1/LCPQuestionnaire-1.1.xsd">
+                  xsi:noNamespaceSchemaLocation="LCP-IED.xsd">
     <BasicData>
         <MemberState>DE</MemberState>
         <ReferenceYear>2016</ReferenceYear>
@@ -12,7 +12,7 @@
         <PostalCode>D-06844</PostalCode>
         <NameOfDepartmentContactPerson>Section Emissions Situation</NameOfDepartmentContactPerson>
         <Phone/>
-        <EMail>LCP@uba.de</EMail>
+        <Email>LCP@uba.de</Email>
     </BasicData>
     <ListOfPlants>
         <Plant>
@@ -20,7 +20,6 @@
             <PlantId>DE0001</PlantId>
             <EPRTRNationalId>14-60-10525170000</EPRTRNationalId>
             <PlantLocation>
-                <Address1/>
                 <City/>
                 <Region/>
                 <PostalCode/>
@@ -49,14 +48,18 @@
                 <EnergyInput>
                     <Biomass>3</Biomass>
                     <OtherSolidFuels>
-                        <Category>Coke</Category>
-                        <Value>4</Value>
+                        <OtherSolidFuel>
+                            <Category>Coke</Category>
+                            <Value>4</Value>
+                        </OtherSolidFuel>
                     </OtherSolidFuels>
                     <LiquidFuels>4</LiquidFuels>
                     <NaturalGas>5</NaturalGas>
                     <OtherGases>
-                        <Category>BlastFurnaceGas</Category>
-                        <Value>5</Value>
+                        <OtherGas>
+                            <Category>BlastFurnaceGas</Category>
+                            <Value>5</Value>
+                        </OtherGas>
                     </OtherGases>
                     <Coal>1</Coal>
                     <Lignite>1</Lignite>
