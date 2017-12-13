@@ -8,21 +8,6 @@
                 omit-xml-declaration="yes"/>
     <xsl:variable name="schema"
                   select="document('http://dd.eionet.europa.eu/schemas/LCP-article_72_IED/LCP-IED.xsd')/xs:schema"/>
-    <!--<xsl:variable name="labels" select="document('http://converters.eionet.europa.eu/xmlfile/article17-labels.xml')/labels"/>-->
-    <!--<xsl:variable name="codelists" select="document('http://converters.eionet.europa.eu/xmlfile/lcp-codelists-en.xml')/Article17Codelists"/>-->
-
-    <!--<xsl:variable name="codelistsUrl">
-        <xsl:choose>
-            <xsl:when test="doc-available(concat($xmlPath, 'lcp-codelists-', $labelsLanguage ,'.xml'))">
-                <xsl:value-of select="concat($xmlPath, 'lcp-codelists-', $labelsLanguage ,'.xml')"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="concat($xmlPath, 'lcp-codelists-en.xml')"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="codelists" select="document($codelistsUrl)/LCPCodelists"/>
-   -->
     <xsl:variable name="labelsLanguage" select="LCPQuestionnaire/@xml:lang"/>
     <xsl:variable name="xmlPath" select="'https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/xml/'"/>
     <xsl:variable name="labelsUrl">
@@ -68,9 +53,6 @@
         <xsl:param name="codelistElement" select="''"/>
         <xsl:variable name="elemValue">
             <xsl:choose>
-                <!-- <xsl:when test="string-length($codelistName) &gt; 0">
-                     <xsl:value-of select="$schema/xs:simpleType[@name = $elementType]//xs:enumeration[@value = $elem]/xs:annotation/xs:documentation"/>
-                 </xsl:when>-->
                 <xsl:when test="$elem/text()='yes'">Yes</xsl:when>
                 <xsl:when test="$elem/text()='no'">No</xsl:when>
                 <!-- detect disabled fields -->
@@ -97,7 +79,7 @@
                                     select="$schema/xs:simpleType[@name = 'StatusOfThePlantType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
                 </xsl:call-template>
             </xsl:when>
-            <xsl:when test="$codelistElement='Sector'">
+            <xsl:when test="$codelistElement='OtherSector'">
                 <xsl:call-template name="break">
                     <xsl:with-param name="text"
                                     select="$schema/xs:simpleType[@name = 'OtherSectorType']/xs:restriction/xs:enumeration[@value = $elemValue]/xs:annotation/xs:documentation"/>
@@ -699,7 +681,7 @@
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'OtherSector'"/>
-                        <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
+                        <xsl:with-param name="codelistElement" select="'OtherSector'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
@@ -759,7 +741,7 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                            <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
+                            <xsl:with-param name="codelistElement" select="'OtherSector'"/>
                         </xsl:call-template>
                     </td>
                     <td>
@@ -827,7 +809,7 @@
                         <th rowspan="2">
                             <xsl:call-template name="getLabel">
                                 <xsl:with-param name="labelName" select="'OtherSector'"/>
-                                <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
+                                <xsl:with-param name="codelistElement" select="'OtherSector'"/>
                             </xsl:call-template>
                         </th>
                         <th rowspan="2">
@@ -886,7 +868,7 @@
                             <td>
                                 <xsl:call-template name="getValue">
                                     <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                                    <!--<xsl:with-param name="codelistElement" select="'Sector'"/>-->
+                                    <xsl:with-param name="codelistElement" select="'OtherSector'"/>
                                 </xsl:call-template>
                             </td>
                             <td>
