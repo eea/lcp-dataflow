@@ -24,7 +24,7 @@
     <xsl:variable name="codelists" select="document($codelistsUrl)/LCPCodelists"/>
    -->
     <xsl:variable name="labelsLanguage" select="LCPQuestionnaire/@xml:lang"/>
-    <xsl:variable name="xmlPath" select="'https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP/xml/'"/>
+    <xsl:variable name="xmlPath" select="'https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/xml/'"/>
     <xsl:variable name="labelsUrl">
         <xsl:choose>
             <xsl:when test="doc-available(concat($xmlPath, 'lcp-labels-', $labelsLanguage ,'.xml'))">
