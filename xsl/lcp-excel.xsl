@@ -153,10 +153,6 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="long-string-heading">
-                            </table:table-column>
-                            <table:table-column
-                                    table:default-cell-value-type="string"
                                     table:default-cell-style-name="string-cell">
                             </table:table-column>
                             <table:table-column
@@ -264,11 +260,6 @@
 
                                     </text:p>
                                 </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-
-                                    </text:p>
-                                </table:table-cell>
                             </table:table-row>
                             <table:table-row table:default-cell-value-type="string">
                                 <table:table-cell table:style-name="Heading2">
@@ -284,11 +275,6 @@
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
                                         <xsl:value-of select="$labels/EPRTRNationalId"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-                                        <xsl:value-of select="$labels/Address1"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -1033,18 +1019,6 @@
         <table:table-row table:default-cell-value-type="string">
             <table:table-cell table:style-name="Heading1">
                 <text:p>
-                    <xsl:value-of select="$labels/address2"/>
-                </text:p>
-            </table:table-cell>
-            <table:table-cell table:style-name="cell1">
-                <text:p>
-                    <xsl:value-of select="./BasicData/Address2"/>
-                </text:p>
-            </table:table-cell>
-        </table:table-row>
-        <table:table-row table:default-cell-value-type="string">
-            <table:table-cell table:style-name="Heading1">
-                <text:p>
                     <xsl:value-of select="$labels/city"/>
                 </text:p>
             </table:table-cell>
@@ -1133,11 +1107,6 @@
                 <table:table-cell table:style-name="cell1">
                     <text:p>
                         <xsl:value-of select="./EPRTRNationalId"/>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="cell1">
-                    <text:p>
-                        <xsl:value-of select="./PlantLocation/Address1"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="cell1">
