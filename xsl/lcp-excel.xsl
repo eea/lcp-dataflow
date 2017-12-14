@@ -1278,7 +1278,7 @@
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
-                        <xsl:value-of select="./EnergyInput/OtherSolidFuels"/>
+                        <xsl:value-of select="./EnergyInput/OtherSolidFuels/OtherSolidFuel/Value"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
@@ -1293,7 +1293,7 @@
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
-                        <xsl:value-of select="./EnergyInput/OtherGases"/>
+                        <xsl:value-of select="./EnergyInput/OtherGases/OtherGas/Value"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">

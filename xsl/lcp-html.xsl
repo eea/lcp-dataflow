@@ -1043,7 +1043,7 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem"
-                                            select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels"/>
+                                            select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel/Value"/>
                         </xsl:call-template>
                     </td>
                     <td>
@@ -1061,7 +1061,7 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem"
-                                            select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases"/>
+                                            select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas/Value"/>
                         </xsl:call-template>
                     </td>
 
