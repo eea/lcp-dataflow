@@ -392,7 +392,6 @@
 			<xs:element name="NumberOfPlants" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="Organization" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Address1" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="Address2" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="City" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="State" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="PostalCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
