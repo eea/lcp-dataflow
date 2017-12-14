@@ -447,14 +447,14 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
     (: warning if some contact info missing :)
     let $missingContactInfo :=
-    for $bdata in ($docRoot//BasicData[  Organization = '' or Address1 = '' or City = '' or NameOfDepartmentContactPerson = '' or Phone = '' or PostalCode = '' ])
+    for $bdata in ($docRoot//BasicData[  Organization = '' or StreetName = '' or City = '' or NameOfDepartmentContactPerson = '' or Phone = '' or PostalCode = '' ])
     return
         <tr>
             <td class='warning' title="Details"> Missing some contact info </td>
             <td class="{ if (functx:if-empty( data($bdata/NameOfDepartmentContactPerson)   , ' ') = ' ') then "tdwarning" else ""  }" title="NameOfDepartmentContactPerson"> { functx:if-empty( data($bdata/NameOfDepartmentContactPerson)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/Organization)   , ' ') = ' ') then "tdwarning" else ""  }" title="Organization"> { functx:if-empty( data($bdata/Organization)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/City)   , ' ') = ' ') then "tdwarning" else ""  }" title="City"> { functx:if-empty( data($bdata/City)   , '#Missing Value')  } </td>
-            <td class="{ if (functx:if-empty( data($bdata/Address1)   , ' ') = ' ') then "tdwarning" else ""  }" title="Address1"> { functx:if-empty( data($bdata/Address1)   , '#Missing Value')  } </td>
+            <td class="{ if (functx:if-empty( data($bdata/StreetName)   , ' ') = ' ') then "tdwarning" else ""  }" title="StreetName"> { functx:if-empty( data($bdata/StreetName)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/PostalCode)   , ' ') = ' ') then "tdwarning" else ""  }" title="PostalCode"> { functx:if-empty( data($bdata/PostalCode)   , '#Missing Value')  } </td>
             <td class="{ if (functx:if-empty( data($bdata/Phone)   , ' ') = ' ') then "tdwarning" else ""  }" title="Phone"> { functx:if-empty( data($bdata/Phone)   , '#Missing Value')  } </td>
         </tr>
