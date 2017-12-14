@@ -641,10 +641,11 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             let $Biomass := eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass)
             let $Coal := eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal)
             let $Lignite := eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite)
-            let $OtherSolidFuels :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels)
+            let $OtherSolidFuels := sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel[Value castable as xs:double]/Value)
             let $LiquidFuels :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels)
             let $NaturalGas :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas)
-            let $OtherGases :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases)
+            let $OtherGases :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas[Value castable as xs:double]/Value)
+            (:let $asd := trace($OtherGases, "otherGas:"):)
             let $Peat :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat)
 
             let $inputinTJ := eworx:sum ( ( $Biomass, $Coal, $Lignite, $LiquidFuels, $NaturalGas, $OtherGases , $OtherSolidFuels, $Peat, 0)  )
@@ -703,10 +704,10 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     let $res :=
         for $plant in $docRoot//Plant[ not (  PlantId = $excluded/PlantId ) ]
             let $Biomass :=  if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass)castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass) else 0
-            let $OtherSolidFuels :=  if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels) else 0
+            let $OtherSolidFuels :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel[Value castable as xs:double]/Value)
             let $LiquidFuels :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels) else 0
             let $NaturalGas :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas) else 0
-            let $OtherGases :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases) else 0
+            let $OtherGases :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas[Value castable as xs:double]/Value)
             let $Peat := if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat) else 0
             let $Coal := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal) else 0
             let $Lignite := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) else 0
@@ -761,10 +762,10 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     let $res :=
         for $plant in $docRoot//Plant[ not (  PlantId = $excluded/PlantId ) ]
         let $Biomass :=  if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass)castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass) else 0
-        let $OtherSolidFuels :=  if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels) else 0
+        let $OtherSolidFuels :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel[Value castable as xs:double]/Value)
         let $LiquidFuels :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels) else 0
         let $NaturalGas :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas) else 0
-        let $OtherGases :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases) else 0
+        let $OtherGases :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas[Value castable as xs:double]/Value)
         let $Peat := if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat) else 0
         let $Coal := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal) else 0
         let $Lignite := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) else 0
@@ -812,10 +813,10 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     let $res :=
         for $plant in $docRoot//Plant[ not (  PlantId = $excluded/PlantId ) ]
             let $Biomass :=  if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass)castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Biomass) else 0
-            let $OtherSolidFuels :=  if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels) else 0
+            let $OtherSolidFuels :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel[Value castable as xs:double]/Value)
             let $LiquidFuels :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels) else 0
             let $NaturalGas :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas) else 0
-            let $OtherGases :=  if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases) else 0
+            let $OtherGases :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas[Value castable as xs:double]/Value)
             let $Peat := if (($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat) else 0
             let $Coal := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Coal) else 0
             let $Lignite := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) else 0

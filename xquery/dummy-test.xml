@@ -1,5 +1,5 @@
 <LCPQuestionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="en"
-                  xsi:noNamespaceSchemaLocation="LCP-IED.xsd">
+                  xsi:noNamespaceSchemaLocation="../schema/LCP-IED.xsd">
     <BasicData>
         <MemberState>DE</MemberState>
         <ReferenceYear>2016</ReferenceYear>
@@ -52,6 +52,10 @@
                             <Category>Coke</Category>
                             <Value>4</Value>
                         </OtherSolidFuel>
+                        <OtherSolidFuel>
+                            <Category>Other</Category>
+                            <Value>5</Value>
+                        </OtherSolidFuel>
                     </OtherSolidFuels>
                     <LiquidFuels>4</LiquidFuels>
                     <NaturalGas>5</NaturalGas>
@@ -59,6 +63,10 @@
                         <OtherGas>
                             <Category>BlastFurnaceGas</Category>
                             <Value>5</Value>
+                        </OtherGas>
+                        <OtherGas>
+                            <Category>LPG</Category>
+                            <Value>6</Value>
                         </OtherGas>
                     </OtherGases>
                     <Coal>1</Coal>

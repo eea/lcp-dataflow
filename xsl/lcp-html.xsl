@@ -695,7 +695,7 @@
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'OtherSector'"/>
-                        <xsl:with-param name="codelistElement" select="'OtherSector'"/>
+                        <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
@@ -823,7 +823,7 @@
                         <th rowspan="2">
                             <xsl:call-template name="getLabel">
                                 <xsl:with-param name="labelName" select="'OtherSector'"/>
-                                <xsl:with-param name="codelistElement" select="'OtherSector'"/>
+                                <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
                             </xsl:call-template>
                         </th>
                         <th rowspan="2">
@@ -882,7 +882,7 @@
                             <td>
                                 <xsl:call-template name="getValue">
                                     <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                                    <xsl:with-param name="codelistElement" select="'OtherSector'"/>
+                                    <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
                                 </xsl:call-template>
                             </td>
                             <td>

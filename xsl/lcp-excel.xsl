@@ -308,17 +308,17 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/countrycode"/>
+                                        <xsl:value-of select="$labels/countryCode"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/buildingnumber"/>
+                                        <xsl:value-of select="$labels/buildingNumber"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/streetname"/>
+                                        <xsl:value-of select="$labels/streetName"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -513,12 +513,12 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/TypeOfCombustionPlantFurtherDetails"/>
+                                        <xsl:value-of select="$labels/typeOfCombustionPlantFurtherDetails"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/derogation"/>
+                                        <xsl:value-of select="$labels/Derogation"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>
@@ -644,7 +644,7 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/biomass"/>
+                                        <xsl:value-of select="$labels/Biomass"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -669,17 +669,17 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/coal"/>
+                                        <xsl:value-of select="$labels/Coal"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/lignite"/>
+                                        <xsl:value-of select="$labels/Lignite"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/peat"/>
+                                        <xsl:value-of select="$labels/Peat"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>
@@ -870,22 +870,22 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/MonthValue"/>
+                                        <xsl:value-of select="$labels/monthValue"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/DesulphurisationRate"/>
+                                        <xsl:value-of select="$labels/desulphurisationRate"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/SulphurContent"/>
+                                        <xsl:value-of select="$labels/sulphurContent"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/TechnicalJustification"/>
+                                        <xsl:value-of select="$labels/technicalJustification"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>
