@@ -435,18 +435,6 @@
                 <tr>
                     <th>
                         <xsl:call-template name="getLabel">
-                            <xsl:with-param name="labelName" select="'address2'"/>
-                        </xsl:call-template>
-                    </th>
-                    <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="Address2"/>
-                        </xsl:call-template>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <xsl:call-template name="getLabel">
                             <xsl:with-param name="labelName" select="'city'"/>
                         </xsl:call-template>
                     </th>
