@@ -47,14 +47,18 @@
         <EnergyInput>
           <Biomass/>
           <OtherSolidFuels>
-            <Category/>
-            <Value/>
+            <OtherSolidFuel>
+              <Category/>
+              <Value/>
+            </OtherSolidFuel>
           </OtherSolidFuels>
           <LiquidFuels/>
           <NaturalGas/>
           <OtherGases>
-            <Category/>
-            <Value/>
+            <OtherGas>
+              <Category/>
+              <Value/>
+            </OtherGas>
           </OtherGases>
           <Coal/>
           <Lignite/>
