@@ -219,9 +219,9 @@ $.noConflict();
                                             plant.PlantId = responsePlant.PlantId.value ;
                                             plant.PlantName = responsePlant.PlantName.value;
                                             plant.EPRTRNationalId = responsePlant.EPRTRNationalId.value;
-                                            plant.PlantLocation.Address1 = responsePlant.streetName.value;
+                                            plant.PlantLocation.StreetName = responsePlant.streetName.value;
                                             if (!isEmpty(responsePlant.buildingNumber.value)) {
-                                                plant.PlantLocation.Address1 += " " + responsePlant.buildingNumber.value;
+                                                plant.PlantLocation.BuildingNumber += " " + responsePlant.buildingNumber.value;
                                             }
                                             plant.PlantLocation.City = responsePlant.city.value;
                                             plant.PlantLocation.Region = responsePlant.regionCode.value;
@@ -668,27 +668,7 @@ $.noConflict();
                 if ( isEmpty ( plant.PlantDetails.MWth) )
                     res = false;
 
-                // energy input
-               
-                for  ( j in ( ( plant.EnergyInputAndTotalEmissionsToAir.EnergyInput)) ) {
-                    if  ( isEmpty (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput[ j]) )
-                        plant.EnergyInputAndTotalEmissionsToAir.EnergyInput[ j] = 0;
-                }
-
-                for ( j in ( ( plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir)) ) {
-                    if (isEmpty (plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir[ j]))
-                        plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir[ j] = 0;
-                }
-
-                for ( j in ( ( plant.Desulphurisation)) ) {
-                    if (isEmpty (plant.Desulphurisation[ j]))
-                        plant.Desulphurisation[ j] = 0;
-                }
-                for ( j in ( ( plant.UsefulHeat)) ) {
-                    if (isEmpty (plant.UsefulHeat[ j]))
-                        plant.UsefulHeat[ j] = 0;
-                }
-
+    
 
                 if (res === false) break;
             }
@@ -902,7 +882,7 @@ $.noConflict();
         $scope.phoneNumberPattern = /^[ 0-9\(\)\+\-]{7,25}$/;
         $scope.positiveIntegerPattern = /^\d+$/;
         $scope.positiveDecimalNumberPattern = /^\d*\.?\d*$/;
-        $scope.binaryNumberPattern=/^[0-1]+$/;
+        $scope.binaryNumberPattern= /^(0(\.\d+)?|1(\.0+)?)$/;
         $scope.decimalNumberPattern =/^[+-]?(\d*\.?\d*)$/;
         $scope.dateFormat = /^(19|20)\d\d([-])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/;
 
@@ -1589,9 +1569,9 @@ $.noConflict();
                                     ", "  + facility.city.value + ". \n\n Do you want to use the data on plant level?" )) {
                                     if (!plant.PlantLocation) plant.PlantLocation = {};
                                     if (!plant.GeographicalCoordinate) plant.GeographicalCoordinate = {};
-                                    plant.PlantLocation.Address1 = facility.streetName.value;
+                                    plant.PlantLocation.StreetName = facility.streetName.value;
                                     if (!isEmpty(facility.buildingNumber.value)) {
-                                        plant.PlantLocation.Address1 += " " + facility.buildingNumber.value;
+                                        plant.PlantLocation.BuildingNumber += " " + facility.buildingNumber.value;
                                     }
                                     plant.PlantLocation.City =facility.city.value;
                                     plant.PlantLocation.PostalCode = facility.postalCode.value;

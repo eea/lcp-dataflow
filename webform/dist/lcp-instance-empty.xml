@@ -19,7 +19,6 @@
       <PlantId/>
       <EPRTRNationalId/>
       <PlantLocation>
-        <Address1/>
         <City/>
         <Region/>
         <PostalCode/>

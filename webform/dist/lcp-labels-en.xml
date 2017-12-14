@@ -78,9 +78,9 @@
 		<liquidFuels>Liquid fuels (TJ)</liquidFuels>
 		<naturalGas>Natural gas (TJ)</naturalGas>
 		<otherGases>Other gases (TJ)</otherGases>
-		<Coal>Coal</Coal>
+		<Coal>Coal(TJ)</Coal>
 		<Lignite>Lignite (TJ)</Lignite>
-		<Peat>Peat</Peat>
+		<Peat>Peat(TJ)</Peat>
 		<totalEmissionsToAir>TOTAL EMISSIONS TO AIR</totalEmissionsToAir>
 		<SO2>SO2 (t)</SO2>
 		<NOx>NOx (t)</NOx>
