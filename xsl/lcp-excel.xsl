@@ -761,7 +761,7 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/TSP"/>
+                                        <xsl:value-of select="$labels/dust"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>

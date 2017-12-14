@@ -476,7 +476,7 @@
                     </th>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="nameOfDepartmentContactPerson"/>
+                            <xsl:with-param name="elem" select="NameOfDepartmentContactPerson"/>
                         </xsl:call-template>
                     </td>
                 </tr>
@@ -555,7 +555,7 @@
             <tr>
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'StreetName'"/>
+                        <xsl:with-param name="labelName" select="'streetName'"/>
                     </xsl:call-template>
                 </th>
                 <th>
@@ -672,38 +672,38 @@
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'DateOfStartOfOperation'"/>
+                        <xsl:with-param name="labelName" select="'dateOfStartOfOperation'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'Refineries'"/>
+                        <xsl:with-param name="labelName" select="'refineries'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'OtherSector'"/>
+                        <xsl:with-param name="labelName" select="'otherSector'"/>
                         <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'OperatingHours'"/>
+                        <xsl:with-param name="labelName" select="'operatingHours'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'Comments'"/>
+                        <xsl:with-param name="labelName" select="'comments'"/>
                     </xsl:call-template>
                 </th>
                 <th colspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'TypeOfCombustionPlant'"/>
+                        <xsl:with-param name="labelName" select="'typeOfCombustionPlant'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'TypeOfCombustionPlantFurtherDetails'"/>
+                        <xsl:with-param name="labelName" select="'typeOfCombustionPlantFurtherDetails'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
@@ -937,22 +937,22 @@
 
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'biomass'"/>
+                        <xsl:with-param name="labelName" select="'Biomass'"/>
                     </xsl:call-template>
                 </th>
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'coal'"/>
+                        <xsl:with-param name="labelName" select="'Coal'"/>
                     </xsl:call-template>
                 </th>
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'lignite'"/>
+                        <xsl:with-param name="labelName" select="'Lignite'"/>
                     </xsl:call-template>
                 </th>
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'peat'"/>
+                        <xsl:with-param name="labelName" select="'Peat'"/>
                     </xsl:call-template>
                 </th>
                 <th>
@@ -987,7 +987,7 @@
                 </th>
                 <th>
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'TSP'"/>
+                        <xsl:with-param name="labelName" select="'dust'"/>
                     </xsl:call-template>
                 </th>
             </tr>
@@ -1094,22 +1094,22 @@
                 </th>
                 <th colspan="3">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'MonthValue'"/>
+                        <xsl:with-param name="labelName" select="'monthValue'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'DesulphurisationRate'"/>
+                        <xsl:with-param name="labelName" select="'desulphurisationRate'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'SulphurContent'"/>
+                        <xsl:with-param name="labelName" select="'sulphurContent'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'TechnicalJustification'"/>
+                        <xsl:with-param name="labelName" select="'technicalJustification'"/>
                     </xsl:call-template>
                 </th>
             </tr>
