@@ -90,7 +90,9 @@
                     <tr>
                         <td><label  class="mandatory"  ><span translate="referenceYear"></span> </label></td>
                         <td><select class="form-control" name="ReportingYear" ng-model="instance.LCPQuestionnaire.BasicData.ReferenceYear" required
-                                    ng-options="year for year in reportingYears" ng-disabled="false"></select>
+                                   ng-options="year for year in reportingYears" ng-disabled="false">
+                                </select>
+                                    
                             <div class="invalid-msg" error-mapper watch-view="BasicData.ReportingYear" errors-to-show='["required"]'></div>
                         </td>
                     </tr>
@@ -125,13 +127,7 @@
                                    ng-model="instance.LCPQuestionnaire.BasicData.Address1"/>
                         </td>
                     </tr>
-                    <tr>
-                        <td><label ><span translate="address2"></span> </label></td>
-                        <td>
-                            <input class="width30em" type="text" name="address2"
-                                   ng-model="instance.LCPQuestionnaire.BasicData.Address2"/>
-                        </td>
-                    </tr>
+                    
                     <tr>
                         <td><label ><span translate="city"></span> </label></td>
                         <td>
@@ -415,8 +411,8 @@
                                             <td> <input class="form-control" type="text" name="addPostalCode"
                                                                ng-model="plant.PlantLocation.PostalCode"/>
                                             </td>
-                                            <td> <input class="form-control" type="text" name="addCountryCode"
-                                                               ng-model="plant.PlantLocation.CountryCode"/>
+                                            <td> <input class="form-control" type="text" name="addCountryCode" placeholder="{{instance.LCPQuestionnaire.BasicData.MemberState}}"
+                                                readonly        ng-model="plant.PlantLocation.CountryCode"/>
                                             </td>
                                         </tr>
                                         <tr>
@@ -572,7 +568,7 @@
                                 <th class="mandatory" rowspan="2">
                                     <a href="" ng-click="setCriteria('PlantDetails.OperatingHours')"><span translate="operatingHours"></span></a>
                                 </th>
-                                <th class="mandatory" rowspan="2">
+                                <th  rowspan="2">
                                     <a href="" ng-click="setCriteria('PlantDetails.Derogation')"><span translate="derogation"></span></a>
                                 </th>
                                 <th rowspan="2">
@@ -581,7 +577,7 @@
                                 <th rowspan="2"></th>
                             </tr>
                             <tr>
-                                <th  class="mandatory">
+                                <th >
                                     <a href="" ng-click="setCriteria('Refineries')"><span translate="refineries"></span></a>
                                 </th>
                                 <th>
@@ -613,9 +609,9 @@
 
                                 </td>
                                 <td id="byOperatingHours">{{ plant.PlantDetails.OperatingHours }}
-                                    <span class="red" ng-show="submitted == true &&  number(plant.LcpArt15.OperatingHours) < 0 "  translate="positive_integer">! </span>
+                                    <span class="red" ng-show="isRequired(plant.PlantDetails.OperatingHours)"  translate="required_field">! </span>
                                 </td>
-                                <td id="byDerogation">{{ plant.PlantDetails.Derogation | formatDerogation}}
+                                <td id="byDerogation">{{ plant.PlantDetails.Derogation}}
                                 </td>
                                 <td id="byComments">{{ plant.PlantDetails.Comments }}
                                 </td>
@@ -678,7 +674,7 @@
                                                 <span  translate="typeOfCombustionPlant"></span>
                                             </th>
                                             <th  class="width15 mandatory" >
-                                                <span  translate="FurtherDetails" ng-show="otherTypeOfCombustionPlant"></span>
+                                                <span  translate="FurtherDetails" ng-show="TypeOfCombustionPlantFurtherDetails"></span>
                                             </th>
                                             <th colspan="3"></th>
                                             </tr>
@@ -690,7 +686,7 @@
                                                  </select>
                                             </td>
                                             <td> <input class="form-control" type="text" name="AddOtherTypeOfCombustionPlant" 
-                                                    ng-show="otherTypeOfCombustionPlant"    ng-model="plant.PlantDetails.TypeOfCombustionPlant.Other" />
+                                                    ng-show="TypeOfCombustionPlantFurtherDetails"    ng-model="plant.PlantDetails.TypeOfCombustionPlantFurtherDetails" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -701,7 +697,7 @@
                                             <th>
                                                 <span  translate="refineries"></span>
                                             </th>
-                                            <th colspan="2" ng-class="{ !plant.PlantDetails.Refineries }">
+                                            <th colspan="2">
                                                 <span translate="otherSector"></span>
                                             </th>
                                         </tr>
@@ -711,14 +707,17 @@
                                                   required    ng-model="plant.PlantDetails.DateOfStartOfOperation" />
                                             </td>
                                             <td></td>
-                                            <td> <input class="form-control" type="checkbox" name="addRefineries" ng-change="checkboxClearInputs(plant, 'PlantDetails.Refineries' , 'PlantDetails.OtherSector')"
+                                            <td> <input class="form-control" type="checkbox" name="addRefineries" 
                                                         ng-model="plant.PlantDetails.Refineries" />
+                                                        <!--ng-change="checkboxClearInputs(plant, 'PlantDetails.Refineries' , 'PlantDetails.OtherSector')"-->
                                             </td>
                                             <td  colspan="2">
 
                                                 <select class="form-control" id="statusOfThePlantId" name="addOtherSector" ng-model="plant.PlantDetails.OtherSector" 
                                                         ng-options="sector['@id'] as plantDetailsOtherSectorFieldsView[sector['@id']] for sector in codeList.OldLCPCodelists.sectors.concepts"
-                                                        required tooltip="{{'sectorsTooltip' | translate}}"></select>
+                                                       tooltip="{{'sectorsTooltip' | translate}}">
+                                                        <option value=""></option>
+                                                       </select>
                                             </td>
                                         </tr>
                                     
@@ -729,7 +728,7 @@
                                             <th class="mandatory">
                                                 <span translate="operatingHours"></span>
                                             </th>
-                                            <th class="mandatory" colspan="2">
+                                            <th  colspan="2">
                                                 <span translate="Derogation"></span>
                                             </th>
                                             <th colspan="2"></th>
@@ -742,7 +741,7 @@
                                             <td> <div multiselect class="multiselect" name="DerogationSelect" multiple="true"
                                                 ng-model="plant.PlantDetails.Derogation"
                                                 options="status['@id']  as status.prefLabel[0]['@value']  for status in codeList.DerogationValueCodeLists.concepts"
-                                                change="selected()" required></div>
+                                                change="selected()" ></div>
                                           </td>
                                         </tr>
                                         <tr>
@@ -835,10 +834,10 @@
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal')"><span   translate="Coal"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite')"><span   translate="Lignite"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat')"><span   translate="Peat"></span></a></th>
-                                        <th colspan="2" class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels')"><span   translate="otherSolidFuels"></span></a></th>
+                                        <th  class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels')"><span   translate="otherSolidFuels"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels')"><span   translate="liquidFuels"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas')"><span   translate="naturalGas"></span></a></th>
-                                        <th colspan="2" class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases')"><span   translate="otherGases"></span></a></th>
+                                        <th  class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases')"><span   translate="otherGases"></span></a></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -864,12 +863,12 @@
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat)"  translate="positive_decimal">! </span>
                                     </td>
 
-                                    <td ="byEnergyInputOtherSolidFuelsCategory">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category}}
-                                        <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category)" translate="required_field">! </span>
-                                    </td>
-                                    <td ="byEnergyInputOtherSolidFuelsValue">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value}}
-                                        <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value)"  translate="positive_decimal">! </span>
+                                    <td id="byEnergyInputOtherSolidFuels">
+                                            <div ng-repeat="OtherSolidFuel  in  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel track by $index" >
+                                                    {{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[$index].Category}}:   {{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[$index].Value}} 
+                                                </div> 
+                                        
+                                        <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels)" translate="required_field">! </span>
                                     </td>
                                     <td id="byEnergyInputLiquidFuels">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels}}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels)" translate="required_field">! </span>
@@ -879,13 +878,13 @@
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas)" translate="required_field">! </span>
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas)"  translate="positive_decimal">! </span>
                                     </td>
-                                    <td id="byEnergyInputOtherGasesCategory">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category}}
-                                        <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category)" translate="required_field">! </span>
-                                    </td>
-                                    <td id="byEnergyInputOtherGasesValue">{{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value}}
+                                    <td id="byEnergyInputOtherGases">
+                                            <div ng-repeat="OtherGas  in  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas track by $index" >
+                                                    {{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas[$index].Category}}:   {{ plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas[$index].Value}} 
+                                            </div> 
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases)" translate="required_field">! </span>
-                                        <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value)"  translate="positive_decimal">! </span>
                                     </td>
+                                   
                                     <td>
                                         <button type="button" class="btn btn-sm" ng-click="edit(plant, 'EnergyInput')">
                                             <span class="glyphicon glyphicon-pencil"></span>
@@ -972,61 +971,98 @@
                                             </tr>
 
                                             <tr>
-                                                <th colspan="2" class="width15 mandatory">
-                                                    <span  translate="otherSolidFuels"></span>
-                                                </th>
+                                                 <th  class="width15 mandatory">
+                                                    <span  translate="naturalGas"></span>
+                                                 </th>
                                                 <th  class="width30 mandatory">
                                                     <span   translate="liquidFuels"></span>
                                                 </th>
-                                                <th  class="width15 mandatory">
-                                                    <span  translate="naturalGas"></span>
-                                                </th>
-                                                <th colspan="2" class="width30 mandatory">
-                                                    <span   translate="otherGases"></span>
-                                                </th>
                                             </tr>
-
                                             <tr>
 
-                                                <td> <input class="form-control" type="number" name="addOtherSolidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value}}"
-                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value"  required/>
+                                                <td> <input class="form-control" type="number" name="addNaturalGas" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas"  required/>
+                                                </td>
+                                                <td> <input class="form-control" type="number" name="addLiquidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels"  required/>
+                                                </td>
+                                            </tr>
+                                              <tr>
+                                                   <td>
+                                                    <span class="red" ng-show="showError(modalEnergyInput.addNaturalGas, 'required')" translate="required_field"></span>
+                                                    <span class="red" ng-show="!showError(modalEnergyInput.addNaturalGas, 'required') && showError(modalEnergyInput.addNaturalGas, 'pattern')"  translate="positive_decimal">! </span>
+                                                </td>
+                                                <td>
+                                                    <span class="red" ng-show="showError(modalEnergyInput.addLiquidFuels, 'required')" translate="required_field"></span>
+                                                    <span class="red" ng-show="!showError(modalEnergyInput.addLiquidFuels, 'required') && showError(modalEnergyInput.addLiquidFuels, 'pattern')"  translate="positive_decimal">! </span>
+                                                </td>
+                                            </tr>
+
+                                             <tr>
+                                                <th colspan="2" class="width15 mandatory">
+                                                    <span  translate="otherSolidFuels"></span>
+                                                </th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                             
+                                            <!--tr>
+
+                                                <td> <input class="form-control" type="number" name="addOtherSolidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[0].Value}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[1].Value"  required/>
                                                 </td>  
-                                                       <td>     <select class="form-control" id="addOtherSolidFuels" name="addOtherSolidFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category"
+                                                       <td>     <select class="form-control" id="addOtherSolidFuels" name="addOtherSolidFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels[1].Category"
                                                                      ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherSolidFuelCodeLists.concepts"
                                                                       tooltip="{{'statusTooltip' | translate}}">
                                                                       <option value=""></option>
                                                                    </select>
                                                            
-                                                        </td>
-                                                <td> <input class="form-control" type="number" name="addLiquidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels}}"
-                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels"  required/>
                                                 </td>
-                                                <td> <input class="form-control" type="number" name="addNaturalGas" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas}}"
-                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas"  required/>
+                                                <td><button  type="button"ng-click="addOtherSolidFuel()" class="btn btn-default">Add</button>
+                                                      </td>
+                                            </tr-->
+                                            <tr data-ng-repeat="OtherSolidFuel in plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel track by $index">
+                                                <td> <input class="form-control" type="number" name="addOtherSolidFuels" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[$index].Value}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[$index].Value"  required/>
+                                                </td>  
+                                                       <td>     <select class="form-control" id="addOtherSolidFuels" name="addOtherSolidFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[$index].Category"
+                                                                     ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherSolidFuelCodeLists.concepts"
+                                                                      tooltip="{{'statusTooltip' | translate}}">
+                                                                      <option value=""></option>
+                                                                   </select>
+                                                           
                                                 </td>
-                                                <td> <input class="form-control" type="number" name="addOtherGases" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value}}"
-                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value"  required/>
+                                                <td><button  type="button"ng-click="addOtherSolidFuel()" class="btn btn-default">Add</button>
+                                                      </td>
+                                                       <td><button  type="button"ng-click="removeOtherSolidFuel($index)" class="btn btn-default">Remove</button>
+                                                      </td>
+                                            </tr>
+
+<!-- OTHER GASES-->
+                                            <tr>
+                                               
+                                                 <th colspan="2" class="width30 mandatory">
+                                                    <span   translate="otherGases"></span>
+                                                </th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            <tr data-ng-repeat="OtherGas in plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas track by $index">                                                
+                                                <td> <input class="form-control" type="number" name="addOtherGases" ng-pattern="positiveDecimalNumberPattern" placeholder="{{plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas[$index].Value}}"
+                                                            ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas[$index].Value"  required/>
                                                 </td>
-                                                <td>     <select class="width15 form-control" id="addOtherGasesousFuels" name="addOtherGasesousFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category"
+                                                 <td>     <select class="width12 form-control" id="addOtherGasesousFuels" name="addOtherGasesousFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas[$index].Category"
                                                     ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherGasesousFuelCodeLists.concepts"
                                                      tooltip="{{'statusTooltip' | translate}}">
                                                      <option value=""></option>
                                                   </select>
-                                          
-                                       </td>
+                                                </td>
+                                                    <td><button  type="button" ng-click="addOtherGas()" class="btn btn-default">Add</button>
+                                                </td>
+                                                <td><button  type="button" ng-click="removeOtherGas($index)" class="btn btn-default">Remove</button>
+                                                </td>
                                             </tr>
 
-                                            
-                                            <tr>
-                                                <td>
-                                                    <span class="red" ng-show="showError(modalEnergyInput.addLiquidFuels, 'required')" translate="required_field"></span>
-                                                    <span class="red" ng-show="!showError(modalEnergyInput.addLiquidFuels, 'required') && showError(modalEnergyInput.addLiquidFuels, 'pattern')"  translate="positive_decimal">! </span>
-                                                </td>
-                                                <td>
-                                                    <span class="red" ng-show="showError(modalEnergyInput.addNaturalGas, 'required')" translate="required_field"></span>
-                                                    <span class="red" ng-show="!showError(modalEnergyInput.addNaturalGas, 'required') && showError(modalEnergyInput.addNaturalGas, 'pattern')"  translate="positive_decimal">! </span>
-                                                </td>
-                                            </tr>
                                         </table>
                                     </div>
                                     <div class="modal-footer">
@@ -1100,7 +1136,7 @@
                                     <tr>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2')"><span   translate="SO2"></span></a></th>
                                         <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx')"><span   translate="NOx"></span></a></th>
-                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP')"><span   translate="TSP"></span></a></th>
+                                        <th class="mandatory"><a href="" ng-click="setCriteria('EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP')"><span   translate="dust"></span></a></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1110,15 +1146,15 @@
                                     </td>
                                     <td id="byEnergyInputPlantId">{{ plant.PlantId }}</td>
 
-                                    <td id="byTotalEmissionSO2">{{ plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2}}
+                                    <td id="byTotalEmissionSO2">{{ plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2 }}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2)" translate="required_field">! </span>
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.SO2)"  translate="positive_decimal">! </span>
                                     </td>
-                                    <td id="byTotalEmissionNOx">{{ plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx}}
+                                    <td id="byTotalEmissionNOx">{{ plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx }}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx)" translate="required_field">! </span>
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.NOx)"  translate="positive_decimal">! </span>
                                     </td>
-                                    <td id="byTotalEmissionTSP">{{ plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP}}
+                                    <td id="byTotalEmissionTSP">{{ plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP }}
                                         <span class="red" ng-show="isRequired(plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP)" translate="required_field">! </span>
                                         <span class="red" ng-show="submitted == true && !isPositiveDecimal(plant.EnergyInputAndTotalEmissionsToAir.TotalEmissionsToAir.TSP)"  translate="positive_decimal">! </span>
                                     </td>
@@ -1168,7 +1204,7 @@
                                                     <span  translate="NOx"></span>
                                                 </th>
                                                 <th class="mandatory">
-                                                    <span  translate="TSP"></span>
+                                                    <span  translate="dust"></span>
                                                 </th>
                                                 <th colspan="2"></th>
                                             </tr>
@@ -1219,7 +1255,7 @@
 
                     <h2><span translate="Desulphurisation"></span></h2>
 
-                    <button ng-click="openBulkEditListOfPlants('Desulphurisation')" class="btn btn-sm btn-primary" ng-show="!bulkEditListOfPlants">
+                    <!--button ng-click="openBulkEditListOfPlants('Desulphurisation')" class="btn btn-sm btn-primary" ng-show="!bulkEditListOfPlants">
                         <span class="glyphicon glyphicon-pencil"></span>
                         <span translate="editAllRows"></span>
                     </button>
@@ -1233,7 +1269,7 @@
                     <button ng-click="closeBulkEditListOfPlants('Desulphurisation')" class="btn btn-sm btn-primary" ng-show="bulkEditListOfPlant && instance.LCPQuestionnaire.ListOfPlants.Plant.length > 20">
                         <span class="glyphicon glyphicon-ok"></span>
                         <span translate="editsDone"></span>
-                    </button>
+                    </button-->
 
 
                     <div ng-controller="PaginationCtrl" ng-show="instance.LCPQuestionnaire.ListOfPlants.Plant.length > 0 && !bulkEditListOfPlants">
@@ -1280,9 +1316,10 @@
                                         <span class="red" ng-show="isRequired(plant.PlantName)" translate="required_field">! </span>
                                     </td>
                                     <td  id="byDesulphurisationPlantId">{{ plant.PlantId }}</td>
-                                    <td id="byDesulphurisationDesulphurisationRate"> <div ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts" ng-hide="!plant.Desulphurisation.Months.Month[i]">
+                                    <td id="byDesulphurisationDesulphurisationRate">
+                                         <div ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts" ng-hide="!plant.Desulphurisation.Months.Month[i]">
                                              {{ plant.Desulphurisation.Months.Month[i].MonthValue}}:   {{ plant.Desulphurisation.Months.Month[i].DesulphurisationRate}} 
-                                    </div> 
+                                         </div> 
                                         <!--span class="red" ng-show="isRequired(plant.Desulphurisation.DesulphurisationRate)" translate="required_field">! </span-->
                                         <span class="red" ng-show="isDesulphurizationRateEmpty(plant.Desulphurisation)"  translate="required_field">! </span>
                                     </td>
@@ -1364,10 +1401,12 @@
                                             </tr>
 
                                             <tr ng-repeat="(i,month)  in codeList.MonthValueCodeLists.concepts track by $index">
+                                                  <!--ng-form name="DesulphurizationInnerForm"-->
                                                 <td> <input class="form-control" type="number" name="addDesulphurisationRate"  ng-model="plant.Desulphurisation.Months.Month[i].DesulphurisationRate"
                                                 placeholder="{{plant.Desulphurisation.Months.Month[i].DesulphurisationRate}}" required/>
-                                            
-                                                </td>
+                                                <!--span class="red" ng-show="showError(DesulphurizationInnerForm.addDesulphurisationRate, 'required')" translate="required_field"></span-->
+                                                <!--span class="red" ng-show="!showError(DesulphurizationInnerForm.addDesulphurisationRate, 'required') && showError(DesulphurizationInnerForm.addDesulphurisationRate, 'pattern')"  translate="positive_decimal01">! </span-->
+                                            </td>
                                                 <td> <input class="form-control" type="number" name="addSulphurContent" ng-pattern="positiveDecimalNumberPattern" 
                                           ng-model="plant.Desulphurisation.Months.Month[i].SulphurContent" placeholder="{{plant.Desulphurisation.Months.Month[i].SulphurContent}}"  required/>
                                                 </td>
@@ -1387,6 +1426,7 @@
                                                              <option value=""></option>
                                                           </select-->
                                                 </td>
+                                                <!--/ng-form-->
                                             </tr>
                                             <!--tr>
                                                 <td>
@@ -1533,7 +1573,7 @@
                                             <tr>
                                                 <td>
                                                     <span class="red" ng-show="showError(modalUsefulHeat.addUsefulHeatProportion, 'required')" translate="required_field"></span>
-                                                    <span class="red" ng-show="!showError(modalUsefulHeat.addUsefulHeatProportion, 'required') && showError(modalUsefulHeat.addUsefulHeatProportion, 'pattern')"  translate="positive_decimal">! </span>
+                                                    <span class="red" ng-show="!showError(modalUsefulHeat.addUsefulHeatProportion, 'required') && showError(modalUsefulHeat.addUsefulHeatProportion, 'pattern')"  translate="positive_decimal01">! </span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1552,53 +1592,7 @@
                 </div>
             </li>
         </div>
-        <div >
-            <li tab heading="Additional help text" active="tabs[getTabIndex('Notes')].active"   ng-controller="TabController" disabled="bulkEditListOfPlants == true">
-                <div class="notesPage"  novalidate>
-                        <div id="H_1">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right linkBackground" ng-click="goto('PlantDetails' , 'TAB_H_1')">H1</a></h4>
-
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_1_text" translate="h1"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_2">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right linkBackground" ng-click="goto('PlantDetails' , 'TAB_H_2')">H2</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_2_text"  translate="h2"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_3">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right  linkBackground" ng-click="goto('PlantDetails' , 'TAB_H_3')">H3</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_3_text"  translate="h3"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_4">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right  linkBackground" ng-click="goto('OptOutsTNP' , 'TAB_H_4')">H4</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_4_text"  translate="h4"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="H_5">
-                            <h4><a href="#"  class="glyphicon glyphicon-circle-arrow-right  linkBackground" ng-click="goto('LCPArt15' , 'TAB_H_5')">H5</a></h4>
-                            <table class="noteTable">
-                                <tr>
-                                    <td><span id="H_5_text"  translate="h5"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                </div>
-            </li>
-        </div>
+       
     </ul>
 
         </div>

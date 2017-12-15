@@ -606,4 +606,63 @@
         input[type=checkbox] {
             margin: 0 0 0;
         }
+
+        /* Custom Dropdown multiselect */
+        .input-xlarge{
+            display: block;
+            width: 100%;
+            min-height: 30px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:focus > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > li > a:focus > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:focus > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"], .dropdown-submenu:focus > a > [class*=" icon-"] {
+            background-image: url("http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/img/glyphicons-halflings-white.png");
+        }
+
+        .icon-empty{
+            background-image: url("http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/img/glyphicons-halflings-white.png") !important;
+            
+        }
+
+        .icon-empty >a:hover {
+            background-image: url("http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/img/glyphicons-halflings.png") !important;
+            
+        }
+        .icon-ok {
+            background-position: -288px 0;
+            background-image: url("http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/img/glyphicons-halflings.png");
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            *margin-right: .3em;
+            line-height: 14px;
+            vertical-align: text-top;
+            
+            background-repeat: no-repeat;
+            margin-top: 1px;
+        }
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+            color: #ffffff;
+        }
+        multiselect .dropdown-menu > li > a {
+            cursor: pointer;
+        }
+
+        .dropdown-menu > li > a {
+            font-weight: normal;
+            line-height: 20px;
+            color: #333333;
+            white-space: nowrap;
+        }
+        a:hover, a:focus {
+            color: #005580;
+        }
+        a {
+            color: #0088cc;
+        }
     </style>

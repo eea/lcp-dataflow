@@ -32,11 +32,11 @@ $.noConflict();
         languageChangerProvider.setLanguageFilePrefix('lcp-labels-');
         languageChangerProvider.setAvailableLanguages({ "item" :[{
             "code": "bg",
-            "label": "Български (bg)"}, {
+            "label": "Ð‘ÑŠÐ»Ð³Ð°Ñ€ÑÐºÐ¸ (bg)"}, {
             "code": "es",
-                "label": "Español (es)"}, {
+                "label": "EspaÃ±ol (es)"}, {
             "code": "cs",
-                "label": "Čeština (cs)"}, {
+                "label": "ÄŒeÅ¡tina (cs)"}, {
             "code": "da",
                 "label": "Dansk (da)"}, {
             "code": "de",
@@ -44,19 +44,19 @@ $.noConflict();
             "code": "et",
                 "label": "Eesti (et)"}, {
             "code": "el",
-                "label": "ελληνικά (el)"}, {
+                "label": "ÎµÎ»Î»Î·Î½Î¹ÎºÎ¬ (el)"}, {
             "code": "en",
                 "label": "English (en)"}, {
             "code": "fr",
-                "label": "Français (fr)"}, {
+                "label": "FranÃ§ais (fr)"}, {
             "code": "hr",
                 "label": "Hrvatski (hr)"}, {
             "code": "it",
                 "label": "Italiano (it)"}, {
             "code": "lv",
-                "label": "Latviešu valoda (lv)"}, {
+                "label": "LatvieÅ¡u valoda (lv)"}, {
             "code": "lt",
-                "label": "Lietuvių kalba (lt)"}, {
+                "label": "LietuviÅ³ kalba (lt)"}, {
             "code": "hu",
                 "label": "Magyar (hu)"}, {
             "code": "hr",
@@ -68,13 +68,13 @@ $.noConflict();
             "code": "pl",
                 "label": "Polski (pl)"}, {
             "code": "pt",
-                "label": "Português (pt)"}, {
+                "label": "PortuguÃªs (pt)"}, {
             "code": "ro",
-                "label": "Română (ro)"}, {
+                "label": "RomÃ¢nÄƒ (ro)"}, {
             "code": "sk",
-                "label": "Slovenčina (sk)"}, {
+                "label": "SlovenÄina (sk)"}, {
             "code": "sl",
-                "label": "Slovenščina (sl)"}, {
+                "label": "SlovenÅ¡Äina (sl)"}, {
             "code": "fi",
                 "label": "Suomi (fi)"}, {
             "code": "sv",
@@ -121,7 +121,7 @@ $.noConflict();
 
             if ($scope.instance.LCPQuestionnaire.ListOfPlants && $scope.instance.LCPQuestionnaire.ListOfPlants.Plant) {
 
-                // if therσυσe is only 1 plant, then convert it to array
+                // if therÏƒÏ…Ïƒe is only 1 plant, then convert it to array
                 if (!angular.isArray($scope.instance.LCPQuestionnaire.ListOfPlants.Plant)) {
                     $scope.instance.LCPQuestionnaire.ListOfPlants.Plant = [$scope.instance.LCPQuestionnaire.ListOfPlants.Plant];
                 }
@@ -221,7 +221,7 @@ $.noConflict();
                                             plant.EPRTRNationalId = responsePlant.EPRTRNationalId.value;
                                             plant.PlantLocation.StreetName = responsePlant.streetName.value;
                                             if (!isEmpty(responsePlant.buildingNumber.value)) {
-                                                plant.PlantLocation.BuildingNumber += " " + responsePlant.buildingNumber.value;
+                                                plant.PlantLocation.BuildingNumber = responsePlant.buildingNumber.value;
                                             }
                                             plant.PlantLocation.City = responsePlant.city.value;
                                             plant.PlantLocation.Region = responsePlant.regionCode.value;
@@ -584,6 +584,14 @@ $.noConflict();
 
         // save instance data.
         $scope.saveInstance = function(){
+           
+            var plantsList = $scope.instance.LCPQuestionnaire.ListOfPlants.Plant;
+            for ( i=0 ; i < plantsList.length; i++) {
+             if(plantsList[i].PlantLocation.CountryCode==null || plantsList[i].PlantLocation.CountryCode=="" )
+                {
+                    plantsList[i].PlantLocation.CountryCode=$scope.instance.LCPQuestionnaire.BasicData.MemberState;
+                }
+            }
 
             //$scope.submitted = true;
             var passedTheQas = $scope.runQAtests();
@@ -962,6 +970,18 @@ $.noConflict();
                 $rootScope.TypeOfCombustionPlantFurtherDetails = false;
             }
         };
+
+      /**  $scope.OtherSolidFuelsSet={OtherSolidFuels: []};
+     $scope.OtherSolidFuelsSet.OtherSolidFuels=[{OtherSolidFuel: {"Category": null, "Value": null}}];
+
+  
+
+        $scope.addOtherSolidFuel = function($index){
+    $scope.OtherSolidFuelsSet.OtherSolidFuels.push({OtherSolidFuel: {"Category": null, "Value": null}});
+        }
+
+**/
+      
 
         //TODO format error message to handle different limits better
         $scope.errorMessages = {
@@ -1730,6 +1750,7 @@ $.noConflict();
     app.controller('ListOfPlantsModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant,dataRepository) {
         var edit = false;
 
+
         if(plant != undefined){
             edit = true;
         }
@@ -1904,6 +1925,36 @@ $.noConflict();
     });
 app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
 
+    $scope.addOtherSolidFuel = function(){
+     plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": null, "Value": null});
+        }
+        $scope.addOtherGas = function(){
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({"Category": null, "Value": null});
+               }
+
+        $scope.removeOtherSolidFuel = function(index){
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.splice(index,1);
+        }
+        $scope.removeOtherGas = function(index){
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.splice(index,1);
+        }
+  if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels==null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel==null  
+  || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel==1) {
+    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel=[];
+    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": null, "Value": null});
+    
+  }
+  if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases==null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas==null  
+    || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas==1) {
+      plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas=[];
+      plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({"Category": null, "Value": null});
+      
+    }
+
+                
+
+
+
         $scope.ok = function (plant) {
             if (!$scope.modalEnergyInput.$invalid) {
                 var lastPlant = $scope.originalPlant;
@@ -1913,12 +1964,10 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal;      
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite;      
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat;      
-                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels;
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels;
                 lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category;
-                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value;
+                lastPlant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases =  plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases;
 
                 $rootScope.$broadcast('updateFilter');
 
@@ -2411,3 +2460,4 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
             td.style.background = '#EEE';
         }
     }
+ 
