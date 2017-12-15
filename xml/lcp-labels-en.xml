@@ -23,6 +23,7 @@
         <city>City</city>
         <state>State</state>
         <postalCode>Postal Code</postalCode>
+        <buildingNumber>Building Number</buildingNumber>
         <streetName>Street Name</streetName>
         <countryCode>Country Code</countryCode>
         <nameOfDepartmentContactPerson>Name of Department/contact person</nameOfDepartmentContactPerson>
@@ -40,6 +41,9 @@
         <geographicalCoordinate>GEOGRAPHICAL COORDINATE</geographicalCoordinate>
         <plantDetails>3. PLANT DETAILS</plantDetails>
         <TypeOfCombustionPlant>Type of Combustion Plant</TypeOfCombustionPlant>
+        <typeOfCombustionPlantFurtherDetails>Type of Combustion Plant Further Details</typeOfCombustionPlantFurtherDetails>
+        <Derogation>Derogation</Derogation>
+        <Sector>SECTOR</Sector>
         <OtherSector>Other Sector</OtherSector>
         <statusOfThePlant>Status of the plant</statusOfThePlant>
         <typeOfCombustionPlant>Type of combustion plant</typeOfCombustionPlant>
@@ -48,7 +52,7 @@
         <capacityAddedMW>Capacity added [MW]</capacityAddedMW>
         <substantialChange>Substantial change</substantialChange>
         <capacityAffectedMW>Capacity affected [MW]</capacityAffectedMW>
-        <dateOfStartOfOperation>Date of start of operation</dateOfStartOfOperation>
+        <dateOfStartOfOperation>Date Of Start Of Operation</dateOfStartOfOperation>
         <sector>SECTOR</sector>
         <refineries>Refineries</refineries>
         <otherSector>Other sector</otherSector>
@@ -71,7 +75,7 @@
         <MWthOther>MWth - other</MWthOther>
         <operatingHours>Operating hours</operatingHours>
         <comments>Comments</comments>
-        <Emissions>TOTAL EMISSIONS TO AIR</Emissions>
+        <Emissions>4. ENERGY INPUT AND TOTAL EMISSIONS TO AIR</Emissions>
         <energyInput>ENERGY INPUT</energyInput>
         <Biomass>Biomass (TJ)</Biomass>
         <otherSolidFuels>Other solid fuels (TJ)</otherSolidFuels>
@@ -85,9 +89,13 @@
         <SO2>SO2 (t)</SO2>
         <NOx>NOx (t)</NOx>
         <dust>Dust (t)</dust>
+        <Desulphurisation>5. DESULPHURISATION</Desulphurisation>
+        <DesulphurisationPerMonth>DESULPHURISATION PER MONTH</DesulphurisationPerMonth>
         <DesulphurisationRate>Desulphurisation Rate</DesulphurisationRate>
         <SulphurContent>Sulphur Content</SulphurContent>
         <TechnicalJustification>Technical Justification</TechnicalJustification>
+        <proportionOfUsefulHeat>6. USEFUL HEAT</proportionOfUsefulHeat>
+        <MonthValue>Month Value</MonthValue>
         <UsefulHeat>Useful Heat</UsefulHeat>
         <UsefulHeatProportion>Useful Heat Proportion</UsefulHeatProportion>
         <hoursOperated>Hours operated</hoursOperated>

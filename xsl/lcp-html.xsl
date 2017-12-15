@@ -396,7 +396,7 @@
                 <tr>
                     <td colspan="2" class="sub-header">
                         <xsl:call-template name="getLabel">
-                            <xsl:with-param name="labelName" select="'nationalContactPerson'"/>
+                            <xsl:with-param name="labelName" select="'competentAuthority'"/>
                         </xsl:call-template>
                         <!--
                                                 <div class="note" style="font-weight: lighter; font-size: 0.9em;">
@@ -531,7 +531,7 @@
                         <xsl:with-param name="labelName" select="'EPRTRNationalId'"/>
                     </xsl:call-template>
                 </th>
-                <th colspan="5">
+                <th colspan="6">
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'plantLocation'"/>
                     </xsl:call-template>
@@ -571,6 +571,16 @@
                 <th>
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'postalCode'"/>
+                    </xsl:call-template>
+                </th>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'countryCode'"/>
+                    </xsl:call-template>
+                </th>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'buildingNumber'"/>
                     </xsl:call-template>
                 </th>
                 <th>
@@ -620,6 +630,16 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem" select="PlantLocation/PostalCode"/>
+                        </xsl:call-template>
+                    </td>
+                    <td>
+                        <xsl:call-template name="getValue">
+                            <xsl:with-param name="elem" select="PlantLocation/CountryCode"/>
+                        </xsl:call-template>
+                    </td>
+                    <td>
+                        <xsl:call-template name="getValue">
+                            <xsl:with-param name="elem" select="PlantLocation/BuildingNumber"/>
                         </xsl:call-template>
                     </td>
                     <td>
@@ -675,15 +695,9 @@
                         <xsl:with-param name="labelName" select="'dateOfStartOfOperation'"/>
                     </xsl:call-template>
                 </th>
-                <th rowspan="2">
+                <th colspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'refineries'"/>
-                    </xsl:call-template>
-                </th>
-                <th rowspan="2">
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'otherSector'"/>
-                        <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
+                        <xsl:with-param name="labelName" select="'Sector'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
@@ -696,9 +710,9 @@
                         <xsl:with-param name="labelName" select="'comments'"/>
                     </xsl:call-template>
                 </th>
-                <th colspan="2">
+                <th rowspan="2">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'typeOfCombustionPlant'"/>
+                        <xsl:with-param name="labelName" select="'TypeOfCombustionPlant'"/>
                     </xsl:call-template>
                 </th>
                 <th rowspan="2">
@@ -712,6 +726,19 @@
                     </xsl:call-template>
                 </th>
 
+            </tr>
+            <tr>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'refineries'"/>
+                        <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
+                    </xsl:call-template>
+                </th>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'otherSector'"/>
+                    </xsl:call-template>
+                </th>
             </tr>
             <xsl:for-each select="./Plant">
                 <tr>
@@ -743,7 +770,7 @@
                     <td>
                         <xsl:call-template name="getValue">
                             <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                            <xsl:with-param name="codelistElement" select="'OtherSector'"/>
+                            <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
                         </xsl:call-template>
                     </td>
                     <td>
@@ -774,140 +801,10 @@
                 </tr>
             </xsl:for-each>
         </table>
-        <div class="table-3-print-all">
-            <div style="page-break-inside: auto !important;">
-                <h2>
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'plantDetails'"/>
-                    </xsl:call-template>
-                </h2>
-                <table class="table-3-print">
-                    <tr>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'plantName'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'plantId'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'MWth'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'DateOfStartOfOperation'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'Refineries'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'OtherSector'"/>
-                                <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'OperatingHours'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'Comments'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th colspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'TypeOfCombustionPlant'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'TypeOfCombustionPlantFurtherDetails'"/>
-                            </xsl:call-template>
-                        </th>
-                        <th rowspan="2">
-                            <xsl:call-template name="getLabel">
-                                <xsl:with-param name="labelName" select="'Derogation'"/>
-                            </xsl:call-template>
-                        </th>
-                    </tr>
-                    <xsl:for-each select="./Plant">
-                        <tr>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantName"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantId"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/MWth"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/DateOfStartOfOperation"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/Refineries"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/OtherSector"/>
-                                    <!--<xsl:with-param name="codelistElement" select="'OtherSector'"/>-->
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/OperatingHours"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/Comments"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/TypeOfCombustionPlant"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/TypeOfCombustionPlantFurtherDetails"/>
-                                </xsl:call-template>
-                            </td>
-                            <td>
-                                <xsl:call-template name="getValue">
-                                    <xsl:with-param name="elem" select="./PlantDetails/Derogation"/>
-                                </xsl:call-template>
-                            </td>
-                        </tr>
-                    </xsl:for-each>
-                </table>
-            </div>
-
-        </div>
 
         <h2>
             <xsl:call-template name="getLabel">
-                <xsl:with-param name="labelName" select="'energyInputEmissions'"/>
+                <xsl:with-param name="labelName" select="'Emissions'"/>
             </xsl:call-template>
         </h2>
         <table id="table-4">
@@ -922,7 +819,7 @@
                         <xsl:with-param name="labelName" select="'PlantId'"/>
                     </xsl:call-template>
                 </th>
-                <th colspan="5">
+                <th colspan="8">
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'energyInput'"/>
                     </xsl:call-template>
@@ -934,7 +831,6 @@
                 </th>
             </tr>
             <tr>
-
                 <th>
                     <xsl:call-template name="getLabel">
                         <xsl:with-param name="labelName" select="'Biomass'"/>
@@ -1029,10 +925,16 @@
                         </xsl:call-template>
                     </td>
                     <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem"
-                                            select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel/Value"/>
-                        </xsl:call-template>
+                        <xsl:for-each select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel">
+                            <xsl:call-template name="getValue">
+                                <xsl:with-param name="elem"
+                                                select="./Category"/>
+                            </xsl:call-template> -
+                            <xsl:call-template name="getValue">
+                                <xsl:with-param name="elem"
+                                                select="./Value"/>
+                            </xsl:call-template><br/>
+                        </xsl:for-each>
                     </td>
                     <td>
                         <xsl:call-template name="getValue">
@@ -1047,10 +949,16 @@
                         </xsl:call-template>
                     </td>
                     <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem"
-                                            select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas/Value"/>
-                        </xsl:call-template>
+                        <xsl:for-each select="./EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas">
+                            <xsl:call-template name="getValue">
+                                <xsl:with-param name="elem"
+                                                select="./Category"/>
+                            </xsl:call-template> -
+                            <xsl:call-template name="getValue">
+                                <xsl:with-param name="elem"
+                                                select="./Value"/>
+                            </xsl:call-template><br/>
+                        </xsl:for-each>
                     </td>
 
                     <td>
@@ -1092,57 +1000,67 @@
                         <xsl:with-param name="labelName" select="'plantId'"/>
                     </xsl:call-template>
                 </th>
-                <th colspan="3">
+                <th colspan="4">
                     <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'monthValue'"/>
-                    </xsl:call-template>
-                </th>
-                <th rowspan="2">
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'desulphurisationRate'"/>
-                    </xsl:call-template>
-                </th>
-                <th rowspan="2">
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'sulphurContent'"/>
-                    </xsl:call-template>
-                </th>
-                <th rowspan="2">
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'technicalJustification'"/>
+                        <xsl:with-param name="labelName" select="'DesulphurisationPerMonth'"/>
                     </xsl:call-template>
                 </th>
             </tr>
-            <xsl:for-each select="./Plant">
+            <tr>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'MonthValue'"/>
+                    </xsl:call-template>
+                </th>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'DesulphurisationRate'"/>
+                    </xsl:call-template>
+                </th>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'SulphurContent'"/>
+                    </xsl:call-template>
+                </th>
+                <th>
+                    <xsl:call-template name="getLabel">
+                        <xsl:with-param name="labelName" select="'TechnicalJustification'"/>
+                    </xsl:call-template>
+                </th>
+            <tr>
+
+            </tr>
+            </tr>
+            <xsl:for-each select="./Plant/Desulphurisation/Months/Month">
                 <tr>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./PlantName"/>
+                            <xsl:with-param name="elem" select="../../../PlantName"/>
                         </xsl:call-template>
                     </td>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./PlantId"/>
+                            <xsl:with-param name="elem" select="../../../PlantId"/>
                         </xsl:call-template>
                     </td>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./Desulphurisation/Months/Month/MonthValue"/>
+                            <xsl:with-param name="elem" select="./MonthValue"/>
                         </xsl:call-template>
                     </td>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./Desulphurisation/Months/Month/DesulphurisationRate"/>
+                            <xsl:with-param name="elem" select="./DesulphurisationRate"/>
                         </xsl:call-template>
                     </td>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./Desulphurisation/Months/Month/SulphurContent"/>
+                            <xsl:with-param name="elem" select="./SulphurContent"/>
                         </xsl:call-template>
                     </td>
                     <td>
                         <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./Desulphurisation/Months/Month/TechnicalJustification"/>
+                            <xsl:with-param name="elem" select="./TechnicalJustification"/>
                         </xsl:call-template>
                     </td>
                 </tr>
@@ -1151,48 +1069,10 @@
 
         <h2>
             <xsl:call-template name="getLabel">
-                <xsl:with-param name="labelName" select="'UsefulHeat'"/>
+                <xsl:with-param name="labelName" select="'proportionOfUsefulHeat'"/>
             </xsl:call-template>
         </h2>
         <table id="table-6">
-            <tr>
-                <th>
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'plantName'"/>
-                    </xsl:call-template>
-                </th>
-                <th>
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'plantId'"/>
-                    </xsl:call-template>
-                </th>
-                <th>
-                    <xsl:call-template name="getLabel">
-                        <xsl:with-param name="labelName" select="'UsefulHeat'"/>
-                    </xsl:call-template>
-                </th>
-            </tr>
-            <xsl:for-each select="./Plant">
-                <tr>
-                    <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./PlantName"/>
-                        </xsl:call-template>
-                    </td>
-                    <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./PlantId"/>
-                        </xsl:call-template>
-                    </td>
-                    <td>
-                        <xsl:call-template name="getValue">
-                            <xsl:with-param name="elem" select="./UsefulHeat/UsefulHeatProportion"/>
-                        </xsl:call-template>
-                    </td>
-                </tr>
-            </xsl:for-each>
-        </table>
-        <table class="table-6-print">
             <tr>
                 <th>
                     <xsl:call-template name="getLabel">

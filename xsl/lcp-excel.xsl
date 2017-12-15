@@ -537,7 +537,7 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="number-cell">
+                                    table:default-cell-style-name="string-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -549,7 +549,7 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="number-cell">
+                                    table:default-cell-style-name="string-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -861,17 +861,17 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/desulphurisationRate"/>
+                                        <xsl:value-of select="$labels/DesulphurisationRate"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/sulphurContent"/>
+                                        <xsl:value-of select="$labels/SulphurContent"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/technicalJustification"/>
+                                        <xsl:value-of select="$labels/TechnicalJustification"/>
                                     </text:p>
                                 </table:table-cell>
                             </table:table-row>
@@ -1246,9 +1246,11 @@
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
-                    <text:p>
-                        <xsl:value-of select="./EnergyInput/OtherSolidFuels/OtherSolidFuel/Value"/>
-                    </text:p>
+                    <xsl:for-each select="./EnergyInput/OtherSolidFuels/OtherSolidFuel">
+                        <text:p>
+                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value"/>
+                        </text:p>
+                    </xsl:for-each>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
@@ -1261,9 +1263,11 @@
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
-                    <text:p>
-                        <xsl:value-of select="./EnergyInput/OtherGases/OtherGas/Value"/>
-                    </text:p>
+                    <xsl:for-each select="./EnergyInput/OtherGases/OtherGas">
+                        <text:p>
+                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value"/>
+                        </text:p>
+                    </xsl:for-each>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
@@ -1319,16 +1323,16 @@
 
     <!-- MODIFIED -->
     <xsl:template name="desulphurisation-table">
-        <xsl:for-each select="Plant/Desulphurisation">
+        <xsl:for-each select="Plant/Desulphurisation/Months/Month">
             <table:table-row table:default-cell-value-type="string">
                 <table:table-cell table:style-name="cell1">
                     <text:p>
-                        <xsl:value-of select="../PlantName"/>
+                        <xsl:value-of select="../../../PlantName"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
-                        <xsl:value-of select="../PlantId"/>
+                        <xsl:value-of select="../../../PlantId"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
