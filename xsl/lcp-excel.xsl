@@ -1246,11 +1246,14 @@
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
-                    <xsl:for-each select="./EnergyInput/OtherSolidFuels/OtherSolidFuel">
-                        <text:p>
-                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value"/>
-                        </text:p>
-                    </xsl:for-each>
+                    <text:p>
+                        <xsl:for-each select="./EnergyInput/OtherSolidFuels/OtherSolidFuel" >
+                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value" separator=", "/>
+                            <xsl:if test="position() != last()">
+                              <xsl:text>, </xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
@@ -1263,11 +1266,14 @@
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
-                    <xsl:for-each select="./EnergyInput/OtherGases/OtherGas">
-                        <text:p>
-                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value"/>
-                        </text:p>
-                    </xsl:for-each>
+                    <text:p>
+                        <xsl:for-each select="./EnergyInput/OtherGases/OtherGas" >
+                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value" separator=", "/>
+                            <xsl:if test="position() != last()">
+                              <xsl:text>, </xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
