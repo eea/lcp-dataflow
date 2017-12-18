@@ -89,10 +89,10 @@
                     </tr>
                     <tr>
                         <td><label  class="mandatory"  ><span translate="referenceYear"></span> </label></td>
-                        <td><select class="form-control" name="ReportingYear" ng-model="instance.LCPQuestionnaire.BasicData.ReferenceYear" required
-                                   ng-options="year for year in reportingYears" ng-disabled="false">
-                                </select>
-                                    
+                        <td>
+                      <input class="form-control" type="text" name="ReportingYear" 
+                      readonly   ng-model="instance.LCPQuestionnaire.BasicData.ReferenceYear" />
+
                             <div class="invalid-msg" error-mapper watch-view="BasicData.ReportingYear" errors-to-show='["required"]'></div>
                         </td>
                     </tr>
@@ -1027,7 +1027,7 @@
                                                 </td>  
                                                        <td>     <select class="form-control" id="addOtherSolidFuels" name="addOtherSolidFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel[$index].Category"
                                                                      ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherSolidFuelCodeLists.concepts"
-                                                                      tooltip="{{'statusTooltip' | translate}}">
+                                                                      >
                                                                       <option value=""></option>
                                                                    </select>
                                                            
@@ -1053,7 +1053,7 @@
                                                 </td>
                                                  <td>     <select class="width12 form-control" id="addOtherGasesousFuels" name="addOtherGasesousFuels" ng-model="plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas[$index].Category"
                                                     ng-options="status['@id']  as status.prefLabel[0]['@value'] | translate for status in codeList.OtherGasesousFuelCodeLists.concepts"
-                                                     tooltip="{{'statusTooltip' | translate}}">
+                                                     >
                                                      <option value=""></option>
                                                   </select>
                                                 </td>

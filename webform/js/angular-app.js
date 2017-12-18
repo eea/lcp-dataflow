@@ -113,13 +113,14 @@ $.noConflict();
                 $scope.instance.LCPQuestionnaire['@xml:lang'] = instance.LCPQuestionnaire['@xml:lang'];
                 $scope.instance.LCPQuestionnaire.BasicData = instance.LCPQuestionnaire.BasicData;
                 $scope.instance.LCPQuestionnaire.ListOfPlants = instance.LCPQuestionnaire.ListOfPlants;
-
+                   $scope.instance.LCPQuestionnaire.BasicData.ReferenceYear='2016';
             }
             else {
                 $scope.instance = instance;
             }
 
             if ($scope.instance.LCPQuestionnaire.ListOfPlants && $scope.instance.LCPQuestionnaire.ListOfPlants.Plant) {
+                   $scope.instance.LCPQuestionnaire.BasicData.ReferenceYear='2016';
 
                 // if therÏƒÏ…Ïƒe is only 1 plant, then convert it to array
                 if (!angular.isArray($scope.instance.LCPQuestionnaire.ListOfPlants.Plant)) {
@@ -266,8 +267,9 @@ $.noConflict();
 
    
         
-        $scope.reportingYears = [];
-        $scope.reportingYears.push ('2016');
+       // $scope.reportingYears = [];
+       // $scope.reportingYears.push ('2016');
+      //  $scope.reportingYear='2016';
         $scope.plantDetailsOtherSectorFieldsView = {iron_steel:"Iron and Steel",esi:"Electricity production",district_heating:"District heating",chp:"Combined heat and power generation",other:"Other"};
 
         // new
@@ -1925,24 +1927,36 @@ $.noConflict();
     });
 app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $modalInstance, plant) {
 
-    $scope.addOtherSolidFuel = function(){
-     plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": null, "Value": null});
-        }
-        $scope.addOtherGas = function(){
-            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({"Category": null, "Value": null});
-               }
+    $scope.addOtherSolidFuel = function () {
+        plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({ "Category": null, "Value": null });
+    }
+    $scope.addOtherGas = function () {
+        plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({ "Category": null, "Value": null });
+    }
 
-        $scope.removeOtherSolidFuel = function(index){
-            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.splice(index,1);
-        }
-        $scope.removeOtherGas = function(index){
-            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.splice(index,1);
-        }
+    $scope.removeOtherSolidFuel = function (index) {
+        plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.splice(index, 1);
+    }
+    $scope.removeOtherGas = function (index) {
+        plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.splice(index, 1);
+    }
+
+//Case when the form data are loaded from xml, and the plantEnergyInputOthersolid stuff is not array but object.
+
   if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels==null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel==null  
   || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel==1) {
+ 
+    if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category!=null ||plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value!=null )
+    {
+        var Category = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category;
+        var Value = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value;
+       plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel=[];
+     plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": Category, "Value": Value});
+     
+    }else {
     plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel=[];
     plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": null, "Value": null});
-    
+    }
   }
   if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases==null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas==null  
     || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas==1) {
@@ -2288,7 +2302,7 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
             return ["Plant name", "Plant ID", "MWth","Type of Combustion Plant", "Date of start of operation", "Refineries",  "Other Sector", "Operating Hours", "Derogation", "Comments"]
         }
         else if (form == 'EnergyInput'){
-            return ["Plant name", "Plant ID", "Biomass (TJ)","Coal","Lignite","Peat", "Other solid fuels (TJ) Category","Other solid fuels (TJ) Value" , "Liquid fuels (TJ)", "Natural gas (TJ)", "Other gases (TJ) Category","Other gases (TJ) Value", "SO2 (t)", "NOx (t)", "Dust (t)"]
+            return ["Plant name", "Plant ID", "Biomass (TJ)","Coal","Lignite","Peat", "Other solid fuels (TJ)" , "Liquid fuels (TJ)", "Natural gas (TJ)", "Other gases", "SO2 (t)", "NOx (t)", "Dust (t)"]
         }
         else if (form == 'TotalEmissionsToAir'){
             return ["Plant name", "Plant ID", "SO2 (t)", "NOx (t)", "TSP (t)"]
@@ -2338,6 +2352,17 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                 //maxRows: formname === 'ListOfPlants' ? 200 : data.length,
                 //maxCols: data.numberOfColumns,
                 colHeaders: getHandsontableColHeaders(formname),
+            /**    beforeRenderer: function(td,row,col,prop,value,cellProperties){
+                    if(prop=="EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels")
+                    {
+                        console.log("found it");
+                        var ht = container.handsontable('getInstance');
+                        ht.setDataAtCell(0,6,"test");
+
+                    //    this.renderer=displayMultiple;
+                    }
+                },
+                **/
       /**          modifyRow: function(row){
                     var ht = container.handsontable('getInstance');
                  //   var rowsNeeded = data.length - ht.countEmptyRows();
@@ -2380,12 +2405,10 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Coal", type: 'numeric', format: '0.[00000]'},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Lignite", type: 'numeric', format: '0.[00000]'},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.Peat", type: 'numeric', format: '0.[00000]'},
-                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Category"},
-                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.Value", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels", readOnly: true},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.LiquidFuels", type: 'numeric', format: '0.[00000]'},
                                 {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.NaturalGas", type: 'numeric', format: '0.[00000]'},
-                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Category"},
-                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.Value", type: 'numeric', format: '0.[00000]'},
+                                {data: "EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases", readOnly: true}
 
                             ]         
                     : formname == 'TotalEmissionsToAir' ?
@@ -2420,6 +2443,11 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
                     },
                 cells: function (row, col, prop) {
                     var cellProperties = {};
+                   // console.log(prop);
+                    if(prop=="EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels")
+                    {
+                    //    this.renderer=displayMultiple;
+                    }
                     if (conditionalReadonlyFields.indexOf(prop) >= 0) {
                         this.renderer = numericConditionalreadOnlyRenderer;
                     }
@@ -2437,6 +2465,14 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
         "LcpArt15.NotaBeneElvSO2", "LcpArt15.DesulphurisationRate", "LcpArt15.SInput",
         "LcpArt15.AnnexVI_A_Footnote2_OperatingHours", "LcpArt15.ElvNOx",
         "LcpArt15.VolatileContents", "LcpArt15.AnnexVI_A_Footnote3_ElvNOx"]
+
+        
+    function displayMultiple(instance, td, row, col, prop, value, cellProperties) {
+        if(row==0 && col==6){
+    //    instance.setDataAtCell(row,col,'test');
+        }
+    //    console.log(cellProperties);
+    }
     function numericConditionalreadOnlyRenderer(instance, td, row, col, prop, value, cellProperties) {
 
         if (prop === "PlantDetails.OtherTypeOfCombustion") {
