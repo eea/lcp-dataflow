@@ -104,6 +104,9 @@ $.noConflict();
         });
 
         dataRepository.getInstance().error(function(){alert("Failed to read instance XML file.");}).success(function(instance) {
+        
+
+        
             if (!angular.isDefined(instance.LCPQuestionnaire)){
                 // add labelLanguage attribute to correct location
                 $scope.instance = {};
@@ -126,6 +129,42 @@ $.noConflict();
                 if (!angular.isArray($scope.instance.LCPQuestionnaire.ListOfPlants.Plant)) {
                     $scope.instance.LCPQuestionnaire.ListOfPlants.Plant = [$scope.instance.LCPQuestionnaire.ListOfPlants.Plant];
                 }
+
+                //We got an Array of Plants here, so we can now check for EnergyInput OtherSolidFuel and OtherGas Objects and turn them to Arrays:
+               $scope.instance.LCPQuestionnaire.ListOfPlants.Plant.forEach(function (plant) {
+               
+            if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels == null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel == null
+                || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel == 1) {
+
+                if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category != null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value != null) {
+                    var Category = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category;
+                    var Value = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value;
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel = [];
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({ "Category": Category, "Value": Value });
+
+                } else {
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel = [];
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({ "Category": null, "Value": null });
+                }
+            }
+            if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases == null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas == null
+                || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas == 1) {
+
+                if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Category != null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Value != null) {
+                    var Category = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Category;
+                    var Value = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Value;
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas = [];
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({ "Category": Category, "Value": Value });
+
+                }
+                else {
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas = [];
+                    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({ "Category": null, "Value": null });
+                }
+            }
+
+            }, this);
+
                 // remove the first empty row, if exists
                 if ($scope.instance.LCPQuestionnaire.ListOfPlants.Plant.length == 1 &&
                         (!$scope.instance.LCPQuestionnaire.ListOfPlants.Plant[0] ||
@@ -1943,29 +1982,37 @@ app.controller('EnergyInputModalInstanceCtrl', function ($rootScope, $scope, $mo
 
 //Case when the form data are loaded from xml, and the plantEnergyInputOthersolid stuff is not array but object.
 
-  if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels==null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel==null  
-  || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel==1) {
- 
-    if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category!=null ||plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value!=null )
-    {
-        var Category = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category;
-        var Value = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value;
-       plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel=[];
-     plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": Category, "Value": Value});
-     
-    }else {
-    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel=[];
-    plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({"Category": null, "Value": null});
+    if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels == null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel == null
+        || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel == 1) {
+
+        if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category != null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value != null) {
+            var Category = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Category;
+            var Value = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.Value;
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel = [];
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({ "Category": Category, "Value": Value });
+
+        } else {
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel = [];
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherSolidFuels.OtherSolidFuel.push({ "Category": null, "Value": null });
+        }
     }
-  }
-  if(plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases==null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas==null  
-    || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas==1) {
-      plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas=[];
-      plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({"Category": null, "Value": null});
-      
+    if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases == null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas == null
+        || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.constructor === Object || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas == 1) {
+
+        if (plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Category != null || plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Value != null) {
+            var Category = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Category;
+            var Value = plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.Value;
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas = [];
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({ "Category": Category, "Value": Value });
+
+        }
+        else {
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas = [];
+            plant.EnergyInputAndTotalEmissionsToAir.EnergyInput.OtherGases.OtherGas.push({ "Category": null, "Value": null });
+        }
     }
 
-                
+
 
 
 
