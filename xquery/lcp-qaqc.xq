@@ -632,7 +632,6 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
     (: LCP 3.3 :)
 
-
     let $excluded := $findings/dataroot/QAQC_Findings_Step1[MemberState=$memberState and substring(Test, 4,3) = '3.3']
 
     let $res :=
@@ -645,7 +644,6 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             let $LiquidFuels :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/LiquidFuels)
             let $NaturalGas :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/NaturalGas)
             let $OtherGases :=  sum($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas[Value castable as xs:double]/Value)
-            (:let $asd := trace($OtherGases, "otherGas:"):)
             let $Peat :=  eworx:getNumber($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Peat)
 
             let $inputinTJ := eworx:sum ( ( $Biomass, $Coal, $Lignite, $LiquidFuels, $NaturalGas, $OtherGases , $OtherSolidFuels, $Peat, 0)  )
@@ -684,13 +682,13 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
 
         let $tsp := if  ($CLRTAP/TSP castable as xs:double ) then
             round-half-to-even ( (eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) div ($CLRTAP/TSP * 1000) ) * 100 , 3 ) else
-            'TSP emissions were not reported under CLRTAP. Therefore they cannot be compared to emissions reported under the LCP Directive'
+            'Dust emissions were not reported under CLRTAP. Therefore they cannot be compared to emissions reported under the LCP Directive'
 
         let $res := <tr>
             <td class='info' title="Details"> Percentage of plant emissions to national total</td>
             <td title="SO2 (%)"> { round-half-to-even(  ( eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/SO2) div ($CLRTAP/SO2 * 1000) ) * 100, 3 )}  </td>
             <td title="NOx (%)"> { round-half-to-even( ( eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/NOx ) div ( $CLRTAP/NOx * 1000 ) ) * 100, 3 )} </td>
-            <td title="TSP (%)"> { $tsp }  </td>
+            <td title="Dust (%)"> { $tsp }  </td>
         </tr>
 
         return xmlconv:RowBuilder("LCP 4.1","Share in overall reported emissions", $message, $res  )
@@ -858,11 +856,11 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
                     <td class='warning' title="Details">Significant difference in reported and expected TSP emissions</td>
                     <td title="PlantName"> { data($plant/PlantName)  } </td>
                     <td title="PlantID"> { data($plant/PlantId)  } </td>
-                    <td class="tdwarning" title="TSP"> { $TSP } </td>
-                    <td title="expected TSP"> { round-half-to-even ( $expected, 3)  } </td>
+                    <td class="tdwarning" title="Dust"> { $TSP } </td>
+                    <td title="expected Dust"> { round-half-to-even ( $expected, 3)  } </td>
                 </tr>
 
-    let $LCP_4_4 := xmlconv:RowBuilder("LCP 4.4","TSP emission outlier test", $message, $res  )
+    let $LCP_4_4 := xmlconv:RowBuilder("LCP 4.4","Dust emission outlier test", $message, $res  )
 
 
     (: LCP 4.5 :)
@@ -922,7 +920,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
         let $res3 :=
             if ( abs($diff) > 0.3) then
                 <tr>
-                    <td class='warning' title="Details"> More than 30% diffence in this year's total amount of <b>TSP</b> reported to the average of last three years. Please make sure that the reported data are correct. </td>
+                    <td class='warning' title="Details"> More than 30% diffence in this year's total amount of <b>Dust</b> reported to the average of last three years. Please make sure that the reported data are correct. </td>
                     <td title="Total Reported Amount({$reportingYear})"> {   eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) }</td>
                     <td title="Average of Total Reported Amount ({$reportingYear - 3}-{$reportingYear - 1})"> {  $Avg_Emissions/TSP }</td>
                     <td class="tdwarning" title="Change (%) "> {  round-half-to-even ($diff * 100 , 2 )} </td>
@@ -930,7 +928,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
                 </tr>
             else if ( abs($diff) > 0.1 ) then
                 <tr>
-                    <td class='info' title="Details"> More than 10% diffence in this year's total amount of <b>TSP</b> reported to the average of last three years.</td>
+                    <td class='info' title="Details"> More than 10% diffence in this year's total amount of <b>Dust</b> reported to the average of last three years.</td>
                     <td title="Total Reported Amount({$reportingYear})"> {  eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP)}</td>
                     <td title="Average of Total Reported Amount ({$reportingYear - 3}-{$reportingYear - 1})"> {  $Avg_Emissions/TSP }</td>
                     <td class="tdinfo" title="Change (%) "> {  round-half-to-even ($diff * 100 , 2 )} </td>
