@@ -712,7 +712,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             let $totalInputTJ := $Biomass + $OtherSolidFuels + $LiquidFuels + $NaturalGas + $OtherGases + $Coal + $Lignite + $Peat
 
             let $oBio := $Biomass * 0.0085
-            let $oSolid := $OtherSolidFuels * 0.3463
+            let $oSolid := $OtherSolidFuels * 0.3020
             let $oLiq := $LiquidFuels * 0.1360
             let $oNatGas := $NaturalGas * 0.0003
             let $oOtherGas := $OtherGases * 0.0083
@@ -769,7 +769,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
         let $Lignite := if ( ($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) castable as xs:double) then xs:double($plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/Lignite) else 0
 
         let $oBio := $Biomass * 0.0854
-        let $oSolid := $OtherSolidFuels * 0.1598
+        let $oSolid := $OtherSolidFuels * 0.1271
         let $oLiq := $LiquidFuels * 0.0912
         let $oNatGas := $NaturalGas * 0.0250
         let $oOtherGas := $OtherGases * 0.0339
@@ -821,7 +821,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             let $totalInputTJ := $Biomass + $OtherSolidFuels + $LiquidFuels + $NaturalGas + $OtherGases + $Peat + $Coal + $Lignite
 
             let $oBio := $Biomass * 0.0041
-            let $oSolid := $OtherSolidFuels * 0.0202
+            let $oSolid := $OtherSolidFuels * 0.0134
             let $oLiq := $LiquidFuels * 0.0048
             let $oNatGas := $NaturalGas * 0.0001
             let $oOtherGas := $OtherGases * 0.0004
