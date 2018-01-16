@@ -438,11 +438,11 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     let $invalidRefinery :=
         for $plant in ($docRoot//Plant[  PlantDetails/Refineries = ('', 'false') and not ( data(PlantDetails/OtherSector)= $xmlconv:VALID_OTHER_SECTOR )  ] )
         return  <tr>
-            <td class='error' title="Details"> When not Refinery, OtherSector should be filled with one of the valid values</td>
+            <td class='warning' title="Details"> When not Refinery, OtherSector should be filled with one of the valid values</td>
             <td title="PlantName"> {  functx:if-empty (data($plant/PlantName) ,  '#Missing Value') } </td>
             <td title="PlantID"> { functx:if-empty( data($plant/PlantId)   , '#Missing Value')  } </td>
-            <td class="tderror" title="Refineries"> { functx:if-empty ( data($plant/PlantDetails/Refineries)   , '#Missing Value')  } </td>
-            <td class="tderror" title="OtherSector"> { functx:if-empty( data($plant/PlantDetails/OtherSector)   , '#Missing Value'  ) } </td>
+            <td class="tdwarning" title="Refineries"> { functx:if-empty ( data($plant/PlantDetails/Refineries)   , '#Missing Value')  } </td>
+            <td class="tdwarning" title="OtherSector"> { functx:if-empty( data($plant/PlantDetails/OtherSector)   , '#Missing Value'  ) } </td>
         </tr>
 
     (: warning if some contact info missing :)
@@ -678,7 +678,7 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
     (: LCP 4.1 :)
     let $LCP_4_1 := if ( $reportingYear != 2016 ) then ()
     else
-        let $CLRTAP := doc($xmlconv:CLRTAP_PATH)//country[MemberState = $memberState and Year = $reportingYear ]
+        let $CLRTAP := doc($xmlconv:CLRTAP_PATH)//country[MemberState = $memberState and Year = $reportingYear - 1 ]
 
         let $tsp := if  ($CLRTAP/TSP castable as xs:double ) then
             round-half-to-even ( (eworx:sum($docRoot//Plant/EnergyInputAndTotalEmissionsToAir/TotalEmissionsToAir/TSP) div ($CLRTAP/TSP * 1000) ) * 100 , 3 ) else
