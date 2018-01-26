@@ -9,8 +9,8 @@
     -->
     <xsl:param name="xml_folder_uri"/>
     <xsl:variable name="language">en</xsl:variable>
-    <xsl:variable name="labels"
-                  select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/xml/lcp-labels-en.xml')/labels"/>
+    <xsl:variable name="labels" select="document('https://svn.eionet.europa.eu/repositories/Reportnet/Dataflows/LCP-v2/xml/lcp-labels-en.xml')/labels"/>
+
 
 
     <xsl:variable name="codelists"
@@ -537,19 +537,11 @@
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
-                                    table:default-cell-style-name="string-cell">
-                            </table:table-column>
-                            <table:table-column
-                                    table:default-cell-value-type="string"
                                     table:default-cell-style-name="number-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
                                     table:default-cell-style-name="number-cell">
-                            </table:table-column>
-                            <table:table-column
-                                    table:default-cell-value-type="string"
-                                    table:default-cell-style-name="string-cell">
                             </table:table-column>
                             <table:table-column
                                     table:default-cell-value-type="string"
@@ -568,12 +560,7 @@
                             <table:table-row table:default-cell-value-type="string">
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/energyInputAndTotalEmissionsToAir"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-
+                                        <xsl:value-of select="$labels/energyInput"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -635,22 +622,12 @@
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/otherSolidFuels"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
                                         <xsl:value-of select="$labels/liquidFuels"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
                                         <xsl:value-of select="$labels/naturalGas"/>
-                                    </text:p>
-                                </table:table-cell>
-                                <table:table-cell table:style-name="Heading2">
-                                    <text:p>
-                                        <xsl:value-of select="$labels/otherGases"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -672,6 +649,168 @@
                         </table:table-header-rows>
                         <table:table-rows>
                             <xsl:call-template name="energyInput-table"/>
+                        </table:table-rows>
+                    </xsl:for-each>
+                </table:table>
+
+                <!-- Energy Input - Other solid fuels (TJ ) -->
+                <table:table>
+                    <xsl:attribute name="table:name">
+                        <xsl:value-of select="'Energy Input - Other solid fuels (TJ )'"/>
+                    </xsl:attribute>
+                    <xsl:for-each select="./ListOfPlants">
+                        <table:table-columns>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="long-string-heading">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                        </table:table-columns>
+                        <table:table-header-rows>
+                            <table:table-row table:default-cell-value-type="string">
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/energyInputOtherSolidFuels"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                            </table:table-row>
+                            <table:table-row table:default-cell-value-type="string">
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/plantName"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/plantId"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/input"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/value"/>
+                                    </text:p>
+                                </table:table-cell>
+                            </table:table-row>
+                        </table:table-header-rows>
+                        <table:table-rows>
+                            <xsl:call-template name="energyInput-other-solid-table"/>
+                        </table:table-rows>
+                    </xsl:for-each>
+                </table:table>
+
+                <!-- Energy Input - Other gases (TJ ) -->
+                <table:table>
+                    <xsl:attribute name="table:name">
+                        <xsl:value-of select="'Energy Input - Other gases (TJ )'"/>
+                    </xsl:attribute>
+                    <xsl:for-each select="./ListOfPlants">
+                        <table:table-columns>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="long-string-heading">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                            <table:table-column
+                                    table:default-cell-value-type="string"
+                                    table:default-cell-style-name="string-cell">
+                            </table:table-column>
+                        </table:table-columns>
+                        <table:table-header-rows>
+                            <table:table-row table:default-cell-value-type="string">
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/energyInputOtherGases"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+
+                                    </text:p>
+                                </table:table-cell>
+                            </table:table-row>
+                            <table:table-row table:default-cell-value-type="string">
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/plantName"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/plantId"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/input"/>
+                                    </text:p>
+                                </table:table-cell>
+                                <table:table-cell table:style-name="Heading2">
+                                    <text:p>
+                                        <xsl:value-of select="$labels/value"/>
+                                    </text:p>
+                                </table:table-cell>
+                            </table:table-row>
+                        </table:table-header-rows>
+                        <table:table-rows>
+                            <xsl:call-template name="energyInput-other-gases-table"/>
                         </table:table-rows>
                     </xsl:for-each>
                 </table:table>
@@ -908,7 +1047,7 @@
                             <table:table-row table:default-cell-value-type="string">
                                 <table:table-cell table:style-name="Heading2">
                                     <text:p>
-                                        <xsl:value-of select="$labels/UsefulHeat"/>
+                                        <xsl:value-of select="$labels/proportionOfUsefulHeat"/>
                                     </text:p>
                                 </table:table-cell>
                                 <table:table-cell table:style-name="Heading2">
@@ -950,6 +1089,7 @@
                         </table:table-rows>
                     </xsl:for-each>
                 </table:table>
+
             </office:body>
         </office:document-content>
     </xsl:template>
@@ -1247,32 +1387,12 @@
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
-                        <xsl:for-each select="./EnergyInput/OtherSolidFuels/OtherSolidFuel" >
-                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value" separator=", "/>
-                            <xsl:if test="position() != last()">
-                              <xsl:text>, </xsl:text>
-                            </xsl:if>
-                        </xsl:for-each>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="number-cell">
-                    <text:p>
                         <xsl:value-of select="./EnergyInput/LiquidFuels"/>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
                         <xsl:value-of select="./EnergyInput/NaturalGas"/>
-                    </text:p>
-                </table:table-cell>
-                <table:table-cell table:style-name="number-cell">
-                    <text:p>
-                        <xsl:for-each select="./EnergyInput/OtherGases/OtherGas" >
-                            <xsl:value-of select="./Category"/> - <xsl:value-of select="./Value" separator=", "/>
-                            <xsl:if test="position() != last()">
-                              <xsl:text>, </xsl:text>
-                            </xsl:if>
-                        </xsl:for-each>
                     </text:p>
                 </table:table-cell>
                 <table:table-cell table:style-name="number-cell">
@@ -1288,6 +1408,62 @@
                 <table:table-cell table:style-name="number-cell">
                     <text:p>
                         <xsl:value-of select="./EnergyInput/Peat"/>
+                    </text:p>
+                </table:table-cell>
+            </table:table-row>
+        </xsl:for-each>
+    </xsl:template>
+
+    <!-- MODIFIED -->
+    <xsl:template name="energyInput-other-solid-table">
+        <xsl:for-each select="Plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherSolidFuels/OtherSolidFuel">
+            <table:table-row table:default-cell-value-type="string">
+                <table:table-cell table:style-name="cell1">
+                    <text:p>
+                        <xsl:value-of select="../../../../PlantName"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="../../../../PlantId"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="./Category"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                       <xsl:value-of select="./Value"/>
+                    </text:p>
+                </table:table-cell>
+            </table:table-row>
+        </xsl:for-each>
+    </xsl:template>
+
+    <!-- MODIFIED -->
+    <xsl:template name="energyInput-other-gases-table">
+        <xsl:for-each select="Plant/EnergyInputAndTotalEmissionsToAir/EnergyInput/OtherGases/OtherGas">
+            <table:table-row table:default-cell-value-type="string">
+                <table:table-cell table:style-name="cell1">
+                    <text:p>
+                        <xsl:value-of select="../../../../PlantName"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="../../../../PlantId"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                        <xsl:value-of select="./Category"/>
+                    </text:p>
+                </table:table-cell>
+                <table:table-cell table:style-name="number-cell">
+                    <text:p>
+                       <xsl:value-of select="./Value"/>
                     </text:p>
                 </table:table-cell>
             </table:table-row>

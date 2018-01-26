@@ -76,12 +76,16 @@
         <operatingHours>Operating hours</operatingHours>
         <comments>Comments</comments>
         <Emissions>4. ENERGY INPUT AND TOTAL EMISSIONS TO AIR</Emissions>
-        <energyInput>ENERGY INPUT</energyInput>
+        <energyInput>4. ENERGY INPUT</energyInput>
+        <energyInputOtherSolidFuels>4.1 OTHER SOLID FUELS</energyInputOtherSolidFuels>
+        <energyInputOtherGases>4.2 OTHER GASES</energyInputOtherGases>
         <Biomass>Biomass (TJ)</Biomass>
         <otherSolidFuels>Other solid fuels (TJ)</otherSolidFuels>
         <liquidFuels>Liquid fuels (TJ)</liquidFuels>
         <naturalGas>Natural gas (TJ)</naturalGas>
         <otherGases>Other gases (TJ)</otherGases>
+        <input>Input</input>
+        <value>Value</value>
         <Coal>Coal</Coal>
         <Lignite>Lignite (TJ)</Lignite>
         <Peat>Peat</Peat>
@@ -95,7 +99,7 @@
         <SulphurContent>Sulphur Content</SulphurContent>
         <TechnicalJustification>Technical Justification</TechnicalJustification>
         <proportionOfUsefulHeat>6. USEFUL HEAT</proportionOfUsefulHeat>
-        <MonthValue>Month Value</MonthValue>
+        <monthValue>Month Value</monthValue>
         <UsefulHeat>Useful Heat</UsefulHeat>
         <UsefulHeatProportion>Useful Heat Proportion</UsefulHeatProportion>
         <hoursOperated>Hours operated</hoursOperated>
