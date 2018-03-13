@@ -443,7 +443,7 @@
 		<xs:sequence>
 			<xs:element name="MWth" type="xs:double" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="DateOfStartOfOperation" type="DateOrNothing" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="Refineries" type="TrueFalseType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Refineries" type="BoolorNothing" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="OtherSector" type="OtherSectorType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="OperatingHours" type="IntOrNothing" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -478,7 +478,7 @@
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="Category" type="OtherSolidFuelsValueType" minOccurs="0" maxOccurs="1"/>
-						<xs:element name="Value" type="xs:double" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="Value" type="DoubleOrNothing" minOccurs="0" maxOccurs="1"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
