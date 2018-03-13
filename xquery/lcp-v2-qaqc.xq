@@ -743,10 +743,10 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             )
             return
                 <tr>
-                    <td class='error' title="Details">Significant difference in reported and expected SO2 emissions</td>
+                    <td class='warning' title="Details">Significant difference in reported and expected SO2 emissions</td>
                     <td title="PlantName"> { data($plant/PlantName)  } </td>
                     <td title="PlantID"> { data($plant/PlantId)  } </td>
-                    <td class="tderror" title="SO2"> { $SO2  } </td>
+                    <td class="tdwarning" title="SO2"> { $SO2  } </td>
                     <td title="expected SO2"> { round-half-to-even ($expected , 3) } </td>
                 </tr>
 
@@ -795,10 +795,10 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
         )
         return
             <tr>
-                <td class='error' title="Details">Significant difference in reported and expected NOx emissions</td>
+                <td class='warning' title="Details">Significant difference in reported and expected NOx emissions</td>
                 <td title="PlantName"> { data($plant/PlantName)  } </td>
                 <td title="PlantID"> { data($plant/PlantId)  } </td>
-                <td class="tderror" title="NOx"> { $NOx } </td>
+                <td class="tdwarning" title="NOx"> { $NOx } </td>
                 <td title="expected NOx"> { round-half-to-even ( $expected, 3)  } </td>
             </tr>
 
@@ -853,10 +853,10 @@ declare function xmlconv:RunQAs( $source_url ) as element()* {
             )
             return
                 <tr>
-                    <td class='error' title="Details">Significant difference in reported and expected TSP emissions</td>
+                    <td class='warning' title="Details">Significant difference in reported and expected TSP emissions</td>
                     <td title="PlantName"> { data($plant/PlantName)  } </td>
                     <td title="PlantID"> { data($plant/PlantId)  } </td>
-                    <td class="tderror" title="Dust"> { $TSP } </td>
+                    <td class="tdwarning" title="Dust"> { $TSP } </td>
                     <td title="expected Dust"> { round-half-to-even ( $expected, 3)  } </td>
                 </tr>
 
